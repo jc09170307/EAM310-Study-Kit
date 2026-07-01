@@ -1,0 +1,1557 @@
+{
+  "meta": {
+    "course": "EAM310",
+    "title": "East Asian Medicine Diagnosis I",
+    "term": "Summer 2026",
+    "generated": "2026-07-01",
+    "note": "Quiz content extracted from EAM310_StudyApp.html for use outside the web app (e.g. GitHub-hosted data file)."
+  },
+  "recallQuizzes": {
+    "wcompanions": [
+      {
+        "q": "What are Hammer & Bilton's four independent axes for describing a pulse?",
+        "a": "Rate, Rhythm/Stability, Volume, and Depth — a contemporary alternative to FCM's 28 fixed named qualities, describing the same physical signs along measurable dimensions."
+      },
+      {
+        "q": "What is a pseudo-arrhythmia?",
+        "a": "An irregularity that mimics a true Knotted/Hasty/Intermittent pulse but stems from a benign, transient cause — patient movement, talking, breath-holding, recent caffeine, or normal sinus arrhythmia. Always re-check with the patient still and calm before diagnosing a true arrhythmia."
+      },
+      {
+        "q": "Which Hammer chapter introduces the concept of Pseudo-Arrhythmias?",
+        "a": "Chapter 6, Rhythm and Stability."
+      },
+      {
+        "q": "In the Maciocia Tongue Companion, what does a Red tongue TIP with coating indicate? Without coating?",
+        "a": "With coating: Heart-Fire. Without coating: Heart Empty-Heat."
+      },
+      {
+        "q": "What does a Red tongue at the CENTER, with coating, indicate?",
+        "a": "Stomach-Heat (Full type)."
+      },
+      {
+        "q": "Which chapter of the Maciocia Tongue Companion is described as the single most exam-relevant chapter, and why?",
+        "a": "Chapter 8, 'Tongue Diagnosis in the Clinic' — it covers exactly what the Final tests: integrating tongue with pulse and symptoms, when tongue findings should override conflicting signs, and prognosis."
+      },
+      {
+        "q": "What is covered in Chapter 5 of the Maciocia Tongue Companion, and which week does it map to?",
+        "a": "The Underside of the Tongue — sublingual veins, examination method, clinical significance. Used in Week 6."
+      }
+    ],
+    "w3": [
+      {
+        "q": "What are the three positions on each wrist, front to back?",
+        "a": "Cun (寸, Front) → Guan (关, Middle) → Chi (尺, Rear). Left wrist: Heart/SI, Liver/GB, Kidney(Yin)/Bladder. Right wrist: Lung/LI, Spleen/Stomach, Kidney(Yang)."
+      },
+      {
+        "q": "What are the three levels of pressure used to examine each pulse position?",
+        "a": "Floating (light touch), Middle, and Deep (heavy pressure near the bone) — the pulse is examined at each of these three depths at each of the three positions."
+      },
+      {
+        "q": "List the Six-Step Pulse Reading Sequence.",
+        "a": "1) Pulse as a whole 2) Spirit, Stomach-Qi, Root 3) The 3 levels & 3 positions 4) Strength of pulse 5) Overall quality 6) Individual positions."
+      },
+      {
+        "q": "What are the three components of a Normal pulse?",
+        "a": "Stomach-Qi (gentle, calm), Spirit (soft but strong, regular), and Root (deep level + Rear position clearly felt). A pulse with Spirit but no Root indicates Yin/Yang organs are weak while Qi/Blood are still intact."
+      },
+      {
+        "q": "Differentiate the Knotted, Hasty, and Intermittent pulses.",
+        "a": "Knotted: SLOW + irregular stops → Cold + Heart-Yang deficiency. Hasty: RAPID + irregular stops → extreme Heat, Heart-Qi deficiency, or Heart-Fire. Intermittent: ANY rate + REGULAR stops → serious Yin-organ problem (most serious of the three)."
+      },
+      {
+        "q": "What does a Slippery pulse indicate, and in what population is it also normal?",
+        "a": "Phlegm, Dampness, or food retention — but it is also a NORMAL finding in pregnancy."
+      },
+      {
+        "q": "What is the difference between a Choppy and a Fine pulse?",
+        "a": "Choppy: rough, jagged, changes irregularly — Blood deficiency or fluid exhaustion. Fine: simply thinner than normal, smooth — Blood deficiency alone (less severe/complex than Choppy)."
+      },
+      {
+        "q": "Which pulse quality is explicitly described as healthy, not pathological?",
+        "a": "Slowed-down (4 beats/breath) — distinct from Slow (3 beats/breath), which IS pathological (Cold)."
+      },
+      {
+        "q": "What does a Scattered pulse indicate and why is it flagged as serious?",
+        "a": "Pulse feels 'broken' into dots rather than continuous — indicates severe Qi and Blood deficiency, especially of the Kidney. Flagged as a serious/concerning finding."
+      },
+      {
+        "q": "What is the difference between a Hollow and a Leather pulse?",
+        "a": "Hollow: empty in the middle at all levels — indicates hemorrhage. Leather: hard surface but empty at the deep level — indicates severe Kidney-Essence/Yin deficiency."
+      }
+    ],
+    "w4": [
+      {
+        "q": "What are the 5 Pathological Body Colors of the tongue?",
+        "a": "Pale, Red, Deep-Red, Purple, Blue."
+      },
+      {
+        "q": "What does a Purple tongue body color ALWAYS indicate, per Maciocia?",
+        "a": "Blood stasis — always, regardless of the specific shade (reddish-purple = from Heat; bluish-purple = from Cold)."
+      },
+      {
+        "q": "Differentiate a Red tongue WITH a thick coating from a Red tongue with NO coating.",
+        "a": "Red + thick coating = Full-Heat. Red + no coating (peeled) = Empty-Heat (Yin deficiency)."
+      },
+      {
+        "q": "What does a swollen, pale tongue indicate, versus a swollen, red tongue?",
+        "a": "Swollen pale = Spleen deficiency with fluid retention (not Heat-driven). Swollen red = usually severe Heat, especially at the tip (Heart-Fire)."
+      },
+      {
+        "q": "What is the difference between a 'Heart crack' and a 'Stomach crack' on the tongue?",
+        "a": "Heart crack: a single long deep crack down the centerline reaching the tip. Stomach crack: a shallow, wide crack that does NOT reach the tip."
+      },
+      {
+        "q": "What does tooth-marking on the tongue edges classically indicate?",
+        "a": "Spleen-Qi deficiency — the swollen, soft tongue body presses against the teeth."
+      },
+      {
+        "q": "In the tongue microsystem map, what organ maps to the tongue root, and what maps to the tip?",
+        "a": "Root → Kidney. Tip → Heart/Lung. (Center → Spleen/Stomach; sides → Liver/Gallbladder.)"
+      },
+      {
+        "q": "What does a Long tongue indicate? A Short tongue?",
+        "a": "Long = tendency to Heat, particularly Heart-Heat. Short = interior Cold (if pale and wet) or extreme Yin deficiency (if red and peeled) — color/moisture determines which."
+      },
+      {
+        "q": "What is the relationship between tongue body color/shape and tongue coating in terms of what each reflects?",
+        "a": "Tongue BODY (color, shape) reflects Blood, Nutritive Qi, and the Yin organs. Tongue COATING reflects the Yang organs — especially the Stomach — and the presence/nature of any pathogenic factor."
+      },
+      {
+        "q": "What does a coating that looks 'added on' rather than rooted in the tongue body indicate?",
+        "a": "The coating isn't truly rooted (Stomach-Qi deficiency) — a thick rootless coating specifically can also suggest a strong pathogenic factor masking underlying deficiency."
+      }
+    ],
+    "w1": [
+      {
+        "q": "What are the Eight Principles?",
+        "a": "Four pairs of opposites: Exterior/Interior, Cold/Heat, Deficiency/Excess, and Yin/Yang. Yin and Yang are the master pair that summarize the other six."
+      },
+      {
+        "q": "What two features must occur SIMULTANEOUSLY to indicate an exterior syndrome?",
+        "a": "Aversion to cold (subjective) AND fever/body feeling hot on palpation (objective) occurring at the same time. The moment aversion to cold disappears, the pathogen has moved interior."
+      },
+      {
+        "q": "What pulse indicates an exterior syndrome? What pulse indicates interior?",
+        "a": "Exterior = Floating pulse (浮脉). Interior = Deep pulse (沉脉)."
+      },
+      {
+        "q": "Differentiate Full Heat from Empty Heat — tongue and pulse.",
+        "a": "Full Heat: Red tongue with THICK YELLOW coating; pulse Rapid AND FORCEFUL. Empty Heat (Yin def): Red tongue with LITTLE OR NO COATING (peeled); pulse Rapid AND FINE/THREADY."
+      },
+      {
+        "q": "What is the treatment principle for Deficiency? For Excess?",
+        "a": "Deficiency → Tonify (补 bǔ). Excess → Reduce/Expel (泻 xiè). Never tonify in an exterior condition — it pushes the pathogen inward."
+      },
+      {
+        "q": "What are the three types of complex Deficiency patterns?",
+        "a": "(1) Deficiency complicated by Excess — pathogen + insufficient zheng qi. (2) Transformation of excess to deficiency — long-term excess consuming zheng qi. (3) Deficiency with false excess manifestations."
+      },
+      {
+        "q": "Describe Collapse of Yin vs Collapse of Yang — emergency presentations.",
+        "a": "Collapse of Yin: sticky sweat, feverish, warm hands/feet, irritability, thirst (cold drinks), red dry tongue, thready rapid weak pulse. Collapse of Yang: cold sweat like pearls, cold body/limbs, listlessness, no thirst (or prefers hot), pale moist tongue, thready fading pulse."
+      },
+      {
+        "q": "What is 'True Heat with False Cold'?",
+        "a": "Interior heat so extreme that it blocks Yang from reaching the extremities → cold limbs despite raging interior heat. KEY: pulse is deep and FORCEFUL — this reveals the true nature. Also: constipation, thirst, scanty dark urine."
+      },
+      {
+        "q": "List the four Qi pathologies and their key features.",
+        "a": "Qi Deficiency: fatigue, spontaneous sweating, pale tongue, deficiency pulse. Qi Sinking: above + bearing-down sensation, prolapse. Qi Stagnation: distension > pain, waxes/wanes, wiry pulse. Rebellious Qi: cough/asthma (Lung), nausea/vomiting (Stomach), headache/hemoptysis (Liver)."
+      },
+      {
+        "q": "What are the three Blood pathologies from CAM Ch.10?",
+        "a": "Blood Deficiency (pallor, dizziness, thready pulse), Blood Stasis (fixed stabbing pain, mass, purple tongue, hesitant pulse), Heat in Blood (restlessness, bleeding, deep red tongue, rapid pulse)."
+      },
+      {
+        "q": "What is the difference between Jin (津) and Ye (液)?",
+        "a": "Jin: clear and thin, fills vessels, moistens muscles and skin, easily consumed and replenished (Yang-type). Ye: thick and heavy, stored in joints and orifices, nourishes brain, marrow, joints — harder to replace (Yin-type)."
+      },
+      {
+        "q": "Name the four types of Fluid Retention patterns (internal Chinese terms).",
+        "a": "Tanyin (痰饮) — stomach/intestines; Xuanyin (悬饮) — hypochondrium; Yiyin (溢饮) — body surface/anasarca; Zhiyin (支饮) — chest/epigastrium."
+      },
+      {
+        "q": "What is 'Sinking of Qi' and how does it differ from Qi Deficiency?",
+        "a": "Sinking of Qi IS a subtype of Qi Deficiency — always has all Qi Def signs PLUS a bearing-down sensation in the abdomen and organ prolapse (anus, uterus, stomach, kidney). Treat by raising and tonifying middle Qi. Cannot have Sinking without Deficiency."
+      },
+      {
+        "q": "What is Mei He Qi (梅核气) and what causes it?",
+        "a": "Plum-pit qi — sensation of something stuck in the throat that can't be swallowed or expectorated. Nothing found on endoscopy. Caused by Liver Qi stagnation + Phlegm accumulation. Key formula: Ban Xia Hou Po Tang."
+      },
+      {
+        "q": "In the Four Levels system, what level is associated with 'faint skin rashes' and 'dry mouth without strong desire to drink'?",
+        "a": "Ying (Nutrient) level — febrile pathogen has injured ying yin and is disturbing the Heart/Mind. Deep red tongue, thready rapid pulse. Treatment: clear heat from ying, cool blood."
+      },
+      {
+        "q": "Describe the clinical significance of 'True Cold with False Heat'.",
+        "a": "Extreme interior cold forces Yang to the surface → flushed face despite interior cold. Patient wants to COVER UP despite appearing hot. Takes warm drinks to relieve apparent thirst. Pulse is superficial but WEAK. Pale tongue. Treat the underlying cold."
+      },
+      {
+        "q": "What does it mean that all emotions affect the Heart?",
+        "a": "The Heart houses the Mind (Shen) — it is the organ responsible for consciousness and recognizing emotions. So while each emotion targets a specific organ (anger→Liver etc.), all emotional disturbance is ultimately registered and felt by the Heart. Red tongue TIP = common sign of emotional stress regardless of which organ is primarily affected."
+      },
+      {
+        "q": "What is the pulse quality classically associated with anger as cause of disease?",
+        "a": "Wiry pulse (弦脉). Maciocia: 'When anger is the cause of disease, the pulse is Wiry: if the pulse is not Wiry, then anger is not the cause of the disease.'"
+      },
+      {
+        "q": "Describe the progression: emotions → Qi stagnation → ??",
+        "a": "Emotions → Qi stagnation → Blood stasis (especially in women, affects Heart/Liver/Uterus) → Heat → Fire (five emotions can turn into Fire) → Phlegm (Qi disruption impairs fluid metabolism). Red tongue tip is the earliest sign this process is occurring."
+      },
+      {
+        "q": "What is Collapse of Yang and how does it differ from Collapse of Yin in clinical presentation?",
+        "a": "Collapse of Yang = extreme Yang Qi exhaustion → cold sweat like pearls, cold body/limbs, feeble breathing, listlessness, no thirst (or prefers hot), pale moist tongue, thready fading pulse. Collapse of Yin = massive Yin consumption → sticky warm sweat, feverish warm hands/feet, restlessness, thirst (cold drinks), red dry tongue, thready rapid weak pulse."
+      }
+    ],
+    "w2": [
+      {
+        "q": "List the Six Excesses (六淫) and their associated season and organ.",
+        "a": "Wind→Spring→Liver; Cold→Winter→Kidneys; Summer-Heat→Summer→Heart (summer only!); Dampness→Late Summer→Spleen; Dryness→Autumn→Lungs; Fire/Heat→Summer (also endogenous)→Heart."
+      },
+      {
+        "q": "Which pathogenic factor is described as 'chief of the hundred diseases' and why?",
+        "a": "Wind — because it is mobile and easily combines with other pathogenic factors (Wind-Cold, Wind-Heat, Wind-Damp), and it tends to open the pores, allowing other pathogens to invade."
+      },
+      {
+        "q": "What makes Summer-Heat unique among the Six Excesses?",
+        "a": "It can ONLY occur in summer — it is the only climatic factor that cannot arise outside its associated season. All others (Wind, Cold, Damp, Dryness, Fire) can occur in any season depending on circumstances."
+      },
+      {
+        "q": "Describe the key features of Dampness that distinguish it from other pathogenic factors.",
+        "a": "Gradual invasion, heaviness of limbs/body, turbid/sticky discharges, fullness in chest and epigastrium, tendency toward prolonged and intractable disease, greasy tongue coat, soggy pulse. Dampness is heavy and turbid — like mud vs wind."
+      },
+      {
+        "q": "What is the key clinical feature that differentiates exterior Aversion to Cold from Yang Deficiency cold feeling?",
+        "a": "Exterior Aversion to Cold: sudden onset, NOT relieved by covering, occurs simultaneously with fever. Yang Deficiency cold: chronic, IS relieved by covering with blankets, no simultaneous fever."
+      },
+      {
+        "q": "Which emotion is classically associated with each organ? (All 7)",
+        "a": "Anger→Liver; Joy (overstimulation)→Heart; Sadness/Grief→Lungs & Heart; Worry→Lungs & Spleen; Pensiveness→Spleen; Fear→Kidneys; Shock→Heart."
+      },
+      {
+        "q": "What effect does each of the Seven Emotions have on Qi?",
+        "a": "Anger = Qi rises; Joy = Qi slows; Sadness = Qi dissolves; Worry = Qi knots; Pensiveness = Qi knots; Fear = Qi descends; Shock = Qi scatters."
+      },
+      {
+        "q": "According to Maciocia, when does an emotion become a cause of disease?",
+        "a": "When it is (1) long-lasting (months or years) OR (2) very intense (even if brief). Shock is the exception — can become a cause almost instantly due to its intensity. Normal emotions in normal circumstances do NOT cause disease."
+      },
+      {
+        "q": "What are the five classic signs of overwork's effect on the body per the 'Five Exhaustions'?",
+        "a": "Excessive use of eyes injures Blood (Heart); excessive lying down injures Qi (Lungs); excessive sitting injures muscles (Spleen); excessive standing injures bones (Kidneys); excessive exercise injures sinews (Liver). (Simple Questions Ch.23)"
+      },
+      {
+        "q": "How does overwork eventually lead to Yin deficiency?",
+        "a": "Daily work uses Post-Heaven Qi which replenishes quickly with rest. But if Qi cannot keep up with demands, the body draws on Yin substances (the 'savings account') to meet energy needs. Sustained overwork over years thus depletes Yin, especially Kidney-Yin. Short holidays cannot restore Yin — requires sustained lifestyle change."
+      },
+      {
+        "q": "What tongue changes indicate antibiotic use? Beta-blocker use?",
+        "a": "Antibiotics: peeled tongue in patches (patches without coating) = Stomach-Yin deficiency. Beta-blockers: slow, deep pulse — pulse CANNOT be used for diagnosis in this patient."
+      },
+      {
+        "q": "Describe Wind-Heat vs Wind-Cold entry routes and key distinguishing signs.",
+        "a": "Wind-Cold enters via skin → Taiyang channels. Wind-Heat enters via nose and mouth → Lung/LI channels. Wind-Cold: severe chills > fever, no thirst, thin white coating, superficial TENSE pulse. Wind-Heat: mild chills < fever, thirst, thin yellow coating, superficial RAPID pulse, possibly sore throat."
+      },
+      {
+        "q": "What is the Shaoyang stage and what are its characteristic symptoms?",
+        "a": "The intermediate/half-exterior half-interior stage. Pathogen failed to go fully interior, anti-pathogenic Qi insufficient to push it back out. Classic: alternating chills and fever, fullness costal/hypochondriac, anorexia, vomiting, bitter taste, dry throat, blurred vision, string-taut pulse. Harmonize Shaoyang (Xiao Chai Hu Tang)."
+      },
+      {
+        "q": "Name the three main Liver-related disharmonies arising from anger/emotional disturbance.",
+        "a": "(1) Liver Qi Stagnation — anger bottled up, key: Wiry pulse, possible distending pain. (2) Liver Yang Rising — anger expressed, + Kidney Yin def; headache, dizziness, red face, tinnitus. (3) Liver Fire Blazing — intense/hot personality + Heat constitution; severe ascending symptoms, red tongue with yellow coat."
+      },
+      {
+        "q": "What are the 'counteracting emotions' and give two examples.",
+        "a": "Each emotion counteracts another emotion via the Five Element Control Sequence: Sadness controls Anger (Metal controls Wood); Fear controls Joy (Water controls Fire); Anger controls Pensiveness (Wood controls Earth); Joy controls Worry (Fire controls Metal); Pensiveness controls Fear (Earth controls Water)."
+      }
+    ],
+    "w6": [
+      {
+        "q": "What is the single fastest prognostic read available on a patient, done before tongue or pulse?",
+        "a": "Spirit (Shen) — assessed from the moment the patient enters. A patient who 'has Shen' has a workable foundation even if severely ill; a patient who has 'lost Shen' is in danger regardless of the presenting complaint."
+      },
+      {
+        "q": "List the five markers of 'Has Spirit' (得神).",
+        "a": "Lustrous complexion, bright/alert eyes, clear responsive mind, even unlabored breathing, moist firm skin (intact Stomach-Qi)."
+      },
+      {
+        "q": "What is False Spirit (假神) and why is it dangerous to misread?",
+        "a": "A brief deceptive flare of apparent vitality in a severely declining patient — classically 'the flaring up of a candle before it goes out.' Misreading it as genuine recovery is a serious clinical (and family communication) error."
+      },
+      {
+        "q": "Differentiate the three variants of a White complexion.",
+        "a": "Dull pale = Blood deficiency. Bright/shiny white = Yang deficiency. Bluish-white = Yang deficiency + interior Cold."
+      },
+      {
+        "q": "What's the difference between whole-face red and malar flush (cheekbones only)?",
+        "a": "Whole face flushed = Full Heat (Excess). Malar flush (cheekbones only) = Empty Heat (Yin deficiency)."
+      },
+      {
+        "q": "What does 'distinct' vs 'obscure' complexion color indicate?",
+        "a": "Distinct (clearly one shade) = Upright Qi still intact, whether Full or Empty. Obscure (muddy, indistinct) = more serious state, Upright Qi failing."
+      },
+      {
+        "q": "Map the six eye zones to their organs.",
+        "a": "Inner/outer corners = Heart. Upper eyelid = Spleen. Lower eyelid = Stomach. Sclera = Lungs. Iris = Liver. Pupil = Kidney."
+      },
+      {
+        "q": "What do the nose tip and nose bridge each correspond to?",
+        "a": "Tip = Spleen zone. Bridge = Liver zone. Green/blue tip = Cold in Spleen. Red bridge = Liver-Fire."
+      },
+      {
+        "q": "What is the single two-axis framework that generalizes across nearly all bodily secretions?",
+        "a": "Thin, clear, watery, profuse = Cold and/or Deficiency. Thick, sticky, dark/yellow, scanty = Heat and/or Excess."
+      },
+      {
+        "q": "What does purplish/dusky nail color indicate?",
+        "a": "Blood stasis, or Qi/Blood deficiency with poor circulation."
+      }
+    ],
+    "w7": [
+      {
+        "q": "Why did Maciocia move Pain to Question #1 and Chills/Fever to #12?",
+        "a": "Pain is the most common presenting complaint for Western patients, so it's asked first. Chills/Fever moved to #12 because it's mainly used to CONFIRM the Hot/Cold nature of a pattern already largely identified — the classical 10-question order assumed acute exterior febrile disease."
+      },
+      {
+        "q": "List Maciocia's 8-step full intake procedure in order.",
+        "a": "1) Let patient speak freely 2) Ask specific questions to determine pattern/onset 3) Exclude/confirm other patterns 4) Broadly follow the 16 Questions 5) Ask about past diseases/operations 6) Look at tongue, feel pulse 7) Ask about family illnesses 8) Inquire about emotional/family/work life to find the cause."
+      },
+      {
+        "q": "In the Master Pain Table, how does Empty pain differ from Full pain on pressure and onset?",
+        "a": "Empty pain: alleviated by pressure, dull/lingering character, slow gradual onset, better with rest. Full pain: aggravated by pressure, sharp character, sudden onset, better with movement."
+      },
+      {
+        "q": "What pain character and location indicates Blood stasis?",
+        "a": "Boring or stabbing pain, FIXED location, worse at night — classically head, chest, epigastrium, or Uterus."
+      },
+      {
+        "q": "Differentiate Qi stagnation pain from Blood stasis pain.",
+        "a": "Qi stagnation: distension greater than pain, no fixed location, comes and goes. Blood stasis: boring/stabbing, fixed location, doesn't move."
+      },
+      {
+        "q": "What does thirst with desire for large amounts of cold water indicate? Small sips?",
+        "a": "Large cold amounts = Full-Heat (any organ). Small sips = Yin deficiency (usually Stomach or Kidneys) — body wants moisture but can't process a large volume."
+      },
+      {
+        "q": "What does thirst with NO desire to actually drink indicate?",
+        "a": "Damp-Heat — fluids feel present internally despite the Heat, so there's little urge to add more."
+      },
+      {
+        "q": "Differentiate spontaneous sweating from night sweating.",
+        "a": "Spontaneous sweating: occurs while awake, worse on exertion, indicates Qi deficiency (Lung or Wei-Qi). Night sweating: occurs during sleep, stops on waking, indicates Yin deficiency."
+      },
+      {
+        "q": "What does sweating on the hands only indicate, versus whole-body profuse sweating?",
+        "a": "Hands only = Heart or Lung-Qi deficiency. Whole-body profuse sweating = Lung-Qi deficiency, or in acute illness, collapse of Yang."
+      },
+      {
+        "q": "What does Wind as an exterior pathogen classically cause in terms of pain location, per the Master Pain framework?",
+        "a": "Occipital headache and stiffness — Wind and Dampness are the two exterior pathogens most likely to directly cause pain."
+      }
+    ],
+    "w8": [
+      {
+        "q": "What does 'condition relieved by eating' vs 'aggravated by eating' indicate?",
+        "a": "Relieved by eating = Empty (Deficiency) pattern. Aggravated by eating = Full (Excess) pattern."
+      },
+      {
+        "q": "Differentiate lack of appetite from excessive hunger.",
+        "a": "Lack of appetite = Spleen-Qi deficiency. Excessive hunger = Stomach-Heat."
+      },
+      {
+        "q": "What do feelings of fullness, distension, and heaviness after eating each indicate?",
+        "a": "Fullness = Dampness or food retention. Distension = Qi stagnation. Heaviness = Dampness."
+      },
+      {
+        "q": "Map the five tastes in the mouth to their patterns.",
+        "a": "Bitter = Heat (esp. Liver/GB-Fire). Sweet/sticky = Dampness (Spleen). Salty = Kidney-Yin deficiency. No taste sensation = Spleen deficiency. Pungent/acrid = Lung-Heat."
+      },
+      {
+        "q": "What does diarrhea with mucus AND blood, with a heavy painful anus, indicate?",
+        "a": "Damp-Heat in the Intestines."
+      },
+      {
+        "q": "What does loose stool with visibly undigested food indicate?",
+        "a": "Spleen-Qi deficiency."
+      },
+      {
+        "q": "Differentiate very frequent + copious urination from frequent + scanty urination.",
+        "a": "Very frequent + copious = Kidney-Yang deficiency. Frequent + scanty = Qi deficiency."
+      },
+      {
+        "q": "What does scanty, dark urine indicate?",
+        "a": "Kidney-Yin deficiency."
+      },
+      {
+        "q": "List the six steps for taking the pulse in order.",
+        "a": "1) Time (ideally morning) 2) Level the arm 3) Place the fingers 4) Arrange the fingers (per body size) 5) Regulate the fingers (initial overall read) 6) Move the fingers (lift/press/search/push/roll)."
+      },
+      {
+        "q": "What does it mean for a pulse to 'have spirit'?",
+        "a": "It is soft but has an underlying strength — not hard, not collapsing. Assessed independently of specific pulse qualities and carries real prognostic weight, like Shen on inspection."
+      }
+    ],
+    "w9": [
+      {
+        "q": "What does tenderness at Ren-17 on LIGHT pressure specifically indicate?",
+        "a": "Heart-Blood stasis."
+      },
+      {
+        "q": "Differentiate a Full vs Empty presentation on chest palpation.",
+        "a": "Full: tenderness aggravated by palpation, often Excess Lung condition (Phlegm). Empty: palpation actually RELIEVES discomfort, indicates Deficiency of Heart or Lungs."
+      },
+      {
+        "q": "What does a discrepancy between the apical beat and the radial pulse indicate?",
+        "a": "Poor prognosis — flags for closer follow-up."
+      },
+      {
+        "q": "What do masses that MOVE under abdominal palpation indicate, versus masses that are FIXED and hard?",
+        "a": "Moving masses = Qi stagnation. Fixed, hard masses = Blood stasis."
+      },
+      {
+        "q": "What is the single general rule for interpreting sound loudness across breathing, cough, vomiting, hiccup, and borborygmi?",
+        "a": "LOUD/coarse/forceful = Full pattern. WEAK/thin/quiet = Empty pattern."
+      },
+      {
+        "q": "What is the single general rule for smelling diagnosis?",
+        "a": "Strong or foul odor = Heat. Absence of odor / bland = Cold. Smelling is rarely a clinching factor alone — mostly confirms a pattern already suspected."
+      },
+      {
+        "q": "What does sighing indicate, and how does it differ by organ involved?",
+        "a": "Sighing indicates Qi stagnation — of the Liver if from repressed anger/frustration, or of the Lungs if from worry/sadness. It does not follow the loud/weak volume axis."
+      },
+      {
+        "q": "What does a dry cough specifically indicate regardless of volume?",
+        "a": "Lung-Yin deficiency."
+      },
+      {
+        "q": "Map the Five Elements to their voice and smell correspondences.",
+        "a": "Wood/Liver: shouting voice, rancid smell. Fire/Heart: laughing voice, scorched smell. Earth/Spleen: singing voice, fragrant/sweetish smell. Metal/Lung: weeping voice, rotten smell. Water/Kidney: groaning voice, putrid smell."
+      },
+      {
+        "q": "Why should you re-check a pulse before diagnosing it as Knotted, Hasty, or Intermittent?",
+        "a": "Many apparent irregularities are pseudo-arrhythmias from patient movement, talking, or breath-holding — re-check with the patient still and breathing calmly before committing to a true arrhythmic diagnosis."
+      }
+    ]
+  },
+  "multipleChoiceQuizzes": {
+    "wcompanions": [
+      {
+        "q": "Hammer & Bilton's pulse system describes the pulse along which four axes?",
+        "options": [
+          "Yin, Yang, Qi, Blood",
+          "Rate, Rhythm/Stability, Volume, Depth",
+          "Floating, Deep, Slow, Rapid",
+          "Excess, Deficiency, Hot, Cold"
+        ],
+        "correct": 1,
+        "explain": "These four measurable axes offer a contemporary alternative lens to FCM's 28 fixed named pulse qualities."
+      },
+      {
+        "q": "A pseudo-arrhythmia is best described as:",
+        "options": [
+          "A true, serious cardiac arrhythmia requiring referral",
+          "An irregularity from a benign transient cause, mimicking a true arrhythmic pulse",
+          "A pulse quality found only in pregnancy",
+          "A permanent pulse change after age 60"
+        ],
+        "correct": 1,
+        "explain": "Movement, talking, breath-holding, or caffeine can all produce a pseudo-arrhythmia — re-check calm and still before diagnosing the real thing."
+      },
+      {
+        "q": "In the Maciocia Tongue Companion, a Red tongue SIDE with no coating indicates:",
+        "options": [
+          "Liver-Fire",
+          "Liver-Yin deficiency with Empty-Heat",
+          "Stomach-Heat",
+          "Heart-Fire"
+        ],
+        "correct": 1,
+        "explain": "Sides WITH coating = Liver-Fire/GB-Heat (Full). Sides WITHOUT coating = Liver-Yin deficiency with Empty-Heat."
+      },
+      {
+        "q": "Which Maciocia Tongue Companion chapter is flagged as most relevant to the Final exam?",
+        "options": [
+          "Chapter 1 — History",
+          "Chapter 8 — Tongue Diagnosis in the Clinic",
+          "Chapter 9 — Case Histories",
+          "Chapter 2 — Overview"
+        ],
+        "correct": 1,
+        "explain": "Chapter 8 covers clinical integration of tongue with pulse and symptoms — directly matching Final exam content."
+      },
+      {
+        "q": "Hammer's 'Depth' axis (Ch.9) most closely parallels which FCM concept?",
+        "options": [
+          "Slow/Rapid qualities",
+          "Empty/Full qualities",
+          "Floating/Deep qualities",
+          "Knotted/Hasty/Intermittent"
+        ],
+        "correct": 2,
+        "explain": "Depth maps to FCM's Floating/Deep, but with more granular sub-classification of superficial vs. submerged qualities."
+      }
+    ],
+    "w3": [
+      {
+        "q": "On the LEFT wrist, the Guan (Middle) position corresponds to which organs?",
+        "options": [
+          "Heart/Small Intestine",
+          "Liver/Gall Bladder",
+          "Kidney (Yin)",
+          "Lung/Large Intestine"
+        ],
+        "correct": 1,
+        "explain": "Left wrist front-to-back: Cun=Heart/SI, Guan=Liver/GB, Chi=Kidney(Yin)."
+      },
+      {
+        "q": "A pulse that has Spirit but lacks Root indicates:",
+        "options": [
+          "Completely normal health",
+          "Yin/Yang organs weak while Qi/Blood are still intact",
+          "Immediate collapse of Yang",
+          "A purely exterior condition"
+        ],
+        "correct": 1,
+        "explain": "This combination is a classic marker of developing Kidney weakness while the Heart is still compensating."
+      },
+      {
+        "q": "A pulse that is RAPID with irregular stops is called:",
+        "options": [
+          "Knotted",
+          "Hasty",
+          "Intermittent",
+          "Choppy"
+        ],
+        "correct": 1,
+        "explain": "Hasty = rapid + irregular stops, indicating extreme Heat, Heart-Qi deficiency, or Heart-Fire."
+      },
+      {
+        "q": "Which pulse quality is a NORMAL finding during pregnancy?",
+        "options": [
+          "Wiry",
+          "Slippery",
+          "Choppy",
+          "Hollow"
+        ],
+        "correct": 1,
+        "explain": "Slippery is pathological (Phlegm/Dampness/food retention) in most contexts but is a normal finding in pregnancy."
+      },
+      {
+        "q": "The 'Slowed-down' pulse quality (4 beats/breath) is best described as:",
+        "options": [
+          "A sign of Cold",
+          "A healthy, non-pathological finding",
+          "A sign of severe deficiency",
+          "Identical to the Slow pulse"
+        ],
+        "correct": 1,
+        "explain": "Slowed-down is explicitly healthy — distinct from the pathological Slow pulse (3 beats/breath, indicating Cold)."
+      },
+      {
+        "q": "A pulse that is empty in the middle at all levels, indicating hemorrhage, is called:",
+        "options": [
+          "Leather",
+          "Firm",
+          "Hollow",
+          "Soggy"
+        ],
+        "correct": 2,
+        "explain": "Hollow pulse: empty in the middle — classic sign of hemorrhage."
+      },
+      {
+        "q": "Which pulse quality feels 'broken into dots' and signals a serious finding?",
+        "options": [
+          "Minute",
+          "Scattered",
+          "Fine",
+          "Choppy"
+        ],
+        "correct": 1,
+        "explain": "Scattered indicates severe Qi and Blood deficiency, especially of the Kidney — flagged as serious."
+      },
+      {
+        "q": "What is the correct order of the Six-Step Pulse Reading Sequence's first two steps?",
+        "options": [
+          "Individual positions, then overall quality",
+          "Pulse as a whole, then Spirit/Stomach-Qi/Root",
+          "Strength, then the 3 levels",
+          "The 3 positions, then individual positions"
+        ],
+        "correct": 1,
+        "explain": "The sequence starts broad (whole pulse), then checks the three pillars of a healthy pulse (Spirit, Stomach-Qi, Root), before narrowing to specifics."
+      },
+      {
+        "q": "A Wiry pulse most specifically suggests:",
+        "options": [
+          "Blood deficiency",
+          "Liver disharmony, pain, or Phlegm",
+          "Hemorrhage",
+          "Normal pregnancy"
+        ],
+        "correct": 1,
+        "explain": "Wiry (taut like a guitar string) is the classic Liver-disharmony/pain/Phlegm pulse quality."
+      },
+      {
+        "q": "An Intermittent pulse (regular stops, any rate) is considered:",
+        "options": [
+          "The mildest of the three irregular pulses",
+          "A serious sign, pointing to a Yin-organ problem",
+          "A normal finding in athletes",
+          "Identical in meaning to Knotted"
+        ],
+        "correct": 1,
+        "explain": "Intermittent is the most serious of the three stop-pattern pulses (Knotted/Hasty/Intermittent), pointing to a genuine Yin-organ problem."
+      }
+    ],
+    "w4": [
+      {
+        "q": "A Purple tongue body color, per Maciocia, ALWAYS indicates:",
+        "options": [
+          "Qi stagnation",
+          "Blood stasis",
+          "Yin deficiency",
+          "Phlegm accumulation"
+        ],
+        "correct": 1,
+        "explain": "Purple always indicates Blood stasis — reddish-purple from Heat, bluish-purple from Cold."
+      },
+      {
+        "q": "A Red tongue with NO coating (peeled) most strongly indicates:",
+        "options": [
+          "Full-Heat from an acute invasion",
+          "Empty-Heat from Yin deficiency",
+          "Interior Cold",
+          "Phlegm-Dampness"
+        ],
+        "correct": 1,
+        "explain": "Peeled/no coating + red body = classic Empty-Heat (Yin deficiency) presentation."
+      },
+      {
+        "q": "A 'Stomach crack' on the tongue is best described as:",
+        "options": [
+          "A long deep crack reaching the tip",
+          "A shallow wide crack NOT reaching the tip",
+          "A horizontal crack on the sides only",
+          "Multiple small ice-floe-like cracks"
+        ],
+        "correct": 1,
+        "explain": "Stomach crack = shallow and wide, does not reach the tip (unlike the deep Heart crack, which does)."
+      },
+      {
+        "q": "Tooth-marking on the tongue edges is classically attributed to:",
+        "options": [
+          "Liver-Blood deficiency",
+          "Spleen-Qi deficiency",
+          "Kidney-Yin deficiency",
+          "Heart-Fire"
+        ],
+        "correct": 1,
+        "explain": "A swollen, soft tongue from Spleen-Qi deficiency presses against the teeth, leaving marks."
+      },
+      {
+        "q": "Which tongue zone corresponds to the Kidney in the standard microsystem map?",
+        "options": [
+          "Tip",
+          "Center",
+          "Root",
+          "Sides"
+        ],
+        "correct": 2,
+        "explain": "Root = Kidney. Tip = Heart/Lung, Center = Spleen/Stomach, Sides = Liver/Gallbladder."
+      },
+      {
+        "q": "A Long tongue body most indicates a tendency to:",
+        "options": [
+          "Cold",
+          "Heat, particularly Heart-Heat",
+          "Blood stasis",
+          "Dampness"
+        ],
+        "correct": 1,
+        "explain": "A Long tongue points toward Heat, especially of the Heart."
+      },
+      {
+        "q": "A Short tongue that is pale and wet indicates:",
+        "options": [
+          "Extreme Yin deficiency",
+          "Interior Cold",
+          "Full Heat",
+          "Liver-Qi stagnation"
+        ],
+        "correct": 1,
+        "explain": "Short + pale + wet = interior Cold. (Short + red + peeled would indicate extreme Yin deficiency instead.)"
+      },
+      {
+        "q": "The tongue BODY (color and shape) primarily reflects:",
+        "options": [
+          "The Yang organs and any pathogenic factor",
+          "Blood, Nutritive Qi, and the Yin organs",
+          "Only the Stomach's condition",
+          "Nothing diagnostically significant"
+        ],
+        "correct": 1,
+        "explain": "Tongue body reflects Blood/Nutritive Qi/Yin organs; the coating reflects the Yang organs and pathogenic factors."
+      },
+      {
+        "q": "A coating that looks 'added on' rather than rooted in the tongue body suggests:",
+        "options": [
+          "Perfectly normal Stomach-Qi",
+          "The coating isn't truly rooted — Stomach-Qi deficiency",
+          "Always indicates Excess Heat",
+          "A sign of pregnancy"
+        ],
+        "correct": 1,
+        "explain": "An unrooted coating points to Stomach-Qi deficiency, and if thick, may also mask an underlying deficiency beneath a strong pathogen."
+      },
+      {
+        "q": "A swollen RED tip on the tongue, compared to wide swollen PALE sides, indicates:",
+        "options": [
+          "Both indicate identical patterns",
+          "Swollen red tip = severe Heart-Fire; pale sides = Spleen deficiency",
+          "Swollen red tip = Spleen deficiency; pale sides = Heart-Fire",
+          "Neither finding has diagnostic significance"
+        ],
+        "correct": 1,
+        "explain": "Location and color both matter — red swelling at the tip points to Heart-Fire, while pale swelling at the sides points to Spleen deficiency (fluid retention, not Heat)."
+      }
+    ],
+    "w1": [
+      {
+        "q": "What are the Eight Principles built from?",
+        "options": [
+          "Four pairs of opposites, with Yin/Yang as the master pair",
+          "Six climatic factors and two constitutional types",
+          "The Five Elements plus Qi and Blood",
+          "Eight separate unrelated diagnostic categories"
+        ],
+        "correct": 0,
+        "explain": "Exterior/Interior, Cold/Heat, Deficiency/Excess, and Yin/Yang — the last pair summarizes the other six."
+      },
+      {
+        "q": "Which two features must occur SIMULTANEOUSLY to confirm an exterior syndrome?",
+        "options": [
+          "Fever and thirst",
+          "Aversion to cold and fever occurring together",
+          "Floating pulse and red tongue",
+          "Sweating and chills alternating"
+        ],
+        "correct": 1,
+        "explain": "The moment aversion to cold disappears — even if fever remains — the pathogen has moved interior."
+      },
+      {
+        "q": "Which pulse indicates an exterior syndrome?",
+        "options": [
+          "Deep",
+          "Wiry",
+          "Floating",
+          "Slow"
+        ],
+        "correct": 2,
+        "explain": "Floating (浮脉) = exterior. Deep (沉脉) = interior."
+      },
+      {
+        "q": "Full Heat vs. Empty Heat: which tongue coating distinguishes them?",
+        "options": [
+          "Full Heat has no coating; Empty Heat has thick yellow coating",
+          "Full Heat has thick yellow coating; Empty Heat has little/no coating",
+          "Both have identical coatings — only the pulse differs",
+          "Full Heat has a white coating; Empty Heat has a black coating"
+        ],
+        "correct": 1,
+        "explain": "Full Heat: red tongue + thick yellow coat, Rapid Forceful pulse. Empty Heat (Yin def): red tongue + little/no coat, Rapid Fine/Thready pulse."
+      },
+      {
+        "q": "What is the treatment principle for a Deficiency pattern?",
+        "options": [
+          "Reduce/expel (泻)",
+          "Tonify (补)",
+          "Release the exterior",
+          "Warm and open"
+        ],
+        "correct": 1,
+        "explain": "Deficiency → Tonify. Excess → Reduce/Expel. Never tonify in an exterior condition — it traps the pathogen inward."
+      },
+      {
+        "q": "Which of these is NOT one of the three types of complex deficiency patterns?",
+        "options": [
+          "Deficiency complicated by Excess",
+          "Transformation of Excess to Deficiency",
+          "Deficiency with false Excess manifestations",
+          "Simultaneous Deficiency of all Eight Principles"
+        ],
+        "correct": 3,
+        "explain": "The three real types are: complicated by excess, transformation from excess, and deficiency with false-excess signs."
+      },
+      {
+        "q": "In Collapse of Yang, what is the characteristic sweat quality?",
+        "options": [
+          "Sticky, warm sweat",
+          "Cold sweat like pearls",
+          "No sweating at all",
+          "Profuse but odorless sweat"
+        ],
+        "correct": 1,
+        "explain": "Collapse of Yang: cold sweat like pearls, cold limbs, pale moist tongue, thready fading pulse. Collapse of Yin: sticky warm sweat, red dry tongue."
+      },
+      {
+        "q": "'True Heat with False Cold' is revealed clinically by which finding?",
+        "options": [
+          "A weak, superficial pulse",
+          "A deep but FORCEFUL pulse despite cold limbs",
+          "A pale, swollen tongue",
+          "Absence of thirst"
+        ],
+        "correct": 1,
+        "explain": "Interior Heat so extreme it blocks Yang from reaching the extremities — the deep, forceful pulse reveals the true Heat underneath."
+      },
+      {
+        "q": "Qi Sinking is best described as:",
+        "options": [
+          "A completely separate pathology from Qi Deficiency",
+          "A subtype of Qi Deficiency plus a bearing-down sensation/prolapse",
+          "A form of Qi Stagnation with pain that waxes and wanes",
+          "Rebellious Qi affecting the Stomach"
+        ],
+        "correct": 1,
+        "explain": "Sinking of Qi always includes all Qi Deficiency signs, PLUS bearing-down sensation and possible organ prolapse."
+      },
+      {
+        "q": "Which of the three Blood pathologies presents with fixed, stabbing pain and a purple tongue?",
+        "options": [
+          "Blood Deficiency",
+          "Heat in the Blood",
+          "Blood Stasis",
+          "Blood Sinking"
+        ],
+        "correct": 2,
+        "explain": "Blood Stasis: fixed stabbing pain, palpable mass, purple tongue, hesitant pulse."
+      },
+      {
+        "q": "What is the key difference between Jin (津) and Ye (液)?",
+        "options": [
+          "Jin is thick and stored in joints; Ye is thin and fills vessels",
+          "Jin is thin/easily replenished; Ye is thick/harder to replace, nourishes joints and marrow",
+          "They are two names for the same substance",
+          "Jin is Yang in nature; Ye does not exist in modern TCM theory"
+        ],
+        "correct": 1,
+        "explain": "Jin: clear, thin, easily consumed and replenished (Yang-type). Ye: thick, stored in joints/orifices, nourishes brain and marrow (Yin-type)."
+      },
+      {
+        "q": "Mei He Qi (梅核气) — 'plum-pit qi' — is caused by:",
+        "options": [
+          "Kidney-Yang deficiency with edema",
+          "Liver-Qi stagnation combined with Phlegm accumulation in the throat",
+          "An actual physical obstruction found on endoscopy",
+          "Wind-Cold invading the Lung"
+        ],
+        "correct": 1,
+        "explain": "A sensation of something stuck in the throat with nothing found on endoscopy — classic Liver-Qi stagnation + Phlegm. Key formula: Ban Xia Hou Po Tang."
+      },
+      {
+        "q": "In the Four Levels system, faint skin rashes and dry mouth without strong desire to drink indicate which level?",
+        "options": [
+          "Wei (Defensive) level",
+          "Qi level",
+          "Ying (Nutrient) level",
+          "Xue (Blood) level"
+        ],
+        "correct": 2,
+        "explain": "Ying level — the pathogen has injured Ying-Yin and is disturbing the Heart/Mind. Deep red tongue, thready rapid pulse."
+      },
+      {
+        "q": "'True Cold with False Heat' presents with a flushed face, but the patient will:",
+        "options": [
+          "Refuse all warm drinks and covering",
+          "Want to cover up and prefer warm drinks despite the flushed appearance",
+          "Show a red, dry tongue with thick yellow coat",
+          "Have a bounding, forceful pulse"
+        ],
+        "correct": 1,
+        "explain": "Extreme interior Cold forces Yang to the surface — the patient still wants to cover up and take warm drinks. Pulse is superficial but WEAK."
+      },
+      {
+        "q": "Why does the Heart get involved when a different organ is the primary target of an emotion?",
+        "options": [
+          "The Heart physically filters all blood before it reaches other organs",
+          "The Heart houses the Mind (Shen), which registers all emotional disturbance",
+          "It doesn't — this is a common misconception",
+          "Only Fear and Shock involve the Heart"
+        ],
+        "correct": 1,
+        "explain": "All 7 emotions affect the Heart in addition to their primary organ, because the Heart houses the Shen. Red tongue tip is a common resulting sign."
+      },
+      {
+        "q": "Which pulse quality is classically tied to anger as a cause of disease?",
+        "options": [
+          "Slippery",
+          "Choppy",
+          "Wiry — 'if not Wiry, then anger is not the cause'",
+          "Floating"
+        ],
+        "correct": 2,
+        "explain": "Maciocia: when anger is the cause of disease, the pulse MUST be Wiry. If it isn't, anger is not the cause."
+      },
+      {
+        "q": "What is the general progression Maciocia describes from prolonged emotional stress?",
+        "options": [
+          "Emotions → Qi stagnation → Blood stasis → Heat/Fire → Phlegm",
+          "Emotions → Yang deficiency → Cold → Dampness",
+          "Emotions → Blood deficiency → Wind → Fire",
+          "Emotions bypass Qi and directly cause Phlegm"
+        ],
+        "correct": 0,
+        "explain": "The classic sequence: Qi stagnation, then Blood stasis, then Heat turning to Fire, then Phlegm from disrupted fluid metabolism."
+      },
+      {
+        "q": "Collapse of Yang differs from Collapse of Yin primarily in that Collapse of Yang shows:",
+        "options": [
+          "Red, dry tongue and thirst for cold drinks",
+          "Cold sweat, cold limbs, no thirst (or prefers hot), pale moist tongue",
+          "Restlessness with a rapid, thready pulse",
+          "Sticky, warm sweat with feverish extremities"
+        ],
+        "correct": 1,
+        "explain": "Collapse of Yang = extreme Yang exhaustion: cold sweat like pearls, cold limbs, pale moist tongue, thready fading pulse."
+      },
+      {
+        "q": "A pulse that is Rapid AND Fine/Thready, with a red tongue that has little or no coating, most likely indicates:",
+        "options": [
+          "Full Heat (Excess)",
+          "Empty Heat (Yin deficiency)",
+          "Interior Cold",
+          "Exterior Wind-Cold"
+        ],
+        "correct": 1,
+        "explain": "Empty Heat from Yin deficiency: red tongue with little/no coat, pulse Rapid and Fine/Thready — contrast with Full Heat's thick yellow coat and forceful pulse."
+      },
+      {
+        "q": "Which statement correctly describes the relationship between Deficiency and Excess treatment principles?",
+        "options": [
+          "Both Deficiency and Excess are treated by tonifying",
+          "Deficiency is tonified; Excess is reduced/expelled — reversing this worsens the condition",
+          "Excess is always tonified first to build a foundation",
+          "Treatment principle depends only on the pulse, not on Deficiency/Excess status"
+        ],
+        "correct": 1,
+        "explain": "Getting this backwards is a classic mistake — tonifying an Excess pattern reinforces the pathogen; reducing a true Deficiency further depletes the patient."
+      }
+    ],
+    "w2": [
+      {
+        "q": "According to the Six Excesses framework, which pathogen is described as 'chief of the hundred diseases'?",
+        "options": [
+          "Cold",
+          "Wind",
+          "Dampness",
+          "Dryness"
+        ],
+        "correct": 1,
+        "explain": "Wind is mobile and easily combines with other pathogens (Wind-Cold, Wind-Heat, Wind-Damp), and it opens the pores for other pathogens to invade."
+      },
+      {
+        "q": "What makes Summer-Heat unique among the Six Excesses?",
+        "options": [
+          "It is the only excess that can occur in any season",
+          "It can ONLY occur in summer and always injures Qi and Fluids together",
+          "It never combines with other pathogens",
+          "It is purely an endogenous, never an exogenous, factor"
+        ],
+        "correct": 1,
+        "explain": "Summer-Heat is the one climatic factor that cannot arise outside its associated season, and it always injures both Qi and Yin/Fluids simultaneously."
+      },
+      {
+        "q": "Which feature most reliably distinguishes exterior Aversion to Cold from a chronic Yang-deficiency cold feeling?",
+        "options": [
+          "Whether the tongue is pale",
+          "Whether it is relieved by covering with blankets",
+          "Whether the pulse is thready",
+          "Whether the patient reports fatigue"
+        ],
+        "correct": 1,
+        "explain": "Exterior Aversion to Cold: sudden onset, NOT relieved by covering, occurs with simultaneous fever. Yang-deficiency cold: chronic, IS relieved by covering, no accompanying fever."
+      },
+      {
+        "q": "Wind-Cold and Wind-Heat differ in their entry route. Which is correct?",
+        "options": [
+          "Both enter exclusively through the nose and mouth",
+          "Wind-Cold enters via the skin (Taiyang channels); Wind-Heat enters via nose/mouth (Lung/LI channels)",
+          "Wind-Cold enters via the eyes; Wind-Heat enters via the ears",
+          "Entry route is identical — only the season differs"
+        ],
+        "correct": 1,
+        "explain": "This distinction explains why treatment channels differ: Wind-Cold → Taiyang (BL, SI); Wind-Heat → Lung and Large Intestine channels."
+      },
+      {
+        "q": "At what point does aversion to cold disappearing become clinically significant?",
+        "options": [
+          "It has no diagnostic significance",
+          "It signals the pathogen has moved from Exterior to Interior, even if fever persists",
+          "It only matters if the pulse is also Floating",
+          "It indicates the patient is fully recovered"
+        ],
+        "correct": 1,
+        "explain": "Aversion to cold resolving is the single most reliable marker of the Exterior-to-Interior transition."
+      },
+      {
+        "q": "The Shaoyang stage in the Six Stages framework is best described as:",
+        "options": [
+          "Pure Interior Heat with no exterior signs",
+          "A half-exterior/half-interior stage with alternating chills and fever",
+          "The final, most severe stage of disease",
+          "Identical to the Taiyang stage but with a different pulse"
+        ],
+        "correct": 1,
+        "explain": "Shaoyang: pathogen blocked from going fully interior but the body can't expel it either. Classic signs: alternating chills/fever, bitter taste, hypochondriac fullness, Wiry pulse. Treated by harmonizing (e.g. Xiao Chai Hu Tang)."
+      },
+      {
+        "q": "Which of the Seven Emotions is the exception to the 'must be long-lasting or very intense' rule for causing disease?",
+        "options": [
+          "Anger",
+          "Worry",
+          "Shock — it can cause disease almost instantly",
+          "Pensiveness"
+        ],
+        "correct": 2,
+        "explain": "Shock's intensity alone can cause disease from a single instant, unlike the other six emotions which generally need duration or marked intensity."
+      },
+      {
+        "q": "What effect does Worry have on Qi, and which organs does it target?",
+        "options": [
+          "Worry scatters Qi and targets the Kidneys",
+          "Worry knots Qi and targets the Lungs and Spleen",
+          "Worry makes Qi rise and targets the Liver",
+          "Worry has no direct effect on Qi movement"
+        ],
+        "correct": 1,
+        "explain": "Worry knots Qi, first in the Lungs (shallow breathing, tense shoulders) then the Spleen as it becomes chronic (poor appetite, fullness)."
+      },
+      {
+        "q": "The 'Five Exhaustions' (五劳) from Simple Questions Ch.23 pairs excessive standing with injury to which organ?",
+        "options": [
+          "Heart",
+          "Spleen",
+          "Kidneys",
+          "Liver"
+        ],
+        "correct": 2,
+        "explain": "Excessive standing injures the bones, which relates to the Kidneys. (Eyes→Heart/Blood, lying down→Lungs/Qi, sitting→Spleen/muscles, exercise→Liver/sinews.)"
+      },
+      {
+        "q": "Which tongue finding is classically associated with antibiotic use?",
+        "options": [
+          "Swollen and red",
+          "Peeled in patches (Stomach-Yin deficiency pattern)",
+          "Thick greasy white coat",
+          "Deep purple with static spots"
+        ],
+        "correct": 1,
+        "explain": "Antibiotics classically produce a peeled, patchy coating — a Stomach-Yin deficiency presentation — which should not be mistaken for a primary pattern."
+      },
+      {
+        "q": "Excessive sexual activity is understood in Chinese medicine to primarily deplete:",
+        "options": [
+          "Spleen-Qi",
+          "Kidney-Essence (Jing)",
+          "Lung-Yin",
+          "Heart-Blood"
+        ],
+        "correct": 1,
+        "explain": "Kidney-Essence governs reproduction, growth, and aging — excessive loss shows as sore weak lower back/knees, dizziness, tinnitus, premature greying, and weak Will (Zhi)."
+      },
+      {
+        "q": "Which of these is a classic sign suggesting a parasite-related pattern, especially in children?",
+        "options": [
+          "Constant, unchanging epigastric pain relieved by pressure",
+          "Periumbilical pain that comes and goes, plus appetite irregularity and teeth-grinding in sleep",
+          "Bearing-down sensation with organ prolapse",
+          "Fixed stabbing pain worse with pressure"
+        ],
+        "correct": 1,
+        "explain": "Classic parasite presentation: intermittent periumbilical pain, poor appetite alternating with excess hunger, teeth-grinding, pale facial patches, itchy nose/anus."
+      },
+      {
+        "q": "A patient with an old, unresolved injury and localized fixed pain that doesn't fit a clean Zang-Fu pattern most likely has:",
+        "options": [
+          "A dietary cause that was never addressed",
+          "Local Qi and Blood stagnation from unresolved trauma",
+          "An emotional cause requiring only Shen-calming treatment",
+          "A pure Kidney-Yang deficiency pattern"
+        ],
+        "correct": 1,
+        "explain": "Trauma — even old or surgical — creates local Qi/Blood stagnation that can persist as fixed, stabbing pain long after tissue has visibly healed."
+      },
+      {
+        "q": "Regarding Constitution (体质), which statement is most accurate?",
+        "options": [
+          "Constitution is entirely fixed and cannot be influenced after birth",
+          "Constitution is determined at conception and accounts for roughly half of lifetime health, but can be improved within limits",
+          "Constitution has no bearing on disease susceptibility",
+          "Constitution is determined solely by diet in childhood"
+        ],
+        "correct": 1,
+        "explain": "Maciocia: constitution, set by parental Kidney-Essence at conception plus maternal health during pregnancy, accounts for ~50% of lifetime health — and can be supported (not rewritten) via lifestyle."
+      },
+      {
+        "q": "Overwork, in the Chinese medicine sense discussed in FCM Ch.22, refers most specifically to:",
+        "options": [
+          "Any single day of intense physical labor",
+          "Working excessively long hours sustained over years, not a single bout of physical exertion",
+          "Only mental/intellectual strain, never physical",
+          "A condition that resolves completely within 24 hours regardless of duration"
+        ],
+        "correct": 1,
+        "explain": "Short-term overwork depletes Qi (recovers in days); it's YEARS of sustained overwork that draws down Yin — especially Kidney-Yin — since Yin cannot be replenished as quickly as Qi."
+      }
+    ],
+    "w6": [
+      {
+        "q": "What is the most reliable single indicator of Shen (Spirit) on inspection?",
+        "options": [
+          "Skin moisture",
+          "The eyes — bright and alert vs. dull and clouded",
+          "Nail color",
+          "Voice volume"
+        ],
+        "correct": 1,
+        "explain": "The eyes are the classic, most reliable single Shen indicator — bright and alert vs. dull, clouded, or vacant."
+      },
+      {
+        "q": "'False Spirit' (假神) is best described as:",
+        "options": [
+          "A permanent improvement in a chronic patient",
+          "A brief deceptive flare of vitality just before a severe decline worsens",
+          "A sign of excellent prognosis",
+          "An early sign of exterior Wind invasion"
+        ],
+        "correct": 1,
+        "explain": "Classically 'the flaring up of a candle before it goes out' — a dangerous sign to mistake for genuine recovery."
+      },
+      {
+        "q": "A bright, shiny white complexion (not dull) most specifically indicates:",
+        "options": [
+          "Blood deficiency",
+          "Yang deficiency",
+          "Full Heat",
+          "Liver-Fire"
+        ],
+        "correct": 1,
+        "explain": "Dull pale = Blood deficiency, but bright/shiny white specifically points to Yang deficiency."
+      },
+      {
+        "q": "Malar flush (redness confined to the cheekbones) indicates:",
+        "options": [
+          "Full Heat (Excess)",
+          "Empty Heat (Yin deficiency)",
+          "Blood stasis",
+          "Interior Cold"
+        ],
+        "correct": 1,
+        "explain": "Whole-face flushing is Full Heat; malar flush specifically is Empty Heat from Yin deficiency."
+      },
+      {
+        "q": "On the eye zone map, the sclera (white of the eye) corresponds to which organ?",
+        "options": [
+          "Liver",
+          "Kidney",
+          "Lungs",
+          "Heart"
+        ],
+        "correct": 2,
+        "explain": "Sclera = Lungs. (Corners = Heart, upper lid = Spleen, lower lid = Stomach, iris = Liver, pupil = Kidney.)"
+      },
+      {
+        "q": "A green/blue discoloration at the tip of the nose indicates:",
+        "options": [
+          "Liver-Fire",
+          "Cold in the Spleen",
+          "Lung-Heat",
+          "Kidney-Yang deficiency"
+        ],
+        "correct": 1,
+        "explain": "The nose tip corresponds to the Spleen zone; green/blue there indicates Cold in the Spleen."
+      },
+      {
+        "q": "Which general rule applies across nearly all bodily secretions?",
+        "options": [
+          "Sweet = Deficiency, sour = Excess",
+          "Thin/clear/watery = Cold or Deficiency; thick/sticky/dark = Heat or Excess",
+          "All secretions indicate Dampness",
+          "Secretion color has no diagnostic value"
+        ],
+        "correct": 1,
+        "explain": "This two-axis rule generalizes across saliva, sputum, discharge, and more."
+      },
+      {
+        "q": "An 'obscure' (muddy, indistinct) complexion color, compared to a 'distinct' one, indicates:",
+        "options": [
+          "A milder condition",
+          "Upright Qi failing — a more serious state",
+          "Nothing different diagnostically",
+          "Always an exterior pattern"
+        ],
+        "correct": 1,
+        "explain": "Distinct color = Upright Qi intact (Full or Empty). Obscure color = more serious, Upright Qi failing."
+      },
+      {
+        "q": "Purplish or dusky nail color most specifically indicates:",
+        "options": [
+          "Liver-Blood deficiency",
+          "Blood stasis or poor circulation from Qi/Blood deficiency",
+          "Kidney-Yin deficiency",
+          "Normal constitution"
+        ],
+        "correct": 1,
+        "explain": "Purplish/dusky nails point to Blood stasis or circulatory impairment from deficiency."
+      },
+      {
+        "q": "Dry, rough skin resembling fish scales, long-standing, most indicates:",
+        "options": [
+          "Acute Wind-Heat",
+          "Blood deficiency or Blood stasis",
+          "Damp-Heat",
+          "Kidney-Yang deficiency"
+        ],
+        "correct": 1,
+        "explain": "This texture is a classic sign of chronic Blood deficiency or stasis failing to nourish/moisten the skin."
+      }
+    ],
+    "w7": [
+      {
+        "q": "Why did Maciocia reorder the classical 10 Questions to put Pain first?",
+        "options": [
+          "Pain is spiritually significant in TCM theory",
+          "It's the most common presenting complaint for Western patients",
+          "The classical order was simply wrong",
+          "Pain always indicates the most severe pathology"
+        ],
+        "correct": 1,
+        "explain": "The reordering reflects modern outpatient reality rather than the classical acute-febrile-disease bias."
+      },
+      {
+        "q": "In Maciocia's 8-step intake, what should happen FIRST?",
+        "options": [
+          "Take the pulse",
+          "Ask about family illnesses",
+          "Let the patient speak freely about the problem",
+          "Work through the 16 Questions systematically"
+        ],
+        "correct": 2,
+        "explain": "Free, uninterrupted patient narration comes first — before directed questioning begins."
+      },
+      {
+        "q": "Pain that is aggravated by pressure, sharp, and sudden in onset is characteristic of:",
+        "options": [
+          "Empty (Deficiency) pattern",
+          "Full (Excess) pattern",
+          "Yin deficiency specifically",
+          "Normal physiological variation"
+        ],
+        "correct": 1,
+        "explain": "Aggravated-by-pressure + sharp + sudden onset is the classic Full/Excess pain profile."
+      },
+      {
+        "q": "Fixed, boring/stabbing pain that is worse at night points to:",
+        "options": [
+          "Qi stagnation",
+          "Blood stasis",
+          "Exterior Wind",
+          "Damp-Heat"
+        ],
+        "correct": 1,
+        "explain": "Fixed location + boring/stabbing + worse at night is the signature of Blood stasis."
+      },
+      {
+        "q": "Thirst with a desire to drink only small sips indicates:",
+        "options": [
+          "Full-Heat",
+          "Yin deficiency",
+          "Interior Cold",
+          "Exterior Wind-Cold"
+        ],
+        "correct": 1,
+        "explain": "Small-sip thirst reflects Yin deficiency — the body wants moisture but can't process a large volume."
+      },
+      {
+        "q": "Thirst present, but with NO actual desire to drink, indicates:",
+        "options": [
+          "Full-Heat",
+          "Damp-Heat",
+          "Blood deficiency",
+          "Kidney-Yang deficiency"
+        ],
+        "correct": 1,
+        "explain": "Fluids feel internally present despite the Heat, so there's little urge to add more — classic Damp-Heat."
+      },
+      {
+        "q": "Night sweating that stops upon waking is classically associated with:",
+        "options": [
+          "Qi deficiency",
+          "Yin deficiency",
+          "Blood stasis",
+          "Exterior Wind-Heat"
+        ],
+        "correct": 1,
+        "explain": "Night sweats (盗汗) that resolve on waking are a hallmark Yin-deficiency sign."
+      },
+      {
+        "q": "Sweating confined to the hands only most often indicates:",
+        "options": [
+          "Kidney-Yang deficiency",
+          "Heart or Lung-Qi deficiency",
+          "Liver-Fire",
+          "Exterior Wind-Cold"
+        ],
+        "correct": 1,
+        "explain": "Hand-only sweating is classically linked to Heart or Lung-Qi deficiency."
+      },
+      {
+        "q": "Which two exterior pathogens are most likely to directly cause pain?",
+        "options": [
+          "Cold and Dryness",
+          "Wind and Dampness",
+          "Summer-Heat and Fire",
+          "Wind and Fire"
+        ],
+        "correct": 1,
+        "explain": "Wind causes occipital headache/stiffness; Dampness causes joint/epigastric pain."
+      },
+      {
+        "q": "A distension-greater-than-pain quality, with no fixed location, that comes and goes, is characteristic of:",
+        "options": [
+          "Blood stasis",
+          "Qi stagnation",
+          "Interior Cold",
+          "Damp-Heat"
+        ],
+        "correct": 1,
+        "explain": "This is the classic Qi stagnation pain profile, contrasting with Blood stasis's fixed stabbing pain."
+      }
+    ],
+    "w8": [
+      {
+        "q": "A condition that is relieved by eating suggests:",
+        "options": [
+          "A Full (Excess) pattern",
+          "An Empty (Deficiency) pattern",
+          "Exterior invasion",
+          "Blood stasis"
+        ],
+        "correct": 1,
+        "explain": "Relief with eating points to Deficiency; aggravation with eating points to Excess."
+      },
+      {
+        "q": "Excessive hunger (as opposed to lack of appetite) most specifically indicates:",
+        "options": [
+          "Spleen-Qi deficiency",
+          "Stomach-Heat",
+          "Kidney-Yin deficiency",
+          "Liver-Qi stagnation"
+        ],
+        "correct": 1,
+        "explain": "Excessive hunger points to Stomach-Heat; lack of appetite points to Spleen-Qi deficiency."
+      },
+      {
+        "q": "A salty taste in the mouth indicates:",
+        "options": [
+          "Liver-Fire",
+          "Kidney-Yin deficiency",
+          "Spleen deficiency",
+          "Lung-Heat"
+        ],
+        "correct": 1,
+        "explain": "Salty taste maps to Kidney-Yin deficiency in the Five Flavors correspondence."
+      },
+      {
+        "q": "Diarrhea with mucus AND blood, with a heavy, painful anus, indicates:",
+        "options": [
+          "Interior Cold in the Intestines",
+          "Damp-Heat in the Intestines",
+          "Spleen-Qi deficiency",
+          "Kidney-Yang deficiency"
+        ],
+        "correct": 1,
+        "explain": "Mucus + blood + heavy painful anus is the classic Damp-Heat presentation."
+      },
+      {
+        "q": "Loose stools with visibly undigested food point to:",
+        "options": [
+          "Spleen-Qi deficiency",
+          "Stomach-Heat",
+          "Liver-Fire",
+          "Blood stasis"
+        ],
+        "correct": 0,
+        "explain": "Undigested food in the stool is a hallmark of Spleen-Qi deficiency (failure to transform/transport)."
+      },
+      {
+        "q": "Very frequent AND copious urination indicates:",
+        "options": [
+          "Kidney-Yin deficiency",
+          "Kidney-Yang deficiency",
+          "Qi deficiency",
+          "Damp-Heat in the Bladder"
+        ],
+        "correct": 1,
+        "explain": "Copious pale urine reflects Yang's inability to consolidate fluids — Kidney-Yang deficiency."
+      },
+      {
+        "q": "Scanty, dark urine indicates:",
+        "options": [
+          "Kidney-Yang deficiency",
+          "Qi deficiency",
+          "Kidney-Yin deficiency",
+          "Damp-Heat"
+        ],
+        "correct": 2,
+        "explain": "Scanty + dark reflects depleted fluids themselves — Kidney-Yin deficiency."
+      },
+      {
+        "q": "In the pulse-taking procedure, what is 'regulating the fingers'?",
+        "options": [
+          "Adjusting finger spacing for body size",
+          "Taking an initial overall impression before individual positions",
+          "Warming the fingers before palpation",
+          "Counting the respiratory rate"
+        ],
+        "correct": 1,
+        "explain": "Regulating the fingers means forming a first overall impression before assessing each position separately."
+      },
+      {
+        "q": "The normal adult (16-35yr) pulse rate is approximately:",
+        "options": [
+          "60 bpm",
+          "76 bpm",
+          "90 bpm",
+          "100 bpm"
+        ],
+        "correct": 1,
+        "explain": "~76 bpm is the reference normal for adults 16-35; children run faster (~90+)."
+      },
+      {
+        "q": "A pulse 'having spirit' means it is:",
+        "options": [
+          "Fast and forceful",
+          "Soft but with an underlying strength, neither hard nor collapsing",
+          "Always Wiry",
+          "Irregular but rhythmic"
+        ],
+        "correct": 1,
+        "explain": "Pulse spirit is assessed independently of specific qualities and carries real prognostic weight."
+      }
+    ],
+    "w9": [
+      {
+        "q": "Tenderness at Ren-17 on LIGHT pressure specifically suggests:",
+        "options": [
+          "Lung-Qi deficiency",
+          "Heart-Blood stasis",
+          "Stomach-Heat",
+          "Kidney-Yang deficiency"
+        ],
+        "correct": 1,
+        "explain": "Light-pressure tenderness at the chest center (Ren-17) is a classic sign of Heart-Blood stasis."
+      },
+      {
+        "q": "On chest palpation, discomfort that is RELIEVED by palpation indicates:",
+        "options": [
+          "Full condition of the Lungs",
+          "Deficiency of Heart or Lungs",
+          "Blood stasis",
+          "Phlegm accumulation"
+        ],
+        "correct": 1,
+        "explain": "Relief with palpation is the hallmark of a Deficiency (Empty) pattern."
+      },
+      {
+        "q": "A discrepancy between the apical beat and the radial pulse suggests:",
+        "options": [
+          "Nothing clinically significant",
+          "A poor prognosis warranting closer follow-up",
+          "Normal physiological variation",
+          "Exterior Wind invasion"
+        ],
+        "correct": 1,
+        "explain": "This mismatch is specifically flagged as a poor prognostic sign."
+      },
+      {
+        "q": "On abdominal palpation, a mass that is FIXED and hard indicates:",
+        "options": [
+          "Qi stagnation",
+          "Blood stasis",
+          "Normal Original Qi",
+          "Dampness"
+        ],
+        "correct": 1,
+        "explain": "Fixed, hard masses indicate Blood stasis; masses that move indicate Qi stagnation."
+      },
+      {
+        "q": "The general rule for interpreting sound loudness in hearing diagnosis is:",
+        "options": [
+          "Loud = Empty, weak = Full",
+          "Loud = Full, weak = Empty",
+          "Loudness has no diagnostic value",
+          "Loud always means Heat"
+        ],
+        "correct": 1,
+        "explain": "This single rule covers breathing, cough, vomiting, hiccup, and borborygmi."
+      },
+      {
+        "q": "The general rule for smelling diagnosis is:",
+        "options": [
+          "Strong/foul odor = Cold; absence of odor = Heat",
+          "Strong/foul odor = Heat; absence of odor = Cold",
+          "Odor is unrelated to pattern",
+          "All odors indicate Excess"
+        ],
+        "correct": 1,
+        "explain": "Strong/foul = Heat; bland/absent = Cold. Smelling mostly confirms rather than clinches a diagnosis."
+      },
+      {
+        "q": "Sighing, as a diagnostic sign, indicates:",
+        "options": [
+          "Kidney-Yang deficiency",
+          "Qi stagnation of the Liver or Lungs",
+          "Blood stasis",
+          "Exterior Wind-Cold"
+        ],
+        "correct": 1,
+        "explain": "Sighing points to Qi stagnation — Liver if from repressed anger, Lungs if from worry/sadness."
+      },
+      {
+        "q": "A dry cough, regardless of loudness, specifically indicates:",
+        "options": [
+          "Lung-Yin deficiency",
+          "Full Excess of the Lungs",
+          "Kidney-Yang deficiency",
+          "Interior Cold"
+        ],
+        "correct": 0,
+        "explain": "Dry cough is a direct marker of Lung-Yin deficiency, overriding the usual loud/weak axis."
+      },
+      {
+        "q": "In the Five-Element correspondences, a groaning voice and putrid smell map to:",
+        "options": [
+          "Wood/Liver",
+          "Fire/Heart",
+          "Water/Kidney",
+          "Metal/Lung"
+        ],
+        "correct": 2,
+        "explain": "Groaning voice + putrid smell = Water element, Kidney organ."
+      },
+      {
+        "q": "Before diagnosing a Knotted, Hasty, or Intermittent pulse, you should first:",
+        "options": [
+          "Take the pulse twice as fast",
+          "Re-check with the patient still and breathing calmly to rule out pseudo-arrhythmia",
+          "Immediately refer to cardiology",
+          "Assume it's always pathological"
+        ],
+        "correct": 1,
+        "explain": "Movement, talking, or breath-holding can all mimic true arrhythmic pulse qualities."
+      }
+    ]
+  }
+}
