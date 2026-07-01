@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a2a4a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="EAM310">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EAM310 · EAM Diagnosis I · Summer 2026</title>
 <style>
@@ -2922,6 +2930,12 @@ buildMCQuizSection('w9', 'mc-w9');
 buildMCQuizSection('wcompanions', 'mc-wcompanions');
 buildHubQuiz(['w1','w2','w3','w4'], 'hub-quiz-hubmid', 'hub-mc-hubmid');
 buildHubQuiz(['w1','w2','w3','w4','w6','w7','w8','w9'], 'hub-quiz-hubfinal', 'hub-mc-hubfinal');
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed:', err));
+  });
+}
 </script>
 </body>
 </html>
