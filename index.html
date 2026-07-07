@@ -78,6 +78,27 @@ body { background: var(--bg); color: var(--text); font-family: 'Quicksand', sans
 }
 .topbar-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--muted); }
 
+/* ── DOC NAV BAR ── */
+.doc-nav {
+  background: rgba(10,12,18,0.98);
+  border-bottom: 1px solid var(--border);
+  padding: 0.35rem 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+}
+.doc-nav-label { color: var(--muted); margin-right: 0.3rem; white-space: nowrap; }
+.doc-nav a {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.25rem 0.6rem; border-radius: 6px;
+  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2);
+  color: var(--gold); text-decoration: none; white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+  font-size: 0.62rem;
+}
+.doc-nav a:hover { background: rgba(201,168,76,0.18); border-color: var(--gold); }
+.doc-nav a.current { background: rgba(201,168,76,0.22); border-color: var(--gold); color: #fff; }
+
 /* ── WEEK TABS ── */
 .week-bar {
   position: sticky; top: 48px; z-index: 99;
@@ -234,6 +255,18 @@ td em { color: var(--gold); font-style: normal; font-family: 'JetBrains Mono', m
 <div class="topbar">
   <div class="topbar-title">🔬 EAM310 · EAM Diagnosis I</div>
   <div class="topbar-meta">Prof. Schrier · Fri 9AM–1PM Rm 303 · Summer 2026</div>
+</div>
+
+<!-- DOC NAV BAR -->
+<div class="doc-nav">
+  <span class="doc-nav-label">📚 Kit:</span>
+  <a href="index.html" class="current">🔬 Study App</a>
+  <a href="EAM310_StudyGuide.html">📖 Study Guide</a>
+  <a href="EAM310_Workbook.html">📋 Workbook</a>
+  <a href="EAM310_Worksheet.html">✏️ Worksheet</a>
+  <a href="EAM310_Journal.pdf">🩺 Journal</a>
+  <a href="EAM310_Workbook.pdf">⬇️ Workbook PDF</a>
+  <a href="EAM310_Worksheet.pdf">⬇️ Worksheet PDF</a>
 </div>
 
 <!-- WEEK TABS -->
