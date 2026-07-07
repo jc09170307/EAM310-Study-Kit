@@ -389,9 +389,43 @@ td strong { color: var(--text); }
   .ws-q, .mcq-opts, .tf-opts, .case-block { page-break-inside: avoid; break-inside: avoid; }
   .cover-page { min-height: 23cm; }
 }
+
+/* ── DOC NAV BAR ── */
+.doc-nav {
+  background: rgba(10,12,18,0.98);
+  border-bottom: 1px solid #2a3a5a;
+  padding: 0.35rem 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+  position: sticky; top: 0; z-index: 200;
+}
+.doc-nav-label { color: #888; margin-right: 0.3rem; white-space: nowrap; }
+.doc-nav a {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.25rem 0.6rem; border-radius: 6px;
+  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2);
+  color: #c9a84c; text-decoration: none; white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+  font-size: 0.62rem;
+}
+.doc-nav a:hover { background: rgba(201,168,76,0.18); border-color: #c9a84c; }
+.doc-nav a.current { background: rgba(201,168,76,0.22); border-color: #c9a84c; color: #fff; }
+@media print { .doc-nav { display: none; } }
 </style>
 </head>
 <body>
+<!-- DOC NAV BAR -->
+<div class="doc-nav">
+  <span class="doc-nav-label">📚 Kit:</span>
+  <a href="index.html">🔬 Study App</a>
+  <a href="EAM310_StudyGuide.html">📖 Study Guide</a>
+  <a href="EAM310_Workbook.html">📋 Workbook</a>
+  <a href="EAM310_Worksheet.html" class="current">✏️ Worksheet</a>
+  <a href="EAM310_Journal.pdf">🩺 Journal</a>
+  <a href="EAM310_Workbook.pdf">⬇️ Workbook PDF</a>
+  <a href="EAM310_Worksheet.pdf">⬇️ Worksheet PDF</a>
+</div>
 <div class="controls">
 <button class="ctrl-btn ctrl-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
 <span class="ctrl-label">EAM310 · Worksheet · Summer 2026 · Answer key is at the back — no peeking 🎀</span>
