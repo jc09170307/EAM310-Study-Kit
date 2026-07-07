@@ -2,7 +2,7 @@
 // Enables "Install App" (not just "Add to Home Screen") on supporting browsers,
 // plus basic offline access to the app shell once it's been visited once.
 
-const CACHE_NAME = 'eam310-studyapp-v3';
+const CACHE_NAME = 'eam310-studyapp-v5';
 const APP_SHELL = [
   './',
   './index.html',
@@ -34,16 +34,16 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // Network-first strategy: always try to get fresh content, fall back to cache
   event.respondWith(
-    caches.match(event.request).then(cached => {
-      return cached || fetch(event.request).then(response => {
-        // Cache successful same-origin GET responses for offline use next time
-        if (event.request.method === 'GET' && response.ok) {
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseClone));
-        }
-        return response;
-      }).catch(() => cached);
-    })
+    fetch(event.request).then(response => {
+      if (event.request.method === 'GET' && response.ok) {
+        const responseClone = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseClone));
+      }
+      return response;
+    }).catch(() =>
+      caches.match(event.request)
+    )
   );
 });
