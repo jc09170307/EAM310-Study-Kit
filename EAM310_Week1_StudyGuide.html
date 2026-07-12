@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAM310 · Week 1 Study Guide · Eight Principles + Vital Substances</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #c9a84c;
+  --gold-light: #f5e9c8;
+  --gold-pale: #fdf8ee;
+  --red: #c0392b;
+  --red-light: #fef0ee;
+  --teal: #1a7a6e;
+  --teal-light: #eef6f4;
+  --navy: #1e2d5a;
+  --navy-light: #eef0f8;
+  --purple: #7b3fa0;
+  --purple-light: #f4eef8;
+  --green: #1e7a4a;
+  --green-light: #edf7f2;
+  --orange: #d4680a;
+  --orange-light: #fef3e8;
+  --bg: #fafaf8;
+  --border: #e2ddd5;
+  --text: #2c2c2c;
+  --muted: #6b6b6b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ── SCREEN CONTROLS ── */
+.controls {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy);
+  padding: 0.6rem 1.2rem;
+  display: flex; align-items: center; gap: 1rem;
+  print-color-adjust: exact;
+}
+.ctrl-btn {
+  background: var(--gold); color: var(--navy);
+  border: none; border-radius: 6px;
+  padding: 0.4rem 1rem; font-family: 'Fredoka', sans-serif;
+  font-size: 0.85rem; font-weight: 600; cursor: pointer;
+}
+.ctrl-label { color: rgba(255,255,255,0.7); font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; }
+
+/* ── COVER ── */
+.cover {
+  background: linear-gradient(135deg, var(--navy) 0%, #2d4080 60%, #1a5a52 100%);
+  color: white; padding: 3rem 2.5rem 2.5rem;
+  page-break-after: always;
+}
+.cover-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.8rem;
+}
+.cover-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.4rem; font-weight: 700;
+  line-height: 1.15; margin-bottom: 0.5rem;
+  color: white;
+}
+.cover-subtitle {
+  font-size: 1rem; color: rgba(255,255,255,0.75);
+  margin-bottom: 1.5rem;
+}
+.cover-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.8rem; }
+.pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(201,168,76,0.5);
+  border-radius: 20px; padding: 0.25rem 0.75rem;
+  font-size: 0.72rem; color: var(--gold);
+  font-family: 'JetBrains Mono', monospace;
+}
+.cover-toc {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.4rem; font-size: 0.82rem;
+  color: rgba(255,255,255,0.8);
+}
+.toc-item { display: flex; align-items: center; gap: 0.4rem; }
+.toc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+/* ── PAGE SECTIONS ── */
+.section {
+  max-width: 900px; margin: 0 auto;
+  padding: 1.8rem 2rem;
+  page-break-before: always;
+}
+.section:first-of-type { page-break-before: avoid; }
+
+/* ── SECTION HEADERS ── */
+.section-header {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 1.2rem; padding-bottom: 0.6rem;
+  border-bottom: 3px solid var(--gold);
+}
+.section-icon {
+  font-size: 1.5rem; width: 42px; height: 42px;
+  background: var(--gold-pale); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.section-title {
+  font-family: 'Fredoka', sans-serif; font-size: 1.4rem;
+  font-weight: 700; color: var(--navy);
+}
+.section-sub { font-size: 0.75rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+h2 {
+  font-family: 'Fredoka', sans-serif; font-size: 1.05rem;
+  color: var(--navy); margin: 1.2rem 0 0.5rem;
+  padding-left: 0.5rem; border-left: 3px solid var(--gold);
+}
+h3 {
+  font-family: 'Quicksand', sans-serif; font-size: 0.9rem;
+  font-weight: 700; color: var(--text); margin: 0.8rem 0 0.3rem;
+}
+p { font-size: 0.83rem; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.65; }
+strong { color: var(--text); }
+em { color: var(--navy); font-style: normal; font-weight: 600; }
+
+/* ── CALLOUT BOXES ── */
+.callout {
+  border-radius: 8px; padding: 0.7rem 0.9rem;
+  margin-bottom: 0.8rem; display: flex; gap: 0.7rem;
+  align-items: flex-start;
+}
+.callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+.callout-body { font-size: 0.8rem; line-height: 1.55; color: var(--text); }
+.callout-body strong { display: block; margin-bottom: 0.2rem; font-size: 0.82rem; }
+.tip  { background: var(--gold-pale); border-left: 3px solid var(--gold); }
+.pearl { background: var(--teal-light); border-left: 3px solid var(--teal); }
+.warn { background: var(--red-light); border-left: 3px solid var(--red); }
+.exam { background: var(--navy-light); border-left: 3px solid var(--navy); }
+.analogy { background: var(--purple-light); border-left: 3px solid var(--purple); }
+
+/* ── TABLES ── */
+.tbl-wrap { overflow-x: auto; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+thead th {
+  background: var(--navy); color: white;
+  font-family: 'Fredoka', sans-serif; font-size: 0.72rem;
+  padding: 0.5rem 0.65rem; text-align: left;
+  letter-spacing: 0.03em;
+}
+tbody td {
+  padding: 0.45rem 0.65rem; border-bottom: 1px solid var(--border);
+  vertical-align: top; line-height: 1.5; color: var(--muted);
+}
+tbody tr:nth-child(even) td { background: var(--gold-pale); }
+tbody tr:hover td { background: #f0f0f8; }
+td strong { color: var(--text); }
+td em { color: var(--teal); font-style: normal; font-weight: 600; }
+
+/* ── GRID CARDS ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 0.9rem; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.65rem; margin-bottom: 0.9rem; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.6rem; margin-bottom: 0.9rem; }
+
+.card {
+  border-radius: 8px; padding: 0.75rem;
+  border: 1px solid var(--border);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.card h4 {
+  font-family: 'Fredoka', sans-serif; font-size: 0.85rem;
+  font-weight: 600; margin-bottom: 0.4rem;
+}
+.card ul { padding-left: 1rem; margin: 0; }
+.card li { font-size: 0.76rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.1rem; }
+.card li strong { color: var(--text); }
+
+.card-gold  { background: var(--gold-pale);  border-color: var(--gold);   }
+.card-gold h4 { color: #8a6020; }
+.card-red   { background: var(--red-light);  border-color: var(--red);    }
+.card-red h4 { color: var(--red); }
+.card-teal  { background: var(--teal-light); border-color: var(--teal);   }
+.card-teal h4 { color: var(--teal); }
+.card-navy  { background: var(--navy-light); border-color: var(--navy);   }
+.card-navy h4 { color: var(--navy); }
+.card-purple{ background: var(--purple-light);border-color: var(--purple); }
+.card-purple h4 { color: var(--purple); }
+.card-green { background: var(--green-light); border-color: var(--green); }
+.card-green h4 { color: var(--green); }
+.card-orange{ background: var(--orange-light);border-color: var(--orange); }
+.card-orange h4 { color: var(--orange); }
+
+/* ── BADGE / TAG ── */
+.badge {
+  display: inline-block; border-radius: 12px;
+  padding: 0.1rem 0.55rem; font-size: 0.68rem;
+  font-family: 'JetBrains Mono', monospace; font-weight: 600;
+  margin: 0.1rem;
+}
+.badge-gold   { background: var(--gold-light); color: #7a5c10; }
+.badge-red    { background: var(--red-light);   color: var(--red); }
+.badge-teal   { background: var(--teal-light);  color: var(--teal); }
+.badge-navy   { background: var(--navy-light);  color: var(--navy); }
+.badge-purple { background: var(--purple-light);color: var(--purple); }
+
+/* ── COMPARISON TABLE SPECIAL ── */
+.vs-table thead th:nth-child(2) { background: #1a4a8a; }
+.vs-table thead th:nth-child(3) { background: #8a1a1a; }
+.vs-table td:nth-child(2) { background: rgba(26,74,138,0.05); }
+.vs-table td:nth-child(3) { background: rgba(138,26,26,0.05); }
+
+/* ── QI TYPE TREE ── */
+.qi-tree {
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 0.75rem; background: white; margin-bottom: 0.8rem;
+  font-size: 0.75rem;
+}
+
+/* ── PRINT ── */
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .controls { display: none; }
+  body { font-size: 10pt; background: white; }
+
+  .cover { padding: 2cm 1.8cm; min-height: 18cm; }
+  .cover-title { font-size: 28pt; }
+
+  .section {
+    max-width: 100%; padding: 1.2cm 1.5cm 0.5cm;
+    page-break-before: always;
+  }
+
+  h2 { font-size: 11pt; page-break-after: avoid; }
+  h3 { font-size: 10pt; page-break-after: avoid; }
+  p, li, td, th { font-size: 8.5pt; }
+
+  .tbl-wrap { overflow: visible; box-shadow: none; }
+  table { table-layout: fixed; width: 100%; }
+  th, td { word-wrap: break-word; overflow-wrap: break-word;
+           font-size: 7.8pt !important; padding: 0.3rem 0.45rem !important; }
+  thead { display: table-header-group; }
+  thead th { background: var(--navy) !important; color: white !important; }
+
+  .card, .callout, tr, .grid-2 > *, .grid-3 > *, .grid-4 > * {
+    page-break-inside: avoid; break-inside: avoid;
+  }
+  h2 + *, h3 + * { page-break-before: avoid; }
+  @page { size: letter; margin: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <button class="ctrl-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+  <span class="ctrl-label">EAM310 · Week 1 Study Guide · Eight Principles + Vital Substances · Quiz Prep</span>
+</div>
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="cover">
+  <div class="cover-eyebrow">EAM310 · East Asian Medicine Diagnosis I · Summer 2026</div>
+  <div class="cover-title">Week 1 Comprehensive<br>Study Guide 📚</div>
+  <div class="cover-subtitle">Eight Principles · Vital Substances (Qi, Blood, Body Fluids, Shen)<br>Prof. Schrier · Virginia University of Integrative Medicine</div>
+  <div class="cover-pills">
+    <span class="pill">FCM Ch. 30–31</span>
+    <span class="pill">CAM Ch. 10</span>
+    <span class="pill">Lecture Transcripts</span>
+    <span class="pill">Clinical Pearls</span>
+    <span class="pill">Comparison Tables</span>
+    <span class="pill">Quiz Prep</span>
+  </div>
+  <div class="cover-toc">
+    <div class="toc-item"><span class="toc-dot"></span>Eight Principles Overview</div>
+    <div class="toc-item"><span class="toc-dot"></span>Interior vs. Exterior</div>
+    <div class="toc-item"><span class="toc-dot"></span>Cold vs. Heat Patterns</div>
+    <div class="toc-item"><span class="toc-dot"></span>Full vs. Empty Conditions</div>
+    <div class="toc-item"><span class="toc-dot"></span>Yin–Yang Patterns</div>
+    <div class="toc-item"><span class="toc-dot"></span>Three Treasures + Jīng</div>
+    <div class="toc-item"><span class="toc-dot"></span>Types of Qì</div>
+    <div class="toc-item"><span class="toc-dot"></span>Xuè / Blood</div>
+    <div class="toc-item"><span class="toc-dot"></span>Jīn Yè / Body Fluids</div>
+    <div class="toc-item"><span class="toc-dot"></span>Shén + Five Spirits</div>
+    <div class="toc-item"><span class="toc-dot"></span>Pathologies + Patterns</div>
+    <div class="toc-item"><span class="toc-dot"></span>Master Comparison Tables</div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 1: EIGHT PRINCIPLES OVERVIEW ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">⚡</div>
+    <div>
+      <div class="section-title">Eight Principles · Bā Gāng Biàn Zhèng 八綱辨證</div>
+      <div class="section-sub">FCM Ch. 30 · CAM Ch. 10 · Foundation of all pattern differentiation</div>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <span class="callout-icon">🎯</span>
+    <div class="callout-body">
+      <strong>The Big Picture</strong>
+      The Eight Principles are <em>four pairs of opposites</em> that form the framework for ALL pattern diagnosis in TCM. They tell you the <strong>location</strong> (Interior/Exterior), <strong>temperature</strong> (Hot/Cold), <strong>relative strength</strong> of pathogen vs. righteous Qi (Full/Empty), and the <strong>master summary</strong> (Yin/Yang). Every other system — Zang-Fu, Six Meridians, Four Levels — uses these as the foundation.
+    </div>
+  </div>
+
+  <div class="callout analogy">
+    <span class="callout-icon">📖</span>
+    <div class="callout-body">
+      <strong>Historical Context (from lecture)</strong>
+      Rooted in Han classics — the <em>Suwen</em> and <em>Shang Han Lun</em>. The actual term "Eight Principles" dates to the Qing dynasty (1644–1912) and is based on Zhang Jingyue's <em>Jingyue Quanshu</em>, though greatly simplified from his original description.
+    </div>
+  </div>
+
+  <div class="grid-4">
+    <div class="card card-teal">
+      <h4>🏠 Interior / Exterior</h4>
+      <ul>
+        <li>Location of disease</li>
+        <li>Stage of disease</li>
+        <li>Direction of travel</li>
+      </ul>
+    </div>
+    <div class="card card-red">
+      <h4>🌡️ Hot / Cold</h4>
+      <ul>
+        <li>Nature of the pathology</li>
+        <li>Yang vs. Yin nature</li>
+        <li>Treatment direction</li>
+      </ul>
+    </div>
+    <div class="card card-gold">
+      <h4>⚖️ Full / Empty</h4>
+      <ul>
+        <li>Pathogen vs. Zheng Qi</li>
+        <li>Relative strength</li>
+        <li>Reinforce vs. Reduce</li>
+      </ul>
+    </div>
+    <div class="card card-navy">
+      <h4>☯️ Yin / Yang</h4>
+      <ul>
+        <li>Master summarizing pair</li>
+        <li>Cold/Interior/Empty = Yin</li>
+        <li>Hot/Exterior/Full = Yang</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="callout-icon">⚠️</span>
+    <div class="callout-body">
+      <strong>Key Rule — Location, Not Cause!</strong>
+      Differentiation of Interior and Exterior is based on the <em>location</em> of the disease, NOT the etiology. A disease may be caused by an exterior pathogenic factor, but if it is now affecting the internal organs → it is classified as <strong>Interior</strong>. The cause doesn't matter; where it IS now matters.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 2: INTERIOR / EXTERIOR ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">🏠</div>
+    <div>
+      <div class="section-title">Interior – Exterior Patterns</div>
+      <div class="section-sub">Location, stage, and direction of disease travel</div>
+    </div>
+  </div>
+
+  <h2>Exterior Patterns</h2>
+  <p>Located in the superficial portions of the body: skin, hair, muscles, interspaces between muscles, and superficial meridians/collateral channels. Represents the <strong>early stage</strong> of an exogenous disease.</p>
+
+  <div class="callout pearl">
+    <span class="callout-icon">🩺</span>
+    <div class="callout-body">
+      <strong>Two Types of Exterior Conditions (from lecture)</strong>
+      (1) Affect <strong>skin & muscles</strong> — caused by EPF with acute onset (Wind-Cold, Wind-Heat). (2) Affect <strong>channels</strong> — slower onset, e.g., Bi Syndrome/Painful Obstruction, characterized by obstruction to Qi circulation in channels & joints by Cold, Damp, Wind, or Heat.
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>Exterior Cold</th><th>Exterior Heat</th><th>Exterior Empty</th><th>Exterior Full</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Fever</strong></td><td>Slight fever</td><td>Fever</td><td>Slight or no fever</td><td>Fever</td></tr>
+        <tr><td><strong>Aversion to Cold</strong></td><td>Pronounced</td><td>Slight</td><td>Aversion to wind</td><td>Strong aversion to cold</td></tr>
+        <tr><td><strong>Sweating</strong></td><td>No sweating</td><td>Slight sweating</td><td>Sweating</td><td>No sweating</td></tr>
+        <tr><td><strong>Thirst</strong></td><td>No thirst</td><td>Thirst</td><td>—</td><td>—</td></tr>
+        <tr><td><strong>Body aches</strong></td><td>Severe</td><td>Present</td><td>Slight</td><td>Severe</td></tr>
+        <tr><td><strong>Tongue coat</strong></td><td>Thin white</td><td>Thin white / red sides</td><td>Thin white</td><td>Thin white</td></tr>
+        <tr><td><strong>Pulse</strong></td><td>Floating-Tight</td><td>Floating-Rapid</td><td>Floating-Slow</td><td>Floating-Tight</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout analogy">
+    <span class="callout-icon">🧠</span>
+    <div class="callout-body">
+      <strong>Prof. Schrier's Memory Hook — Cold Physiology</strong>
+      Cold = contracting. So: (1) Cold <strong>contracts the pulse</strong> → tight quality. (2) Cold <strong>closes pores</strong> → no sweating. (3) Cold makes you NOT thirsty. (4) Cold <strong>stiffens</strong> the neck and body → severe aches. When you see tight + no sweat + no thirst → think Cold!
+    </div>
+  </div>
+
+  <h2>Interior Patterns</h2>
+  <p>Location is the five Zang and six Fu organs. Defines the <strong>stage</strong> of disease and its direction of travel. Chronic in nature; often mid-to-late stage.</p>
+
+  <div class="callout analogy">
+    <span class="callout-icon">🎮</span>
+    <div class="callout-body">
+      <strong>Prof. Schrier's Monopoly Analogy</strong>
+      Some pathogens bypass the exterior stage entirely — like going directly to jail in Monopoly: "Do not pass Go, do not collect $200." The three direct-entry zones are the <strong>Stomach, Intestines, and Uterus</strong>. They also enter internally via emotions, diet, and overwork.
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="vs-table">
+      <thead><tr><th>Feature</th><th>🏃 Exterior Pattern</th><th>🏠 Interior Pattern</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Fever</strong></td><td>Fever WITH aversion to cold</td><td>Fever without aversion to cold, OR aversion to cold without fever</td></tr>
+        <tr><td><strong>Tongue coat</strong></td><td>Thin white</td><td>Yellow/black; slippery/greasy</td></tr>
+        <tr><td><strong>Tongue body</strong></td><td>Normal</td><td>Purplish, pale, trembling, deviated</td></tr>
+        <tr><td><strong>Pulse</strong></td><td>Superficial / Floating</td><td>Deep; also slippery, wiry, choppy</td></tr>
+        <tr><td><strong>Symptoms</strong></td><td>Skin, muscles, stiff neck, headache</td><td>Constipation, stomachache, palpitations, diarrhea</td></tr>
+        <tr><td><strong>Duration</strong></td><td>Short; sudden onset</td><td>Chronic; longer duration</td></tr>
+        <tr><td><strong>Treatment herbs</strong></td><td>Leaves & twigs (light, float up)</td><td>Roots, seeds, heavy medicinals (sink deep)</td></tr>
+        <tr><td><strong>Acupuncture points</strong></td><td>Head, arm, upper back (Yang areas); cupping</td><td>Chest, back, leg, foot; Mu, Back-shu, Lower He-Sea, Source points</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Disease Transmission</h2>
+  <div class="grid-2">
+    <div class="card card-red">
+      <h4>⬇️ Exterior → Interior (Worsening)</h4>
+      <ul>
+        <li>Aversion to cold → aversion to heat</li>
+        <li>Thin white coat → thick yellow coat</li>
+        <li>Superficial pulse → deep pulse</li>
+        <li>Causes: weak body resistance, hyperactive pathogen, improper/delayed treatment</li>
+        <li><em>"Just a cold, I'll push through" = lets pathogen dive deeper</em></li>
+      </ul>
+    </div>
+    <div class="card card-teal">
+      <h4>⬆️ Interior → Exterior (Improvement)</h4>
+      <ul>
+        <li>Pulse becomes less deep</li>
+        <li>Tongue coat thins</li>
+        <li>Causes: correct treatment, good care, strengthened resistance</li>
+        <li><em>Pathogen being expelled toward surface</em></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 3: HOT / COLD ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">🌡️</div>
+    <div>
+      <div class="section-title">Hot – Cold Patterns</div>
+      <div class="section-sub">Nature of pathology · Yang vs. Yin</div>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <span class="callout-icon">☯️</span>
+    <div class="callout-body">
+      <strong>Core Rule</strong> Cold belongs to <em>Yin</em>; Heat belongs to <em>Yang</em>. Cold syndromes arise from exogenous pathogenic Cold OR deficiency of Yang (Yin excess). Heat syndromes arise from exogenous pathogenic Heat OR Yin deficiency in the interior.
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="vs-table">
+      <thead><tr><th>Feature</th><th>❄️ Cold</th><th>🔥 Heat</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Sensation</strong></td><td>Aversion to cold, prefers warmth</td><td>Aversion to heat, prefers coolness</td></tr>
+        <tr><td><strong>Thirst</strong></td><td>No thirst; tastelessness</td><td>Yes — prefers cold drinks</td></tr>
+        <tr><td><strong>Face</strong></td><td>Pale</td><td>Red</td></tr>
+        <tr><td><strong>Limbs</strong></td><td>Cold</td><td>Hot</td></tr>
+        <tr><td><strong>Stools</strong></td><td>Loose</td><td>Dry / constipation</td></tr>
+        <tr><td><strong>Urine</strong></td><td>Clear, profuse</td><td>Scanty, red/dark</td></tr>
+        <tr><td><strong>Tongue</strong></td><td>Pale, white moist coat</td><td>Red, yellow dry coat</td></tr>
+        <tr><td><strong>Pulse</strong></td><td>Slow / Tight</td><td>Rapid</td></tr>
+        <tr><td><strong>Water analogy</strong></td><td>Cold water is clear — like cold urine</td><td>Algae grows in warm water — like turbid/dark urine</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Full vs. Empty Cold & Heat</h2>
+  <div class="grid-2">
+    <div class="card card-navy">
+      <h4>❄️ Full Cold (Excess Yin)</h4>
+      <ul>
+        <li>Pain <strong>worse with pressure</strong></li>
+        <li>Abdominal pain aggravated by pressure</li>
+        <li>Pulse: Full-Tight-Deep</li>
+        <li>Tongue: thick white coat</li>
+        <li>Face: bright-white</li>
+        <li><em>Cause: cold foods, external cold → interior</em></li>
+      </ul>
+    </div>
+    <div class="card card-teal">
+      <h4>❄️ Empty Cold (Yang Deficiency)</h4>
+      <ul>
+        <li>Pain <strong>better with pressure/warmth</strong></li>
+        <li>Listlessness; dull-pale face</li>
+        <li>Pulse: Weak-Slow-Deep</li>
+        <li>Tongue: thin white coat</li>
+        <li><em>Cause: overwork, cold foods, excess sex, internal cold</em></li>
+      </ul>
+    </div>
+    <div class="card card-red">
+      <h4>🔥 Full Heat (Excess Yang)</h4>
+      <ul>
+        <li>Whole face red; high fever <strong>all day</strong></li>
+        <li>Strong thirst for cold water</li>
+        <li>Pulse: Full-Rapid-Overflowing</li>
+        <li>Tongue: red, yellow coat</li>
+        <li><em>Cause: emotional problems, diet (spicy/alcohol), EPF → interior</em></li>
+      </ul>
+    </div>
+    <div class="card card-orange">
+      <h4>🔥 Empty Heat (Yin Deficiency)</h4>
+      <ul>
+        <li>Malar flush only; heat <strong>afternoon/evening</strong></li>
+        <li>Night sweats; dry mouth — drinks in small sips</li>
+        <li>Five-palm heat; insomnia</li>
+        <li>Pulse: Floating-Empty-Rapid</li>
+        <li>Tongue: red, peeled / no coat</li>
+        <li><em>Cause: overwork, irregular eating, excess sex, blood loss</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Combined Hot & Cold Patterns</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Pattern</th><th>Mechanism</th><th>Key Signs</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cold Exterior + Heat Interior</strong></td><td>Pre-existing interior heat + invaded by Wind-Cold</td><td>Fever, aversion to cold, no sweat, stiff neck (exterior Cold) + irritability, thirst (interior Heat)</td></tr>
+        <tr><td><strong>Heat Exterior + Cold Interior</strong></td><td>Pre-existing cold + attacked by Wind-Heat</td><td>Fever, sore throat, thirst, rapid pulse (exterior Heat) + loose stools, pale urine, chilliness (interior Cold)</td></tr>
+        <tr><td><strong>Heat Above + Cold Below</strong></td><td>Heat rises, Cold descends</td><td>Above: thirst, irritability, sour regurgitation, bitter taste, mouth ulcers. Below: loose stools, borborygmi, profuse pale urine</td></tr>
+        <tr><td><strong>Combination Coexisting</strong></td><td>Both patterns simply coexist</td><td>Very common! E.g., Kidney Yang deficiency + Damp-Heat in Bladder; Spleen Yang def + Liver Fire</td></tr>
+        <tr><td><strong>False Heat – True Cold</strong></td><td>Extreme cold pushes Yang to surface</td><td>Red cheeks (powder-like), but body curled up, low voice, thirst but wants warm drinks, pale urine, Pulse: rapid/floating but EMPTY</td></tr>
+        <tr><td><strong>False Cold – True Heat</strong></td><td>Extreme heat pushes Yin to surface → cold limbs</td><td>Cold limbs but chest hot, dark face, bright eyes, loud voice, thirst for cold, scanty dark urine, constipation, Pulse: Deep-Full</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="callout-icon">⚠️</span>
+    <div class="callout-body">
+      <strong>False Heat/Cold ≠ Empty Heat/Cold!</strong>
+      Empty Heat and Empty Cold arise from deficiency of Yin/Yang — there IS real heat or cold present. In False Heat/Cold, the appearance is false — there is NO actual heat or cold. This is the most confusing distinction in the Eight Principles!
+    </div>
+  </div>
+
+  <h2>Treatment Principles</h2>
+  <div class="grid-2">
+    <div class="card card-navy">
+      <h4>❄️ Cold Treatment</h4>
+      <ul>
+        <li><strong>Exterior cold:</strong> Dispel cold; reducing method; cupping</li>
+        <li><strong>Interior cold:</strong> Warm it; reinforcing method; warming needle + moxa</li>
+        <li><strong>Excess cold:</strong> Patient feels cold, doesn't like touch → dispel; reducing + cupping</li>
+        <li><strong>Deficiency cold:</strong> Patient feels cold but <em>likes touch/warmth</em> → warm; reinforcing + moxa</li>
+      </ul>
+    </div>
+    <div class="card card-red">
+      <h4>🔥 Heat Treatment</h4>
+      <ul>
+        <li><strong>Exterior heat:</strong> Expel heat; Jinyinhua, Liangqiao, Banlangen</li>
+        <li><strong>Interior heat:</strong> Clear heat; Shigao</li>
+        <li><strong>Excess heat:</strong> Patient feels hot → expel; reducing method</li>
+        <li><strong>Deficiency heat:</strong> Tonify Yin + clear heat; reinforcing method</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 4: FULL / EMPTY ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">⚖️</div>
+    <div>
+      <div class="section-title">Full – Empty (Excess – Deficiency)</div>
+      <div class="section-sub">Relative strength of pathogen vs. Zheng Qi</div>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <span class="callout-icon">💡</span>
+    <div class="callout-body">
+      <strong>Core Concept</strong>
+      Full/Empty is about <em>balance</em> — the most important concept in TCM treatment. <strong>Full</strong> = presence of a pathogenic factor (not excess of Zheng Qi). <strong>Empty</strong> = deficiency of Zheng Qi. Key: always assess the relative strength of pathogen AND Zheng Qi before treatment.
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="vs-table">
+      <thead><tr><th>Feature</th><th>🔴 Full / Excess</th><th>🔵 Empty / Deficient</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Pain</strong></td><td>Severe, intense — <em>stops normal activities</em></td><td>Dull ache — more of an ache than a pain</td></tr>
+        <tr><td><strong>Pain on pressure</strong></td><td>Worse with pressure (aggravated)</td><td>Better with pressure (likes touch)</td></tr>
+        <tr><td><strong>Voice</strong></td><td>Strong, coarse</td><td>Weak, quiet</td></tr>
+        <tr><td><strong>Breathing</strong></td><td>Coarse, loud</td><td>Feeble, shallow</td></tr>
+        <tr><td><strong>Tinnitus</strong></td><td>High-pitched</td><td>Low-pitched</td></tr>
+        <tr><td><strong>Urine</strong></td><td>Scanty, dark</td><td>Frequent / pale</td></tr>
+        <tr><td><strong>Stools</strong></td><td>Constipation</td><td>Loose / incontinence</td></tr>
+        <tr><td><strong>Mind</strong></td><td>Restlessness, irritability</td><td>Listlessness, fatigue</td></tr>
+        <tr><td><strong>Pulse</strong></td><td>Full, Excess</td><td>Empty, Weak</td></tr>
+        <tr><td><strong>Tongue coat</strong></td><td>Thick</td><td>Little or none</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Exterior Full vs. Exterior Empty</h2>
+  <div class="grid-2">
+    <div class="card card-red">
+      <h4>Full Exterior (Excess)</h4>
+      <ul>
+        <li>Fever ✓; <strong>no sweating</strong></li>
+        <li>Severe body aches</li>
+        <li>Strong aversion to cold</li>
+        <li>Floating-Tight pulse</li>
+        <li>Thin white coat</li>
+      </ul>
+    </div>
+    <div class="card card-teal">
+      <h4>Empty Exterior (Deficient)</h4>
+      <ul>
+        <li>Slight or no fever; <strong>sweating present</strong></li>
+        <li>Slight body aches</li>
+        <li>Aversion to wind (not cold)</li>
+        <li>Floating-Slow pulse</li>
+        <li>Thin white coat</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout pearl">
+    <span class="callout-icon">🔑</span>
+    <div class="callout-body">
+      <strong>The Sweating Key</strong>
+      In exterior patterns: <em>no sweating = Full (Excess); sweating = Empty (Deficient)</em>. The pores are either locked shut by the pathogen (Excess) or the Wei Qi is too weak to hold them closed (Deficiency). This is the #1 differentiator between Exterior Full and Exterior Empty!
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 5: YIN / YANG ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">☯️</div>
+    <div>
+      <div class="section-title">Yin – Yang Patterns + Collapse</div>
+      <div class="section-sub">The master summarizing pair</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card card-navy">
+      <h4>Excess Yang (Full Heat)</h4>
+      <ul>
+        <li>3 types: (1) External Yang EPF (Wind-Heat, Summer-Heat); (2) Internally generated (Heart-Fire, Liver-Fire); (3) Transformed from other pathogens (Cold → Interior Heat)</li>
+        <li>Restlessness, headache, irritability</li>
+        <li>Pain worse with pressure</li>
+        <li>Red tongue; Full pulse</li>
+      </ul>
+    </div>
+    <div class="card card-teal">
+      <h4>Excess Yin (Full Cold)</h4>
+      <ul>
+        <li>Excess Cold consumes Yang</li>
+        <li>Sources: Wind-Cold, Cold-Damp, Cold penetrating directly into Stomach/Intestines/Uterus, Bi syndrome, internally generated Damp/Phlegm</li>
+        <li>Cold limbs, weakness, contracture</li>
+        <li>Pain improved with heat</li>
+        <li>Pale tongue; slow pulse</li>
+      </ul>
+    </div>
+    <div class="card card-orange">
+      <h4>Deficiency Yang (Empty Cold)</h4>
+      <ul>
+        <li>Yang spontaneously deficient → apparent Yin excess</li>
+        <li>Feeling cold, desires warmth, cold limbs, pale urine</li>
+        <li>Fatigue, weakness; pain <em>improves with heat AND pressure</em></li>
+        <li>Pale tongue; slow weak pulse</li>
+        <li><em>Cause: cold foods, overwork, excess sex, Full Cold</em></li>
+      </ul>
+    </div>
+    <div class="card card-purple">
+      <h4>Deficiency Yin (Empty Heat)</h4>
+      <ul>
+        <li>Yin depleted → apparent Yang excess; consumes Body Fluids, Essence, Blood</li>
+        <li><strong>Main cause: overwork</strong> ("burning the candle at both ends")</li>
+        <li>Dryness (mouth, skin, eyes, afternoon); night sweats; 5-palm heat; insomnia</li>
+        <li>Red tongue, no coat; thin rapid pulse</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>⚡ Collapse of Yin and Yang</h2>
+  <div class="callout warn">
+    <span class="callout-icon">🚨</span>
+    <div class="callout-body">
+      <strong>Collapse = Extreme Sudden Emptiness + Separation of Yin and Yang</strong>
+      Often but not necessarily followed by death. Life is the circulation of Yin and Yang; when they separate, balance is lost.
+    </div>
+  </div>
+  <div class="tbl-wrap">
+    <table class="vs-table">
+      <thead><tr><th>Feature</th><th>⬇️ Collapse of Yang</th><th>⬆️ Collapse of Yin</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Sweating</strong></td><td>Profuse, oily sweat (cold)</td><td>Abundant perspiration (hot skin)</td></tr>
+        <tr><td><strong>Limbs</strong></td><td>Chilliness, cold limbs</td><td>Hot limbs</td></tr>
+        <tr><td><strong>Breathing</strong></td><td>Weak breathing</td><td>—</td></tr>
+        <tr><td><strong>Thirst</strong></td><td>No thirst</td><td>Dry mouth, desires cold liquids in small sips</td></tr>
+        <tr><td><strong>Urine/Stools</strong></td><td>Frequent profuse urination / incontinence; loose stools</td><td>Retention of urine; constipation</td></tr>
+        <tr><td><strong>Pulse</strong></td><td>Minute-Deep</td><td>Floating-Empty-Rapid</td></tr>
+        <tr><td><strong>Tongue</strong></td><td>Pale-Wet-Swollen-Short</td><td>Red-Peeled-Short-Dry</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 6: THREE TREASURES + JING ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">🕯️</div>
+    <div>
+      <div class="section-title">Three Treasures + Jīng 精 / Essence</div>
+      <div class="section-sub">FCM Ch. 31 · The foundation of all vital substances</div>
+    </div>
+  </div>
+
+  <div class="callout analogy">
+    <span class="callout-icon">🕯️</span>
+    <div class="callout-body">
+      <strong>Prof. Schrier's Candle Analogy (lecture)</strong>
+      <strong>Jīng</strong> = the candle wax and wick — the foundation. Without it, nothing burns. Once it's melted away (depleted), the flame dies. <strong>Qì</strong> = the flame — energy in action, the Jīng in motion. <strong>Shén</strong> = the light given off — the most immaterial; the purpose of the candle. You can't have great light without both the candle AND the flame.
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Treasure</th><th>Chinese</th><th>Association</th><th>Nature</th><th>Element</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Shén 神</strong></td><td>Mind/Spirit</td><td>Heart + Heaven</td><td>Most immaterial / refined</td><td>Fire</td></tr>
+        <tr><td><strong>Qì 氣</strong></td><td>Qi/Energy</td><td>Spleen-Stomach + Humanity</td><td>Refined substance; in between</td><td>Earth</td></tr>
+        <tr><td><strong>Jīng 精</strong></td><td>Essence</td><td>Kidneys + Earth</td><td>Dense, raw, most material</td><td>Water</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Three Types of Jīng</h2>
+  <div class="grid-3">
+    <div class="card card-navy">
+      <h4>Pre-Heaven Essence</h4>
+      <ul>
+        <li>From blending of parents' sexual energies <em>before birth</em></li>
+        <li>Nourishes embryo/fetus</li>
+        <li>Determines constitutional make-up, strength, vitality</li>
+        <li>Fixed in quality AND quantity</li>
+        <li><em>Goal: preserve by good work, rest, diet, exercise</em></li>
+        <li>Like an initial bank account — can't add to it directly</li>
+      </ul>
+    </div>
+    <div class="card card-teal">
+      <h4>Post-Heaven Essence</h4>
+      <ul>
+        <li>From refined substances from food & fluids by Spleen & Stomach <em>after birth</em></li>
+        <li>Can be stored and replenished</li>
+        <li>Herbs, food, breathing, exercise all nourish this</li>
+        <li>"Adding money to the bank account through work"</li>
+      </ul>
+    </div>
+    <div class="card card-gold">
+      <h4>Kidney Essence</h4>
+      <ul>
+        <li>Combination of Pre + Post Heaven Essence</li>
+        <li>Fixed in quality and quantity</li>
+        <li>Replenished by Post-Heaven Essence</li>
+        <li>Produces Tian Gui (menses in women, sperm in men)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Functions of Essence (Jīng)</h2>
+  <div class="grid-2">
+    <div class="card card-purple">
+      <h4>5 Key Functions</h4>
+      <ul>
+        <li>1. Growth, reproduction, development (cycles of 7 & 8 — Suwen Ch.1)</li>
+        <li>2. Basis of Kidney Qi</li>
+        <li>3. Produces Marrow → fills spinal cord → brain</li>
+        <li>4. Basis of constitutional strength</li>
+        <li>5. Basis for the Three Treasures (Jing, Qi, Shen)</li>
+      </ul>
+    </div>
+    <div class="card card-red">
+      <h4>Jīng Deficiency Signs</h4>
+      <ul>
+        <li><strong>Children:</strong> poor bone development, late fontanelle closure, mental retardation</li>
+        <li><strong>Adults:</strong> soft bones, weak knees/legs, low backache, poor memory, loose teeth, hair loss/premature gray, sexual weakness, infertility, tinnitus, deafness, absent-mindedness</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 7: QI ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">⚡</div>
+    <div>
+      <div class="section-title">Qì 氣 — Types, Functions & Pathologies</div>
+      <div class="section-sub">The vital force in action</div>
+    </div>
+  </div>
+
+  <h2>Types of Qi</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Qi Type</th><th>Chinese</th><th>Source / Location</th><th>Key Functions</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Congenital Qi</strong></td><td>先天氣</td><td>Inherited; stored in Kidneys</td><td>Determines constitutional strength; conserved but not replenished. Composite of Jīng Qi + Yuán Qi</td></tr>
+        <tr><td><strong>Acquired Qi</strong></td><td>後天氣</td><td>Post-natal; Gǔ Qi + Air + Zōng Qi</td><td>Can be stored and replenished</td></tr>
+        <tr><td><strong>Qīng Qi 清氣</strong></td><td>Air/Clear Qi</td><td>Inhaled by Lungs</td><td>Inhalation function</td></tr>
+        <tr><td><strong>Gǔ Qi 穀氣</strong></td><td>Food/Grain Qi</td><td>Spleen & Stomach from food</td><td>Origin of Qi & Blood; rises to chest → Zōng Qi; Lung combines with air; Heart transforms to Blood</td></tr>
+        <tr><td><strong>Zōng Qi 宗氣</strong></td><td>Gathering/Ancestral Qi</td><td>Chest; Air + Gǔ Qi</td><td>Nourishes Heart & Lung; controls speech & voice strength; promotes blood circulation to extremities; works with Yuán Qi to regulate breathing</td></tr>
+        <tr><td><strong>Yuán Qi 原氣</strong></td><td>Source/Original Qi</td><td>Kidneys / Mingmén; exits at Source points</td><td>"Motive Force" — arouses all organs; facilitates transformation of Zōng Qi into Zhēn Qi; conduit for Triple Burner; facilitates Blood transformation</td></tr>
+        <tr><td><strong>Zhēn Qi 真氣</strong></td><td>Vital/True Qi</td><td>From Zōng Qi via Lungs</td><td>Last stage of transformation; becomes Yíng Qi + Wèi Qi = Meridian Qi</td></tr>
+        <tr><td><strong>Wèi Qi 衛氣</strong></td><td>Defensive Qi</td><td>Circulates OUTSIDE vessels; Yang</td><td>Protects surface; opens/closes pores; moistens skin/hair; warms Zang-Fu; readjusts temperature. Circulates 50x/24hrs (25x day, 25x night)</td></tr>
+        <tr><td><strong>Yíng Qi 營氣</strong></td><td>Nutritive Qi</td><td>Circulates INSIDE vessels; Yin</td><td>Nourishes internal organs; closely linked to Blood; circulates in channels & vessels; <em>activated when needling</em></td></tr>
+        <tr><td><strong>Zhōng Qi 中氣</strong></td><td>Central Qi</td><td>Spleen (Earth center)</td><td>Supports Spleen transformation & transportation; raises Qi</td></tr>
+        <tr><td><strong>Zhèng Qi 正氣</strong></td><td>Upright/Righteous Qi</td><td>Wèi + Yíng + Kidney Essence</td><td>Defends against external pathogens; opposite of Xié Qi (evil/pathogenic Qi)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>6 Functions of Qi</h2>
+  <div class="grid-3">
+    <div class="card card-gold">
+      <h4>1. 🚂 Transporting</h4>
+      <ul>
+        <li>Ascending, descending, entering, exiting</li>
+        <li>Movement = no pain; no movement = pain</li>
+        <li>Linked to transformation function</li>
+      </ul>
+    </div>
+    <div class="card card-red">
+      <h4>2. 🔥 Warming</h4>
+      <ul>
+        <li>Function of Yang Qi</li>
+        <li>All physiological processes need warmth</li>
+        <li>Fluids (Yin) need Yang warmth to transform, transport, excrete</li>
+      </ul>
+    </div>
+    <div class="card card-teal">
+      <h4>3. 🛡️ Protecting</h4>
+      <ul>
+        <li>Primarily Wèi Qi function</li>
+        <li>Nourishes Còu Lǐ (space between skin & muscles)</li>
+        <li>Linked to Lungs (skin = most exterior)</li>
+      </ul>
+    </div>
+    <div class="card card-navy">
+      <h4>4. 🤲 Holding</h4>
+      <ul>
+        <li>Yang Qi holds Yin (fluids/blood) in place</li>
+        <li>Prevents leaking: urinary incontinence, bleeding, prolapse</li>
+      </ul>
+    </div>
+    <div class="card card-purple">
+      <h4>5. 🔄 Transforming</h4>
+      <ul>
+        <li>Food → Gǔ Qi → Zhēn Qi</li>
+        <li>Dense forms transformed into subtle forms</li>
+        <li>Jin Ye into clear/thin (jin) and turbid (ye) parts</li>
+      </ul>
+    </div>
+    <div class="card card-green">
+      <h4>6. ⬆️ Rising</h4>
+      <ul>
+        <li>Holds body structures in proper place</li>
+        <li>Weak Qi → sinks → prolapse</li>
+        <li>Different from Holding: Rising = up; Holding = don't leak out</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Qi Pathologies</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Pathology</th><th>Mechanism</th><th>Key Signs</th><th>Distinguishing Feature</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Qi Deficiency</strong></td>
+          <td>More Qi consumed than produced; Lung, Spleen, Kidney, Heart</td>
+          <td>Shortness of breath, weak voice, spontaneous sweating, poor appetite, loose stools, tiredness, empty pulse</td>
+          <td><em>Lung signs:</em> SOB, weak voice, spont. sweating. <em>Spleen signs:</em> poor appetite, loose stools</td>
+        </tr>
+        <tr>
+          <td><strong>Sinking Qi</strong></td>
+          <td>Aspect of Qi Deficiency — not enough Yang Qi to rise; Spleen primarily</td>
+          <td>All Qi Deficiency signs + bearing-down sensation, prolapse of organ, mental depression ("feeling down")</td>
+          <td>Never diagnose Sinking without Deficiency. "I'm down in the dumps" = literal in TCM!</td>
+        </tr>
+        <tr>
+          <td><strong>Qi Stagnation</strong></td>
+          <td>Emotional stress (main); irregular eating; overwork; lack of exercise. Often Liver but also Lungs, Heart, Stomach, Spleen, Intestines</td>
+          <td>Distension (subjective & objective), moving pain, mental depression, irritability, gloomy feeling, frequent sighing, wiry pulse, tongue normal or red on sides</td>
+          <td>Distension &gt; pain; pain waxes/wanes with emotions</td>
+        </tr>
+        <tr>
+          <td><strong>Rebellious Qi</strong></td>
+          <td>Qi moving in wrong direction</td>
+          <td>Stomach (↓→↑): belching, hiccup, nausea, vomiting. Spleen (↑→↓): diarrhea, prolapse. Liver (↑excessive): headache, dizziness; (horizontal→ST): nausea; (→SP): diarrhea; (↓): burning urination. Lung (↓→↑): cough, asthma. Kidney (↓→↑): asthma. Heart (↓→↑): mental restlessness, insomnia</td>
+          <td>Each organ has a normal direction — pathology is reversal</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 8: XUE / BLOOD ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">🩸</div>
+    <div>
+      <div class="section-title">Xuè 血 / Blood</div>
+      <div class="section-sub">Dense, material form of Qi · Yin in nature</div>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <span class="callout-icon">📖</span>
+    <div class="callout-body">
+      <strong>Suwen 26:</strong> "Blood is the mind of a person." Ling Shu 32: "When blood is harmonized, the mind is calm in its residence." Blood anchors the Shen. Blood deficiency → insomnia, anxiety, poor memory.
+    </div>
+  </div>
+
+  <h2>Sources of Blood</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Organ</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Spleen</strong></td><td>Main source — generates Blood from Gǔ Qi (Food Qi)</td></tr>
+        <tr><td><strong>Lung</strong></td><td>Pushes Gǔ Qi to Heart for transformation</td></tr>
+        <tr><td><strong>Heart</strong></td><td>Transforms Gǔ Qi into Blood; governs Blood and circulation</td></tr>
+        <tr><td><strong>Kidney</strong></td><td>Makes Blood through Marrow and Kidney Essence</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Functions of Blood</h2>
+  <div class="grid-3">
+    <div class="card card-red"><h4>1. Nourishes Body</h4><ul><li>All tissues and organs depend on Blood for nourishment</li></ul></div>
+    <div class="card card-red"><h4>2. Circulates with Yíng Qi</h4><ul><li>Blood and Nutritive Qi move together in vessels</li></ul></div>
+    <div class="card card-red"><h4>3. Moistens Body</h4><ul><li>Keeps tissues supple and lubricated</li></ul></div>
+    <div class="card card-red"><h4>4. Houses the Mind</h4><ul><li>Anchors Shén; Blood deficiency → insomnia, anxiety</li></ul></div>
+    <div class="card card-red"><h4>5. Menstruation</h4><ul><li>Determines menstrual cycle; Liver key role</li></ul></div>
+    <div class="card card-red"><h4>Organ Relationships</h4><ul><li><strong>Heart:</strong> governs + circulates</li><li><strong>Spleen:</strong> makes + holds in vessels</li><li><strong>Liver:</strong> stores + regulates menstruation; nourishes sinews, eyes</li></ul></div>
+  </div>
+
+  <h2>Blood Pathologies</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Pattern</th><th>Key Signs</th><th>Pulse</th><th>Tongue</th><th>Key Distinguisher</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Blood Deficiency</strong></td>
+          <td>Dull-white sallow face, dizziness, poor memory, numbness/tingling, blurred vision, insomnia, pale lips, scanty periods/amenorrhea, depression, slight anxiety</td>
+          <td>Choppy or Fine</td>
+          <td>Pale, thin, slightly dry</td>
+          <td>Dullness of everything — dull face, blurred vision, dull aching, dull memory</td>
+        </tr>
+        <tr>
+          <td><strong>Blood Stasis</strong></td>
+          <td>Stabbing, fixed, boring pain; dark complexion; purple lips/nails; dark menstrual blood with clots; potential masses</td>
+          <td>Wiry, Choppy, or Firm</td>
+          <td>Purple (location varies by organ)</td>
+          <td>Pain &gt; distension (opposite of Qi stagnation); FIXED location; purple signs</td>
+        </tr>
+        <tr>
+          <td><strong>Heat in Blood</strong></td>
+          <td>Feeling of heat, skin eruptions (red), thirst, bleeding, anxiety (Heart), itching rashes (Liver), excessive periods (Uterus), blood in stool (Intestines)</td>
+          <td>Rapid</td>
+          <td>Red</td>
+          <td>Bleeding (various sites) + heat signs + red eruptions</td>
+        </tr>
+        <tr>
+          <td><strong>Loss of Blood</strong></td>
+          <td>Epistaxis, hematemesis, hemoptysis, blood in stool, menorrhagia, metrorrhagia, hematuria</td>
+          <td>Variable</td>
+          <td>Pale (Qi def) or Red (Blood Heat)</td>
+          <td>Caused by: (1) Qi def fails to hold blood, (2) Blood Heat pushes blood out</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout pearl">
+    <span class="callout-icon">🔑</span>
+    <div class="callout-body">
+      <strong>Qi Stagnation vs. Blood Stasis (KEY EXAM COMPARISON)</strong>
+      Qi Stagnation: distension &gt; pain; moving pain; wiry pulse; tongue normal/slightly red sides. Blood Stasis: pain &gt; distension; FIXED, stabbing/boring pain; choppy/wiry/firm pulse; PURPLE tongue. Prof. Schrier's gravy analogy: heat condenses blood like thickening gravy on stove. Cold makes ice cubes (congeals it).
+    </div>
+  </div>
+
+  <h2>Causes of Blood Stasis</h2>
+  <div class="grid-2">
+    <div class="card card-purple">
+      <h4>Main Causes</h4>
+      <ul>
+        <li>1. Qi Stagnation (Qi fails to move Blood)</li>
+        <li>2. Qi Deficiency (too weak to move Blood)</li>
+        <li>3. Heat in Blood (condenses/thickens it)</li>
+        <li>4. Blood Deficiency (→ Qi def → can't move)</li>
+        <li>5. Interior Cold (congeals like ice)</li>
+        <li>6. Dampness & Phlegm (aggravates, not direct cause)</li>
+        <li>7. Trauma</li>
+        <li>8. Emotions (suppressed → Qi stagnation → Blood stasis)</li>
+        <li>9. Diet</li>
+        <li>10. Lifestyle habits</li>
+      </ul>
+    </div>
+    <div class="card card-navy">
+      <h4>Blood Stasis by Location</h4>
+      <ul>
+        <li><strong>Liver:</strong> purple nails, dark face, painful periods with dark clots, purple sides of tongue</li>
+        <li><strong>Heart:</strong> purple lips, stabbing chest pain, mental restlessness, purple tongue (front sides), distended sublingual veins</li>
+        <li><strong>Lung:</strong> oppression in chest, coughing dark blood, purple tongue (front sides/front)</li>
+        <li><strong>Stomach:</strong> epigastric pain, vomiting dark blood, dark stools, purple center of tongue</li>
+        <li><strong>Uterus:</strong> painful periods, dark clots, amenorrhea, fixed abdominal masses, purple tongue</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 9: JIN YE / BODY FLUIDS ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">💧</div>
+    <div>
+      <div class="section-title">Jīn Yè 津液 / Body Fluids</div>
+      <div class="section-sub">Yin in nature · Origin: food and drink</div>
+    </div>
+  </div>
+
+  <div class="callout analogy">
+    <span class="callout-icon">🍸</span>
+    <div class="callout-body">
+      <strong>Prof. Schrier's Memory Hook</strong>
+      "Jīn is like gin — clear, thin, light alcohol. That's the thin, clear fluid." Jīn circulates with Wèi Qi on the exterior (fast, light). Yè is the heavy, dense, turbid fluid circulating with Yíng Qi in the interior (slow, deep).
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="vs-table">
+      <thead><tr><th>Feature</th><th>Jīn 津 (Clear)</th><th>Yè 液 (Turbid)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Yin/Yang</strong></td><td>Yang</td><td>Yin</td></tr>
+        <tr><td><strong>Characteristics</strong></td><td>Clear, light, thin, watery</td><td>Turbid, heavy, dense</td></tr>
+        <tr><td><strong>Circulates with</strong></td><td>Wèi Qi on the EXTERIOR</td><td>Yíng Qi in the INTERIOR</td></tr>
+        <tr><td><strong>Movement</strong></td><td>Quick</td><td>Slow</td></tr>
+        <tr><td><strong>Controlled by</strong></td><td>Lung (Upper Burner)</td><td>Spleen + Kidneys (Middle + Lower Burner)</td></tr>
+        <tr><td><strong>Functions</strong></td><td>Moistens skin & muscles; manifests as sweat, tears, saliva, mucus; component of Blood</td><td>Moistens joints, spine, bone marrow, brain; lubricates sense organ orifices (eyes, ears, nose, mouth)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Body Fluid Pathologies</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Condition</th><th>Mechanism</th><th>Key Signs</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Deficiency of Body Fluids</strong></td>
+          <td>Always causes dryness (associated with Yin). Causes: dietary factors, Yin deficiency, heavy blood loss, profuse sweating, vomiting, diarrhea, severe Blood deficiency</td>
+          <td>Lung: dry skin, dry cough. Stomach: dry tongue with horizontal cracks, dry mouth (no desire to drink or drinks in small sips). Kidney: scanty urine, dry mouth at night, dry throat. Large Intestine: dry stools</td>
+        </tr>
+        <tr>
+          <td><strong>Edema — Pitting</strong></td>
+          <td>Yang deficiency (Spleen, Lung, or Kidney) fails to mobilize fluids</td>
+          <td>Lung Yang def: face & hands. Spleen Yang def: abdomen & limbs. Kidney Yang def: legs & ankles (lower body)</td>
+        </tr>
+        <tr>
+          <td><strong>Edema — Non-Pitting</strong></td>
+          <td>Qi stagnation or Dampness</td>
+          <td>Swelling without pitting on pressure</td>
+        </tr>
+        <tr>
+          <td><strong>Phlegm</strong></td>
+          <td>Spleen deficiency (main); Lungs fail to diffuse/lower fluids; Kidneys fail to transform/excrete</td>
+          <td>Swollen tongue, sticky coat, slippery/wiry pulse; oppression in chest, nausea, heaviness, muzziness, dizziness</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Types of Phlegm</h2>
+  <div class="grid-2">
+    <div class="card card-teal">
+      <h4>Substantial Phlegm (visible)</h4>
+      <ul>
+        <li><strong>Damp Phlegm:</strong> profuse sticky white phlegm, sticky taste, no thirst, slippery pulse</li>
+        <li><strong>Phlegm-Heat:</strong> sticky yellow phlegm, red face, dry mouth, restlessness, rapid-slippery pulse</li>
+        <li><strong>Cold Phlegm:</strong> white watery phlegm, cold limbs, pale swollen tongue, deep-slow pulse</li>
+        <li><strong>Wind Phlegm:</strong> dizziness, numbness (unilateral), deviated tongue, wiry pulse</li>
+        <li><strong>Phlegm Fluid:</strong> very thin watery sputum, dizziness, wiry pulse</li>
+      </ul>
+    </div>
+    <div class="card card-purple">
+      <h4>Non-Substantial Phlegm (invisible)</h4>
+      <ul>
+        <li><strong>Qi Phlegm:</strong> throat swelling sensation (Plum-Pit Qi), no actual swelling, wiry pulse</li>
+        <li><strong>Under Skin:</strong> lumps, nerve ganglia, lymph nodes, thyroid, lipomas</li>
+        <li><strong>In Channels:</strong> numbness</li>
+        <li><strong>Misting Heart:</strong> mental illness</li>
+        <li><strong>Gallbladder/Kidneys:</strong> stones</li>
+        <li><strong>Joints:</strong> bone deformities in rheumatoid arthritis</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 10: SHEN + FIVE SPIRITS ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">✨</div>
+    <div>
+      <div class="section-title">Shén 神 / Mind-Spirit + Five Spirits</div>
+      <div class="section-sub">Most immaterial of the Three Treasures</div>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <span class="callout-icon">👁️</span>
+    <div class="callout-body">
+      <strong>Healthy Shén Signs (Yǒu Shén 有神)</strong>
+      Physical appearance bright; eyes show alertness with a twinkle (KEY SIGN — "Is anyone home?"); mind clear with clear speech; respiration smooth and even; good appetite; normal bowel movements.
+    </div>
+  </div>
+
+  <h2>States of Shén</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Sign</th><th>Having Shén (有神)</th><th>Loss of Shén (失神)</th><th>False Shén (假神)</th></tr></thead>
+      <tbody>
+        <tr><td>Complexion</td><td>Bright, moist sheen</td><td>Dim, dull sheen</td><td>Dull with sudden flushed cheeks</td></tr>
+        <tr><td>Eyes</td><td>Alert, vivid, colors with a twinkle</td><td>Dull color, blurred vision</td><td>Dull colors but suddenly lustrous</td></tr>
+        <tr><td>Mind</td><td>Clear speech, consciousness, agile response</td><td>Unconscious, delirious</td><td>Unclear conscious with sudden change</td></tr>
+        <tr><td>Motion</td><td>Free with quick response</td><td>Slow movement, poor response</td><td>Suddenly responsive</td></tr>
+        <tr><td>Respiration</td><td>Even</td><td>Rapid, feeble, difficult</td><td>Feeble but then strong</td></tr>
+        <tr><td>Diet</td><td>Strong appetite</td><td>Poor</td><td>Poor but then suddenly improves</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="callout-icon">🚨</span>
+    <div class="callout-body">
+      <strong>False Spirit (Jiǎ Shén 假神) — lecture pearl</strong>
+      A sudden revival before death — the patient who's been unresponsive, emaciated, and delirious suddenly perks up completely: eyes bright, strong speech, wants to eat. This is the floating up of Yang Qi as Yin and Yang begin to separate. "The candle flares brightest just before it goes out."
+    </div>
+  </div>
+
+  <h2>The Five Spirits (Five Shén)</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Spirit</th><th>Organ</th><th>Quality</th><th>Responsible For</th><th>Imbalances</th><th>BL Point</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Shén 神</strong></td><td>Heart ❤️</td><td>Inspiration, Insight, Awareness, Compassion</td>
+          <td>Consciousness, thinking, affections, memory, sleep</td>
+          <td>Mania, lack of inspiration, scattered spirit, insomnia, hysteria, sadness, depression</td>
+          <td>BL-44 Mind Hall</td>
+        </tr>
+        <tr>
+          <td><strong>Hún 魂</strong></td><td>Liver 🌿</td><td>Vision, Imagination, Direction, Benevolence; "the soul" — enters at birth, leaves at death</td>
+          <td>Sleep, plans, projects, life aims; repository of dreams, aspirations, inspiration</td>
+          <td>Delusions, hallucinations, psychosis, nightmares, sleepwalking, anger, frustration, jealousy, paranoia</td>
+          <td>BL-47 Gate of Ethereal Soul</td>
+        </tr>
+        <tr>
+          <td><strong>Pò 魄</strong></td><td>Lung 🌬️</td><td>Animal wit, embodiment, sensation, appreciation; dies with the body</td>
+          <td>Feelings and sensations; instinctive reactions; bodily sensation</td>
+          <td>Emotional numbness, mind/body disconnect, over-indulgence, extreme vanity, sadness, grief, can't let go</td>
+          <td>BL-42 Gate of Corporeal Soul</td>
+        </tr>
+        <tr>
+          <td><strong>Yì 思</strong></td><td>Spleen 🌍</td><td>Integrity, Intention, Clear Thought, Devotion; gives ability to study and manifest ideas</td>
+          <td>Thinking, memory, concentration; "standing on firm ground" = speaking truth</td>
+          <td>Poor concentration, overthinking, worrying, stuck thoughts, lack of sympathy, over-smothering</td>
+          <td>BL-49 Thought Shelter</td>
+        </tr>
+        <tr>
+          <td><strong>Zhì 志</strong></td><td>Kidney 💧</td><td>Instinctual power, aligned will, courage, wisdom; embodies survival drive. "Water doesn't stop for obstacles"</td>
+          <td>Willpower, determination, drive; motivates achievement</td>
+          <td>Low willpower, lack of drive, no life goals, depression, fearfulness, low self-esteem</td>
+          <td>BL-52 Gate of Willpower</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════ SECTION 11: MASTER COMPARISON TABLES ══════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">📊</div>
+    <div>
+      <div class="section-title">Master Comparison Tables · Quick Reference</div>
+      <div class="section-sub">Everything side-by-side for exam prep</div>
+    </div>
+  </div>
+
+  <h2>Vital Substances Relationships</h2>
+  <div class="callout exam">
+    <span class="callout-icon">🎯</span>
+    <div class="callout-body">
+      <strong>Key Relationships to Memorize</strong>
+      (1) Qi is the commander of Blood; Blood is the mother of Qi. (2) Blood nourishes Body Fluids; Body Fluids replenish Blood. (3) Qi transforms/transports/holds Body Fluids; Body Fluids nourish Qi. (4) Liver Blood nourishes Essence; Kidney Essence transforms into Blood.
+    </div>
+  </div>
+
+  <h2>Qi Pathology Differentiation</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>Qi Deficiency</th><th>Sinking Qi</th><th>Qi Stagnation</th><th>Rebellious Qi</th></tr></thead>
+      <tbody>
+        <tr><td>Core issue</td><td>Not enough Qi</td><td>Qi Def + can't rise</td><td>Qi blocked, not flowing</td><td>Qi going wrong direction</td></tr>
+        <tr><td>Pain/discomfort</td><td>Dull tiredness</td><td>Bearing-down sensation</td><td>Distension &gt; pain</td><td>Organ-specific (nausea, cough, headache)</td></tr>
+        <tr><td>Key sign</td><td>Fatigue, empty pulse</td><td>Prolapse</td><td>Wiry pulse; sighing</td><td>Belching, hiccup, cough, headache</td></tr>
+        <tr><td>Tongue</td><td>Pale</td><td>Pale</td><td>Normal or red sides</td><td>Varies by organ</td></tr>
+        <tr><td>Primary organ</td><td>Lung, Spleen, Kidney, Heart</td><td>Spleen</td><td>Liver (mainly)</td><td>Stomach, Liver, Lung, etc.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Eight Principles Master Summary</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Pair</th><th>Yang/Excess Side</th><th>Yin/Deficiency Side</th><th>Key Differentiator</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Location</strong></td><td>Exterior: floating pulse, thin white coat, fever + aversion to cold</td><td>Interior: deep pulse, abnormal coat, fever without aversion to cold</td><td>Pulse depth + aversion to cold relationship</td></tr>
+        <tr><td><strong>Temperature</strong></td><td>Heat: red, thirst, rapid pulse, red tongue yellow coat</td><td>Cold: pale, no thirst, slow/tight pulse, pale tongue white coat</td><td>Thirst + tongue color + face color</td></tr>
+        <tr><td><strong>Strength</strong></td><td>Full: pain worse on pressure, strong voice, thick coat, full pulse</td><td>Empty: pain better on pressure, weak voice, little coat, empty pulse</td><td>Response to pressure on pain</td></tr>
+        <tr><td><strong>Nature</strong></td><td>Yang: Hot/Exterior/Full → restlessness, redness, strength</td><td>Yin: Cold/Interior/Empty → quietness, pallor, weakness</td><td>Overall vitality and expression</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Treatment Principles Summary</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Pattern</th><th>Principle</th><th>Acupuncture Method</th><th>Herbal Direction</th></tr></thead>
+      <tbody>
+        <tr><td>Exterior (any)</td><td>Expel EPF; don't let it inside</td><td>Head, arm, upper back (Yang areas); cupping</td><td>Light herbs — leaves & twigs (Jinyin hua, Bohe, Fangfeng)</td></tr>
+        <tr><td>Interior (any)</td><td>Treat real condition; determine Hot/Cold/Full/Empty</td><td>Chest, back, legs, feet; Mu, Back-shu, Lower He-Sea, Source points</td><td>Heavy herbs — roots, seeds (Shigao, etc.)</td></tr>
+        <tr><td>Cold</td><td>Warm / dispel cold</td><td>Warming needle; moxibustion; reinforcing (deficiency); reducing (excess)</td><td>Warm, pungent herbs</td></tr>
+        <tr><td>Heat</td><td>Clear / expel heat</td><td>Reducing method (excess); reinforcing (deficiency — tonify Yin)</td><td>Cool herbs; Jinyin hua, Lian qiao (exterior); Shi gao (interior)</td></tr>
+        <tr><td>Full/Excess</td><td>Reduce/expel pathogen</td><td>Reducing method (Xiè method)</td><td>Clearing, draining herbs</td></tr>
+        <tr><td>Empty/Deficiency</td><td>Tonify/reinforce Zheng Qi</td><td>Reinforcing method (Bǔ method)</td><td>Tonic herbs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout exam">
+    <span class="callout-icon">📝</span>
+    <div class="callout-body">
+      <strong>Prof. Schrier's Clinical Strategy for MCQs (lecture)</strong>
+      Step 1: Is this exterior or interior? Step 2: Is it hot or cold? Step 3: Is it full or empty? Then look at your multiple choice options and cross things off. You're building a differential by layering these principles — each question narrows the answer. The Eight Principles are your diagnostic filter.
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:2rem; padding:1rem; border-top: 2px solid var(--gold);">
+    <p style="font-family:'Fredoka',sans-serif; color:var(--navy); font-size:0.9rem; font-weight:600;">EAM310 · Week 1 Study Guide · Jon Centeno · VUIM DAcHM · Summer 2026</p>
+    <p style="font-size:0.72rem; color:var(--muted); font-family:'JetBrains Mono',monospace;">Sources: FCM Ch.30–31 · CAM Ch.10 · Prof. Schrier Lecture Transcripts · For educational use only</p>
+  </div>
+</div>
+
+</body>
+</html>
