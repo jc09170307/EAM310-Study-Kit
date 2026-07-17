@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 · Week 2 Worksheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--gold:#c9a227;--gold-light:#f5e6b0;--teal:#0d7888;--teal-light:#d8f0f3;--maroon:#5a1018;--cream:#fffdf5;--white:#fff;--offwhite:#f7f5ef;--muted:#4a5068;--border:#c4bfac;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Quicksand',sans-serif;background:var(--cream);color:#1a1a2e;font-size:13.5px;line-height:1.55;}
+.kit-nav{background:var(--navy);padding:.45rem 1.1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
+.kit-nav-title{font-family:'Fredoka',sans-serif;color:var(--gold);font-size:.9rem;font-weight:600;}
+.kit-nav a{color:rgba(255,255,255,.7);font-size:.68rem;font-weight:600;text-decoration:none;padding:.2rem .45rem;border-radius:4px;border:1px solid rgba(255,255,255,.15);}
+.kit-nav a.active{background:var(--gold);color:var(--navy);}
+.wrap{max-width:860px;margin:0 auto;padding:1.5rem 1.2rem 4rem;}
+.doc-header{background:var(--navy);border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:.8rem;}
+.doc-header h1{font-family:'Fredoka',sans-serif;font-size:1.5rem;color:var(--gold-light);}
+.doc-header .sub{font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.2rem;}
+.doc-header .meta{font-size:.75rem;color:rgba(255,255,255,.55);text-align:right;}
+h2{font-family:'Fredoka',sans-serif;font-size:1.05rem;color:var(--navy);border-bottom:2px solid var(--gold);padding-bottom:.2rem;margin:1.5rem 0 .8rem;}
+.ws-q{margin-bottom:1.1rem;}
+.q-num{font-weight:800;color:var(--maroon);margin-right:.4rem;}
+.question{font-weight:600;font-size:.88rem;}
+.fill-line{display:block;border-bottom:1.5px solid var(--border);min-height:22px;margin-top:.3rem;}
+.fill-box{border:1.5px solid var(--border);border-radius:6px;min-height:60px;padding:.3rem .5rem;margin-top:.4rem;background:var(--white);}
+.case-box{background:var(--navy);color:#fff;border-radius:10px;padding:.9rem 1.1rem;margin:.8rem 0;font-size:.85rem;line-height:1.6;}
+.case-box h4{font-family:'Fredoka',sans-serif;color:var(--gold-light);margin-bottom:.35rem;}
+.tag{display:inline-block;background:rgba(201,162,39,.25);border:1px solid rgba(201,162,39,.5);color:var(--gold-light);font-size:.65rem;font-weight:700;padding:.1rem .4rem;border-radius:3px;margin:.1rem;}
+.callout{border-radius:8px;padding:.7rem .9rem;margin:.8rem 0;font-size:.8rem;border-left:3.5px solid;}
+.callout.tip{background:rgba(201,162,39,.1);border-color:var(--gold);}
+.callout.tip strong{color:#8a6e10;}
+.sec-divider{border:none;border-top:2px dashed var(--border);margin:1.8rem 0;}
+/* Answer Key */
+.ak-section{background:#f0f8fa;border:1.5px solid var(--teal);border-radius:10px;padding:1rem;margin-top:2rem;}
+.ak-section h3{font-family:'Fredoka',sans-serif;color:var(--teal);margin-bottom:.7rem;}
+.ak-item{margin-bottom:.8rem;font-size:.82rem;}
+.ak-q{font-weight:600;color:var(--navy);}
+.ak-a{color:var(--muted);margin-top:.15rem;padding-left:.8rem;border-left:2px solid var(--teal);}
+.page-footer{text-align:center;font-size:.65rem;color:var(--muted);margin-top:2rem;padding-top:.8rem;border-top:1px solid var(--border);}
+@media print{
+  @page{size:letter portrait;margin:.55in .6in .5in .6in;}
+  body{background:white;font-size:9pt;}
+  .kit-nav{display:none;}
+  .wrap{max-width:none;padding:0;}
+  .doc-header{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;border-radius:4px;page-break-after:always;}
+  .ak-section{-webkit-print-color-adjust:exact;print-color-adjust:exact;page-break-before:always;}
+  .case-box{-webkit-print-color-adjust:exact;print-color-adjust:exact;page-break-inside:avoid;}
+  .callout{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  h2{page-break-after:avoid;}
+}
+</style>
+</head>
+<body>
+<nav class="kit-nav">
+  <span class="kit-nav-title">🔬 EAM310</span>
+  <a href="https://jc09170307.github.io/EAM310-Study-Kit/">Study App</a>
+  <a href="EAM310_Week2_StudyGuide.html">W2 Guide</a>
+  <a href="EAM310_Week2_Worksheet.html" class="active">W2 Worksheet</a>
+  <a href="EAM310_PatternMatrix.html">Matrix</a>
+</nav>
+<div class="wrap">
+<div class="doc-header">
+  <div><h1>Week 2 · Worksheet</h1>
+  <div class="sub">Four Pillars · Tongue Intro · Pulse Intro · Critical Reasoning</div>
+  <div class="sub">Prof. Daniel Schrier, D.O.M., L.Ac. · EAM310 · VUIM · Summer 2026</div></div>
+  <div class="meta">Name: ________________<br>Date: ________________<br>Quiz 2 Prep</div>
+</div>
+
+<div class="callout tip"><strong>Instructions:</strong> Cover the Answer Key at the bottom. Answer from memory. Use lined spaces for short answers, boxes for longer explanations. Case studies: identify the pattern and justify every finding.</div>
+
+<!-- SECTION A: ACTIVE RECALL -->
+<h2>Section A · Active Recall — Four Pillars &amp; Reasoning</h2>
+
+<div class="ws-q"><span class="q-num">1.</span><span class="question">Name the Four Pillars of EAM Diagnosis. Give the Chinese character and pinyin for each. Why is the answer four and not five?</span>
+<span class="fill-line"></span><span class="fill-line"></span><span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="ws-q"><span class="q-num">2.</span><span class="question">Why does Prof. Schrier reject "interrogation" as a term for the third pillar? What does he use instead?</span>
+<span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="ws-q"><span class="q-num">3.</span><span class="question">Describe the three types of critical reasoning in EAM. Give a concrete clinical example of each.</span>
+<div class="fill-box"></div></div>
+
+<div class="ws-q"><span class="q-num">4.</span><span class="question">A patient presents with a floating pulse. You put a "?" next to it. What two completely different patterns could produce a floating pulse, and what additional signs would tell them apart?</span>
+<div class="fill-box"></div></div>
+
+<div class="ws-q"><span class="q-num">5.</span><span class="question">A patient has cold hands and feet but a warm torso. Is this a Cold pattern? Explain the alternative.</span>
+<span class="fill-line"></span><span class="fill-line"></span><span class="fill-line"></span></div>
+
+<hr class="sec-divider">
+<!-- SECTION B: TONGUE MAP -->
+<h2>Section B · Tongue Diagnosis</h2>
+
+<div class="ws-q"><span class="q-num">6.</span><span class="question">Label the tongue map zones. Fill in the blank: Tip = ___ / Just behind tip = ___ / Sides = ___ / Center oval = ___ / Root/Back = ___</span>
+<span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="ws-q"><span class="q-num">7.</span><span class="question">What do the three layers of the tongue each reflect? (Coat, Body, Sublingual veins)</span>
+<span class="fill-line"></span><span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="ws-q"><span class="q-num">8.</span><span class="question">What is "tongue spirit" and why does it matter? What does a spiritless tongue look like?</span>
+<span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="ws-q"><span class="q-num">9.</span><span class="question">What three things should you tell patients before a tongue & pulse assessment, and what's the reason for each?</span>
+<div class="fill-box"></div></div>
+
+<div class="ws-q"><span class="q-num">10.</span><span class="question">Red tongue + thick yellow coat vs. Red tongue + NO coat. What does each indicate?</span>
+<span class="fill-line"></span><span class="fill-line"></span></div>
+
+<hr class="sec-divider">
+<!-- SECTION C: PULSE -->
+<h2>Section C · Pulse Diagnosis Intro</h2>
+
+<div class="ws-q"><span class="q-num">11.</span><span class="question">Map the pulse positions. For LEFT wrist: Cun = ___ / Guan = ___ / Chi = ___. For RIGHT wrist: Cun = ___ / Guan = ___ / Chi = ___</span>
+<span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="ws-q"><span class="q-num">12.</span><span class="question">Who was Ibn Sina? What was his quote about pulse diagnosis?</span>
+<span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="ws-q"><span class="q-num">13.</span><span class="question">List the three qualities of a NORMAL pulse (Stomach-Qi, Spirit, Root) and describe what each feels like.</span>
+<div class="fill-box"></div></div>
+
+<div class="ws-q"><span class="q-num">14.</span><span class="question">Describe the journal assignment protocol: How many people? How many total observations? Due dates?</span>
+<span class="fill-line"></span><span class="fill-line"></span></div>
+
+<hr class="sec-divider">
+<!-- SECTION D: CLINICAL CASES -->
+<h2>Section D · Clinical Cases</h2>
+
+<div class="case-box">
+  <h4>🩺 Case 1 — Mr. Reyes, 38</h4>
+  <p>Sudden onset 2 days ago. Fever 38.4°C with chills (simultaneously). Occipital headache, stiff neck, body aches. No sweating. No thirst. Clear nasal discharge. Tongue: thin white coat, normal body. Pulse: floating, tight.</p>
+  <div style="margin-top:.5rem;"><span class="tag">Fever + Chills (simultaneous)</span><span class="tag">No sweating</span><span class="tag">No thirst</span><span class="tag">Tongue: thin white</span><span class="tag">Pulse: float + tight</span></div>
+</div>
+<div class="ws-q"><span class="q-num">C1a.</span><span class="question">Which Four Pillar gave you the most clinical data in this case so far (pulse = palpation, tongue = observation)?</span><span class="fill-line"></span></div>
+<div class="ws-q"><span class="q-num">C1b.</span><span class="question">What Eight Principles pattern does this represent? Justify each component (Location? Nature? Degree?)</span><div class="fill-box"></div></div>
+<div class="ws-q"><span class="q-num">C1c.</span><span class="question">What would you expect this patient's pulse to be if the pathogen transmitted inward to the interior? What sign would you look for on the tongue?</span><span class="fill-line"></span><span class="fill-line"></span></div>
+
+<div class="case-box" style="margin-top:1.2rem;">
+  <h4>🩺 Case 2 — Ms. Park, 44 (Journal Practice Patient)</h4>
+  <p>You are doing your Journal assignment. You observe Ms. Park's tongue and feel her pulse. Tongue: red body, no coating (peeled, mirror-smooth), dry. Pulse: floating, thready, slightly rapid. She reports: feels tired by afternoon, sometimes gets warm in the evenings, night sweats, dry mouth worse at night, palms slightly warm.</p>
+  <div style="margin-top:.5rem;"><span class="tag">Red body, NO coat</span><span class="tag">Pulse: floating thready rapid</span><span class="tag">Afternoon fatigue/warmth</span><span class="tag">Night sweats</span><span class="tag">Dry mouth at night</span></div>
+</div>
+<div class="ws-q"><span class="q-num">C2a.</span><span class="question">The floating pulse — does it indicate exterior? Explain using Schrier's clinical reasoning principle.</span><span class="fill-line"></span><span class="fill-line"></span></div>
+<div class="ws-q"><span class="q-num">C2b.</span><span class="question">What does the tongue (red body + NO coating) tell you? What layer of the tongue is giving you this information?</span><span class="fill-line"></span><span class="fill-line"></span></div>
+<div class="ws-q"><span class="q-num">C2c.</span><span class="question">What is the Eight Principles pattern? What journal fields would you fill in for this patient?</span><div class="fill-box"></div></div>
+
+<hr class="sec-divider">
+<!-- ANSWER KEY -->
+<div class="ak-section">
+<h3>🙈 Answer Key — No Peeking Until You've Tried</h3>
+
+<div class="ak-item"><span class="ak-q">1. Four Pillars:</span><div class="ak-a">望 Wàng (Observation/Seeing) · 聞 Wén (Hearing & Smelling — ONE pillar) · 問 Wèn (Inquiry) · 切 Qiē (Palpation). Four not five because hearing and smelling are bundled as 聞.</div></div>
+<div class="ak-item"><span class="ak-q">2. Interrogation → Inquiry:</span><div class="ak-a">Schrier: "We're not the CIA." The goal is curiosity and openness — "Tell me more about how this shows up for you." The energy of the question shapes what the patient shares.</div></div>
+<div class="ak-item"><span class="ak-q">3. Three reasoning types:</span><div class="ak-a">Deductive (general rule → this patient: fever+chills+floating pulse → exterior). Inductive (specific observations → general rule: historically floating pulse = exterior). Analogical (A causes B, A predicts B: sustained Heat → damages Blood → internal Wind vector opens).</div></div>
+<div class="ak-item"><span class="ak-q">4. Floating pulse — two patterns:</span><div class="ak-a">EXTERIOR: fever + aversion to cold (simultaneously), stiff neck, occipital headache, runny nose. YIN DEFICIENCY: night sweats, five-palm heat, malar flush (cheeks not whole face), afternoon fever, dryness. The floating pulse in Yin def. is because deficient Yin cannot anchor Yang.</div></div>
+<div class="ak-item"><span class="ak-q">5. Cold hands, warm torso:</span><div class="ak-a">NOT automatically a Cold pattern. More likely Qi stagnation blocking warm Qi from reaching extremities. The core is hot — the Qi is simply stuck and not circulating outward. Context: look at tongue, full pulse picture, other signs.</div></div>
+<div class="ak-item"><span class="ak-q">6. Tongue zones:</span><div class="ak-a">Tip = Heart · Just behind tip = Lung · Sides = Liver/Gallbladder · Center oval = Spleen/Stomach · Root/Back = Kidney, Bladder, Intestines.</div></div>
+<div class="ak-item"><span class="ak-q">7. Three tongue layers:</span><div class="ak-a">Coat = most superficial, Yang organs & pathogenic factors. Body = Yin organs, Blood, Nutritive Qi (Ying level). Sublingual veins = deepest, Yuan (Original) Qi; Blood stasis if dark/distended/tortuous.</div></div>
+<div class="ak-item"><span class="ak-q">8. Tongue spirit:</span><div class="ak-a">How alive it looks — fresh, slightly moist, slightly lustrous. Reflects Stomach-Qi. Good spirit = good prognosis even in disease. Spiritless ("cow tongue at the deli" — dull, dry, gray) = serious Stomach-Qi depletion. Always note this.</div></div>
+<div class="ak-item"><span class="ak-q">9. Patient prep instructions:</span><div class="ak-a">(1) Don't brush/scrape tongue — "cleaning up a murder scene." (2) No perfume/cologne/essential oils — interfere with smelling diagnosis. (3) Poker face on examination — never say "it looks dead"; say "your chi is good" or "this is great information."</div></div>
+<div class="ak-item"><span class="ak-q">10. Red + coat vs Red + no coat:</span><div class="ak-a">Red + THICK YELLOW coat = Full-Heat (pathogen present; coating reflects Yang organs/Stomach's pathogen load). Red + NO coat = Empty-Heat from Yin deficiency (Yin consumed → Stomach-Yin failing to "steam" a coat upward).</div></div>
+<div class="ak-item"><span class="ak-q">11. Pulse positions:</span><div class="ak-a">LEFT: Cun=Heart/PC · Guan=Liver/GB · Chi=Kidney-Yin. RIGHT: Cun=Lung/LI · Guan=Spleen/Stomach · Chi=Kidney-Yang.</div></div>
+<div class="ak-item"><span class="ak-q">12. Ibn Sina:</span><div class="ak-a">Avicenna (980–1037 CE), Persian polymath of the Islamic Golden Age. Quote: "Only the musically trained can truly know the pulse. The pulse is of a musical nature." Means: pulse requires time and repetition to develop sensitivity, like learning an instrument.</div></div>
+<div class="ak-item"><span class="ak-q">13. Normal pulse:</span><div class="ak-a">Stomach-Qi = gentle, calm, unhurried (reflects digestive function). Spirit = soft but with strength, regular rhythm, "alive" (reflects Mind vitality). Root = clearly felt deep and at Chi/rear position (reflects Kidney Essence intact).</div></div>
+<div class="ak-item"><span class="ak-q">14. Journal protocol:</span><div class="ak-a">5 people minimum, each seen 4–5+ times. 50 total tongue + pulse observations. J1–25 due at Midterm (Aug 7). J26–50 due at Final (Sep 11). ~6–7 entries/week starting now.</div></div>
+<div class="ak-item"><span class="ak-q">C1: Pattern</span><div class="ak-a">Exterior Wind-Cold (Excess). Location: exterior (simultaneous fever + chills, floating pulse). Nature: Cold (no thirst, thin white coat, tight pulse — tight = Cold contracting). Degree: Excess (no sweating = pathogen blocking pores, forceful tight pulse).</div></div>
+<div class="ak-item"><span class="ak-q">C1c: Interior transmission</span><div class="ak-a">Pulse would become deep (沉). Tongue coat would thicken and likely turn yellow. Key clinical marker = aversion to cold disappears (it was there only while pathogen was at the surface).</div></div>
+<div class="ak-item"><span class="ak-q">C2: Full pattern</span><div class="ak-a">Floating pulse in Yin deficiency — NOT exterior (Schrier's clinical pearl). Tongue body = Yin organs/Ying level → red = Heat. NO coat = Yin deficiency (Stomach-Yin failing to steam up a coat). Pattern: Yin Deficiency with Empty-Heat. Interior · Heat · Deficiency. The floating thready rapid pulse confirms Empty-Heat not Full-Heat.</div></div>
+</div>
+
+<div class="page-footer">EAM310 Week 2 Worksheet · Prof. Daniel Schrier, D.O.M., L.Ac. · Jonathan Centeno · VUIM DAcHM · Summer 2026</div>
+</div>
+</body>
+</html>
