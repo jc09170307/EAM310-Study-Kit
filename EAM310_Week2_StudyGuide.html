@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAM310 · Week 2 Study Guide · Four Pillars & Tongue/Pulse Intro</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#1a2744; --navy-mid:#263a5e;
+  --gold:#c9a227; --gold-light:#f5e6b0; --gold-dark:#8a6e10;
+  --teal:#0d7888; --teal-light:#d8f0f3;
+  --maroon:#5a1018; --maroon-light:#faf0f0;
+  --cream:#fffdf5; --white:#ffffff; --offwhite:#f7f5ef;
+  --cold:#2a6898; --cold-bg:#d5e8f5;
+  --heat:#b83030; --heat-bg:#f5d8d8;
+  --text:#1a1a2e; --muted:#4a5068; --border:#c4bfac;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Quicksand',sans-serif;background:var(--cream);color:var(--text);font-size:14px;line-height:1.6;}
+
+/* ── NAV ── */
+.kit-nav{background:var(--navy);padding:.5rem 1.2rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
+.kit-nav-title{font-family:'Fredoka',sans-serif;color:var(--gold);font-size:.9rem;font-weight:600;}
+.kit-nav a{color:rgba(255,255,255,.7);font-size:.68rem;font-weight:600;text-decoration:none;padding:.2rem .5rem;border-radius:4px;border:1px solid rgba(255,255,255,.15);}
+.kit-nav a:hover{color:#fff;border-color:var(--gold);}
+.kit-nav a.active{background:var(--gold);color:var(--navy);border-color:var(--gold);}
+
+/* ── LAYOUT ── */
+.wrap{max-width:900px;margin:0 auto;padding:1.5rem 1.2rem 4rem;}
+
+/* ── COVER ── */
+.cover{background:var(--navy);border-radius:14px;padding:1.8rem 2rem;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;}
+.cover h1{font-family:'Fredoka',sans-serif;font-size:2rem;font-weight:700;color:var(--gold-light);line-height:1.1;}
+.cover .sub{font-size:.82rem;color:rgba(255,255,255,.65);margin-top:.3rem;}
+.cover-meta{text-align:right;}
+.badge{display:inline-block;background:rgba(201,162,39,.2);border:1px solid rgba(201,162,39,.4);color:var(--gold-light);font-size:.68rem;font-weight:700;padding:.15rem .5rem;border-radius:4px;margin:.15rem;}
+
+/* ── CHAPTER HEADERS ── */
+.ch-header{background:var(--navy);color:var(--gold-light);font-family:'Fredoka',sans-serif;font-size:1.15rem;font-weight:700;padding:.6rem 1rem;border-radius:8px;margin:2rem 0 1rem;display:flex;align-items:center;gap:.5rem;}
+.ch-num{background:var(--gold);color:var(--navy);border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800;flex-shrink:0;}
+.sec-title{font-family:'Fredoka',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);border-bottom:2.5px solid var(--gold);padding-bottom:.2rem;margin:1.2rem 0 .6rem;}
+
+/* ── BODY TEXT ── */
+p{margin-bottom:.9rem;line-height:1.65;}
+p.lead{font-size:.95rem;color:var(--muted);font-style:italic;border-left:3px solid var(--gold);padding-left:.8rem;margin-bottom:1rem;}
+strong{color:var(--navy);}
+em.zh{color:var(--teal);font-style:normal;font-weight:600;}
+
+/* ── CALLOUTS ── */
+.callout{border-radius:10px;padding:.85rem 1rem;margin:1rem 0;font-size:.82rem;line-height:1.55;border-left:4px solid;}
+.callout h4{font-family:'Fredoka',sans-serif;font-size:.88rem;margin-bottom:.35rem;}
+.callout.tip{background:rgba(201,162,39,.1);border-color:var(--gold);}
+.callout.tip h4{color:var(--gold-dark);}
+.callout.clinical{background:#e8f5ec;border-color:#2a7050;}
+.callout.clinical h4{color:#1e5838;}
+.callout.warning{background:var(--heat-bg);border-color:var(--heat);}
+.callout.warning h4{color:var(--heat);}
+.callout.quote{background:var(--offwhite);border-color:var(--navy-mid);font-style:italic;}
+.callout.quote h4{color:var(--navy);font-style:normal;}
+.callout.schrier{background:#f0f8fa;border-color:var(--teal);}
+.callout.schrier h4{color:var(--teal);}
+.callout ul{padding-left:1.2rem;margin-top:.3rem;}
+.callout li{margin-bottom:.2rem;}
+
+/* ── TABLES ── */
+.tbl-wrap{border-radius:10px;overflow:hidden;border:1.5px solid var(--border);margin:1rem 0;box-shadow:0 2px 8px rgba(26,39,68,.08);}
+table{width:100%;border-collapse:collapse;font-size:.82rem;}
+thead th{padding:.55rem .7rem;text-align:left;font-family:'Fredoka',sans-serif;font-size:.78rem;font-weight:700;}
+.th-navy{background:var(--navy);color:#fff;}
+.th-teal{background:var(--teal);color:#fff;}
+.th-maroon{background:var(--maroon);color:#fff;}
+tbody td{padding:.45rem .7rem;border-top:1px solid var(--border);vertical-align:top;line-height:1.45;font-size:.8rem;}
+tbody tr:nth-child(even) td{background:var(--offwhite);}
+.row-hdr{font-weight:700;color:var(--navy);font-size:.75rem;text-transform:uppercase;letter-spacing:.03em;}
+
+/* ── TONGUE DIAGRAM ── */
+.tongue-wrap{display:flex;gap:1.5rem;align-items:flex-start;margin:1rem 0;}
+.tongue-img-box{flex-shrink:0;width:220px;}
+.tongue-img-box img{width:100%;border-radius:10px;border:1.5px solid var(--border);}
+.tongue-notes{flex:1;}
+.zone-pill{display:inline-block;background:var(--teal-light);border:1px solid var(--teal);color:var(--teal);font-size:.7rem;font-weight:700;padding:.12rem .5rem;border-radius:10px;margin:.12rem;}
+
+/* ── PULSE GRID ── */
+.pulse-grid-wrap{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:1rem;margin:1rem 0;}
+.pulse-grid{display:grid;grid-template-columns:60px 1fr 1fr 1fr;gap:4px;font-size:.78rem;}
+.pulse-cell{border-radius:4px;padding:.4rem .5rem;text-align:center;}
+.pulse-header{background:var(--navy);color:#fff;font-weight:700;}
+.pulse-side{background:var(--teal-light);font-weight:700;color:var(--teal);display:flex;align-items:center;justify-content:center;}
+.pulse-organ{background:var(--offwhite);color:var(--muted);font-size:.72rem;line-height:1.3;}
+.pulse-organ strong{display:block;color:var(--navy);font-size:.78rem;}
+
+/* ── PILLAR CARDS ── */
+.pillar-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1rem 0;}
+.pillar-card{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:.8rem 1rem;}
+.pillar-card .icon{font-size:1.5rem;margin-bottom:.3rem;}
+.pillar-card h4{font-family:'Fredoka',sans-serif;font-size:.9rem;color:var(--navy);margin-bottom:.2rem;}
+.pillar-card .zh{font-size:.72rem;color:var(--teal);font-weight:600;}
+.pillar-card p{font-size:.78rem;color:var(--muted);margin:0;line-height:1.4;}
+.pillar-card.highlight{border-color:var(--gold);background:rgba(201,162,39,.06);}
+
+/* ── SYSTEM CARDS ── */
+.system-list{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.8rem 0;}
+.system-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.55rem .7rem;font-size:.78rem;}
+.system-card strong{display:block;color:var(--navy);font-size:.8rem;margin-bottom:.1rem;}
+.system-card span{color:var(--muted);font-size:.72rem;}
+.system-card.primary{border-left:3px solid var(--gold);background:rgba(201,162,39,.06);}
+
+/* ── REASON CARDS ── */
+.reason-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.7rem;margin:.8rem 0;}
+.reason-card{background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:.7rem;}
+.reason-card h5{font-family:'Fredoka',sans-serif;font-size:.82rem;color:var(--navy);margin-bottom:.3rem;}
+.reason-card p{font-size:.74rem;color:var(--muted);line-height:1.4;margin:0;}
+.reason-card .example{font-size:.72rem;font-style:italic;color:var(--teal);margin-top:.25rem;}
+
+/* ── FIVE PHASE TABLE ── */
+.phase-wrap{overflow-x:auto;margin:1rem 0;}
+
+/* ── FOOTER ── */
+.doc-footer{text-align:center;font-size:.7rem;color:var(--muted);margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);}
+
+/* ── PRINT CSS ── */
+@media print {
+  @page{size:letter portrait;margin:.55in .6in .5in .6in;}
+  body{background:white;font-size:9pt;}
+  .kit-nav{display:none;}
+  .wrap{max-width:none;padding:0;}
+  .cover{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;border-radius:4px;page-break-after:always;}
+  .ch-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;border-radius:4px;}
+  thead th{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .callout,.pulse-side,.pulse-header,.system-card.primary{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .tbl-wrap{box-shadow:none;page-break-inside:avoid;}
+  .callout{page-break-inside:avoid;}
+  .pillar-grid,.system-list,.reason-grid{page-break-inside:avoid;}
+  h2,.ch-header,.sec-title{page-break-after:avoid;}
+  table{font-size:8pt;}
+  thead th{font-size:7.5pt;padding:.3rem .5rem;}
+  tbody td{font-size:8pt;padding:.28rem .5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="kit-nav">
+  <span class="kit-nav-title">🔬 EAM310</span>
+  <a href="https://jc09170307.github.io/EAM310-Study-Kit/">Study App</a>
+  <a href="EAM310_StudyGuide.html">Full Guide</a>
+  <a href="EAM310_Week1_StudyGuide.html">Week 1</a>
+  <a href="EAM310_Week2_StudyGuide.html" class="active">Week 2</a>
+  <a href="EAM310_Week2_QuickRef.html">W2 Ref</a>
+  <a href="EAM310_PatternMatrix.html">Matrix</a>
+</nav>
+
+<div class="wrap">
+
+<!-- COVER -->
+<div class="cover">
+  <div>
+    <h1>Week 2 Study Guide</h1>
+    <div class="sub">Four Pillars of EAM Diagnosis · Tongue &amp; Pulse Introduction</div>
+    <div class="sub" style="margin-top:.3rem;">Prof. Daniel Schrier, D.O.M., L.Ac. · EAM310 · VUIM · Summer 2026</div>
+    <div class="sub" style="margin-top:.5rem;font-size:.74rem;color:rgba(255,255,255,.45);">Sources: Lecture transcript (Otter.ai) · FCM Ch.1–12, 23, 25 · CAM Ch.2–4, 11</div>
+  </div>
+  <div class="cover-meta">
+    <span class="badge">EAM310</span><br>
+    <span class="badge">Week 2</span><br>
+    <span class="badge">Quiz 2 Prep</span><br>
+    <span class="badge">Summer 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 1: CONTEXT & OVERVIEW -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">1</span> Context — Where We Are in EAM Diagnosis</div>
+
+<p>Week 2 sits at a critical junction. You've come out of Week 1 with the Eight Principles framework under your belt. Now Schrier is zooming out to show where that framework lives within the <strong>entire diagnostic ecosystem of East Asian Medicine</strong> — and then zooming all the way in to introduce the two most tactile, hands-on skills in the whole course: reading tongues and feeling pulses.</p>
+
+<div class="callout quote">
+  <h4>Professor Lin Hei Xiang (via Prof. Schrier)</h4>
+  "As for the contents of the Yellow Emperor's Classic, if you fully understand even one sentence, you will be able to receive nourishment from that for your entire life."
+</div>
+
+<p>That quote sets the tone for this week. You are not being asked to master these skills on Day 2. You are being asked to <em>begin</em> — to feel a pulse and observe a tongue without judgment, recording what you notice without forcing it to mean something you haven't learned yet.</p>
+
+<div class="callout tip">
+  <h4>💡 Quiz 2 Targets (covering Week 2 material)</h4>
+  Four Pillars names and definitions · Systems of pattern differentiation and their distinctions · Critical reasoning types (deductive, inductive, analogical) · Tongue map zones · What tongue body vs coating vs sublingual veins each reflect · Pulse positions (left/right, cun/guan/chi, organ assignments) · Assignment protocol for the Tongue &amp; Pulse Journal
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 2: FOUR PILLARS -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">2</span> The Four Pillars — 四診 Sì Zhěn</div>
+
+<p class="lead">These four methods are not separate steps run in sequence — they are simultaneous lenses applied at once. By the time a patient sits down in front of you, your observation has already begun.</p>
+
+<div class="callout warning">
+  <h4>⚠ Potential Quiz Trap — Count the Pillars</h4>
+  Schrier specifically pointed this out: "Observation, auscultation &amp; olfaction, inquiry, palpation — wait, Daniel, that's five." No — hearing and smelling are <strong>one pillar together</strong> (聞 Wén covers both). The answer is always four.
+</div>
+
+<div class="pillar-grid">
+  <div class="pillar-card">
+    <div class="icon">👁️</div>
+    <h4>Observation 望 Wàng</h4>
+    <div class="zh">Diagnosis by Seeing</div>
+    <p>Spirit (Shén), body, complexion color &amp; lustre, facial features, eyes, tongue body/coat. Includes constitutional observation — long earlobes (Kidney essence), upturned nose (weak Lung constitution), inability to make decisions (Liver/Gallbladder). Everything visible before the patient speaks.</p>
+  </div>
+  <div class="pillar-card">
+    <div class="icon">👂</div>
+    <h4>Hearing &amp; Smelling 聞 Wén</h4>
+    <div class="zh">Diagnosis by Listening &amp; Smelling</div>
+    <p>Voice strength (Full vs Empty), breathing sounds, cough. Smelling: you'll <em>ask</em> rather than smell directly ("What does your stool smell like? Very offensive? Or minimal odor?"). Loud/foul = Heat/Excess. Weak/absent = Cold/Deficiency.</p>
+  </div>
+  <div class="pillar-card highlight">
+    <div class="icon">🗣️</div>
+    <h4>Inquiry 問 Wèn</h4>
+    <div class="zh">Diagnosis by Asking — NOT "Interrogation"</div>
+    <p>Schrier explicitly rejects Maciocia's term "interrogation" — we're not the CIA. Be curious: <em>"Tell me more about how this is showing up for you."</em> Covers the 10 Traditional Questions + 3 new Western questions + the 16 Questions framework (Week 7). This is Week 7's main topic; for now just know it exists.</p>
+  </div>
+  <div class="pillar-card">
+    <div class="icon">🤚</div>
+    <h4>Palpation 切 Qiē</h4>
+    <div class="zh">Diagnosis by Touching &amp; Feeling</div>
+    <p>Pulse diagnosis (the primary focus). Also: abdominal palpation (Hara in Japanese tradition), channel palpation, skin palpation, point tenderness (back-shu, front-mu, lower-he). Tongue is <strong>not</strong> palpation — it's observation. "Don't touch the tongue. That's just weird."</p>
+  </div>
+</div>
+
+<div class="callout schrier">
+  <h4>🏃 Ballroom Dance Medicine Connection</h4>
+  In a dance medicine context, Observation is especially rich — you'll watch how a dancer carries their body, asymmetries in stance, where they guard or collapse, skin color under stage lighting. Many dancers also arrive with habitual "performance face" — learning to see through the mask to the real Shén underneath is a clinical skill you're already developing.
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 3: SYSTEMS OF PATTERN DIFFERENTIATION -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">3</span> Systems of Pattern Differentiation</div>
+
+<p>The Eight Principles are the <em>foundation</em> — but they're not the only framework. Schrier summarized the full landscape of pattern differentiation systems this week. Think of it as a map of maps:</p>
+
+<div class="system-list">
+  <div class="system-card primary">
+    <strong>① Eight Principles 八纲 Bā Gāng</strong>
+    <span>THE FOUNDATION — today's focus. Exterior/Interior, Cold/Heat, Deficiency/Excess, Yin/Yang. Applicable in every case regardless of which other system you then apply.</span>
+  </div>
+  <div class="system-card">
+    <strong>② Qi, Blood &amp; Body Fluids 气血津液</strong>
+    <span>Vital substance imbalances. What Week 1 also touched on. Works alongside Eight Principles in most clinical presentations.</span>
+  </div>
+  <div class="system-card">
+    <strong>③ Zang-Fu Organs 脏腑 Zàng Fǔ</strong>
+    <span>The workhorse of modern clinical practice. Most diagnoses in TCM eventually land here — Liver-Qi Stagnation, Kidney-Yang Deficiency, etc.</span>
+  </div>
+  <div class="system-card">
+    <strong>④ Channels &amp; Collaterals 经络 Jīng Luò</strong>
+    <span>12 primary + sinew + divergent + luo + 8 extraordinary. Important for acupuncture point selection and channel-based pathology.</span>
+  </div>
+  <div class="system-card">
+    <strong>⑤ Six Stages 六经 Liù Jīng (Shang Han Lun)</strong>
+    <span>Zhang Zhong Jing's system for febrile/cold-damage diseases. Taiyang → Yangming → Shaoyang → Taiyin → Shaoyin → Jueyin. This is Week 3 territory.</span>
+  </div>
+  <div class="system-card">
+    <strong>⑥ Four Levels 卫气营血 (Wen Bing)</strong>
+    <span>Ye Tian Shi's system for warm/epidemic febrile diseases. Wei → Qi → Ying → Xue (deepening invasion).</span>
+  </div>
+  <div class="system-card">
+    <strong>⑦ Three Burners 三焦 Sān Jiāo</strong>
+    <span>Upper (Heart-Lung), Middle (SP-ST-LV-GB), Lower (KD-BL-LI-SI). Used in Wen Bing and some Zang-Fu frameworks.</span>
+  </div>
+  <div class="system-card">
+    <strong>⑧ Five Elements 五行 Wǔ Xíng</strong>
+    <span>Wood-Fire-Earth-Metal-Water generating and controlling cycles. Used heavily in Worsley Five-Element tradition; embedded in all TCM organ-emotion correspondences.</span>
+  </div>
+</div>
+
+<div class="callout tip">
+  <h4>💡 The Big Picture: "Many Ways to Peel a Potato"</h4>
+  Schrier's phrase captures it perfectly. TCM, Japanese meridian/Hara, Worsley Five-Element — all using the same fundamental principles, different diagnostic entry points. They all put needles in people. They all give herbs. The goal is the same. The framework chosen shapes where you look first.
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 4: CRITICAL REASONING -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">4</span> Critical Reasoning in EAM Diagnosis</div>
+
+<p>One of the highest-yield conceptual points from this lecture. Schrier introduced three modes of clinical reasoning and showed how they interplay when building a pattern identification:</p>
+
+<div class="reason-grid">
+  <div class="reason-card">
+    <h5>🔽 Deductive Reasoning</h5>
+    <p>Start from a general rule, apply to this specific patient's presentation.</p>
+    <div class="example">Fever + aversion to cold + floating pulse → you <em>assume</em> exterior pattern. Then verify with all accompanying signs.</div>
+  </div>
+  <div class="reason-card">
+    <h5>🔼 Inductive Reasoning</h5>
+    <p>Start from observed patterns across many patients, derive a general conclusion.</p>
+    <div class="example">Historically, floating pulse = exterior pattern in most cases → becomes a general clinical rule (but always check the full picture).</div>
+  </div>
+  <div class="reason-card">
+    <h5>🔗 Analogical Reasoning</h5>
+    <p>Because X causes Y, the presence of X predicts Y will develop if unchecked.</p>
+    <div class="example">Long-term heat damages Blood → opens a vector for internal wind → patient with sustained heat may develop internal wind pattern.</div>
+  </div>
+</div>
+
+<div class="callout clinical">
+  <h4>🩺 The Floating Pulse Trap — Schrier's Most Important Clinical Pearl This Week</h4>
+  <p>A floating pulse does NOT automatically equal exterior pattern. Context decides:</p>
+  <ul>
+    <li><strong>Floating + exterior:</strong> fever, aversion to cold, occipital headache, stiff neck, runny nose — pathogen fighting at the surface</li>
+    <li><strong>Floating + Yin deficiency:</strong> night sweats, five-palm heat, malar flush, afternoon fever, dryness — the pulse floats because Yin can't anchor Yang</li>
+  </ul>
+  <p>Lesson: <strong>every sign is a question mark until you see the full constellation.</strong> Put a "?" next to floating pulse. Then gather the supporting signs before committing to a pattern.</p>
+</div>
+
+<div class="callout clinical">
+  <h4>🩺 Cold Limbs ≠ Cold Pattern (Always)</h4>
+  Cold limbs with a hot torso is NOT a straightforward Cold pattern. It's more likely <strong>Qi stagnation blocking warm Qi from reaching the extremities</strong>. The body core is hot — the stuck Qi just can't circulate outward. Context, context, context.
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 5: FIVE-PHASE CORRESPONDENCES REVIEW -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">5</span> Five-Phase Correspondences — Quiz-Relevant Items</div>
+
+<p>Schrier reviewed five-phase (五行 Wǔ Xíng) correspondences as a foundation for reading signs and symptoms across the whole body. What matters for Quiz 2:</p>
+
+<div class="tbl-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th class="th-navy" style="width:12%">Element</th>
+        <th class="th-navy" style="width:10%">Organ</th>
+        <th class="th-navy" style="width:11%">Color</th>
+        <th class="th-navy" style="width:11%">Emotion</th>
+        <th class="th-navy" style="width:11%">Sense Organ</th>
+        <th class="th-navy" style="width:11%">Tissue</th>
+        <th class="th-navy" style="width:10%">Season</th>
+        <th class="th-navy" style="width:15%">Pathogenic Factor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background:#e8f5e0;font-weight:700;color:#1e5010;">Wood 木</td>
+        <td>LV / GB</td><td>Green</td><td>Anger</td><td>Eyes</td><td>Sinews</td><td>Spring</td><td>Wind</td>
+      </tr>
+      <tr>
+        <td style="background:#fde8e8;font-weight:700;color:#8a1010;">Fire 火</td>
+        <td>HT / SI</td><td>Red</td><td>Joy</td><td>Tongue</td><td>Vessels</td><td>Summer</td><td>Heat</td>
+      </tr>
+      <tr>
+        <td style="background:#fdf5e0;font-weight:700;color:#7a5010;">Earth 土</td>
+        <td>SP / ST</td><td>Yellow</td><td>Pensiveness</td><td>Mouth</td><td>Muscles/Flesh</td><td>Late Summer</td><td>Dampness</td>
+      </tr>
+      <tr>
+        <td style="background:#f0f0f0;font-weight:700;color:#2a2a3a;">Metal 金</td>
+        <td>LU / LI</td><td>White</td><td>Grief</td><td>Nose</td><td>Skin/Hair</td><td>Autumn</td><td>Dryness</td>
+      </tr>
+      <tr>
+        <td style="background:#ddeef8;font-weight:700;color:#0a3870;">Water 水</td>
+        <td>KD / BL</td><td>Black/Blue</td><td>Fear</td><td>Ears</td><td>Bones</td><td>Winter</td><td>Cold</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout tip">
+  <h4>💡 What Schrier Said to Know vs Skip</h4>
+  <strong>Know:</strong> Color, sound, odor, emotion, taste, tissues, season, pathogenic factor — these all show up clinically.<br>
+  <strong>Skip (for now):</strong> Domestic animals, weapons — these matter for dietary therapy later, not for Q2.<br>
+  <strong>Mnemonic for tissues:</strong> <em>Sinews (wood) · Vessels (fire) · Muscles (earth) · Skin/Hair (metal) · Bones (water)</em> — goes with organ pairs.
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 6: TONGUE DIAGNOSIS INTRODUCTION -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">6</span> Introduction to Tongue Diagnosis 舌診 Shé Zhěn</div>
+
+<p class="lead">Tongue diagnosis is part of Observation (望 Wàng). You look — you do not touch. The tongue is one of the most objective signs in all of TCM diagnosis: it changes slowly (days to weeks), reflects the chronic underlying pattern, and cannot be faked.</p>
+
+<div class="sec-title">The Tongue Map — Zones &amp; Organ Correspondences</div>
+
+<div class="tongue-wrap">
+  <div class="tongue-img-box">
+    <img src="https://jc09170307.github.io/EAM310-Study-Kit/chinese_medicine_tongue_map.jpg" alt="TCM Tongue Map — Prof. Schrier's version"/>
+    <div style="font-size:.65rem;color:var(--muted);text-align:center;margin-top:.3rem;">Prof. Schrier's tongue map (as drawn on board in class)</div>
+  </div>
+  <div class="tongue-notes">
+    <div class="tbl-wrap" style="margin-top:0;">
+      <table>
+        <thead><tr><th class="th-teal">Zone</th><th class="th-teal">Organ(s)</th><th class="th-teal">Clinical Note</th></tr></thead>
+        <tbody>
+          <tr><td class="row-hdr">Tip</td><td><strong>Heart</strong></td><td>Red tip = Heart-Fire; swollen red tip = severe Heart-Fire</td></tr>
+          <tr><td class="row-hdr">Just behind tip</td><td><strong>Lung</strong></td><td>Swollen front third = Phlegm in Lungs</td></tr>
+          <tr><td class="row-hdr">Sides</td><td><strong>Liver / Gallbladder</strong></td><td>Red sides = Liver-Fire; pale sides = Liver-Blood def.</td></tr>
+          <tr><td class="row-hdr">Center (oval)</td><td><strong>Spleen / Stomach</strong></td><td>Stomach crack (shallow, wide) = Stomach-Yin def.</td></tr>
+          <tr><td class="row-hdr">Root / Back</td><td><strong>Kidney, Bladder, Intestines</strong></td><td>Rootless coat at root = Kidney-Yin def.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip" style="margin-top:.5rem;">
+      <h4>⭐ Quiz Guarantee (Schrier said so)</h4>
+      "I will give you something like this on a quiz question. The tongue map — Heart at tip, Lung right behind, Liver/GB on sides, Spleen/Stomach center, Kidney/Bladder/Intestines at the rear. These are things you <strong>do need to know</strong>."
+    </div>
+  </div>
+</div>
+
+<div class="sec-title">The Three Diagnostic Layers of the Tongue</div>
+
+<div class="tbl-wrap">
+  <table>
+    <thead>
+      <tr><th class="th-maroon">Layer</th><th class="th-maroon">What It Is</th><th class="th-maroon">What It Reflects</th><th class="th-maroon">Depth</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-hdr">Tongue Coat 苔 Tāi</td>
+        <td>The film/coating on the surface of the tongue body</td>
+        <td>Yang organs (especially Stomach); presence &amp; nature of pathogenic factors; digestive strength</td>
+        <td>Most superficial</td>
+      </tr>
+      <tr>
+        <td class="row-hdr">Tongue Body 體 Tǐ</td>
+        <td>The fleshy tongue itself — color, shape, moisture</td>
+        <td>Yin organs; state of Blood, Nutritive Qi (Ying); Yin and Yang balance</td>
+        <td>Middle — Ying/Nutritive level</td>
+      </tr>
+      <tr>
+        <td class="row-hdr">Sublingual Veins 舌下脈</td>
+        <td>The purple veins visible under the tongue</td>
+        <td>Yuan (Original/Congenital) Qi; Blood stasis (dark, distended, tortuous veins)</td>
+        <td>Deepest — Yuan level</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sec-title">The Five Things to Observe on a Tongue</div>
+
+<div class="tbl-wrap">
+  <table>
+    <thead><tr><th class="th-navy" style="width:18%">Observation</th><th class="th-navy" style="width:42%">What You Look At</th><th class="th-navy" style="width:40%">Key Clinical Significance</th></tr></thead>
+    <tbody>
+      <tr><td class="row-hdr">Body Color</td><td>Normal = pale red. Look for: Pale, Red, Deep-Red, Purple, Blue/Bluish-purple</td><td>Pale=Yang/Blood def · Red=Heat · Purple=Blood stasis (always) · Blue=Interior Cold + stasis</td></tr>
+      <tr><td class="row-hdr">Body Shape</td><td>Swollen, thin, stiff, flaccid, cracked, quivering, deviated, tooth-marked, long, short</td><td>Swollen=Damp/Phlegm · Thin=Def · Deviated=Internal Wind · Tooth-marks=Spleen-Qi def</td></tr>
+      <tr><td class="row-hdr">Coating</td><td>Color: white/yellow/grey/black. Thickness: thin/thick. Quality: moist, dry, greasy, rootless, absent</td><td>White=Cold · Yellow=Heat · Thick coat=pathogen present · No coat=Yin def (Stomach-Yin failing)</td></tr>
+      <tr><td class="row-hdr">Moisture</td><td>Wet, moist, dry, peeled</td><td>Reflects Body Fluid status. Dry=fluid consumption (Heat or Yin def). Wet=Yang def/Cold/Dampness</td></tr>
+      <tr><td class="row-hdr">Spirit 神</td><td>Does it look alive? Fresh, moist, slightly shiny? Or dull, gray, lifeless like "a cow tongue at the kosher deli"?</td><td>Tongue spirit = Stomach-Qi. A spirited tongue = good prognosis even in disease. Spiritless = serious depletion.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout schrier">
+  <h4>💬 Schrier's Clinical Protocol — The Murder Scene Rule</h4>
+  <p>When scheduling tongue &amp; pulse assessments, tell patients:</p>
+  <ul>
+    <li><strong>Do NOT brush or scrape your tongue</strong> before the appointment — "You're cleaning up a murder scene. You clean it all up, then we don't know what's going on."</li>
+    <li>No perfume, no cologne, no essential oils — these interfere with smelling diagnosis (Pillar 2)</li>
+    <li>When you look at a patient's tongue: <strong>poker face</strong>. Never say "it looks dead" even if it's alarming. "Oh, your chi is good" or "This is great diagnostic information, thank you."</li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 7: PULSE DIAGNOSIS INTRODUCTION -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">7</span> Introduction to Pulse Diagnosis 脈診 Mài Zhěn</div>
+
+<p class="lead">Pulse diagnosis is the deepest, most subjective, and most rewarding skill in all of EAM. You will spend years developing it. Week 2 is only the beginning — feel without judgment, describe what you notice, draw pictures if that helps.</p>
+
+<div class="callout quote">
+  <h4>Ibn Sina (Avicenna, 980–1037 CE) — Islamic Golden Age Polymath</h4>
+  "Only the musically trained can truly know the pulse. The pulse is of a musical nature."<br><br>
+  <span style="font-size:.78rem;font-style:normal;color:var(--muted);">Schrier's interpretation: like learning an instrument, pulse diagnosis requires your fingers to develop sensitivity over time. You don't have to be a musician. You just have to practice pressing on strings in different places until your hands learn what they're feeling. Schrier can play the Jurassic Park theme on saxophone — and he says that counts.</span>
+</div>
+
+<div class="sec-title">Pulse Position Map — Cun · Guan · Chi</div>
+
+<div class="pulse-grid-wrap">
+  <p style="font-size:.78rem;color:var(--muted);margin-bottom:.7rem;">Both wrists are read simultaneously. Index finger = Cun (front), middle finger = Guan (middle), ring finger = Chi (rear). Three depths at each position: superficial, middle, deep.</p>
+  <div class="pulse-grid">
+    <div class="pulse-cell pulse-header"></div>
+    <div class="pulse-cell pulse-header">CUN 寸<br><span style="font-size:.65rem;font-weight:400;">Front / Index</span></div>
+    <div class="pulse-cell pulse-header">GUAN 关<br><span style="font-size:.65rem;font-weight:400;">Middle / Middle</span></div>
+    <div class="pulse-cell pulse-header">CHI 尺<br><span style="font-size:.65rem;font-weight:400;">Rear / Ring</span></div>
+
+    <div class="pulse-cell pulse-side">L</div>
+    <div class="pulse-cell pulse-organ"><strong>Heart · Pericardium</strong>心 / 心包<br>Upper Burner</div>
+    <div class="pulse-cell pulse-organ"><strong>Liver · Gallbladder</strong>肝 / 胆<br>Middle Burner</div>
+    <div class="pulse-cell pulse-organ"><strong>Kidney Yin</strong>肾阴<br>Lower Burner</div>
+
+    <div class="pulse-cell pulse-side">R</div>
+    <div class="pulse-cell pulse-organ"><strong>Lung · Large Intestine</strong>肺 / 大肠<br>Upper Burner</div>
+    <div class="pulse-cell pulse-organ"><strong>Spleen · Stomach</strong>脾 / 胃<br>Middle Burner</div>
+    <div class="pulse-cell pulse-organ"><strong>Kidney Yang</strong>肾阳<br>Lower Burner</div>
+  </div>
+  <p style="font-size:.72rem;color:var(--muted);margin-top:.5rem;"><strong>Memory hook:</strong> Left wrist reads the more Yin organs (Heart, Liver, Kidney-Yin). Right wrist reads the respiratory and digestive organs (Lung, Spleen/Stomach, Kidney-Yang). Both kidneys at Chi because they share the same deep root.</p>
+</div>
+
+<div class="sec-title">What to Feel — Six Basic Qualities</div>
+
+<div class="tbl-wrap">
+  <table>
+    <thead><tr><th class="th-teal">Quality</th><th class="th-teal">Description</th><th class="th-teal">Indicates</th></tr></thead>
+    <tbody>
+      <tr><td class="row-hdr">Rate</td><td>Count beats per minute. &lt;60 = Slow. 60-80 = Normal. &gt;90 = Rapid. Normal: about 4-5 beats per breath.</td><td>Slow=Cold · Rapid=Heat</td></tr>
+      <tr><td class="row-hdr">Depth</td><td>Where do you feel it? Surface pressure only = Floating. Need to press firmly = Deep. Floating AND Deep (empty middle) = Hollow.</td><td>Float=Exterior · Deep=Interior</td></tr>
+      <tr><td class="row-hdr">Strength</td><td>Forceful under pressure = Full/Excess. Fades when you press = Empty/Deficient. Can barely find it = Minute.</td><td>Force=Excess · Weak=Deficiency</td></tr>
+      <tr><td class="row-hdr">Width/Tension</td><td>Tight/taut like a wire = Wiry. Smooth, rolling like pearls = Slippery. Thin like thread = Fine/Thready.</td><td>Wiry=Liver/pain/Phlegm · Slippery=Phlegm/pregnancy · Fine=Blood def</td></tr>
+      <tr><td class="row-hdr">Rhythm</td><td>Regular or irregular? Stops at regular intervals = Intermittent (serious). Stops irregularly when slow = Knotted. Stops irregularly when rapid = Hasty.</td><td>Irregular rhythms = organ involvement</td></tr>
+      <tr><td class="row-hdr">Length</td><td>Can you feel it beyond the cun-guan-chi zone? = Long. Doesn't reach both ends = Short.</td><td>Long=Heat tendency · Short=deficiency or Cold</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sec-title">The Normal Pulse — Three Essential Qualities</div>
+
+<div class="tbl-wrap">
+  <table>
+    <thead><tr><th class="th-navy">Quality</th><th class="th-navy">What It Feels Like</th><th class="th-navy">What It Reflects</th></tr></thead>
+    <tbody>
+      <tr><td class="row-hdr">Stomach-Qi 胃气</td><td>Gentle, calm, slightly slow, unhurried — at ease</td><td>Digestive function intact; Stomach-Qi present = life</td></tr>
+      <tr><td class="row-hdr">Spirit 神</td><td>Soft but with strength; regular rhythm; "alive"</td><td>Vitality of the Mind; good prognosis</td></tr>
+      <tr><td class="row-hdr">Root 根</td><td>Clearly felt at the deep level; strong at Chi position (rear)</td><td>Kidney Essence intact; the root of life</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout clinical">
+  <h4>🩺 How to Record What You Feel (Assignment Protocol)</h4>
+  <p>Schrier was very clear: you don't need to name a pulse quality to document it. Options:</p>
+  <ul>
+    <li><strong>Words you know:</strong> "Feels wiry at left guan." "Feels slippery overall."</li>
+    <li><strong>Descriptive metaphor:</strong> "Feels like a piece of wood floating on a river" (that's actually the Floating pulse quality).</li>
+    <li><strong>Symbols:</strong> +++ (very strong/big) · + (slightly elevated) · 0 (normal) · - (slightly deficient) · --- (can barely find it)</li>
+    <li><strong>Pictures:</strong> Draw what the sensation feels like. Seriously.</li>
+    <li><strong>Honesty:</strong> "I don't feel anything at this position" is a completely valid and useful clinical note.</li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 8: THE ASSIGNMENT -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">8</span> The Tongue &amp; Pulse Journal Assignment</div>
+
+<p>This is 10% of your total grade (due in two batches: J1–25 at Midterm, J26–50 at Final). Schrier gave very specific details:</p>
+
+<div class="tbl-wrap">
+  <table>
+    <thead><tr><th class="th-navy">Parameter</th><th class="th-navy">Requirement</th><th class="th-navy">Schrier's Note</th></tr></thead>
+    <tbody>
+      <tr><td class="row-hdr">Total entries</td><td>50 total (tongue + pulse per entry)</td><td>"Do more than 50 if you can. I had to do 50 a week in school."</td></tr>
+      <tr><td class="row-hdr">Number of people</td><td>Minimum 5 different people</td><td>"See each person at least 4 times minimum — 5 times preferred. Then you see what's shifting."</td></tr>
+      <tr><td class="row-hdr">What to record (tongue)</td><td>Color, coat, moisture, shape, notable features. Draw what you see.</td><td>"Look at moisture. Is the coat sticky? Does it look like cottage cheese? Draw everything."</td></tr>
+      <tr><td class="row-hdr">What to record (pulse)</td><td>Both wrists, all three positions. Rate, depth, strength, quality.</td><td>"Write + or - if you can't name it. Draw a picture. Say 'I don't know' if you don't know."</td></tr>
+      <tr><td class="row-hdr">Due dates</td><td>J1–25: Midterm (Aug 7) · J26–50: Final (Sep 11)</td><td>"Don't wait — start now. Do at least 5–6 per week."</td></tr>
+      <tr><td class="row-hdr">Context notes</td><td>Note time of day, recent meals, sleep, emotional state</td><td>"All of these affect the tongue and pulse readings."</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout warning">
+  <h4>⚠ Pace Check — You Need 6 Entries Per Week Starting Now</h4>
+  25 entries by August 7 (Midterm). Today is July 17. That's approximately 3.5 weeks = 7 entries per week. Starting this week. The journal is a daily practice — not a cram-the-week-before assignment. Use your Journal PDF and start with yourself and anyone in your household.
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CHAPTER 9: QUICK REVIEW FOR QUIZ 2 -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="ch-header"><span class="ch-num">9</span> Quiz 2 Preparation — Key Facts to Know Cold</div>
+
+<div class="tbl-wrap">
+  <table>
+    <thead><tr><th class="th-maroon">Topic</th><th class="th-maroon">The Exact Thing to Know</th></tr></thead>
+    <tbody>
+      <tr><td class="row-hdr">Four Pillars</td><td>Observation (望) · Hearing &amp; Smelling combined as ONE pillar (聞) · Inquiry (問) · Palpation (切). COUNT = FOUR.</td></tr>
+      <tr><td class="row-hdr">Tongue map</td><td>Heart=tip · Lung=just behind tip · LV/GB=sides · SP/ST=center oval · KD/BL/Intestines=root/back</td></tr>
+      <tr><td class="row-hdr">Three tongue layers</td><td>Coat=most superficial, Yang organs · Body=Yin organs, Ying level · Sublingual veins=Yuan Qi (deepest)</td></tr>
+      <tr><td class="row-hdr">Floating pulse context</td><td>Floating ≠ always exterior. Floating + exterior signs (fever+chills, stiff neck) = exterior. Floating + night sweats/five-palm heat/malar flush = Yin deficiency.</td></tr>
+      <tr><td class="row-hdr">Pulse positions</td><td>Left: CUN=HT/PC · GUAN=LV/GB · CHI=KD-Yin. Right: CUN=LU/LI · GUAN=SP/ST · CHI=KD-Yang</td></tr>
+      <tr><td class="row-hdr">Tongue don'ts</td><td>Do NOT touch. Do NOT tell patient their tongue "looks dead." Tell them not to brush their tongue before appointments.</td></tr>
+      <tr><td class="row-hdr">Critical reasoning types</td><td>Deductive (general rule → specific case) · Inductive (specific observations → general rule) · Analogical (A causes B, so presence of A predicts B)</td></tr>
+      <tr><td class="row-hdr">Five-phase quiz items</td><td>Color, emotion, sense organ, tissue, season, pathogenic factor per element. Skip domestic animals and weapons for now.</td></tr>
+      <tr><td class="row-hdr">Ibn Sina quote</td><td>"Only the musically trained can truly know the pulse." (Context: pulse has a musical nature — rhythm, timing, feel. Know who said it.)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="doc-footer">
+  EAM310 Week 2 Study Guide · Prof. Daniel Schrier, D.O.M., L.Ac. · Jonathan Centeno · VUIM DAcHM · Summer 2026<br>
+  Sources: Week 2 Lecture Transcript (Otter.ai) · FCM Maciocia 3rd ed. · CAM Cheng Xinnong 4th ed.
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>
+<!-- APPENDEOF marker - not actual HTML, just tracking -->
