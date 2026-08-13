@@ -17,6 +17,7 @@
     --ink: #24395c;
     --muted: #5b6b85;
     --hairline: #d8dce4;
+    --ruleline: #7b879e;
     --cream: #faf6ec;
   }
   * { box-sizing: border-box; }
@@ -167,7 +168,7 @@
     break-inside: avoid;
   }
   .prompt-line { font-size: 8.8pt; font-weight: 600; margin-bottom: 4pt; }
-  .write-rule { border-bottom: 0.75pt solid var(--hairline); height: 15pt; }
+  .write-rule { border-bottom: 1.1pt solid var(--ruleline); height: 15pt; }
 
   .dots-grid {
     display: table;
@@ -184,6 +185,8 @@
     vertical-align: top;
   }
   .dots-cell b { color: var(--navy); }
+  .dots-lines { margin-top: 8pt; }
+  .dots-lines div { border-bottom: 1.1pt solid var(--ruleline); height: 13pt; }
 
   /* ---------- Section C vocab table ---------- */
   table.vocab {
@@ -199,7 +202,7 @@
     padding: 5pt 7pt;
   }
   table.vocab td {
-    border-bottom: 0.75pt solid var(--hairline);
+    border-bottom: 1.1pt solid var(--ruleline);
     padding: 5pt 7pt;
     font-size: 8.4pt;
     vertical-align: top;
@@ -239,7 +242,7 @@
   .qtext { font-size: 8.7pt; font-weight: 600; color: var(--ink); }
   .qhint { font-size: 7.8pt; font-style: italic; color: var(--muted); margin-top: 2pt; }
   .qlines { margin-top: 6pt; }
-  .qlines div { border-bottom: 0.6pt solid var(--hairline); height: 12pt; }
+  .qlines div { border-bottom: 1.1pt solid var(--ruleline); height: 12pt; }
 
   table.mini {
     width: 100%;
@@ -309,7 +312,7 @@
   .tri-cell.green .tt { color: var(--jade); }
   .tri-cell.red .tt { color: var(--maroon); }
   .tri-cell.gold .tt { color: var(--gold); }
-  .tri-cell .ln { border-bottom: 0.6pt solid var(--hairline); height: 11pt; }
+  .tri-cell .ln { border-bottom: 1.1pt solid var(--ruleline); height: 11pt; }
 
   .map-box {
     border: 0.75pt solid var(--hairline);
@@ -458,12 +461,20 @@
 <div class="lede">How might each of these prior concepts relate to today's material? Complete the connections:</div>
 <div class="dots-grid">
   <div class="dots-row">
-    <div class="dots-cell"><b>Tongue diagnosis (Week 4)</b> &rarr; Which of the Four Diagnostic Methods does it belong to? What other observations complete that same pillar?</div>
-    <div class="dots-cell"><b>Blood deficiency (Week 1)</b> &rarr; What facial color and lip color would you expect to observe, and why?</div>
+    <div class="dots-cell"><b>Tongue diagnosis (Week 4)</b> &rarr; Which of the Four Diagnostic Methods does it belong to? What other observations complete that same pillar?
+      <div class="dots-lines"><div></div><div></div></div>
+    </div>
+    <div class="dots-cell"><b>Blood deficiency (Week 1)</b> &rarr; What facial color and lip color would you expect to observe, and why?
+      <div class="dots-lines"><div></div><div></div></div>
+    </div>
   </div>
   <div class="dots-row">
-    <div class="dots-cell"><b>Heat Excess pattern (Week 2, Eight Principles)</b> &rarr; What facial color and complexion quality would confirm this on observation?</div>
-    <div class="dots-cell"><b>Pulse diagnosis (Week 3)</b> &rarr; If a patient's pulse and facial color seem to disagree, which diagnostic principle from today explains how to resolve that?</div>
+    <div class="dots-cell"><b>Heat Excess pattern (Week 2, Eight Principles)</b> &rarr; What facial color and complexion quality would confirm this on observation?
+      <div class="dots-lines"><div></div><div></div></div>
+    </div>
+    <div class="dots-cell"><b>Pulse diagnosis (Week 3)</b> &rarr; If a patient's pulse and facial color seem to disagree, which diagnostic principle from today explains how to resolve that?
+      <div class="dots-lines"><div></div><div></div></div>
+    </div>
   </div>
 </div>
 
