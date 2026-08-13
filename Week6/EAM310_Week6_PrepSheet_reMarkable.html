@@ -135,6 +135,8 @@
     margin: 16pt 0 8pt 0;
     page-break-inside: avoid;
     break-inside: avoid;
+    page-break-after: avoid;
+    break-after: avoid;
   }
   .sec.jade { background: var(--jade); }
   .subhead {
@@ -144,6 +146,8 @@
     margin: 10pt 0 4pt 0;
     border-bottom: 1.5pt solid var(--gold);
     padding-bottom: 2pt;
+    page-break-after: avoid;
+    break-after: avoid;
   }
   .lede {
     color: var(--muted);
@@ -253,8 +257,10 @@
     font-size: 9pt;
     margin: 10pt 0 3pt 0;
     color: var(--navy);
+    page-break-after: avoid;
+    break-after: avoid;
   }
-  .topic-rule { border-bottom: 1.5pt solid var(--gold); margin-bottom: 6pt; }
+  .topic-rule { border-bottom: 1.5pt solid var(--gold); margin-bottom: 6pt; page-break-after: avoid; break-after: avoid; }
   .qcard {
     border: 0.75pt solid var(--hairline);
     border-left: 3pt solid var(--navy);
@@ -324,6 +330,8 @@
     font-weight: 700;
     color: var(--navy);
     margin: 10pt 0 4pt 0;
+    page-break-after: avoid;
+    break-after: avoid;
   }
   .qcard.pre { border-left-color: var(--gold); background: #fffdf6; }
   .qcard.post { border-left-color: var(--jade); }
