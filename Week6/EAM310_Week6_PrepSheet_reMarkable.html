@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 6 Pre-Lecture Analysis Sheet</title>
+<style>
+  @page {
+    size: 714pt 966pt;
+    margin: 40pt 44pt 46pt 44pt;
+  }
+  :root {
+    --navy: #1c2f52;
+    --jade: #0e9169;
+    --gold: #d4af2c;
+    --maroon: #8c2c39;
+    --paper: #ffffff;
+    --ink: #1c2f52;
+    --muted: #5b6b85;
+    --hairline: #d8dce4;
+    --cream: #faf6ec;
+    --grid: #e7ebf2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--ink);
+    font-size: 9.3pt;
+    line-height: 1.42;
+    margin: 0;
+    padding: 0;
+    background-color: var(--paper);
+    background-image:
+      repeating-linear-gradient(0deg, var(--grid), var(--grid) 0.6pt, transparent 0.6pt, transparent 22pt),
+      repeating-linear-gradient(90deg, var(--grid), var(--grid) 0.6pt, transparent 0.6pt, transparent 22pt);
+    orphans: 3;
+    widows: 3;
+  }
+  .dance {
+    font-style: italic;
+    color: var(--maroon);
+  }
+  /* keep grid confined to margins; give content surfaces a solid backing so the grid doesn't clash with text */
+  .qcard, .callout, .map-box, .hw-box, .tri-cell, table.ican, table.vocab, table.mini,
+  .cover-tags, .rm-cover-tags { background-color: #ffffff; }
+  table.ican td, table.vocab td, table.mini td { background-color: #ffffff; }
+  .dance-box {
+    border: 0.75pt solid var(--gold);
+    border-left: 3pt solid var(--maroon);
+    background: #fff8ec;
+    border-radius: 3pt;
+    padding: 7pt 10pt;
+    margin: 8pt 0;
+    font-size: 8.3pt;
+    font-style: italic;
+    color: var(--maroon);
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .dance-box b { font-style: normal; color: var(--navy); }
+  .wm {
+    position: fixed;
+    bottom: 16pt;
+    left: 44pt;
+    font-size: 6.6pt;
+    color: #c9cfdb;
+  }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; margin: 0; }
+
+  /* ---------- Cover ---------- */
+  .cover {
+    position: relative;
+    padding-left: 26pt;
+    min-height: 760pt;
+  }
+  .cover::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4pt;
+    background: var(--navy);
+  }
+  .cover h1 {
+    font-size: 34pt;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.12;
+    padding-bottom: 10pt;
+    border-bottom: 3pt solid var(--gold);
+    display: inline-block;
+    margin-top: 46pt;
+  }
+  .cover .subtitle {
+    margin-top: 14pt;
+    font-size: 12pt;
+    color: var(--muted);
+  }
+  .cover .prof {
+    margin-top: 4pt;
+    font-size: 12pt;
+    color: var(--muted);
+  }
+  .howto {
+    margin-top: 26pt;
+    background: var(--cream);
+    border-left: 4pt solid var(--gold);
+    padding: 14pt 18pt;
+    max-width: 430pt;
+    font-size: 9.3pt;
+    color: var(--navy);
+  }
+  .howto b { color: var(--navy); }
+  .cover-tags {
+    position: absolute;
+    right: 0;
+    bottom: 30pt;
+    text-align: right;
+  }
+  .tag {
+    display: inline-block;
+    border: 1pt solid var(--navy);
+    border-radius: 3pt;
+    padding: 4pt 12pt;
+    font-size: 9pt;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6pt;
+  }
+  .tag-wrap { display: block; }
+
+  /* ---------- Section headers ---------- */
+  .sec {
+    background: var(--navy);
+    color: #fff;
+    font-weight: 700;
+    font-size: 11pt;
+    padding: 6pt 10pt;
+    margin: 16pt 0 8pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .sec.jade { background: var(--jade); }
+  .subhead {
+    font-weight: 700;
+    font-size: 9.6pt;
+    color: var(--navy);
+    margin: 10pt 0 4pt 0;
+    border-bottom: 1.5pt solid var(--gold);
+    padding-bottom: 2pt;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 8.6pt;
+    margin-bottom: 6pt;
+  }
+
+  /* ---------- Section A table ---------- */
+  table.ican {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 4pt;
+  }
+  table.ican th {
+    background: var(--navy);
+    color: #fff;
+    font-size: 8.4pt;
+    text-align: left;
+    padding: 5pt 7pt;
+  }
+  table.ican td {
+    border-bottom: 0.75pt solid var(--hairline);
+    padding: 5pt 7pt;
+    font-size: 8.5pt;
+    vertical-align: middle;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  table.ican td.stmt b { color: var(--navy); }
+  table.ican td.conf { width: 108pt; text-align: center; }
+  .conf-label { font-size: 6.6pt; color: var(--muted); display: block; margin-bottom: 1pt; }
+  .circ {
+    display: inline-block;
+    width: 11pt; height: 11pt;
+    border: 0.75pt solid var(--muted);
+    border-radius: 50%;
+    font-size: 6.6pt;
+    line-height: 10pt;
+    text-align: center;
+    margin: 0 1pt;
+    color: var(--muted);
+  }
+
+  /* ---------- Section B ---------- */
+  .callout {
+    background: var(--cream);
+    border-left: 3pt solid var(--gold);
+    padding: 8pt 12pt;
+    font-size: 8.7pt;
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .prompt-line { font-size: 8.8pt; font-weight: 600; margin-bottom: 4pt; }
+  .write-rule { border-bottom: 0.75pt solid var(--hairline); height: 15pt; }
+
+  .dots-grid {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10pt 0;
+  }
+  .dots-row { display: table-row; }
+  .dots-cell {
+    display: table-cell;
+    width: 50%;
+    font-size: 8.4pt;
+    padding-bottom: 10pt;
+    vertical-align: top;
+  }
+  .dots-cell b { color: var(--navy); }
+
+  /* ---------- Section C vocab table ---------- */
+  table.vocab {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6pt;
+  }
+  table.vocab th {
+    background: var(--navy);
+    color: #fff;
+    font-size: 8.2pt;
+    text-align: left;
+    padding: 5pt 7pt;
+  }
+  table.vocab td {
+    border-bottom: 0.75pt solid var(--hairline);
+    padding: 5pt 7pt;
+    font-size: 8.4pt;
+    vertical-align: top;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .hanzi { font-size: 11.5pt; color: var(--navy); }
+  .pinyin { font-size: 7.4pt; color: var(--muted); font-style: italic; display: block; }
+  .gloss { font-style: italic; color: var(--jade); }
+
+  /* ---------- Section D question cards ---------- */
+  .topic-label {
+    font-weight: 700;
+    font-size: 9pt;
+    margin: 10pt 0 3pt 0;
+    color: var(--navy);
+  }
+  .topic-rule { border-bottom: 1.5pt solid var(--gold); margin-bottom: 6pt; }
+  .qcard {
+    border: 0.75pt solid var(--hairline);
+    border-left: 3pt solid var(--navy);
+    border-radius: 3pt;
+    padding: 7pt 10pt 9pt 10pt;
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .qcard.star { border-left-color: var(--gold); }
+  .qlabel {
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.3pt;
+    color: var(--jade);
+    text-transform: uppercase;
+    margin-bottom: 2pt;
+  }
+  .qtext { font-size: 8.7pt; font-weight: 600; color: var(--ink); }
+  .qhint { font-size: 7.8pt; font-style: italic; color: var(--muted); margin-top: 2pt; }
+  .qlines { margin-top: 6pt; }
+  .qlines div { border-bottom: 0.6pt solid var(--hairline); height: 12pt; }
+
+  table.mini {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6pt;
+  }
+  table.mini th {
+    background: var(--navy);
+    color: #fff;
+    font-size: 7.6pt;
+    padding: 4pt 6pt;
+    text-align: left;
+  }
+  table.mini td {
+    border: 0.6pt solid var(--hairline);
+    padding: 8pt 6pt;
+    font-size: 8pt;
+  }
+
+  /* ---------- Section E clinical case ---------- */
+  .case-box {
+    background: var(--navy);
+    color: #fff;
+    padding: 10pt 14pt;
+    border-radius: 3pt;
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .case-box .case-title { font-weight: 700; font-size: 9.4pt; margin-bottom: 4pt; }
+  .case-box p { font-size: 8.6pt; line-height: 1.5; margin: 0 0 6pt 0; }
+  .chip {
+    display: inline-block;
+    background: rgba(255,255,255,0.14);
+    border: 0.75pt solid rgba(255,255,255,0.4);
+    border-radius: 9pt;
+    padding: 2pt 8pt;
+    font-size: 7.4pt;
+    margin: 2pt 3pt 0 0;
+  }
+  .pq-hdr {
+    font-size: 8.8pt;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 10pt 0 4pt 0;
+  }
+  .qcard.pre { border-left-color: var(--gold); background: #fffdf6; }
+  .qcard.post { border-left-color: var(--jade); }
+
+  /* ---------- Section F ---------- */
+  .tri-grid {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8pt 0;
+    margin-bottom: 10pt;
+  }
+  .tri-cell {
+    display: table-cell;
+    width: 33.3%;
+    border: 0.75pt solid var(--hairline);
+    border-radius: 3pt;
+    padding: 7pt 9pt;
+    vertical-align: top;
+  }
+  .tri-cell .tt { font-weight: 700; font-size: 8.4pt; margin-bottom: 5pt; }
+  .tri-cell.green .tt { color: var(--jade); }
+  .tri-cell.red .tt { color: var(--maroon); }
+  .tri-cell.gold .tt { color: var(--gold); }
+  .tri-cell .ln { border-bottom: 0.6pt solid var(--hairline); height: 11pt; }
+
+  .map-box {
+    border: 0.75pt solid var(--hairline);
+    border-radius: 3pt;
+    padding: 14pt;
+    margin-bottom: 10pt;
+  }
+  .map-title {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 10.5pt;
+    padding: 6pt;
+    border-radius: 3pt;
+    margin-bottom: 10pt;
+  }
+  .map-grid {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8pt 0;
+  }
+  .map-col { display: table-cell; width: 20%; text-align: center; }
+  .map-lbl { font-size: 7.4pt; font-weight: 700; color: var(--navy); margin-bottom: 4pt; }
+  .map-node {
+    border: 0.75pt solid var(--hairline);
+    border-radius: 3pt;
+    background: var(--cream);
+    padding: 8pt 4pt;
+    font-size: 8.4pt;
+    color: var(--navy);
+    min-height: 14pt;
+  }
+  .map-node.blank { background: #fff; }
+  .map-sub {
+    border: 0.75pt solid var(--hairline);
+    border-radius: 3pt;
+    padding: 8pt 4pt;
+    margin-top: 6pt;
+    font-size: 7.4pt;
+    color: var(--muted);
+    min-height: 22pt;
+  }
+  .arrow { font-size: 8pt; color: var(--muted); margin: 3pt 0; }
+
+  .hw-box {
+    border: 0.75pt solid var(--hairline);
+    border-radius: 3pt;
+    padding: 10pt 14pt;
+  }
+  .hw-box .hwt { font-weight: 700; font-size: 8.8pt; margin-bottom: 6pt; }
+  .hw-item { font-size: 8.5pt; margin-bottom: 6pt; }
+  .box-chk {
+    display: inline-block;
+    width: 8pt; height: 8pt;
+    border: 0.9pt solid var(--muted);
+    margin-right: 5pt;
+    vertical-align: middle;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-size: 7.4pt;
+    color: var(--muted);
+    margin-top: 14pt;
+    border-top: 0.6pt solid var(--hairline);
+    padding-top: 8pt;
+  }
+
+  .pagebreak { page-break-before: always; break-before: page; }
+
+  /* ---------- reMarkable full-bleed cover ---------- */
+  .rm-cover-outer {
+    background: var(--navy);
+    margin: -40pt -44pt -46pt -44pt;
+    padding: 40pt 44pt 46pt 44pt;
+    min-height: 966pt;
+    position: relative;
+  }
+  .rm-cover-outer h1 {
+    font-size: 34pt;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.12;
+    padding-bottom: 10pt;
+    border-bottom: 3pt solid var(--gold);
+    display: inline-block;
+    margin-top: 46pt;
+  }
+  .rm-cover-outer .subtitle {
+    margin-top: 14pt;
+    font-size: 12pt;
+    color: #cfd8ea;
+  }
+  .rm-cover-outer .prof {
+    margin-top: 4pt;
+    font-size: 12pt;
+    color: #cfd8ea;
+  }
+  .rm-cover-outer .brand {
+    margin-top: 10pt;
+    font-size: 9.4pt;
+    font-weight: 700;
+    color: var(--gold);
+    font-style: italic;
+  }
+  .rm-howto {
+    margin-top: 26pt;
+    background: var(--cream);
+    border-left: 4pt solid var(--gold);
+    padding: 14pt 18pt;
+    max-width: 430pt;
+    font-size: 9.3pt;
+    color: var(--navy);
+  }
+  .rm-howto b { color: var(--navy); }
+  .rm-cover-tags {
+    position: absolute;
+    right: 44pt;
+    bottom: 46pt;
+    text-align: right;
+  }
+  .rm-tag {
+    display: inline-block;
+    border: 1pt solid var(--gold);
+    border-radius: 3pt;
+    padding: 4pt 12pt;
+    font-size: 9pt;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 6pt;
+  }
+  .cover-wm {
+    position: absolute;
+    right: 44pt;
+    top: 40pt;
+    font-size: 8pt;
+    color: #3a4d73;
+    text-align: right;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER (reMarkable full-bleed) ============ -->
+<div class="rm-cover-outer">
+  <div class="cover-wm">温故知新<br>온고지신</div>
+  <h1>Pre-Lecture<br>Analysis Sheet</h1>
+  <div class="subtitle">Week 6 &middot; Diagnosis by Observation (Inspection) &mdash; 望诊</div>
+  <div class="prof">Prof. Daniel Schrier, D.O.M., L.Ac.</div>
+  <div class="brand">TCM for Ballroom Dancers | Dance Medicine Specialty</div>
+
+  <div class="rm-howto">
+    <b>How to use this sheet:</b><br>
+    <b>Before lecture</b> &rarr; complete Sections A&ndash;D and the pre-lecture case questions. Rate your confidence honestly.<br>
+    <b>During lecture</b> &rarr; annotate directly &mdash; add answers, corrections, and new insights in the lined spaces.<br>
+    <b>After lecture</b> &rarr; complete Section F, update confidence ratings, and finish the clinical case.
+  </div>
+
+  <div class="rm-cover-tags">
+    <div><span class="rm-tag">EAM310</span></div>
+    <div><span class="rm-tag">Week 6</span></div>
+    <div><span class="rm-tag">Summer 2026</span></div>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 : SECTION A ============ -->
+<div class="pagebreak"></div>
+
+<div class="sec">A &middot; Learning Targets &mdash; I Can Statements</div>
+<div class="lede">Rate your confidence <b>before</b> lecture (Pre) and <b>after</b> lecture (Post) by circling a number 1&ndash;5 in each column. 1 = can't do it yet &middot; 5 = fully confident</div>
+
+<table class="ican">
+  <tr><th style="width:52%;">I Can Statement</th><th class="conf">Pre-Lecture Confidence</th><th class="conf">Post-Lecture Confidence</th></tr>
+  <tr>
+    <td class="stmt"><b>Explain</b> the Zang-Xiang (藏象) theory and why internal organ conditions manifest on the body's exterior.</td>
+    <td class="conf"><span class="conf-label">Pre</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+    <td class="conf"><span class="conf-label">Post</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+  </tr>
+  <tr>
+    <td class="stmt"><b>Describe</b> observation of Vitality (Shen 神) and distinguish a healthy, vigorous mental status from a lethargic one.</td>
+    <td class="conf"><span class="conf-label">Pre</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+    <td class="conf"><span class="conf-label">Post</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+  </tr>
+  <tr>
+    <td class="stmt"><b>Identify</b> the five facial colors and state the excess- vs. deficiency-type pattern each color indicates.</td>
+    <td class="conf"><span class="conf-label">Pre</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+    <td class="conf"><span class="conf-label">Post</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+  </tr>
+  <tr>
+    <td class="stmt"><b>Interpret</b> observation of body appearance &mdash; shape, movement, and posture &mdash; as clinical evidence of underlying patterns.</td>
+    <td class="conf"><span class="conf-label">Pre</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+    <td class="conf"><span class="conf-label">Post</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+  </tr>
+  <tr>
+    <td class="stmt"><b>Correlate</b> each of the five sense organs with its associated zang-fu organ and interpret abnormal findings at each.</td>
+    <td class="conf"><span class="conf-label">Pre</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+    <td class="conf"><span class="conf-label">Post</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+  </tr>
+  <tr>
+    <td class="stmt"><b>Apply</b> the TCM Four Diagnostic Methods framework and explain why the four must be combined, not used in isolation.</td>
+    <td class="conf"><span class="conf-label">Pre</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+    <td class="conf"><span class="conf-label">Post</span><span class="circ">1</span><span class="circ">2</span><span class="circ">3</span><span class="circ">4</span><span class="circ">5</span></td>
+  </tr>
+</table>
+
+<div class="sec">B &middot; Activate &mdash; Connect to What You Know</div>
+<div class="subhead">B1 &middot; From Midterm to Today</div>
+<div class="callout">
+  Weeks 1&ndash;4 built the foundation &mdash; Vital Substances, the Eight Principles, and two palpation/observation skills you already practice: <b>pulse</b> and <b>tongue</b> diagnosis. The Week 5 midterm reviewed all of it together. Today opens the second unit of the course: the full <b>TCM Four Diagnostic Methods</b> (四诊), starting with <b>Inspection/Observation</b> (望诊) &mdash; the pillar that tongue diagnosis actually belongs to.
+</div>
+<div class="prompt-line">What do you already know about Zang-Xiang theory and how internal organs manifest externally? Write whatever comes to mind:</div>
+<div class="write-rule"></div>
+<div class="write-rule"></div>
+
+<div class="subhead">B2 &middot; Connect the Dots</div>
+<div class="lede">How might each of these prior concepts relate to today's material? Complete the connections:</div>
+<div class="dots-grid">
+  <div class="dots-row">
+    <div class="dots-cell"><b>Tongue diagnosis (Week 4)</b> &rarr; Which of the Four Diagnostic Methods does it belong to? What other observations complete that same pillar?</div>
+    <div class="dots-cell"><b>Blood deficiency (Week 1)</b> &rarr; What facial color and lip color would you expect to observe, and why?</div>
+  </div>
+  <div class="dots-row">
+    <div class="dots-cell"><b>Heat Excess pattern (Week 2, Eight Principles)</b> &rarr; What facial color and complexion quality would confirm this on observation?</div>
+    <div class="dots-cell"><b>Pulse diagnosis (Week 3)</b> &rarr; If a patient's pulse and facial color seem to disagree, which diagnostic principle from today explains how to resolve that?</div>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 : SECTION C ============ -->
+<div class="pagebreak"></div>
+
+<div class="sec">C &middot; Vocabulary Pre-Load &mdash; Define Before Class</div>
+<div class="lede">Fill in your definition/mnemonic before lecture. Refine it during and after class. Blank = opportunity to learn it live.</div>
+<table class="vocab">
+  <tr><th style="width:12%;">Character</th><th style="width:17%;">Pinyin</th><th style="width:26%;">English</th><th>My Definition / Clinical Note</th></tr>
+  <tr><td class="hanzi">望诊<span class="pinyin">Wàng Zhěn</span></td><td>Wàng Zhěn</td><td class="gloss">Diagnosis by Observation</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">神<span class="pinyin">Shén</span></td><td>Shén</td><td class="gloss">Spirit / Vitality</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">藏象<span class="pinyin">Zàng Xiàng</span></td><td>Zàng Xiàng</td><td class="gloss">Visceral Manifestation theory</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">得神<span class="pinyin">Dé Shén</span></td><td>Dé Shén</td><td class="gloss">"Having Spirit" &mdash; good prognosis</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">失神<span class="pinyin">Shī Shén</span></td><td>Shī Shén</td><td class="gloss">"Loss of Spirit" &mdash; poor prognosis</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">五色诊<span class="pinyin">Wǔ Sè Zhěn</span></td><td>Wǔ Sè Zhěn</td><td class="gloss">Five-Color Diagnosis</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">面色<span class="pinyin">Miàn Sè</span></td><td>Miàn Sè</td><td class="gloss">Facial complexion</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">四诊<span class="pinyin">Sì Zhěn</span></td><td>Sì Zhěn</td><td class="gloss">The Four Diagnostic Methods</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">闻诊<span class="pinyin">Wén Zhěn</span></td><td>Wén Zhěn</td><td class="gloss">Listening &amp; Smelling</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">问诊<span class="pinyin">Wèn Zhěn</span></td><td>Wèn Zhěn</td><td class="gloss">Inquiry</td><td>&nbsp;</td></tr>
+  <tr><td class="hanzi">切诊<span class="pinyin">Qiè Zhěn</span></td><td>Qiè Zhěn</td><td class="gloss">Palpation</td><td>&nbsp;</td></tr>
+</table>
+
+<div class="sec">D &middot; Anticipatory Questions &mdash; Answer During Lecture</div>
+<div class="lede">These questions preview exactly what the lecture will teach. Leave blank before lecture &mdash; fill in the answers as the material is covered. Come back and expand after class.</div>
+
+<div class="topic-label">Foundations of Observation</div>
+<div class="topic-rule"></div>
+<div class="qcard">
+  <div class="qlabel">Q1 &middot; Zang-Xiang Theory</div>
+  <div class="qtext">What is Zang-Xiang (藏象) theory, and which classical source states that "viscera inside the body must manifest themselves externally"?</div>
+  <div class="qhint">Hint: Lecture slide 20.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+<div class="qcard">
+  <div class="qlabel">Q2 &middot; The Four Methods</div>
+  <div class="qtext">Name the Four Diagnostic Methods (四诊) and explain why relying on only one while neglecting the others is considered one-sided.</div>
+  <div class="qhint">Hint: Lecture slides 19, 21&ndash;22.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+
+<div class="topic-label">Observation of Vitality (Shen 神)</div>
+<div class="topic-rule"></div>
+<div class="qcard star">
+  <div class="qlabel">Q3 &middot; Vigorous vs. Lethargic Shen &#9733;</div>
+  <div class="qtext">What signs distinguish a "healthy, vigorous" mental status from a "lethargic" one during observation of Vitality? Why does this matter for prognosis?</div>
+  <div class="qhint">Hint: Lecture slides 26&ndash;27.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+
+<div class="topic-label">Observation of Color &mdash; The Five Colors 五色</div>
+<div class="topic-rule"></div>
+<div class="qcard star">
+  <div class="qlabel">Q4 &middot; The Five Colors Table &#9733;</div>
+  <div class="qtext">Fill in the excess-type vs. deficiency-type indication for each facial color as the lecture covers it:</div>
+  <table class="mini">
+    <tr><th>Color</th><th>Excess-Type Indication</th><th>Deficiency-Type Indication</th></tr>
+    <tr><td>Red</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Pale (White)</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Yellow</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Blue (Green)</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Dark Grey (Black)</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </table>
+  <div class="qhint">Hint: Lecture slides 34&ndash;43. This mirrors the homework assignment on slide 57 &mdash; get a head start here.</div>
+</div>
+<div class="qcard">
+  <div class="qlabel">Q5 &middot; Bright White vs. Withered Pale</div>
+  <div class="qtext">A "bright white, puffy/bloated" face and a "withered pale" face are both in the Pale category &mdash; but they point to different patterns. What is each, and how do they differ?</div>
+  <div class="qhint">Hint: Lecture slide 36.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+<div class="qcard">
+  <div class="qlabel">Q6 &middot; Yang Jaundice vs. Yin Jaundice</div>
+  <div class="qtext">Distinguish Yang jaundice from Yin jaundice by color quality (bright orange vs. smoky dark) and underlying cause.</div>
+  <div class="qhint">Hint: Lecture slide 38.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+<div class="qcard">
+  <div class="qlabel">Q7 &middot; Blue-Purplish Face, Two Presentations</div>
+  <div class="qtext">A blue-purplish face with intermittent chest pain has one interpretation. The same color in a child with high fever and violent limb movement has another. What is each?</div>
+  <div class="qhint">Hint: Lecture slide 40.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+
+<div class="topic-label">Observation of Appearance</div>
+<div class="topic-rule"></div>
+<div class="qcard">
+  <div class="qlabel">Q8 &middot; Overweight vs. Thin</div>
+  <div class="qtext">An overweight patient with mental depression suggests one pattern; a thin patient with dry skin suggests another. What is each, and what do they share as a diagnostic principle?</div>
+  <div class="qhint">Hint: Lecture slide 45.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+<div class="dance-box"><b>Clinical connection &mdash; ballroom &amp; American Rhythm:</b> Observation of posture and movement quality applies directly on the floor. A Cha Cha or Mambo dancer whose usually crisp hip action turns heavy and effortful, or a Rumba dancer whose extension collapses early, is showing an appearance-based sign worth inspecting before assuming simple fatigue.</div>
+<div class="qcard">
+  <div class="qlabel">Q9 &middot; Wei, Bi, and Wind Stroke</div>
+  <div class="qtext">Compare Wei syndrome, Bi syndrome, and hemiplegia/wind stroke as appearance-based diagnostic categories. What distinguishes each on observation of movement?</div>
+  <div class="qhint">Hint: Lecture slide 46.</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+
+<div class="topic-label">Observation of the Five Sense Organs</div>
+<div class="topic-rule"></div>
+<div class="qcard star">
+  <div class="qlabel">Q10 &middot; Organ-to-Zang Matching &#9733;</div>
+  <div class="qtext">Match each sense organ to its associated zang organ, and record one abnormal finding taught for each:</div>
+  <table class="mini">
+    <tr><th>Sense Organ</th><th>Associated Zang</th><th>One Abnormal Finding</th></tr>
+    <tr><td>Eye</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Nose</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Ear</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Gums</td><td>(Yangming channel)</td><td>&nbsp;</td></tr>
+    <tr><td>Lips &amp; Mouth</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>Throat</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </table>
+  <div class="qhint">Hint: Lecture slides 47&ndash;56.</div>
+</div>
+
+<div class="sec jade">E &middot; Clinical Case &mdash; Apply It Before &amp; After</div>
+<div class="case-box">
+  <div class="case-title">Case Vignette: Ms. Chen, 52 years old</div>
+  <p>Ms. Chen presents to the clinic having lost <b>noticeable weight over the past three months</b>. She appears <b>withered</b>, moves slowly, and answers questions with a <b>dull, delayed</b> response &mdash; her eyes lack luster and rarely meet yours. Her <b>complexion is a pale yellow, without brightness</b>. Her <b>lips are pale</b>. Her skin appears <b>dry</b>. She denies pain. Nasal discharge is clear. Her family reports she "just doesn't seem like herself" and has grown quiet and withdrawn.</p>
+  <span class="chip">Weight loss, 3 mo.</span>
+  <span class="chip">Withered appearance</span>
+  <span class="chip">Dull, delayed responses</span>
+  <span class="chip">Complexion: pale yellow, no brightness</span>
+  <span class="chip">Lips: pale</span>
+  <span class="chip">Skin: dry</span>
+</div>
+<div class="dance-box"><b>Dance medicine parallel:</b> a similar picture &mdash; pale, dull complexion, pale lips, dry skin, low affect &mdash; can appear in a Bolero or East Coast Swing dancer mid-competition-season after prolonged rehearsal load without adequate recovery. Inspection findings, not the training log alone, tell you whether this is Blood deficiency.</div>
+
+<div class="pq-hdr">Pre-Lecture Questions &mdash; Answer Based on Your Current Knowledge</div>
+<div class="callout"><b>Before the lecture, do your best with these.</b> Guessing is fine &mdash; it primes your brain to receive the lecture material.</div>
+<div class="qcard pre">
+  <div class="qlabel">Pre &middot; Q1</div>
+  <div class="qtext">Based on her mental responsiveness alone, would you describe Ms. Chen's Shen as more consistent with "having Spirit" (得神) or "loss of Spirit" (失神)? What is your evidence?</div>
+  <div class="qlines"><div></div></div>
+</div>
+<div class="qcard pre">
+  <div class="qlabel">Pre &middot; Q2</div>
+  <div class="qtext">What does her pale yellow, dull complexion suggest to you? Consider both the color and the "without brightness" quality separately.</div>
+  <div class="qlines"><div></div></div>
+</div>
+<div class="qcard pre">
+  <div class="qlabel">Pre &middot; Q3</div>
+  <div class="qtext">Her lips are pale and her skin is dry. What single underlying substance deficiency could explain both findings together?</div>
+  <div class="qlines"><div></div></div>
+</div>
+
+<!-- ============ PAGE 6 ============ -->
+<div class="pagebreak"></div>
+
+<div class="pq-hdr">Post-Lecture Questions &mdash; Complete After Class</div>
+<div class="qcard post">
+  <div class="qlabel">Post &middot; Q1</div>
+  <div class="qtext">Using proper TCM terminology, state Ms. Chen's complete observation-based differentiation (Shen status, color pattern, and appearance findings together).</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+<div class="qcard post">
+  <div class="qlabel">Post &middot; Q2</div>
+  <div class="qtext">What additional inspection findings (e.g., tongue, sense-organ exam) would you now want to gather to confirm this pattern? What would change your differentiation if found?</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+<div class="qcard post">
+  <div class="qlabel">Post &middot; Q3</div>
+  <div class="qtext">If left untreated, what appearance and color changes might signal further progression? What would a "poor prognosis" complexion look like by contrast with today's "good prognosis" description?</div>
+  <div class="qlines"><div></div><div></div></div>
+</div>
+
+<div class="sec">F &middot; After-Lecture Synthesis &amp; Self-Monitoring</div>
+<div class="lede">Complete this section within 24 hours of lecture for maximum retention.</div>
+<div class="tri-grid">
+  <div class="tri-cell green"><div class="tt">I Can Now Confidently...</div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+  <div class="tri-cell red"><div class="tt">Still Unclear &mdash; I Need to Review...</div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+  <div class="tri-cell gold"><div class="tt">Connected to Other Learning...</div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+</div>
+
+<div class="subhead">Concept Map Completion &mdash; Five-Color Diagnosis</div>
+<div class="lede">Complete the map using only what you can recall from lecture:</div>
+<div class="map-box">
+  <div class="map-title">五色诊 Wǔ Sè Zhěn &mdash; Five-Color Diagnosis</div>
+  <div class="map-grid">
+    <div class="map-col">
+      <div class="map-lbl">红 Red</div>
+      <div class="map-node">Heat (excess or deficiency)</div>
+      <div class="map-sub">Case example / notes:</div>
+    </div>
+    <div class="map-col">
+      <div class="map-lbl">白 Pale (White)</div>
+      <div class="map-node blank">&nbsp;</div>
+      <div class="map-sub">Case example / notes:</div>
+    </div>
+    <div class="map-col">
+      <div class="map-lbl">黄 Yellow</div>
+      <div class="map-node blank">&nbsp;</div>
+      <div class="map-sub">Case example / notes:</div>
+    </div>
+    <div class="map-col">
+      <div class="map-lbl">青 Blue (Green)</div>
+      <div class="map-node blank">&nbsp;</div>
+      <div class="map-sub">Case example / notes:</div>
+    </div>
+    <div class="map-col">
+      <div class="map-lbl">黑 Dark (Black)</div>
+      <div class="map-node blank">&nbsp;</div>
+      <div class="map-sub">Case example / notes:</div>
+    </div>
+  </div>
+</div>
+
+<div class="subhead">Homework Tracker</div>
+<div class="hw-box">
+  <div class="hwt">Assigned Homework (from lecture &amp; syllabus):</div>
+  <div class="hw-item"><span class="box-chk"></span><b>Task 1:</b> Summarize the five colors of the face in a comparison table &mdash; columns for Face Color, Indications (TCM Terms), Case Example, and Remarks.</div>
+  <div class="hw-item"><span class="box-chk"></span><b>Task 2:</b> Read <i>Chinese Acupuncture &amp; Moxibustion</i> (CAM), Chapter 12, and <i>Foundations of Chinese Medicine</i> (FCM), Chapter 23, before Week 7.</div>
+  <div class="hw-item"><span class="box-chk"></span><b>Task 3:</b> Continue Pulse/Tongue Journal entries per the course schedule.</div>
+</div>
+
+<div class="footer-note">EAM310 &middot; Week 6 &middot; Diagnosis by Observation &middot; Summer 2026 &middot; TCM for Ballroom Dancers | Dance Medicine Specialty<br>Sources: Prof. Schrier Lecture 6 Slides (Lao) &middot; Maciocia FCM 3rd ed., Ch. 23 &middot; Cheng Xinnong CAM 4th ed., Ch. 12 &middot; 温故知新 &middot; 온고지신</div>
+
+</body>
+</html>
