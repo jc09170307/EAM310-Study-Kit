@@ -156,6 +156,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 4pt;
+    border: 1.5pt solid var(--navy);
   }
   table.ican th {
     background: var(--navy);
@@ -163,9 +164,10 @@
     font-size: 8.4pt;
     text-align: left;
     padding: 5pt 7pt;
+    border: 1pt solid var(--navy);
   }
   table.ican td {
-    border-bottom: 0.75pt solid var(--hairline);
+    border: 1pt solid var(--ruleline);
     padding: 5pt 7pt;
     font-size: 8.5pt;
     vertical-align: middle;
@@ -223,6 +225,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 6pt;
+    border: 1.5pt solid var(--navy);
   }
   table.vocab th {
     background: var(--navy);
@@ -230,9 +233,10 @@
     font-size: 8.2pt;
     text-align: left;
     padding: 5pt 7pt;
+    border: 1pt solid var(--navy);
   }
   table.vocab td {
-    border-bottom: 1.1pt solid var(--ruleline);
+    border: 1pt solid var(--ruleline);
     padding: 5pt 7pt;
     font-size: 8.4pt;
     vertical-align: top;
@@ -278,6 +282,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 6pt;
+    border: 1.5pt solid var(--navy);
   }
   table.mini th {
     background: var(--navy);
@@ -285,9 +290,10 @@
     font-size: 7.6pt;
     padding: 4pt 6pt;
     text-align: left;
+    border: 1pt solid var(--navy);
   }
   table.mini td {
-    border: 0.6pt solid var(--hairline);
+    border: 1pt solid var(--ruleline);
     padding: 8pt 6pt;
     font-size: 8pt;
   }
@@ -378,14 +384,19 @@
     min-height: 14pt;
   }
   .map-node.blank { background: #fff; }
-  .map-sub {
-    border: 0.75pt solid var(--hairline);
+  .map-sub-label {
+    font-size: 7.2pt;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 8pt;
+    margin-bottom: 3pt;
+    text-align: left;
+  }
+  .map-sub-box {
+    border: 1pt solid var(--ruleline);
     border-radius: 3pt;
-    padding: 8pt 4pt;
-    margin-top: 6pt;
-    font-size: 7.4pt;
-    color: var(--muted);
-    min-height: 22pt;
+    min-height: 54pt;
+    background: #fff;
   }
   .arrow { font-size: 8pt; color: var(--muted); margin: 3pt 0; }
 
@@ -762,27 +773,32 @@
     <div class="map-col">
       <div class="map-lbl">红 Red</div>
       <div class="map-node">Heat (excess or deficiency)</div>
-      <div class="map-sub">Case example / notes:</div>
+      <div class="map-sub-label">Case example / notes</div>
+      <div class="map-sub-box"></div>
     </div>
     <div class="map-col">
       <div class="map-lbl">白 Pale (White)</div>
       <div class="map-node blank">&nbsp;</div>
-      <div class="map-sub">Case example / notes:</div>
+      <div class="map-sub-label">Case example / notes</div>
+      <div class="map-sub-box"></div>
     </div>
     <div class="map-col">
       <div class="map-lbl">黄 Yellow</div>
       <div class="map-node blank">&nbsp;</div>
-      <div class="map-sub">Case example / notes:</div>
+      <div class="map-sub-label">Case example / notes</div>
+      <div class="map-sub-box"></div>
     </div>
     <div class="map-col">
       <div class="map-lbl">青 Blue (Green)</div>
       <div class="map-node blank">&nbsp;</div>
-      <div class="map-sub">Case example / notes:</div>
+      <div class="map-sub-label">Case example / notes</div>
+      <div class="map-sub-box"></div>
     </div>
     <div class="map-col">
       <div class="map-lbl">黑 Dark (Black)</div>
       <div class="map-node blank">&nbsp;</div>
-      <div class="map-sub">Case example / notes:</div>
+      <div class="map-sub-label">Case example / notes</div>
+      <div class="map-sub-box"></div>
     </div>
   </div>
 </div>
