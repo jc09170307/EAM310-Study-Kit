@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>EAM310 Week 6 Drill Pack</title>
+<style>
+@page {
+  size: 714pt 945pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c; --jade: #16805f; --gold: #c9a226; --maroon: #7a2530;
+  --paper: #ffffff; --ink: #24395c; --muted: #5b6b85; --hairline: #d8dce4; --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif; color: var(--ink); font-size: 9.3pt;
+  line-height: 1.42; margin:0; padding:0; background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover { position: relative; padding-left: 26pt; min-height: 760pt; }
+.cover::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4pt; background: var(--navy); }
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold); display:inline-block;
+  margin-top: 46pt; max-width: 540pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.target {
+  margin-top: 14pt; background: #f1f7f4; border-left: 4pt solid var(--jade);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b, .target b { color: var(--navy); }
+.target b { color: var(--jade); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 12pt;
+  padding: 8pt 12pt; margin: 18pt 0 10pt 0;
+  page-break-inside: avoid; break-inside: avoid; page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:10pt; color:var(--navy); margin:12pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 8pt 12pt; margin: 8pt 0 10pt 0; font-size: 8.6pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+
+/* Question formatting */
+.q { margin: 12pt 0 10pt 0; page-break-inside: avoid; break-inside: avoid; }
+.q .stem { font-size: 9.4pt; color: var(--navy); }
+.q .num { font-weight: 700; color: var(--navy); }
+.q .opt { font-size: 9.2pt; color: var(--ink); margin: 2pt 0 2pt 14pt; }
+.q .tf { font-size: 8.3pt; color: var(--muted); margin: 3pt 0 0 14pt; }
+.q .line { border-bottom: 0.75pt solid var(--hairline); height: 14pt; margin: 3pt 0; }
+.q hr { border: none; border-top: 0.5pt solid var(--hairline); margin: 10pt 0; }
+
+table.ref { width:100%; border-collapse: collapse; margin-bottom: 8pt; }
+table.ref th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.ref td { border-bottom: 0.75pt solid var(--hairline); padding: 5pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.answer { font-weight: 600; color: var(--navy); }
+.pinyin { color: var(--jade); font-style: italic; font-size: 8pt; }
+.mnem { font-style: italic; color: var(--muted); }
+
+table.drill { width:100%; border-collapse: collapse; margin-bottom: 10pt; }
+table.drill th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.drill td { border-bottom: 0.75pt solid var(--hairline); padding: 6pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.drill tr:nth-child(even) td { background: #f7f9fc; }
+td.desc { width: 58%; }
+td.ans { width: 42%; font-weight: 600; color: var(--navy); }
+td.ans .sub { font-weight: 400; color: var(--muted); font-size: 8.2pt; display:block; margin-top:2pt; }
+
+.errorlog-row td { border-bottom: 1pt solid var(--hairline); padding: 10pt 7pt; height: 20pt; }
+</style></head><body>
+
+<div class="cover">
+  <div style="font-size:9.5pt;color:#5b6b85;">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>Drill Pack</h1>
+  <div class="subtitle">Blind ID Drills &middot; Both Directions &middot; Error Log</div>
+  <div class="prof">Week 6 &middot; Inspection (Observation) &middot; Lecture 6</div>
+  
+  <div class="cover-tags">
+    
+    <span class="tag-wrap"><span class="tag">Print Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+<div class="howto"><b>How drilling differs from studying:</b> Reading builds understanding. Drilling builds <b>speed</b>. You can understand every table in the Study Guide and still blank under time pressure &mdash; these drills fix that. Fifteen minutes daily beats two hours on Sunday, and that's not a motivational claim, it's how the effect works.</div><div class="sec ">PART A &middot; Blind ID — Five Colors of the Face &amp; Eyes</div><div class="heads-up"><b>Heads Up —</b> Cover the right column. Read the description, name the color/pattern out loud, then uncover. Target: all items in under 3 minutes, twice consecutively.</div><table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr><tr><td class="desc">Entire face red, exogenous fever or zang-fu yang hyperactivity</td><td class="ans">Excess-type Yang heat</td></tr><tr><td class="desc">Malar (cheek) flush only, tidal fever, night sweats</td><td class="ans">Yin-deficiency heat</td></tr><tr><td class="desc">Bright white, puffy/bloated appearance</td><td class="ans">Yang Qi deficiency</td></tr><tr><td class="desc">Withered pale complexion</td><td class="ans">Blood deficiency</td></tr><tr><td class="desc">Whole-body yellow including eyes/skin</td><td class="ans">Jaundice<span class="sub">General finding — see next two rows for subtype</span></td></tr><tr><td class="desc">Bright orange jaundice</td><td class="ans">Yang jaundice<span class="sub">Damp-heat</span></td></tr><tr><td class="desc">Smoky dark jaundice</td><td class="ans">Yin jaundice<span class="sub">Cold-damp or chronic blood stagnation</span></td></tr><tr><td class="desc">Pale + blue tinge, severe epigastric/abdominal pain</td><td class="ans">Excess yin/cold</td></tr><tr><td class="desc">Blue-purple face+lips, precordial pain</td><td class="ans">Heart blood stagnation</td></tr><tr><td class="desc">Pale-dark complexion, lumbar soreness, cold feet</td><td class="ans">Kidney Yang insufficiency</td></tr><tr><td class="desc">Bright yellow (tangerine-peel) eyes</td><td class="ans">Damp-heat, heat predominant</td></tr><tr><td class="desc">Deep yellow + bloodshot eyes</td><td class="ans">Toxic heat in the blood level</td></tr><tr><td class="desc">Red entire eye + headache, easily angered</td><td class="ans">Rising Liver fire</td></tr><tr><td class="desc">Blue-green eyes with tremor, dizziness, numbness</td><td class="ans">Liver wind</td></tr><tr><td class="desc">Dark sclera, crab-eye black</td><td class="ans">Accumulated heat</td></tr><tr><td class="desc">White rings around the iris</td><td class="ans">Turbid phlegm</td></tr></table><div class="pb"></div><div class="sec jade">PART B &middot; Blind ID — Five Wheels, Nose &amp; Ears</div><table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr><tr><td class="desc">Inner &amp; outer canthus</td><td class="ans">Blood Wheel<span class="sub">&#8594; Heart</span></td></tr><tr><td class="desc">Sclera (whites of the eye)</td><td class="ans">Qi Wheel<span class="sub">&#8594; Lung</span></td></tr><tr><td class="desc">Iris (colored part)</td><td class="ans">Wind Wheel<span class="sub">&#8594; Liver</span></td></tr><tr><td class="desc">Pupil</td><td class="ans">Water Wheel<span class="sub">&#8594; Kidney</span></td></tr><tr><td class="desc">Eyelids (upper=Spleen, lower=Stomach)</td><td class="ans">Flesh Wheel<span class="sub">&#8594; Spleen/Stomach</span></td></tr><tr><td class="desc">Green/blue tip of nose</td><td class="ans">Cold</td></tr><tr><td class="desc">Yellow tip of nose, with thirst/sweating</td><td class="ans">Damp + Heat</td></tr><tr><td class="desc">Red bridge of nose</td><td class="ans">Liver fire</td></tr><tr><td class="desc">Greenish bridge of nose</td><td class="ans">Liver Qi stagnation</td></tr><tr><td class="desc">Gray tip of nose</td><td class="ans">Impaired water movement &#8594; edema</td></tr><tr><td class="desc">Flaring of the nostrils, high fever</td><td class="ans">Extreme heat in the Lungs</td></tr><tr><td class="desc">Edema starting upper body/head</td><td class="ans">Lung<span class="sub">governs water pathways</span></td></tr><tr><td class="desc">Edema starting lower body/feet</td><td class="ans">Kidney<span class="sub">source of body fluids</span></td></tr><tr><td class="desc">Edema starting four limbs/torso</td><td class="ans">Spleen<span class="sub">transforms/transports water</span></td></tr><tr><td class="desc">Dry, withered, burnt-black auricle, chronic illness</td><td class="ans">Kidney essence consumed</td></tr><tr><td class="desc">Purulent ear discharge ("Tin Er")</td><td class="ans">Damp-heat, Liver &amp; Gallbladder</td></tr><tr><td class="desc">High-pitched tinnitus (cicadas)</td><td class="ans">Liver</td></tr><tr><td class="desc">Low-pitched tinnitus (rushing water)</td><td class="ans">Kidney</td></tr><tr><td class="desc">Long, full earlobes</td><td class="ans">Strong constitution</td></tr><tr><td class="desc">Small, short earlobes</td><td class="ans">Poor constitution</td></tr></table><div class="pb"></div><div class="sec maroon">PART C &middot; Blind ID — Teeth, Gums, Lips/Mouth, Throat</div><table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr><tr><td class="desc">White, moist sheen, bright/clean teeth</td><td class="ans">Strong Kidney Qi</td></tr><tr><td class="desc">Dry teeth, no sheen</td><td class="ans">Kidney Yin decline</td></tr><tr><td class="desc">Gray and black teeth, like a black bean</td><td class="ans">Exhaustion of Yin and Yang</td></tr><tr><td class="desc">Teeth growing at deviated angles or missing</td><td class="ans">Insufficient Yangming Qi</td></tr><tr><td class="desc">Deep red gums with swelling</td><td class="ans">Excess heat / Stomach fire</td></tr><tr><td class="desc">Pale gums</td><td class="ans">Blood deficiency</td></tr><tr><td class="desc">Blue line between teeth and gums</td><td class="ans">Mercury poisoning</td></tr><tr><td class="desc">Pale lips</td><td class="ans">Blood deficiency</td></tr><tr><td class="desc">Blue-purplish lips</td><td class="ans">Retention of cold OR blood stagnation</td></tr><tr><td class="desc">Crimson lips</td><td class="ans">Yin-deficiency heat</td></tr><tr><td class="desc">Purple lips</td><td class="ans">Blood stasis<span class="sub">stabbing pain</span></td></tr><tr><td class="desc">Deviated mouth</td><td class="ans">Wind</td></tr><tr><td class="desc">Mouth remains open + high fever, thirst, canker sores</td><td class="ans">Excess heat</td></tr><tr><td class="desc">Mouth slightly open</td><td class="ans">Deficiency pattern</td></tr><tr><td class="desc">Deep red throat/pharynx</td><td class="ans">Heat</td></tr><tr><td class="desc">Pale red throat</td><td class="ans">Empty (deficiency) heat</td></tr><tr><td class="desc">Acute redness/swelling of throat</td><td class="ans">Wind invasion (exterior)</td></tr><tr><td class="desc">Chronic sore, dry throat, NOT swollen/red</td><td class="ans">Lung and/or Kidney Yin deficiency, empty heat</td></tr><tr><td class="desc">Swollen tonsils, normal color</td><td class="ans">Damp/phlegm retention, background Qi deficiency</td></tr><tr><td class="desc">Acutely red/swollen tonsils with exudate</td><td class="ans">Wind-heat invasion with toxic heat</td></tr></table><div class="pb"></div><div class="sec ">PART D &middot; Blind ID — Hair, Nails &amp; Skin</div><table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr><tr><td class="desc">Premature graying of hair</td><td class="ans">Depletion of Kidney essence</td></tr><tr><td class="desc">Dull, brittle hair, easily broken</td><td class="ans">Kidney essence or Liver Blood deficiency</td></tr><tr><td class="desc">Hair falling out in patches</td><td class="ans">Blood deficiency within the channels</td></tr><tr><td class="desc">Nail bed blanches, returns to color immediately</td><td class="ans">Sufficient Qi and Blood</td></tr><tr><td class="desc">Nail bed returns to color slowly</td><td class="ans">Exhaustion of Qi and Blood</td></tr><tr><td class="desc">Ridged nails</td><td class="ans">Kidney Yin deficiency / Liver Yang rising</td></tr><tr><td class="desc">Spoon-shaped nails</td><td class="ans">Qi/Blood stagnation, malnutrition, Spleen deficiency</td></tr><tr><td class="desc">Bluish veins on thenar eminence</td><td class="ans">Cold in the Stomach</td></tr><tr><td class="desc">Yellow, orangish skin</td><td class="ans">Damp-heat, more heat than damp</td></tr><tr><td class="desc">Yellow, dusky skin</td><td class="ans">Damp-heat, more damp than heat</td></tr><tr><td class="desc">Pitting edema</td><td class="ans">Yang edema — Spleen/Kidney Yang deficiency</td></tr><tr><td class="desc">Non-pitting edema</td><td class="ans">Qi stagnation or dampness</td></tr><tr><td class="desc">Papule</td><td class="ans">Raised, red, seed-sized, fades with pressure</td></tr><tr><td class="desc">Macule</td><td class="ans">Flat, red patch, does NOT fade with pressure</td></tr><tr><td class="desc">Yong (Yang-type carbuncle)</td><td class="ans">Internal accumulation of fire toxins</td></tr><tr><td class="desc">Ju (Yin-type carbuncle)</td><td class="ans">Insufficient Qi/Blood + internal stagnation</td></tr></table><div class="pb"></div><div class="sec jade">PART E &middot; Blind ID — Secretions Logic &amp; Pediatric Diagnosis</div><table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr><tr><td class="desc">Color: white</td><td class="ans">Cold</td></tr><tr><td class="desc">Color: yellow</td><td class="ans">Heat</td></tr><tr><td class="desc">Quantity: profuse</td><td class="ans">Cold</td></tr><tr><td class="desc">Quantity: scanty</td><td class="ans">Deficiency / heat (dries fluids)</td></tr><tr><td class="desc">Quality: thick, sticky</td><td class="ans">Excess / heat</td></tr><tr><td class="desc">Quality: thin, clear, watery</td><td class="ans">Deficiency / cold</td></tr><tr><td class="desc">Odor: none/faint</td><td class="ans">Cold</td></tr><tr><td class="desc">Odor: strong</td><td class="ans">Heat</td></tr><tr><td class="desc">Wind Gate only (1st segment)</td><td class="ans">Mild illness / exterior pathogen</td></tr><tr><td class="desc">Qi Gate (2nd segment)</td><td class="ans">Interior condition, stronger illness</td></tr><tr><td class="desc">Life Gate (3rd segment)</td><td class="ans">Severe illness</td></tr><tr><td class="desc">Beyond Life Gate to fingertip</td><td class="ans">Life-threatening</td></tr><tr><td class="desc">Light red infant vein, not very visible</td><td class="ans">Normal</td></tr><tr><td class="desc">Bright red infant vein</td><td class="ans">Heat</td></tr><tr><td class="desc">Purple infant vein</td><td class="ans">Stronger heat, creating stasis</td></tr><tr><td class="desc">Green or dark blue infant vein</td><td class="ans">Wind</td></tr><tr><td class="desc">Left index finger examined in...</td><td class="ans">Boys</td></tr><tr><td class="desc">Right index finger examined in...</td><td class="ans">Girls</td></tr></table><div class="pb"></div><div class="sec maroon">Error Log</div><div class="heads-up"><b>Heads Up —</b> Every time you miss a drill item, log it here. Review this page before your next drill session — your errors are more valuable than your correct answers.</div><table class="ref"><tr><th>Item I Missed</th><th>Correct Answer / Why I Missed It</th></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr><tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr></table>
+</body></html>
