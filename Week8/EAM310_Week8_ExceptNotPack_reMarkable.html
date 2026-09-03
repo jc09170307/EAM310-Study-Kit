@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 8 EXCEPT/NOT Pack</title>
+<style>
+@page {
+  size: 714pt 966pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c; --jade: #16805f; --gold: #c9a226; --maroon: #7a2530;
+  --paper: #ffffff; --ink: #24395c; --muted: #5b6b85; --hairline: #d8dce4; --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif; color: var(--ink); font-size: 9.3pt;
+  line-height: 1.42; margin:0; padding:0; background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover { position: relative; padding-left: 26pt; min-height: 760pt; }
+.cover::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4pt; background: var(--navy); }
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold); display:inline-block;
+  margin-top: 46pt; max-width: 540pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.target {
+  margin-top: 14pt; background: #f1f7f4; border-left: 4pt solid var(--jade);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b, .target b { color: var(--navy); }
+.target b { color: var(--jade); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 12pt;
+  padding: 8pt 12pt; margin: 18pt 0 10pt 0;
+  page-break-inside: avoid; break-inside: avoid; page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:10pt; color:var(--navy); margin:12pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 8pt 12pt; margin: 8pt 0 10pt 0; font-size: 8.6pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+
+/* Question formatting */
+.q { margin: 12pt 0 10pt 0; page-break-inside: avoid; break-inside: avoid; }
+.q .stem { font-size: 9.4pt; color: var(--navy); }
+.q .num { font-weight: 700; color: var(--navy); }
+.q .opt { font-size: 9.2pt; color: var(--ink); margin: 2pt 0 2pt 14pt; }
+.q .tf { font-size: 8.3pt; color: var(--muted); margin: 3pt 0 0 14pt; }
+.q .line { border-bottom: 0.75pt solid var(--hairline); height: 14pt; margin: 3pt 0; }
+.q hr { border: none; border-top: 0.5pt solid var(--hairline); margin: 10pt 0; }
+
+table.ref { width:100%; border-collapse: collapse; margin-bottom: 8pt; }
+table.ref th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.ref td { border-bottom: 0.75pt solid var(--hairline); padding: 5pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.answer { font-weight: 600; color: var(--navy); }
+.pinyin { color: var(--jade); font-style: italic; font-size: 8pt; }
+.mnem { font-style: italic; color: var(--muted); }
+
+table.drill { width:100%; border-collapse: collapse; margin-bottom: 10pt; }
+table.drill th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.drill td { border-bottom: 0.75pt solid var(--hairline); padding: 6pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.drill tr:nth-child(even) td { background: #f7f9fc; }
+td.desc { width: 58%; }
+td.ans { width: 42%; font-weight: 600; color: var(--navy); }
+td.ans .sub { font-weight: 400; color: var(--muted); font-size: 8.2pt; display:block; margin-top:2pt; }
+
+.errorlog-row td { border-bottom: 1pt solid var(--hairline); padding: 10pt 7pt; height: 20pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:9.5pt;color:#5b6b85;">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>EXCEPT / NOT Question Pack</h1>
+  <div class="subtitle">18 Negative-Format Questions &mdash; Full Answer Key</div>
+  <div class="prof">Week 8 &middot; Diagnosis by Hearing &amp; Smelling &mdash; 聞診 &middot; Lecture 8</div>
+  <div class="cover-tags">
+    <span class="tag-wrap"><span class="tag gold">TCM for Ballroom Dancers</span></span>
+    
+    <span class="tag-wrap"><span class="tag">reMarkable Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+<div class="howto"><b>How to use this pack:</b> Negative-format questions ("All of the following EXCEPT...") are where students lose points even when they know the material &mdash; one wrong-in-context option hides among three correct ones. For each question, mark every option T (true/belongs) or F (false/doesn't belong) before picking your final answer &mdash; don't just scan for "the weird one."</div>
+<div class="sec jade">EXCEPT / NOT Questions</div>
+<div class="q"><span class="num">1.</span> <span class="stem">All of the following are governed by the organs listed for the voice EXCEPT:</span><div class="opt">A. Lung governs production of the voice</div><div class="opt">B. Kidney governs volume of the voice</div><div class="opt">C. Spleen &amp; Stomach govern strength of the voice</div><div class="opt">D. Liver governs the pitch of the voice</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">2.</span> <span class="stem">All of the following indicate a Full or Heat pattern of the voice EXCEPT:</span><div class="opt">A. Loud voice</div><div class="opt">B. Excessive talking</div><div class="opt">C. Sudden loss of voice from Wind-Heat invasion</div><div class="opt">D. Reluctance to talk</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">3.</span> <span class="stem">All of the following describe hoarseness patterns EXCEPT:</span><div class="opt">A. Sudden onset, low pitch, raspy = Exterior syndrome</div><div class="opt">B. Chronic, gradual intensity = Blood stagnation</div><div class="opt">C. Plum-pit sensation with cough = Phlegm-Heat</div><div class="opt">D. Chronic, worse in the morning = Lung and Kidney Yin deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">4.</span> <span class="stem">All of the following are true of Respiration patterns EXCEPT:</span><div class="opt">A. Excess/Heat = loud sound, rough/distressed breath, acute onset</div><div class="opt">B. Empty/Cold = low sound, faint/slow breath, slow onset</div><div class="opt">C. Excess/Heat is seen with phlegm-heat invading the Lung</div><div class="opt">D. Empty/Cold is seen with a surplus of external contraction of evil qi</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">5.</span> <span class="stem">All of the following are Abnormal Respiration types with their correct mechanism EXCEPT:</span><div class="opt">A. Asthma &mdash; Lung qi's failure to descend</div><div class="opt">B. Wheezing &mdash; Lung qi fails to descend with phlegm obstruction</div><div class="opt">C. Upper Stifling &mdash; Lung qi rises upward to throat, obstructs air tract</div><div class="opt">D. Shortness of Breath &mdash; Excess Heart fire flooding the Lung</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">6.</span> <span class="stem">All of the following indicate a Full/Excess presentation EXCEPT:</span><div class="opt">A. Loud, explosive cough</div><div class="opt">B. Loud and long belching sound</div><div class="opt">C. Sudden, forceful vomiting sound</div><div class="opt">D. Quiet, low hiccup sound</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">7.</span> <span class="stem">All of the following are true of Borborygmi, Yawning, and Sighing EXCEPT:</span><div class="opt">A. Loud borborygmi is usually accompanied by diarrhea or dysentery</div><div class="opt">B. Frequent, loud yawning relieved after yawning indicates Liver Qi Stagnation</div><div class="opt">C. Infrequent, weak yawning indicates Spleen/Kidney Yang deficiency</div><div class="opt">D. Sighing always indicates Kidney Yin deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">8.</span> <span class="stem">All of the following are correctly paired Five Element Sounds EXCEPT:</span><div class="opt">A. Wood &mdash; Shouting</div><div class="opt">B. Fire &mdash; Laughing</div><div class="opt">C. Earth &mdash; Groaning</div><div class="opt">D. Metal &mdash; Weeping</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">9.</span> <span class="stem">All of the following are correctly paired Six Healing Sounds EXCEPT:</span><div class="opt">A. X&#363; 嘘 &mdash; Liver</div><div class="opt">B. H&#275; 呵 &mdash; Heart</div><div class="opt">C. Chu&#299; 吹 &mdash; Spleen</div><div class="opt">D. X&#299; 嘻 &mdash; Triple Burner</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">10.</span> <span class="stem">All of the following are true about the general smell rule EXCEPT:</span><div class="opt">A. Strong, foul, rotten, fetid, or stinking smell indicates Heat or Excess</div><div class="opt">B. Absence of smell indicates Cold or Deficient</div><div class="opt">C. A fishy smell generally leans Cold or Deficient</div><div class="opt">D. A strong smell always indicates Cold or Deficient</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">11.</span> <span class="stem">All of the following are among the Five (named) Odors on the slides EXCEPT:</span><div class="opt">A. Rancid</div><div class="opt">B. Scorched</div><div class="opt">C. Sour</div><div class="opt">D. Putrid</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">12.</span> <span class="stem">All of the following are true of the Five (named) Odor slides EXCEPT:</span><div class="opt">A. "Fragrant" is described as cloying and sickly sweet, not pleasant</div><div class="opt">B. "Putrid" is compared to rotting meat or stagnant pond water</div><div class="opt">C. "Rotten" is compared to a trash can/garbage truck</div><div class="opt">D. Each odor slide explicitly states its paired Zang-Fu element</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">13.</span> <span class="stem">All of the following Breath odor findings are correctly paired EXCEPT:</span><div class="opt">A. Sour &mdash; retention of food, Accumulation Disorder</div><div class="opt">B. Foul, pungent &mdash; Damp-Heat in Stomach and Spleen</div><div class="opt">C. Rotten &mdash; Damp-Heat in Large Intestine</div><div class="opt">D. Fishy &mdash; Heart fire pouring into Bladder</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">14.</span> <span class="stem">All of the following are true of Sweat and Sputum odor EXCEPT:</span><div class="opt">A. Strong-smelling sweat indicates Damp-Heat</div><div class="opt">B. Putrid-smelling sweat indicates disease of the Lungs, Liver, or Kidneys</div><div class="opt">C. Sputum without smell indicates Heat</div><div class="opt">D. Fishy-smelling sputum indicates Lung-Heat</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">15.</span> <span class="stem">All of the following Stool &amp; Flatulence findings are correctly paired EXCEPT:</span><div class="opt">A. Extremely stinky diarrhea with pus or blood &mdash; Damp-Heat in the Intestines</div><div class="opt">B. Sour and foul with indigestion &mdash; Food stagnation</div><div class="opt">C. Fishy odor with loose stools &mdash; Cold in Spleen/Stomach</div><div class="opt">D. Slight or odorless flatulence with emotional stress &mdash; Toxic Heat in Large Intestines</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">16.</span> <span class="stem">All of the following Urine findings are correctly paired EXCEPT:</span><div class="opt">A. Frequent, urgent, painful, burning, turbid yellow, foul odor &mdash; Damp-Heat in Bladder</div><div class="opt">B. Heavy smell of urea, scanty yellow &mdash; Heart fire pouring into Bladder</div><div class="opt">C. Clear, frequent, odorless or slightly fishy &mdash; Kidney deficiency</div><div class="opt">D. Odorless urinary incontinence &mdash; Liver Qi stagnation</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">17.</span> <span class="stem">All of the following are true of Vaginal Discharge and Nose/Ear/Eye odors EXCEPT:</span><div class="opt">A. Strong-smelling, leathery vaginal discharge &mdash; Damp-Heat</div><div class="opt">B. Fishy vaginal discharge &mdash; Damp-Cold</div><div class="opt">C. Foul, fishy odor from the ears with turbid pus &mdash; Damp-Heat in the ear</div><div class="opt">D. Red, swollen eyes with foul fishy odor &mdash; Damp-Heat in the Spleen channel</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="q"><span class="num">18.</span> <span class="stem">All of the following are true about H&#363; 呼 in this deck EXCEPT:</span><div class="opt">A. It is the Wood-element voice sound meaning "Shout"</div><div class="opt">B. It is also the Spleen Healing Sound</div><div class="opt">C. It appears in two different tables with two different meanings</div><div class="opt">D. It is the pinyin/hanzi given for the "Weeping" voice sound</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+<div class="pb"></div>
+<div class="sec maroon">ANSWER KEY</div>
+<table class="ref"><tr><th>#</th><th>Ans</th><th>Why</th></tr>
+<tr><td style="width:4%">1</td><td class="answer" style="width:6%">D</td><td>The slides assign only three organs to the voice &mdash; Lung (production), Kidney (volume), Spleen/Stomach (strength). Liver is not one of the three voice-governing organs on these slides.</td></tr>
+<tr><td style="width:4%">2</td><td class="answer" style="width:6%">D</td><td>Reluctance to talk indicates a Cold pattern or Lung-Qi deficiency, not Full/Heat.</td></tr>
+<tr><td style="width:4%">3</td><td class="answer" style="width:6%">D</td><td>Lung/Kidney Yin deficiency hoarseness is described as worse in the EVENING, not the morning.</td></tr>
+<tr><td style="width:4%">4</td><td class="answer" style="width:6%">D</td><td>A surplus of external contraction of evil qi (or phlegm-heat) is the Excess/Heat mechanism, not Empty/Cold. Empty/Cold is from internal damage causing insufficient Zheng Qi and Kidney/Lung Qi vacuity.</td></tr>
+<tr><td style="width:4%">5</td><td class="answer" style="width:6%">D</td><td>Shortness of Breath is attributed to Lung qi deficiency or Water Retention in the Chest, not excess Heart fire.</td></tr>
+<tr><td style="width:4%">6</td><td class="answer" style="width:6%">D</td><td>A quiet, low hiccup sound indicates an Empty pattern (often ST-Qi or ST-Yin deficiency), not Full/Excess.</td></tr>
+<tr><td style="width:4%">7</td><td class="answer" style="width:6%">D</td><td>Sighing generally indicates Qi stagnation of the Liver or Lungs (from repressed anger/frustration or worry/sadness), or Spleen/Heart deficiency from sadness/grief/pensiveness &mdash; not Kidney Yin deficiency.</td></tr>
+<tr><td style="width:4%">8</td><td class="answer" style="width:6%">C</td><td>Earth pairs with Singing, not Groaning. Groaning pairs with Water.</td></tr>
+<tr><td style="width:4%">9</td><td class="answer" style="width:6%">C</td><td>Chu&#299; 吹 targets the Kidney, not the Spleen. The Spleen Healing Sound is H&#363; 呼.</td></tr>
+<tr><td style="width:4%">10</td><td class="answer" style="width:6%">D</td><td>A strong smell indicates Heat or Excess, the opposite of what this option states.</td></tr>
+<tr><td style="width:4%">11</td><td class="answer" style="width:6%">C</td><td>The five named odors on these slides are Rancid, Scorched, Fragrant, Rotten, and Putrid. "Sour" is not one of the five named odor slides (though it appears separately as a Breath odor finding).</td></tr>
+<tr><td style="width:4%">12</td><td class="answer" style="width:6%">D</td><td>Unlike the Five Element Sounds slides, the Five Odor slides do NOT explicitly pair each odor with an element.</td></tr>
+<tr><td style="width:4%">13</td><td class="answer" style="width:6%">D</td><td>Fishy breath odor indicates Phlegm-Heat in the Lung. Heart fire pouring into the Bladder is the pattern for a heavy urea smell in urine, not breath.</td></tr>
+<tr><td style="width:4%">14</td><td class="answer" style="width:6%">C</td><td>Sputum without smell indicates Cold, not Heat.</td></tr>
+<tr><td style="width:4%">15</td><td class="answer" style="width:6%">D</td><td>Slight or odorless flatulence aggravated by emotional stress indicates Liver qi stagnation. Toxic Heat in the Large Intestines is indicated by flatulence that smells rancid and rotten like rotten eggs.</td></tr>
+<tr><td style="width:4%">16</td><td class="answer" style="width:6%">D</td><td>Odorless urinary incontinence indicates exhaustion of Kidney fire, not Liver Qi stagnation.</td></tr>
+<tr><td style="width:4%">17</td><td class="answer" style="width:6%">D</td><td>Red, swollen eyes with turbid tears and foul, fishy odor (or ulcerations) indicates Damp-Heat in the LIVER channel, not the Spleen channel.</td></tr>
+<tr><td style="width:4%">18</td><td class="answer" style="width:6%">D</td><td>No pinyin/hanzi is given for the Weeping voice sound on these slides. H&#363; 呼 is the Shouting voice sound and the Spleen Healing Sound.</td></tr>
+</table>
+
+</body>
+</html>
