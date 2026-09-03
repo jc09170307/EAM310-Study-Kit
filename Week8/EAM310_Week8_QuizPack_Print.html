@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 8 Quiz Pack</title>
+<style>
+@page {
+  size: 714pt 945pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c; --jade: #16805f; --gold: #c9a226; --maroon: #7a2530;
+  --paper: #ffffff; --ink: #24395c; --muted: #5b6b85; --hairline: #d8dce4; --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif; color: var(--ink); font-size: 9.3pt;
+  line-height: 1.42; margin:0; padding:0; background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover { position: relative; padding-left: 26pt; min-height: 760pt; }
+.cover::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4pt; background: var(--navy); }
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold); display:inline-block;
+  margin-top: 46pt; max-width: 540pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.target {
+  margin-top: 14pt; background: #f1f7f4; border-left: 4pt solid var(--jade);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b, .target b { color: var(--navy); }
+.target b { color: var(--jade); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 12pt;
+  padding: 8pt 12pt; margin: 18pt 0 10pt 0;
+  page-break-inside: avoid; break-inside: avoid; page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:10pt; color:var(--navy); margin:12pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 8pt 12pt; margin: 8pt 0 10pt 0; font-size: 8.6pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+
+/* Question formatting */
+.q { margin: 12pt 0 10pt 0; page-break-inside: avoid; break-inside: avoid; }
+.q .stem { font-size: 9.4pt; color: var(--navy); }
+.q .num { font-weight: 700; color: var(--navy); }
+.q .opt { font-size: 9.2pt; color: var(--ink); margin: 2pt 0 2pt 14pt; }
+.q .tf { font-size: 8.3pt; color: var(--muted); margin: 3pt 0 0 14pt; }
+.q .line { border-bottom: 0.75pt solid var(--hairline); height: 14pt; margin: 3pt 0; }
+.q hr { border: none; border-top: 0.5pt solid var(--hairline); margin: 10pt 0; }
+
+table.ref { width:100%; border-collapse: collapse; margin-bottom: 8pt; }
+table.ref th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.ref td { border-bottom: 0.75pt solid var(--hairline); padding: 5pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.answer { font-weight: 600; color: var(--navy); }
+.pinyin { color: var(--jade); font-style: italic; font-size: 8pt; }
+.mnem { font-style: italic; color: var(--muted); }
+
+table.drill { width:100%; border-collapse: collapse; margin-bottom: 10pt; }
+table.drill th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.drill td { border-bottom: 0.75pt solid var(--hairline); padding: 6pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.drill tr:nth-child(even) td { background: #f7f9fc; }
+td.desc { width: 58%; }
+td.ans { width: 42%; font-weight: 600; color: var(--navy); }
+td.ans .sub { font-weight: 400; color: var(--muted); font-size: 8.2pt; display:block; margin-top:2pt; }
+
+.errorlog-row td { border-bottom: 1pt solid var(--hairline); padding: 10pt 7pt; height: 20pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:9.5pt;color:#5b6b85;">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>Quiz Pack</h1>
+  <div class="subtitle">55 Questions + 3 Matching Sets &middot; True/False &middot; Multiple Choice &middot; Fill-in-Blank &middot; Matching &middot; Active Recall &middot; Full Answer Key</div>
+  <div class="prof">Week 8 &middot; Diagnosis by Hearing &amp; Smelling &mdash; 聞診 &middot; Lecture 8</div>
+  <div class="heads-up" style="max-width:460pt;margin-top:18pt;"><b>Source note:</b> Built from Prof. Schrier's Hearing &amp; Smelling slide deck. Week 8's recorded lecture did not reach this material live, so there is no matching transcript to cross-check against.</div>
+  <div class="cover-tags">
+    
+    <span class="tag-wrap"><span class="tag">Print Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+
+<div class="howto"><b>How to use this pack:</b> Take the parts in order &mdash; built easy &rarr; hard on purpose. Close every source before starting.</div>
+<div class="target"><b>Target scores:</b> Part A: 90%+ (if lower, the base isn't set) &middot; Part B/C: 85%+ &middot; Part D/E: 80%+ &middot; 80%+ overall means genuinely ready.</div>
+
+<div class="sec ">PART A &middot; Active Recall &mdash; Write From Memory</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Cover all sources. Write your answer on the line before checking the key.</div>
+<div class="q"><span class="num">1.</span> <span class="stem">What are the two components of 聞診 (W&eacute;n Zh&eacute;n)?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">2.</span> <span class="stem">Which three organs govern the voice, and what aspect does each govern?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">3.</span> <span class="stem">Loud voice vs. weak voice &mdash; what does each indicate?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">4.</span> <span class="stem">What differentiates chronic hoarseness from Blood stagnation vs. from Lung/Kidney Yin deficiency?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">5.</span> <span class="stem">Contrast Excess/Heat vs. Empty/Cold respiration across sound, breath quality, and onset.</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">6.</span> <span class="stem">What is the shared root mechanism of vomiting, belching, and hiccup?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">7.</span> <span class="stem">What is the general rule linking smell strength/quality to Heat vs. Cold?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">8.</span> <span class="stem">List the Five Element Sounds and their elements.</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">9.</span> <span class="stem">Name the Six Healing Sounds and their target organs.</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">10.</span> <span class="stem">What are the two aspects of Diagnosis by Smelling and what does each tell you?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">11.</span> <span class="stem">Name the Five (named) Odors from the slides.</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">12.</span> <span class="stem">What copy/paste-style error appears on the 'Scorched' odor slide?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">13.</span> <span class="stem">What does strong/rotten-smelling sputum indicate vs. fishy-smelling sputum?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">14.</span> <span class="stem">What does a heavy smell of urea with scanty yellow urine indicate?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">15.</span> <span class="stem">What sound does H&#363; 呼 refer to in two different contexts in this deck?</span><div class="line"></div><div class="line"></div></div>
+
+<div class="pb"></div>
+<div class="sec maroon">PART B &middot; True / False</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Mark each statement T or F. About a third are deliberately false &mdash; including a few classic trap statements.</div>
+<table class="ref"><tr><th>#</th><th>Statement</th><th>Answer</th></tr>
+<tr><td style="width:6%">1.</td><td style="width:84%">Kidney governs the production of the voice.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">2.</td><td style="width:84%">A weak, thin breathing sound indicates a Full pattern.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">3.</td><td style="width:84%">Sudden loss of voice is caused by invasion of Wind-Heat.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">4.</td><td style="width:84%">Hoarseness that is chronic and worse in the evening points to Blood stagnation.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">5.</td><td style="width:84%">Panting worse with movement, with timid breath and low voice, is a Deficiency pattern.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">6.</td><td style="width:84%">A dry cough indicates Lung-Yin deficiency.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">7.</td><td style="width:84%">Loud, forceful vomiting with sudden onset indicates ST deficiency and Cold.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">8.</td><td style="width:84%">Borborygmi that is loud usually accompanies diarrhea or dysentery and is a Full pattern.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">9.</td><td style="width:84%">Yawning accompanied by chest pain, occurring after injury or chronic illness, points to Blood and Qi Stagnation.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">10.</td><td style="width:84%">The Weeping voice sound is paired with the Metal element.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">11.</td><td style="width:84%">The Six Healing Sounds each correspond to a Five Element Sound.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">12.</td><td style="width:84%">The general smell rule states that a strong or foul odor indicates Cold.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">13.</td><td style="width:84%">The Five (named) Odor slides explicitly pair each odor with a Zang-Fu element.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">14.</td><td style="width:84%">Fishy-smelling vaginal discharge indicates Damp-Cold.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">15.</td><td style="width:84%">Odorless urinary incontinence indicates Kidney Yin deficiency.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">16.</td><td style="width:84%">Sputum without any smell indicates Cold.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">17.</td><td style="width:84%">A short, low belching sound indicates a Full pattern.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">18.</td><td style="width:84%">Sneezing due to external stimulation (e.g. dust, pepper) is considered a normal reaction, not a pattern.</td><td style="width:10%">T / F</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec jade">PART C &middot; Multiple Choice</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Standard 4-option format. Distractors are drawn from real adjacent content &mdash; read all four before picking.</div>
+<div class="q"><span class="num">1.</span> <span class="stem">Which organ governs the production of sound, per the slides?</span><div class="opt">A. Kidney</div><div class="opt">B. Lung</div><div class="opt">C. Spleen</div><div class="opt">D. Heart</div></div>
+<div class="q"><span class="num">2.</span> <span class="stem">A patient with reluctance to talk most likely has:</span><div class="opt">A. Heat, or Stomach-Qi excess</div><div class="opt">B. Cold pattern, or Lung-Qi deficiency</div><div class="opt">C. Blood stasis</div><div class="opt">D. Liver-Yang rising</div></div>
+<div class="q"><span class="num">3.</span> <span class="stem">Hoarseness with a plum-pit sensation and cough points to:</span><div class="opt">A. Exterior syndrome</div><div class="opt">B. Blood stagnation</div><div class="opt">C. Phlegm-Heat</div><div class="opt">D. Lung and Kidney Yin deficiency</div></div>
+<div class="q"><span class="num">4.</span> <span class="stem">Which is the Excess/Heat presentation of Respiration?</span><div class="opt">A. Low sound, faint/slow breath, slow onset</div><div class="opt">B. Loud sound, rough/distressed breath, acute onset</div><div class="opt">C. No sound, shallow breath</div><div class="opt">D. Rapid but silent breathing</div></div>
+<div class="q"><span class="num">5.</span> <span class="stem">Panting due to Kidney deficiency occurs because:</span><div class="opt">A. The Kidney generates excess phlegm</div><div class="opt">B. The Kidney is unable to absorb qi</div><div class="opt">C. The Kidney over-governs the Lung</div><div class="opt">D. The Kidney floods the Lung with fluid</div></div>
+<div class="q"><span class="num">6.</span> <span class="stem">A loud, forceful hiccup is most often caused by:</span><div class="opt">A. ST-Qi deficiency</div><div class="opt">B. ST-Yin deficiency</div><div class="opt">C. LV-Qi invading the Stomach</div><div class="opt">D. SP-Qi sinking</div></div>
+<div class="q"><span class="num">7.</span> <span class="stem">Borborygmi that is low in sound points to:</span><div class="opt">A. Damp-Heat in ST & Intestines</div><div class="opt">B. SP/KI yang deficiency, or MB qi deficiency</div><div class="opt">C. LV-Qi invading the Stomach</div><div class="opt">D. Phlegm-Heat obstructing the Lung</div></div>
+<div class="q"><span class="num">8.</span> <span class="stem">Which Five Element Sound is paired with Earth?</span><div class="opt">A. Shouting</div><div class="opt">B. Laughing</div><div class="opt">C. Singing</div><div class="opt">D. Groaning</div></div>
+<div class="q"><span class="num">9.</span> <span class="stem">The X&#363; 嘘 Healing Sound targets which organ?</span><div class="opt">A. Heart</div><div class="opt">B. Liver</div><div class="opt">C. Kidney</div><div class="opt">D. Lung</div></div>
+<div class="q"><span class="num">10.</span> <span class="stem">According to the general smell rule, an absent or fishy smell indicates:</span><div class="opt">A. Heat or Excess</div><div class="opt">B. Cold or Deficient</div><div class="opt">C. Blood stasis</div><div class="opt">D. Wind invasion</div></div>
+<div class="q"><span class="num">11.</span> <span class="stem">Which odor is described on the slides as cloying and sickly sweet rather than pleasant?</span><div class="opt">A. Rancid</div><div class="opt">B. Scorched</div><div class="opt">C. Fragrant</div><div class="opt">D. Putrid</div></div>
+<div class="q"><span class="num">12.</span> <span class="stem">A strong, leathery-smelling vaginal discharge indicates:</span><div class="opt">A. Damp-Cold</div><div class="opt">B. Damp-Heat</div><div class="opt">C. Blood deficiency</div><div class="opt">D. Qi stagnation</div></div>
+
+<div class="pb"></div>
+<div class="sec ">PART D &middot; Fill-in-the-Blank</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Fill in every blank before checking the key.</div>
+<table class="ref"><tr><th>#</th><th>Item</th><th>Answer (fill in)</th></tr>
+<tr><td style="width:6%">1.</td><td style="width:64%">Sputum with no smell indicates ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">2.</td><td style="width:64%">Sudden loss of voice is caused by invasion of ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">3.</td><td style="width:64%">Gradual loss of voice indicates Lung-Qi or ______ deficiency.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">4.</td><td style="width:64%">The Fire-element voice sound is ______, pinyin xi&agrave;o.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">5.</td><td style="width:64%">The Kidney Healing Sound is Chu&#299; 吹, and it removes wind-cold and urges ______ qi.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">6.</td><td style="width:64%">Strong-smelling sweat indicates ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">7.</td><td style="width:64%">Frequent, urgent, painful, burning, turbid yellow urine with foul odor indicates ______ in the Bladder.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">8.</td><td style="width:64%">Flatulence that smells rancid and rotten, like rotten eggs, indicates ______ in the Large Intestines.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">9.</td><td style="width:64%">The classical Fire-element scorched odor character is ______, though the slide uses a different (likely mislabeled) character.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">10.</td><td style="width:64%">Foul, fishy odor from the ears with turbid pus and discharge indicates ______ in the ear.</td><td style="width:30%">&nbsp;</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec maroon">PART E &middot; Matching Sets</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Match each item on the left to its answer on the right.</div>
+<div class="subhead">Five Element Sounds</div>
+<table class="ref"><tr><th>Item</th><th>Your Answer</th><th>Options</th></tr>
+<tr><td>1. Shouting</td><td class="line"></td><td rowspan="5">A. Wood &nbsp; B. Fire &nbsp; C. Earth &nbsp; D. Metal &nbsp; E. Water</td></tr>
+<tr><td>2. Laughing</td><td class="line"></td></tr>
+<tr><td>3. Singing</td><td class="line"></td></tr>
+<tr><td>4. Weeping</td><td class="line"></td></tr>
+<tr><td>5. Groaning</td><td class="line"></td></tr>
+</table>
+<div class="subhead">Six Healing Sounds</div>
+<table class="ref"><tr><th>Item</th><th>Your Answer</th><th>Options</th></tr>
+<tr><td>1. X&#363; 嘘</td><td class="line"></td><td rowspan="6">A. Liver &nbsp; B. Heart &nbsp; C. Spleen &nbsp; D. Lung &nbsp; E. Kidney &nbsp; F. Triple Burner</td></tr>
+<tr><td>2. H&#275; 呵</td><td class="line"></td></tr>
+<tr><td>3. H&#363; 呼</td><td class="line"></td></tr>
+<tr><td>4. S&igrave; 呬</td><td class="line"></td></tr>
+<tr><td>5. Chu&#299; 吹</td><td class="line"></td></tr>
+<tr><td>6. X&#299; 嘻</td><td class="line"></td></tr>
+</table>
+<div class="subhead">Odor of Secretions &rarr; Pattern</div>
+<table class="ref"><tr><th>Item</th><th>Your Answer</th><th>Options</th></tr>
+<tr><td>1. Fishy sputum</td><td class="line"></td><td rowspan="5">A. Lung-Heat &nbsp; B. Heart fire &rarr; Bladder &nbsp; C. Damp-Cold &nbsp; D. Liver qi stagnation &nbsp; E. Kidney deficiency</td></tr>
+<tr><td>2. Heavy urea smell, scanty yellow urine</td><td class="line"></td></tr>
+<tr><td>3. Clear, frequent, odorless urine</td><td class="line"></td></tr>
+<tr><td>4. Fishy vaginal discharge</td><td class="line"></td></tr>
+<tr><td>5. Slight/odorless flatulence, emotional stress</td><td class="line"></td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec jade">ANSWER KEY</div>
+<div class="subhead">Part A &mdash; Active Recall</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>Hearing and Smelling &mdash; the 2nd of the Four Diagnostic Methods (望聞問切).</td></tr>
+<tr><td style="width:8%">2</td><td>Lung=production, Kidney=volume, Spleen &amp; Stomach=strength.</td></tr>
+<tr><td style="width:8%">3</td><td>Loud=Full/Heat. Weak=Empty/Cold.</td></tr>
+<tr><td style="width:8%">4</td><td>Blood stagnation=chronic, gradual intensity. Yin deficiency=chronic, gradual, worse in the evening.</td></tr>
+<tr><td style="width:8%">5</td><td>Excess/Heat: loud sound, rough/distressed breath, acute onset. Empty/Cold: low sound, faint/slow breath, slow onset.</td></tr>
+<tr><td style="width:8%">6</td><td>Rebellious Stomach Qi.</td></tr>
+<tr><td style="width:8%">7</td><td>Strong/foul/rotten = Heat or Excess. Absent or fishy = Cold or Deficient.</td></tr>
+<tr><td style="width:8%">8</td><td>Shout=Wood, Laugh=Fire, Sing=Earth, Weep=Metal, Groan=Water.</td></tr>
+<tr><td style="width:8%">9</td><td>X&#363;=Liver, H&#275;=Heart, H&#363;=Spleen, S&igrave;=Lung, Chu&#299;=Kidney, X&#299;=Triple Burner.</td></tr>
+<tr><td style="width:8%">10</td><td>Body odor=pattern + constitutional type. Odor of secretions=nature of the pattern only.</td></tr>
+<tr><td style="width:8%">11</td><td>Rancid, Scorched, Fragrant, Rotten, Putrid.</td></tr>
+<tr><td style="width:8%">12</td><td>It's labeled with xi&agrave;o 笑 (same hanzi as Laughing) &mdash; classical scorched is ji&#257;o 焦.</td></tr>
+<tr><td style="width:8%">13</td><td>Strong/rotten=Heat in Lungs, usually Phlegm-Heat or Toxic Heat. Fishy=Lung-Heat.</td></tr>
+<tr><td style="width:8%">14</td><td>Heart fire pouring downward into the Bladder.</td></tr>
+<tr><td style="width:8%">15</td><td>The Shouting voice sound (Wood) AND the Spleen Healing Sound &mdash; same hanzi, different tables.</td></tr>
+</table>
+<div class="subhead">Part B &mdash; True/False</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>F &mdash; Lung governs production; Kidney governs volume.</td></tr>
+<tr><td style="width:8%">2</td><td>F &mdash; it indicates an Empty pattern.</td></tr>
+<tr><td style="width:8%">3</td><td>T</td></tr>
+<tr><td style="width:8%">4</td><td>F &mdash; that presentation points to Lung and Kidney Yin deficiency.</td></tr>
+<tr><td style="width:8%">5</td><td>T</td></tr>
+<tr><td style="width:8%">6</td><td>T</td></tr>
+<tr><td style="width:8%">7</td><td>F &mdash; that presentation indicates ST-Heat (an Excess/Heat pattern).</td></tr>
+<tr><td style="width:8%">8</td><td>T</td></tr>
+<tr><td style="width:8%">9</td><td>T</td></tr>
+<tr><td style="width:8%">10</td><td>T</td></tr>
+<tr><td style="width:8%">11</td><td>F &mdash; they are two separate lists (voice-quality diagnosis vs. a qigong healing practice); only H&#363; 呼 happens to share a hanzi across both.</td></tr>
+<tr><td style="width:8%">12</td><td>F &mdash; strong/foul indicates Heat or Excess; absence of smell or fishy smell indicates Cold.</td></tr>
+<tr><td style="width:8%">13</td><td>F &mdash; unlike the Five Element Sounds slides, these do not explicitly state an element per odor.</td></tr>
+<tr><td style="width:8%">14</td><td>T</td></tr>
+<tr><td style="width:8%">15</td><td>F &mdash; it indicates exhaustion of Kidney fire (Yang).</td></tr>
+<tr><td style="width:8%">16</td><td>T</td></tr>
+<tr><td style="width:8%">17</td><td>F &mdash; short/low belching indicates ST-Qi deficiency, an Empty pattern.</td></tr>
+<tr><td style="width:8%">18</td><td>T</td></tr>
+</table>
+<div class="subhead">Part C &mdash; Multiple Choice</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>B. Lung</td></tr>
+<tr><td style="width:8%">2</td><td>B. Cold pattern, or Lung-Qi deficiency</td></tr>
+<tr><td style="width:8%">3</td><td>C. Phlegm-Heat</td></tr>
+<tr><td style="width:8%">4</td><td>B. Loud sound, rough/distressed breath, acute onset</td></tr>
+<tr><td style="width:8%">5</td><td>B. The Kidney is unable to absorb qi</td></tr>
+<tr><td style="width:8%">6</td><td>C. LV-Qi invading the Stomach</td></tr>
+<tr><td style="width:8%">7</td><td>B. SP/KI yang deficiency, or MB qi deficiency</td></tr>
+<tr><td style="width:8%">8</td><td>C. Singing</td></tr>
+<tr><td style="width:8%">9</td><td>B. Liver</td></tr>
+<tr><td style="width:8%">10</td><td>B. Cold or Deficient</td></tr>
+<tr><td style="width:8%">11</td><td>C. Fragrant</td></tr>
+<tr><td style="width:8%">12</td><td>B. Damp-Heat</td></tr>
+</table>
+<div class="subhead">Part D &mdash; Fill-in-the-Blank</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>Cold</td></tr>
+<tr><td style="width:8%">2</td><td>Wind-Heat</td></tr>
+<tr><td style="width:8%">3</td><td>Lung-Yin</td></tr>
+<tr><td style="width:8%">4</td><td>Laughing</td></tr>
+<tr><td style="width:8%">5</td><td>stagnant</td></tr>
+<tr><td style="width:8%">6</td><td>Damp-Heat</td></tr>
+<tr><td style="width:8%">7</td><td>Damp-Heat</td></tr>
+<tr><td style="width:8%">8</td><td>Toxic Heat</td></tr>
+<tr><td style="width:8%">9</td><td>ji&#257;o 焦</td></tr>
+<tr><td style="width:8%">10</td><td>Damp-heat</td></tr>
+</table>
+<div class="subhead">Part E &mdash; Matching</div>
+<table class="ref"><tr><th>Set</th><th>Answers (in order)</th></tr>
+<tr><td>Five Element Sounds</td><td>1-A (Wood), 2-B (Fire), 3-C (Earth), 4-D (Metal), 5-E (Water)</td></tr>
+<tr><td>Six Healing Sounds</td><td>1-A (Liver), 2-B (Heart), 3-C (Spleen), 4-D (Lung), 5-E (Kidney), 6-F (Triple Burner)</td></tr>
+<tr><td>Odor &rarr; Pattern</td><td>1-A (Lung-Heat), 2-B (Heart fire &rarr; Bladder), 3-E (Kidney deficiency), 4-C (Damp-Cold), 5-D (Liver qi stagnation)</td></tr>
+</table>
+
+</body>
+</html>
