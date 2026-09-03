@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 8 Study Guide</title>
+<style>
+@page {
+  size: 714pt 966pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c;
+  --jade: #16805f;
+  --gold: #c9a226;
+  --maroon: #7a2530;
+  --paper: #ffffff;
+  --ink: #24395c;
+  --muted: #5b6b85;
+  --hairline: #d8dce4;
+  --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+  font-size: 9pt;
+  line-height: 1.42;
+  margin: 0; padding: 0;
+  background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+/* Cover */
+.cover {
+  position: relative;
+  padding-left: 26pt;
+  min-height: 760pt;
+}
+.cover::before {
+  content: ""; position:absolute; left:0; top:0; bottom:0; width:4pt;
+  background: var(--navy);
+}
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold);
+  display:inline-block; margin-top: 46pt; max-width: 520pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.cover .meta { margin-top: 20pt; font-size: 9.5pt; color: var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b { color: var(--navy); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+.scope-note {
+  margin-top: 18pt; background: #fff8e5; border: 1pt solid var(--gold);
+  padding: 10pt 14pt; max-width: 460pt; font-size: 8.6pt; color: var(--navy);
+}
+
+/* page break */
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+/* section headers */
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 11pt;
+  padding: 6pt 10pt; margin: 16pt 0 8pt 0;
+  page-break-inside: avoid; break-inside: avoid;
+  page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:9.6pt; color:var(--navy); margin:10pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+p.lede { color: var(--muted); font-size: 8.6pt; margin: 2pt 0 6pt 0; }
+
+table.ref {
+  width:100%; border-collapse: collapse; margin-bottom: 8pt;
+  page-break-inside: avoid; break-inside: avoid;
+}
+table.ref th {
+  background: var(--navy); color:#fff; font-size:8pt; text-align:left; padding:4pt 6pt;
+}
+table.ref td {
+  border-bottom: 0.75pt solid var(--hairline); padding: 4pt 6pt; font-size: 8pt;
+  vertical-align: top;
+}
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.lbl { font-weight:600; color: var(--navy); width: 20%; }
+td.lbl.jade { color: var(--jade); }
+td.lbl.maroon { color: var(--maroon); }
+
+.qr {
+  font-style: italic; font-size: 8pt; color: var(--jade); margin: -2pt 0 8pt 0;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 7pt 10pt; margin: 6pt 0 10pt 0; font-size: 8.3pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+.clinical {
+  background: #f1f7f4; border: 1pt solid var(--jade); border-left: 4pt solid var(--jade);
+  padding: 8pt 10pt; margin: 6pt 0 10pt 0; font-size: 8.4pt;
+  page-break-inside: avoid; break-inside: avoid;
+}
+.clinical b { color: var(--jade); }
+.footer-tag {
+  position: fixed; bottom: 14pt; left: 44pt; font-size: 7pt; color: #b7bfcf;
+}
+
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="meta">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>Week 8 Study Guide</h1>
+  <div class="subtitle">Diagnosis by Hearing &amp; Smelling &mdash; 聞診 (W&eacute;n Zh&eacute;n) &mdash; Voice, Breath Sounds, Digestive/Reflexive Sounds, Five Element Sounds, Six Healing Sounds, Body &amp; Secretion Odors</div>
+  <div class="prof">Lecture 8 &middot; Daniel Schrier, D.O.M., L.Ac.</div>
+  <div class="howto"><b>How to use this guide:</b> Read once for the framework (the two components of W&eacute;n Zh&eacute;n), then drill the tables. Every finding-to-pattern mapping is in a table &mdash; memorize rows, not paragraphs. Pair with the Cram Sheet the night before class.</div>
+  <div class="scope-note"><b>Source note:</b> Week 8's recorded lecture continued Diagnosis by Inquiry from Week 7 and did not reach Hearing &amp; Smelling live (Prof. Schrier confirms on the recording that the quiz would not cover this material because "I didn't talk about this" yet). This guide is therefore built entirely from Prof. Schrier's Hearing &amp; Smelling slide deck (slides 731&ndash;781), cross-checked against Maciocia and Cheng Xinnong &mdash; not from a matching lecture transcript. Treat the slides as the sole primary source for this topic until a lecture recording becomes available.</div>
+  <div class="cover-tags">
+    <span class="tag-wrap"><span class="tag gold">TCM for Ballroom Dancers</span></span>
+    
+    <span class="tag-wrap"><span class="tag">reMarkable Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+
+<div class="sec ">1 &middot; Framework: 聞診 (W&eacute;n Zh&eacute;n) &mdash; The Second Pillar</div>
+<p class="lede">W&eacute;n Zh&eacute;n is the second of the Four Diagnostic Methods (望聞問切) and has two distinct components that share one character (聞 &mdash; "to perceive with the ear/nose").</p>
+<table class="ref"><tr><th>Component</th><th>Covers</th></tr>
+<tr><td class="lbl">Hearing</td><td>Voice, breathing, cough, vomiting, hiccup, borborygmi, sighing, belching &mdash; any sound emitted by the patient</td></tr>
+<tr><td class="lbl jade">Smelling</td><td>Body odor, and odor of bodily secretions (breath, sweat, sputum, urine/stools, vaginal discharge, intestinal gas)</td></tr>
+</table>
+<div class="qr">Quick Recall: 聞診 = Hearing + Smelling, the 2nd of the Four Pillars (望聞問切).</div>
+
+<div class="sec ">2 &middot; Voice &amp; Zang-Fu Relationship</div>
+<p class="lede">Three organ systems govern distinct aspects of the voice.</p>
+<table class="ref"><tr><th>Organ</th><th>Role</th><th>Governs</th></tr>
+<tr><td class="lbl">Lung</td><td>Gateway of the voice; movement of qi helps create sounds</td><td><b>Production</b> of sound</td></tr>
+<tr><td class="lbl">Kidney</td><td>Root of the voice; root of yuan qi, controls reception of qi</td><td><b>Volume</b> of the voice</td></tr>
+<tr><td class="lbl jade">Spleen &amp; Stomach</td><td>Acquired root of qi; influences vocalization</td><td><b>Strength</b> of the voice</td></tr>
+</table>
+<div class="qr">Quick Recall: Lung=production, Kidney=volume, Spleen/Stomach=strength.</div>
+
+<div class="sec jade">3 &middot; Voice &mdash; Basic Full/Empty Patterns</div>
+<table class="ref"><tr><th>Vocalization</th><th>Pattern</th></tr>
+<tr><td>Loud voice</td><td>Full or Heat pattern</td></tr>
+<tr><td>Weak voice</td><td>Empty or Cold pattern</td></tr>
+<tr><td>Weak and vague</td><td>Exterior wind-cold, or Dampness</td></tr>
+<tr><td>Reluctance to talk</td><td>Cold pattern or Lung-Qi deficiency</td></tr>
+<tr><td>Excessive talking</td><td>Heat</td></tr>
+<tr><td>Sudden loss of voice</td><td>Invasion of Wind-Heat</td></tr>
+<tr><td>Gradual loss of voice</td><td>Lung-Qi or Lung-Yin deficiency</td></tr>
+</table>
+<div class="qr">Quick Recall: Loud/excessive=Full/Heat. Weak/reluctant=Empty/Cold. Sudden loss=Wind-Heat invasion; gradual loss=Lung-Qi/Yin deficiency.</div>
+
+<div class="subhead">Abnormal Vocalizations: Hoarseness (by onset)</div>
+<table class="ref"><tr><th>Onset / Quality</th><th>Pattern</th></tr>
+<tr><td>Sudden onset, low pitch, raspy</td><td>Exterior syndrome</td></tr>
+<tr><td>Chronic, gradual intensity</td><td>Blood stagnation</td></tr>
+<tr><td>Hoarseness with plum-pit sensation &amp; cough</td><td>Phlegm-Heat</td></tr>
+<tr><td>Chronic onset, gradually increasing, worse in evening</td><td>Lung and Kidney Yin deficiency</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> "Worse in the evening" is the differentiator that flags Yin deficiency (dusk/night aggravation is the classic Yin-deficiency-heat timing pattern) &mdash; don't just memorize "chronic," since Blood stagnation is also chronic but lacks the evening-worsening detail.</div>
+
+<div class="sec ">4 &middot; Breathing</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Coarse, loud breathing sound</td><td>Full pattern</td></tr>
+<tr><td>Weak, thin breathing sound</td><td>Empty pattern</td></tr>
+<tr><td>Deep breathing</td><td>Excess qi in the Heart and Lungs</td></tr>
+<tr><td>Weak breathing</td><td>Deficiency of qi in Liver and Kidney</td></tr>
+<tr><td>Rough respiration, rapid inhalation &amp; slow exhalation</td><td>Heat, excess, exogenous condition</td></tr>
+<tr><td>Faint respiration, slow inhalation and exhalation</td><td>Deficiency condition or chronic internal condition</td></tr>
+</table>
+
+<div class="subhead">Respiration &mdash; Excess/Heat vs. Empty/Cold</div>
+<table class="ref"><tr><th>Feature</th><th>Excess / Heat</th><th>Empty / Cold</th></tr>
+<tr><td>Sound of respiration</td><td>Loud</td><td>Low</td></tr>
+<tr><td>Breath quality</td><td>Rough and distressed</td><td>Faint and slow</td></tr>
+<tr><td>Onset</td><td>Acute</td><td>Relatively slow</td></tr>
+<tr><td>Mechanism</td><td>Surplus of external contraction of evil qi, or Phlegm-Heat invading the Lung</td><td>Internal damage causing insufficient Zheng Qi and Kidney/Lung Qi vacuity</td></tr>
+</table>
+<div class="qr">Quick Recall: Loud/rough/acute = Excess-Heat. Low/faint/slow-onset = Empty-Cold.</div>
+
+<div class="subhead">Panting (severe respiratory distress)</div>
+<p class="lede">Rapid, irregular respiration, extreme to the point that the nostrils move, with uneven entrance and exit of breath, opening of the mouth, raising of the shoulders, and difficulty lying down.</p>
+<table class="ref"><tr><th>Type</th><th>Presentation</th><th>Mechanism</th></tr>
+<tr><td class="lbl">Excess</td><td>Respiration irregular, chest full, sound loud and rough, exit of breath irregular and exhalation uneven</td><td>Disease/xie qi obstructing the Lung</td></tr>
+<tr><td class="lbl">Deficiency</td><td>Respiration irregular, breath timid, voice low, inhalation diminished and exhalation increased and rapid, breath not continuous, panting worse with movement</td><td>Kidney deficiency (unable to absorb qi) or Lung deficiency (unable to govern qi)</td></tr>
+</table>
+
+<div class="subhead">Abnormal Respiration Types</div>
+<table class="ref"><tr><th>Type</th><th>Mechanism</th></tr>
+<tr><td>Asthma</td><td>Lung qi's failure to descend</td></tr>
+<tr><td>Wheezing</td><td>Lung qi fails to descend with phlegm obstruction</td></tr>
+<tr><td>Upper Stifling</td><td>Lung qi rises upward to the throat and obstructs the air tract</td></tr>
+<tr><td>Shortness of Breath</td><td>Lung qi deficiency, or Water Retention in the Chest (coughing up watery sputum)</td></tr>
+<tr><td>Shortage of Qi</td><td>Lung qi obstructed, Lung qi deficiency, Zheng qi insufficient</td></tr>
+</table>
+
+<div class="sec jade">5 &middot; Cough, Sneezing &amp; Reflexive Sounds</div>
+<div class="subhead">Cough &mdash; K&eacute; S&ograve;u 咳嗽</div>
+<p class="lede">Due to the Lung not diffusing and down-bearing, Lung qi rising counterflow, and Phlegm and Qi flooding the airways.</p>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Loud, explosive cough</td><td>Full pattern</td></tr>
+<tr><td>Weak cough</td><td>Empty pattern</td></tr>
+<tr><td>Dry cough</td><td>Lung-Yin deficiency</td></tr>
+<tr><td>Sound without phlegm</td><td>"Unproductive cough"</td></tr>
+<tr><td>Phlegm with sound</td><td>"Productive cough"</td></tr>
+</table>
+
+<div class="subhead">Sneezing</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Acute onset, constant loud sounds</td><td>Heat and/or excess condition</td></tr>
+<tr><td>Chronic, frequent, soft in volume</td><td>Lung deficiency</td></tr>
+<tr><td>Sudden sneezing in critical stage of chronic illness</td><td>Yang qi recovery</td></tr>
+<tr><td>Sneezing due to external stimulation</td><td>Normal</td></tr>
+</table>
+
+<div class="sec jade">6 &middot; Vomiting, Belching &amp; Hiccup</div>
+<p class="lede">All three share the same root mechanism &mdash; Rebellious Stomach Qi &mdash; and differ only in what is expelled and how.</p>
+<table class="ref"><tr><th>Symptom</th><th>Common Root</th><th>Differences</th></tr>
+<tr><td class="lbl">Vomiting</td><td rowspan="3">Rebellious ST Qi</td><td>Food, fluid or sputum flows up from the Stomach and out of the mouth with sound</td></tr>
+<tr><td class="lbl">Belching</td><td>Air or gas flows up from the stomach and makes sound passing through the throat</td></tr>
+<tr><td class="lbl">Hiccup</td><td>ST Qi's rebellion causes involuntary spasms of the diaphragm and makes a short sound</td></tr>
+</table>
+<table class="ref"><tr><th>Symptom</th><th>Deficiency/Cold Presentation</th><th>Excess/Heat Presentation</th></tr>
+<tr><td>Vomiting</td><td>Comes slowly, sound of retching relatively low, faint, and without force &mdash; frequently ST deficiency and Cold</td><td>Comes relatively suddenly, sound of retching relatively loud and forceful &mdash; frequently ST-Heat</td></tr>
+<tr><td>Belching</td><td>Short and low sound &mdash; ST-Qi deficiency, or ST-Qi deficiency with Cold</td><td>Loud and long sound &mdash; retention of food, ST-Heat, or LV-Qi invading the Stomach</td></tr>
+<tr><td>Hiccup</td><td>Quiet, low sound &mdash; often ST-Qi or ST-Yin deficiency</td><td>Loud sound &mdash; often LV-Qi invading the Stomach</td></tr>
+</table>
+<div class="qr">Quick Recall: All three = Rebellious ST Qi. Loud/forceful=Excess-Heat or LV invading ST. Quiet/faint=ST deficiency (Qi, Yin, or Cold).</div>
+
+<div class="sec jade">7 &middot; Borborygmi, Yawning &amp; Sighing</div>
+<div class="subhead">Borborygmi (gurgling sound in the intestines)</div>
+<table class="ref"><tr><th>Sound</th><th>Pattern</th><th>Subtypes</th></tr>
+<tr><td class="lbl">Loud</td><td>Full pattern (usually with diarrhea or dysentery)</td><td>Cold-damp in MB, Phlegm-damp in MB, LR/SP disharmony, Damp-Heat in ST &amp; Intestines</td></tr>
+<tr><td class="lbl">Low</td><td>Empty pattern</td><td>SP/KI yang deficiency, MB qi deficiency</td></tr>
+</table>
+
+<div class="subhead">Yawning</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Frequent, loud, relieved after yawn, induced by emotional changes</td><td>Liver Qi Stagnation</td></tr>
+<tr><td>Accompanied by chest pain, may occur after injury or chronic illness</td><td>Blood and Qi Stagnation</td></tr>
+<tr><td>Infrequent, weak or no sound</td><td>Spleen/Kidney Yang deficiency</td></tr>
+</table>
+
+<div class="subhead">Sighing</div>
+<p class="lede">Generally indicates Qi stagnation of the Liver or Lungs, often from emotional problems.</p>
+<table class="ref"><tr><th>Cause</th><th>Emotion / Mechanism</th></tr>
+<tr><td>Liver involvement</td><td>Repressed anger or frustration</td></tr>
+<tr><td>Lung involvement</td><td>Worry &amp; sadness</td></tr>
+<tr><td>Weak sound (alternate root)</td><td>Deficiency of Spleen and Heart, deriving from sadness, grief, or pensiveness</td></tr>
+</table>
+
+<div class="sec maroon">8 &middot; Five Element Sounds &mdash; 五音 W&#468; Y&#299;n</div>
+<p class="lede">Voice quality/expression, paired to the Five Elements. Distinct topic from the Five (Element) Odors in Section 11 &mdash; don't conflate the two lists.</p>
+<table class="ref"><tr><th>Element</th><th>Sound</th><th>Pinyin / Hanzi</th><th>Character of the Sound</th></tr>
+<tr><td class="lbl">Wood</td><td>Shouting</td><td>H&#363; 呼</td><td>Gives forcefulness to the voice; an indication of assertion. When one shouts they want to be heard and/or are asking, explicitly or implicitly, for changes to be made. Frequently becomes louder at moments when the person is not really needing to be particularly assertive.</td></tr>
+<tr><td class="lbl">Fire</td><td>Laughing</td><td>Xi&agrave;o 笑</td><td>Occurs when we express moments of joy. Does not necessarily mean an actual laugh (can include a "pre-laugh" without one emerging, or there could be one). Fire is a very yang Element, so just as laughter seems to rise upwards and outwards, so does this sound.</td></tr>
+<tr><td class="lbl jade">Earth</td><td>Singing</td><td>Ch&agrave;ng 唱</td><td>May occur naturally when singing a lullaby with a child in arms, or soothing an anxious or distressed animal/person. Has increased variation in pitch &mdash; the voice goes up and down more frequently.</td></tr>
+<tr><td class="lbl">Metal</td><td>Weeping</td><td>&mdash; (no pinyin/hanzi given on slide)</td><td>Consumes or dissolves qi. More of a non-verbal sound but based on an expressive, emotional quality. When speaking with a weep the person might easily begin to cry; other times there could be a choking back or a faltering in the words.</td></tr>
+<tr><td class="lbl maroon">Water</td><td>Groaning</td><td>&mdash; (no pinyin/hanzi given on slide)</td><td>Has little movement or modulation in its quality. Is one of flatness, as if the more normal ups and downs of the voice have been squeezed or flattened out.</td></tr>
+</table>
+<div class="qr">Quick Recall: Shout=Wood, Laugh=Fire, Sing=Earth, Weep=Metal, Groan=Water &mdash; same order as the standard Five Element cycle.</div>
+
+<div class="sec maroon">9 &middot; The Six Healing Sounds &mdash; Li&ugrave; Z&igrave; Ju&eacute;</div>
+<table class="ref"><tr><th>Sound</th><th>Organ</th><th>Effect</th></tr>
+<tr><td>X&#363; 嘘</td><td class="lbl">Liver</td><td>Removes heat, disperses blockages, brings brightness to the eyes</td></tr>
+<tr><td>H&#275; 呵</td><td class="lbl">Heart</td><td>Expels heat, makes qi descend, reduces fire in the heart</td></tr>
+<tr><td>H&#363; 呼</td><td class="lbl jade">Spleen</td><td>Drives out heat, strengthens the spleen in all four seasons</td></tr>
+<tr><td>S&igrave; 呬</td><td class="lbl">Lung</td><td>Moderates stress, calms the qi, moistens the lungs</td></tr>
+<tr><td>Chu&#299; 吹</td><td class="lbl maroon">Kidney</td><td>Removes wind and cold, urges stagnant qi, brings tranquility to the kidneys</td></tr>
+<tr><td>X&#299; 嘻</td><td>Triple Burner</td><td>Clears heat and restlessness, drives out strong emotional afflictions</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> H&#363; 呼 appears twice in this deck with two different meanings: the <b>Shouting</b> voice sound (Wood, Section 8) and the <b>Spleen</b> Healing Sound (this section). Same pinyin/hanzi, different context &mdash; know which table you're in before answering.</div>
+
+<div class="sec maroon">10 &middot; Diagnosis by Smelling &mdash; Framework</div>
+<table class="ref"><tr><th>Aspect</th><th>Tells the Practitioner</th></tr>
+<tr><td class="lbl">First: Odor of the patient's body itself</td><td>Can indicate not only the pattern of disharmony but also the patient's constitutional type</td></tr>
+<tr><td class="lbl jade">Second: Odor of certain bodily secretions</td><td>Used only to identify the nature of the pattern of disharmony</td></tr>
+</table>
+<table class="ref"><tr><th>Rule</th><th>Indicates</th></tr>
+<tr><td>Strong and/or foul, rotten, fetid, stinking smell</td><td>Heat or Excess</td></tr>
+<tr><td>Absence of smell, or fishy smell</td><td>Cold or Deficient</td></tr>
+</table>
+<div class="qr">Quick Recall: Generally, strong/foul = Heat. Absent/fishy = Cold. Applies across nearly every secretion below.</div>
+<table class="ref"><tr><th>Main Aspects of Diagnosis by Smelling</th></tr>
+<tr><td>Body Odor</td></tr>
+<tr><td>Odor of Bodily Secretions &mdash; Breath, Sweat, Sputum, Urine and stools, Vaginal discharge and lochia, Intestinal gas, etc.</td></tr>
+</table>
+
+<div class="subhead">Body Odor</div>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Goatish odor</td><td>Wind, damp, heat accumulation</td></tr>
+<tr><td>Foul, stinking</td><td>Epidemic infectious disease, or summer heat toxin</td></tr>
+<tr><td>Foul, set in the armpit</td><td>Damp-heat accumulation</td></tr>
+</table>
+
+<div class="sec maroon">11 &middot; The Five (Named) Odors</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Unlike the Five Element Sounds (Section 8), these five odor-description slides do NOT explicitly label each smell with a Zang-Fu element on the lecture slides. Also, the "Scorched" slide title uses the character xi&agrave;o 笑 &mdash; the same hanzi as "Laughing" from Section 8. Classically the Fire-element scorched odor is ji&#257;o 焦, a different character. This looks like a copy/paste label on the lecture slide (already flagged on the Prep Sheet) &mdash; confirm with Prof. Schrier rather than memorizing 笑 for "scorched," and don't assume the classical Wood/Fire/Earth/Metal/Water odor pairing (sour&ndash;scorched&ndash;fragrant&ndash;rank&ndash;putrid) maps 1:1 onto this list without confirming it in class.</div>
+<table class="ref"><tr><th>Odor</th><th>Sensory Description</th></tr>
+<tr><td class="lbl">Rancid (S&#333;u 餿)</td><td>Associated with fat that is no longer fresh or slightly sour. Also related to the smell of newly-mown grass, but not pleasant. Effect on the inside of the nose is somewhat prickling and makes one wrinkle their nose.</td></tr>
+<tr><td class="lbl">Scorched</td><td>Resembles what someone would describe as the smell in life &mdash; e.g. burnt toast, clothes coming out of the tumble dryer, a shirt just scorched while ironing.</td></tr>
+<tr><td class="lbl jade">Fragrant (Xi&#257;ng 香)</td><td>Often thought of as a pleasing smell such as flowers, but this odor is the opposite and not as pleasing &mdash; more associated with a cloying, sickly sweet smell with a tendency to linger in the nostrils.</td></tr>
+<tr><td class="lbl">Rotten (L&agrave;n 爛)</td><td>Fills the inside of one's nose with tiny prickles and may make one clench the inside of their nose. Rotting meat is the best verbal description, or a trash can/garbage truck where many substances are decomposing.</td></tr>
+<tr><td class="lbl maroon">Putrid (F&#468; 腐)</td><td>Described as the smell of rotting meat. Can describe the smell of water in a stagnant pond or the smell of stale urine. Has a sharp and aggressive quality, making one's nose clench up.</td></tr>
+</table>
+
+<div class="sec maroon">12 &middot; Odor of Bodily Secretions</div>
+<div class="subhead">Breath</div>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Strong, foul</td><td>Stomach Heat or retention of food</td></tr>
+<tr><td>Sour</td><td>Retention of food, Accumulation Disorder</td></tr>
+<tr><td>Foul, pungent</td><td>Damp-Heat in Stomach and Spleen</td></tr>
+<tr><td>Rotten</td><td>Damp-Heat in Large Intestine</td></tr>
+<tr><td>Fishy</td><td>Phlegm-Heat in Lung</td></tr>
+</table>
+
+<div class="subhead">Sweat</div>
+<p class="lede">Related to Dampness because the fluids forming sweat come from the space between the skin and muscles, where Dampness often accumulates.</p>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Strong-smelling</td><td>Damp-Heat</td></tr>
+<tr><td>Putrid-smelling</td><td>Indicates a disease of the Lungs, Liver, or Kidneys</td></tr>
+</table>
+
+<div class="subhead">Sputum</div>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Strong-smelling, often smelling rotten</td><td>Heat in the Lungs, usually Phlegm-Heat or Toxic Heat</td></tr>
+<tr><td>Fishy-smelling</td><td>Lung-Heat</td></tr>
+<tr><td>Without smell</td><td>Cold</td></tr>
+</table>
+
+<div class="subhead">Stool &amp; Flatulence</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Extremely stinky, foul odor, diarrhea with pus or blood</td><td>Damp-Heat in the Intestines</td></tr>
+<tr><td>Sour and foul odor with indigestion</td><td>Food stagnation</td></tr>
+<tr><td>Fishy odor with loose stools</td><td>Cold in Spleen/Stomach</td></tr>
+<tr><td>Slight or odorless flatulence, aggravated by emotional stress</td><td>Liver qi stagnation</td></tr>
+<tr><td>Flatulence smells rancid and rotten, like rotten eggs</td><td>Toxic Heat in the Large Intestines</td></tr>
+<tr><td>Abnormal stool color but without odor, or frequent flatulence without strong odor</td><td>ST/LI qi deficiency</td></tr>
+</table>
+
+<div class="subhead">Urine</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Frequent, urgent, painful, burning, turbid yellow with foul odor</td><td>Damp-Heat in Bladder</td></tr>
+<tr><td>Heavy smell of urea, scanty yellow urine</td><td>Heart fire pouring downward into Bladder</td></tr>
+<tr><td>Clear, frequent, odorless or with a slightly fishy odor</td><td>Kidney deficiency</td></tr>
+<tr><td>Odorless urinary incontinence</td><td>Exhaustion of Kidney fire</td></tr>
+</table>
+
+<div class="subhead">Vaginal Discharge</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Strong-smelling, leathery smell</td><td>Damp-Heat</td></tr>
+<tr><td>Fishy smell</td><td>Damp-Cold</td></tr>
+<tr><td>Strong-smelling lochia after childbirth</td><td>Damp-Heat or Toxic Heat in the Uterus</td></tr>
+</table>
+
+<div class="subhead">Odors of Nose, Ears, Eyes</div>
+<table class="ref"><tr><th>Site</th><th>Presentation</th><th>Pattern</th></tr>
+<tr><td class="lbl">Nose</td><td>Yellow, sticky discharge with foul odor</td><td>Heat in Lung or Damp-Heat in SP &amp; ST</td></tr>
+<tr><td class="lbl">Ears</td><td>Foul, fishy odor emanating from ears with turbid pus and discharge</td><td>Damp-Heat in the ear</td></tr>
+<tr><td class="lbl">Eyes</td><td>Red, swollen eyes with turbid tears accompanied by foul, fishy odor, or ulcerations around the eyes</td><td>Damp-Heat in the Liver channel</td></tr>
+</table>
+<div class="qr">Quick Recall: Across nearly every secretion, foul/strong/rotten = Heat or Damp-Heat; fishy or odorless leans Cold or Deficiency &mdash; the general rule from Section 10 holds.</div>
+
+<div class="sec ">13 &middot; Vocabulary Table</div>
+<table class="ref"><tr><th>Character</th><th>Pinyin</th><th>English</th><th>Note</th></tr>
+<tr><td>聞診</td><td>W&eacute;n Zh&eacute;n</td><td>Diagnosis by Hearing &amp; Smelling</td><td>2nd of the Four Diagnostic Methods (望聞問切)</td></tr>
+<tr><td>呼</td><td>H&#363;</td><td>Shout (voice sound)</td><td>Wood-element voice sound &mdash; forcefulness, assertion</td></tr>
+<tr><td>笑</td><td>Xi&agrave;o</td><td>Laugh (voice sound)</td><td>Fire-element voice sound &mdash; expression of joy</td></tr>
+<tr><td>唱</td><td>Ch&agrave;ng</td><td>Sing (voice sound)</td><td>Earth-element voice sound &mdash; soothing, wide pitch variation</td></tr>
+<tr><td>咳嗽</td><td>K&eacute; S&ograve;u</td><td>Cough</td><td>Lung qi rising counterflow + Phlegm/Qi flooding the airways</td></tr>
+<tr><td>嘘</td><td>X&#363;</td><td>"Xu" Healing Sound</td><td>Liver &mdash; removes heat, clears blockages, brightens the eyes</td></tr>
+<tr><td>呵</td><td>H&#275;</td><td>"He" Healing Sound</td><td>Heart &mdash; expels heat, makes qi descend, reduces fire</td></tr>
+<tr><td>呬</td><td>S&igrave;</td><td>"Si" Healing Sound</td><td>Lung &mdash; moderates stress, calms qi, moistens the lungs</td></tr>
+<tr><td>吹</td><td>Chu&#299;</td><td>"Chui" Healing Sound</td><td>Kidney &mdash; removes wind-cold, urges stagnant qi</td></tr>
+<tr><td>嘻</td><td>X&#299;</td><td>"Xi" Healing Sound</td><td>Triple Burner &mdash; clears heat/restlessness, emotional afflictions</td></tr>
+<tr><td>餿</td><td>S&#333;u</td><td>Rancid odor</td><td>Fat no longer fresh / newly-mown grass, unpleasant</td></tr>
+<tr><td>香</td><td>Xi&#257;ng</td><td>Fragrant odor</td><td>Cloying, sickly sweet &mdash; NOT actually pleasant in this context</td></tr>
+<tr><td>爛</td><td>L&agrave;n</td><td>Rotten odor</td><td>Rotting meat / decomposing trash</td></tr>
+<tr><td>腐</td><td>F&#468;</td><td>Putrid odor</td><td>Rotting meat / stagnant water smell</td></tr>
+</table>
+
+<div class="sec maroon">14 &middot; Clinical Case &mdash; Apply It</div>
+<div class="clinical"><b>Mr. Alvarez, 38 years old</b> &mdash; presents with a 3-day history of a loud, productive cough with thick yellow sputum that has a strong, rotten smell. His voice is loud and he speaks rapidly, without reluctance. He reports being thirsty, prefers cold drinks, and his stool has been drier than usual. Breath odor is strong and foul.
+<br><br><b>Working through it:</b> Loud + productive cough with sound &rarr; <b>Full pattern</b> (Section 5). Strong, rotten-smelling sputum &rarr; <b>Heat in the Lungs, most likely Phlegm-Heat</b> (Section 12, Sputum). Loud voice, no reluctance to talk &rarr; consistent with <b>Full/Heat</b> (Section 3). Strong, foul breath &rarr; <b>Stomach Heat or food retention</b> (Section 12, Breath) &mdash; worth asking about diet to differentiate from a purely Lung-origin heat. Preference for cold drinks + drier stool supports an overall <b>Heat</b> picture.
+<br><br><b>Working TCM pattern:</b> Phlegm-Heat in the Lung (with a possible Stomach-Heat component to investigate further via Inquiry).
+<br><br><b>If untreated and this Excess-Heat pattern began to consume Yin over time</b>, expect the picture to shift toward Yin-deficiency signs: voice could become hoarse and worse in the evening (Section 3), cough could dry out (Section 5), sweat could become scantier but still concerning if putrid-smelling (Section 12), and breath odor could shift from strong/foul toward drier without necessarily resolving.</div>
+
+<div class="footer-tag">EAM310 Week 8 Study Guide &middot; Sources: Prof. Schrier (slides 731&ndash;781) &middot; Maciocia FCM 3rd ed. &middot; Cheng Xinnong CAM 4th ed.</div>
+
+</body>
+</html>
