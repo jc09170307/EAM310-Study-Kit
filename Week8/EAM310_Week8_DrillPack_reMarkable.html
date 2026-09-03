@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 8 Drill Pack</title>
+<style>
+@page {
+  size: 714pt 966pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c; --jade: #16805f; --gold: #c9a226; --maroon: #7a2530;
+  --paper: #ffffff; --ink: #24395c; --muted: #5b6b85; --hairline: #d8dce4; --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif; color: var(--ink); font-size: 9.3pt;
+  line-height: 1.42; margin:0; padding:0; background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover { position: relative; padding-left: 26pt; min-height: 760pt; }
+.cover::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4pt; background: var(--navy); }
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold); display:inline-block;
+  margin-top: 46pt; max-width: 540pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.target {
+  margin-top: 14pt; background: #f1f7f4; border-left: 4pt solid var(--jade);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b, .target b { color: var(--navy); }
+.target b { color: var(--jade); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 12pt;
+  padding: 8pt 12pt; margin: 18pt 0 10pt 0;
+  page-break-inside: avoid; break-inside: avoid; page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:10pt; color:var(--navy); margin:12pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 8pt 12pt; margin: 8pt 0 10pt 0; font-size: 8.6pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+
+/* Question formatting */
+.q { margin: 12pt 0 10pt 0; page-break-inside: avoid; break-inside: avoid; }
+.q .stem { font-size: 9.4pt; color: var(--navy); }
+.q .num { font-weight: 700; color: var(--navy); }
+.q .opt { font-size: 9.2pt; color: var(--ink); margin: 2pt 0 2pt 14pt; }
+.q .tf { font-size: 8.3pt; color: var(--muted); margin: 3pt 0 0 14pt; }
+.q .line { border-bottom: 0.75pt solid var(--hairline); height: 14pt; margin: 3pt 0; }
+.q hr { border: none; border-top: 0.5pt solid var(--hairline); margin: 10pt 0; }
+
+table.ref { width:100%; border-collapse: collapse; margin-bottom: 8pt; }
+table.ref th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.ref td { border-bottom: 0.75pt solid var(--hairline); padding: 5pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.answer { font-weight: 600; color: var(--navy); }
+.pinyin { color: var(--jade); font-style: italic; font-size: 8pt; }
+.mnem { font-style: italic; color: var(--muted); }
+
+table.drill { width:100%; border-collapse: collapse; margin-bottom: 10pt; }
+table.drill th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.drill td { border-bottom: 0.75pt solid var(--hairline); padding: 6pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.drill tr:nth-child(even) td { background: #f7f9fc; }
+td.desc { width: 58%; }
+td.ans { width: 42%; font-weight: 600; color: var(--navy); }
+td.ans .sub { font-weight: 400; color: var(--muted); font-size: 8.2pt; display:block; margin-top:2pt; }
+
+.errorlog-row td { border-bottom: 1pt solid var(--hairline); padding: 10pt 7pt; height: 20pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:9.5pt;color:#5b6b85;">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>Drill Pack</h1>
+  <div class="subtitle">Blind ID Drills &middot; Both Directions &middot; Error Log</div>
+  <div class="prof">Week 8 &middot; Diagnosis by Hearing &amp; Smelling &mdash; 聞診 &middot; Lecture 8</div>
+  <div class="cover-tags">
+    <span class="tag-wrap"><span class="tag gold">TCM for Ballroom Dancers</span></span>
+    
+    <span class="tag-wrap"><span class="tag">reMarkable Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+<div class="howto"><b>How drilling differs from studying:</b> Reading builds understanding. Drilling builds <b>speed</b>. You can understand every table in the Study Guide and still blank under time pressure &mdash; these drills fix that. Fifteen minutes daily beats two hours on Sunday.</div>
+
+<div class="sec ">PART A &middot; Blind ID &mdash; Voice &amp; Zang-Fu</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Cover the right column. Read the description, name the term/organ/pattern out loud, then uncover.</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Organ that governs production of the voice</td><td class="ans">Lung</td></tr>
+<tr><td class="desc">Organ that governs volume of the voice</td><td class="ans">Kidney</td></tr>
+<tr><td class="desc">Organ(s) that govern strength of the voice</td><td class="ans">Spleen &amp; Stomach</td></tr>
+<tr><td class="desc">Loud voice</td><td class="ans">Full or Heat pattern</td></tr>
+<tr><td class="desc">Weak voice</td><td class="ans">Empty or Cold pattern</td></tr>
+<tr><td class="desc">Sudden loss of voice</td><td class="ans">Invasion of Wind-Heat</td></tr>
+<tr><td class="desc">Gradual loss of voice</td><td class="ans">Lung-Qi or Lung-Yin deficiency</td></tr>
+<tr><td class="desc">Hoarseness: sudden onset, low pitch, raspy</td><td class="ans">Exterior syndrome</td></tr>
+<tr><td class="desc">Hoarseness: chronic, gradual intensity</td><td class="ans">Blood stagnation</td></tr>
+<tr><td class="desc">Hoarseness: plum-pit sensation &amp; cough</td><td class="ans">Phlegm-Heat</td></tr>
+<tr><td class="desc">Hoarseness: chronic, gradual, worse in evening</td><td class="ans">Lung and Kidney Yin deficiency</td></tr>
+</table>
+
+<div class="sec jade">PART B &middot; Blind ID &mdash; Breathing &amp; Respiration</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Coarse, loud breathing sound</td><td class="ans">Full pattern</td></tr>
+<tr><td class="desc">Weak, thin breathing sound</td><td class="ans">Empty pattern</td></tr>
+<tr><td class="desc">Deep breathing</td><td class="ans">Excess qi in Heart and Lungs</td></tr>
+<tr><td class="desc">Weak breathing</td><td class="ans">Deficiency of qi in Liver and Kidney</td></tr>
+<tr><td class="desc">Respiration: loud sound, rough/distressed breath, acute onset</td><td class="ans">Excess/Heat</td></tr>
+<tr><td class="desc">Respiration: low sound, faint/slow breath, slow onset</td><td class="ans">Empty/Cold</td></tr>
+<tr><td class="desc">Panting, excess type</td><td class="ans">Chest full, loud/rough sound &mdash; xie qi obstructing Lung</td></tr>
+<tr><td class="desc">Panting, deficiency type</td><td class="ans">Timid breath, low voice, worse with movement &mdash; Kidney or Lung deficiency</td></tr>
+<tr><td class="desc">Asthma</td><td class="ans">Lung qi's failure to descend</td></tr>
+<tr><td class="desc">Wheezing</td><td class="ans">Lung qi fails to descend with phlegm obstruction</td></tr>
+<tr><td class="desc">Upper Stifling</td><td class="ans">Lung qi rises upward to throat, obstructs air tract</td></tr>
+<tr><td class="desc">Shortness of Breath</td><td class="ans">Lung qi deficiency, or Water Retention in Chest</td></tr>
+</table>
+
+<div class="sec ">PART C &middot; Blind ID &mdash; Cough, Sneeze &amp; Reflexive Sounds</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Loud, explosive cough</td><td class="ans">Full pattern</td></tr>
+<tr><td class="desc">Weak cough</td><td class="ans">Empty pattern</td></tr>
+<tr><td class="desc">Dry cough</td><td class="ans">Lung-Yin deficiency</td></tr>
+<tr><td class="desc">Cough with sound but no phlegm</td><td class="ans">"Unproductive cough"</td></tr>
+<tr><td class="desc">Sneezing: acute onset, constant loud sounds</td><td class="ans">Heat and/or excess</td></tr>
+<tr><td class="desc">Sneezing: chronic, frequent, soft in volume</td><td class="ans">Lung deficiency</td></tr>
+<tr><td class="desc">Sudden sneezing in critical stage of chronic illness</td><td class="ans">Yang qi recovery</td></tr>
+<tr><td class="desc">Shared mechanism of vomiting, belching, and hiccup</td><td class="ans">Rebellious Stomach Qi</td></tr>
+<tr><td class="desc">Vomiting: slow onset, low/faint/no-force retching sound</td><td class="ans">ST deficiency and Cold</td></tr>
+<tr><td class="desc">Vomiting: sudden onset, loud/forceful retching sound</td><td class="ans">ST-Heat</td></tr>
+<tr><td class="desc">Belching: loud and long sound</td><td class="ans">Full (food retention, ST-Heat, or LV-Qi invading ST)</td></tr>
+<tr><td class="desc">Belching: short and low sound</td><td class="ans">ST-Qi deficiency (with or without Cold)</td></tr>
+<tr><td class="desc">Hiccup: loud sound</td><td class="ans">Full &mdash; often LV-Qi invading Stomach</td></tr>
+<tr><td class="desc">Hiccup: quiet, low sound</td><td class="ans">Empty &mdash; often ST-Qi or ST-Yin deficiency</td></tr>
+<tr><td class="desc">Borborygmi: loud sound</td><td class="ans">Full pattern (with diarrhea/dysentery)</td></tr>
+<tr><td class="desc">Borborygmi: low sound</td><td class="ans">Empty pattern (SP/KI yang def., MB qi def.)</td></tr>
+<tr><td class="desc">Yawning: frequent, loud, relieved after, emotion-induced</td><td class="ans">Liver Qi Stagnation</td></tr>
+<tr><td class="desc">Yawning: infrequent, weak or no sound</td><td class="ans">Spleen/Kidney Yang deficiency</td></tr>
+<tr><td class="desc">Sighing from repressed anger/frustration</td><td class="ans">Liver Qi stagnation</td></tr>
+<tr><td class="desc">Sighing from worry &amp; sadness</td><td class="ans">Lung Qi stagnation</td></tr>
+</table>
+
+<div class="sec jade">PART D &middot; Blind ID &mdash; Five Element Sounds &amp; Six Healing Sounds</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Shouting voice &mdash; element</td><td class="ans">Wood <span class="sub">H&#363; 呼</span></td></tr>
+<tr><td class="desc">Laughing voice &mdash; element</td><td class="ans">Fire <span class="sub">Xi&agrave;o 笑</span></td></tr>
+<tr><td class="desc">Singing voice &mdash; element</td><td class="ans">Earth <span class="sub">Ch&agrave;ng 唱</span></td></tr>
+<tr><td class="desc">Weeping voice &mdash; element</td><td class="ans">Metal</td></tr>
+<tr><td class="desc">Groaning voice &mdash; element</td><td class="ans">Water</td></tr>
+<tr><td class="desc">X&#363; 嘘 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Liver &mdash; removes heat, brightens eyes</td></tr>
+<tr><td class="desc">H&#275; 呵 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Heart &mdash; expels heat, reduces fire</td></tr>
+<tr><td class="desc">H&#363; 呼 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Spleen &mdash; drives out heat, strengthens spleen</td></tr>
+<tr><td class="desc">S&igrave; 呬 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Lung &mdash; calms qi, moistens lungs</td></tr>
+<tr><td class="desc">Chu&#299; 吹 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Kidney &mdash; removes wind-cold, urges stagnant qi</td></tr>
+<tr><td class="desc">X&#299; 嘻 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Triple Burner &mdash; clears heat/restlessness, emotions</td></tr>
+<tr><td class="desc">Which hanzi/pinyin is shared between a Voice Sound and a Healing Sound?</td><td class="ans">H&#363; 呼 &mdash; Shout (Wood voice) AND Spleen Healing Sound</td></tr>
+</table>
+
+<div class="sec maroon">PART E &middot; Blind ID &mdash; Smelling Framework &amp; the Five Odors</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">First aspect of Diagnosis by Smelling</td><td class="ans">Odor of the patient's body itself &mdash; pattern AND constitutional type</td></tr>
+<tr><td class="desc">Second aspect of Diagnosis by Smelling</td><td class="ans">Odor of bodily secretions &mdash; nature of pattern only</td></tr>
+<tr><td class="desc">General rule: strong/foul/rotten smell</td><td class="ans">Heat or Excess</td></tr>
+<tr><td class="desc">General rule: absent or fishy smell</td><td class="ans">Cold or Deficient</td></tr>
+<tr><td class="desc">Goatish body odor</td><td class="ans">Wind, damp, heat accumulation</td></tr>
+<tr><td class="desc">Foul, stinking body odor</td><td class="ans">Epidemic infectious disease, or summer heat toxin</td></tr>
+<tr><td class="desc">Rancid odor (S&#333;u 餿) &mdash; description</td><td class="ans">Fat no longer fresh, newly-mown grass, unpleasant</td></tr>
+<tr><td class="desc">"Fragrant" odor (Xi&#257;ng 香) &mdash; description</td><td class="ans">Cloying, sickly sweet, lingers in nostrils &mdash; NOT actually pleasant</td></tr>
+<tr><td class="desc">Rotten odor (L&agrave;n 爛) &mdash; description</td><td class="ans">Rotting meat / garbage truck (many substances decomposing)</td></tr>
+<tr><td class="desc">Putrid odor (F&#468; 腐) &mdash; description</td><td class="ans">Rotting meat / stagnant pond water / stale urine</td></tr>
+<tr><td class="desc">"Scorched" odor slide's labeled hanzi (and the likely error)</td><td class="ans">Xi&agrave;o 笑 (reused from Laughing) &mdash; classical scorched is Ji&#257;o 焦</td></tr>
+</table>
+
+<div class="sec maroon">PART F &middot; Blind ID &mdash; Odor of Bodily Secretions</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Breath: strong, foul</td><td class="ans">Stomach Heat or retention of food</td></tr>
+<tr><td class="desc">Breath: sour</td><td class="ans">Retention of food, Accumulation Disorder</td></tr>
+<tr><td class="desc">Breath: foul, pungent</td><td class="ans">Damp-Heat in Stomach and Spleen</td></tr>
+<tr><td class="desc">Breath: rotten</td><td class="ans">Damp-Heat in Large Intestine</td></tr>
+<tr><td class="desc">Breath: fishy</td><td class="ans">Phlegm-Heat in Lung</td></tr>
+<tr><td class="desc">Sweat: strong-smelling</td><td class="ans">Damp-Heat</td></tr>
+<tr><td class="desc">Sweat: putrid-smelling</td><td class="ans">Disease of Lungs, Liver, or Kidneys</td></tr>
+<tr><td class="desc">Sputum: strong/rotten-smelling</td><td class="ans">Heat in Lungs &mdash; Phlegm-Heat or Toxic Heat</td></tr>
+<tr><td class="desc">Sputum: fishy-smelling</td><td class="ans">Lung-Heat</td></tr>
+<tr><td class="desc">Sputum: without smell</td><td class="ans">Cold</td></tr>
+<tr><td class="desc">Stool: extremely stinky, diarrhea with pus/blood</td><td class="ans">Damp-Heat in Intestines</td></tr>
+<tr><td class="desc">Stool/gas: sour and foul with indigestion</td><td class="ans">Food stagnation</td></tr>
+<tr><td class="desc">Stool: fishy odor with loose stools</td><td class="ans">Cold in Spleen/Stomach</td></tr>
+<tr><td class="desc">Flatulence: slight/odorless, aggravated by emotional stress</td><td class="ans">Liver qi stagnation</td></tr>
+<tr><td class="desc">Flatulence: rancid, like rotten eggs</td><td class="ans">Toxic Heat in Large Intestines</td></tr>
+<tr><td class="desc">Urine: frequent/urgent/painful/burning, turbid yellow, foul</td><td class="ans">Damp-Heat in Bladder</td></tr>
+<tr><td class="desc">Urine: heavy urea smell, scanty yellow</td><td class="ans">Heart fire pouring into Bladder</td></tr>
+<tr><td class="desc">Urine: clear, frequent, odorless/slightly fishy</td><td class="ans">Kidney deficiency</td></tr>
+<tr><td class="desc">Odorless urinary incontinence</td><td class="ans">Exhaustion of Kidney fire</td></tr>
+<tr><td class="desc">Vaginal discharge: strong-smelling, leathery</td><td class="ans">Damp-Heat</td></tr>
+<tr><td class="desc">Vaginal discharge: fishy smell</td><td class="ans">Damp-Cold</td></tr>
+<tr><td class="desc">Ears: foul, fishy, turbid pus/discharge</td><td class="ans">Damp-heat in the ear</td></tr>
+<tr><td class="desc">Eyes: red/swollen, turbid tears, foul fishy odor</td><td class="ans">Damp-heat in the Liver channel</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec jade">PART G &middot; Reverse Direction &mdash; Pattern &rarr; Finding</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Now cover the LEFT column instead. Read the pattern, recall the hearing/smelling finding that points to it.</div>
+<table class="drill"><tr><th>Finding (cover the left)</th><th>Pattern (read this side)</th></tr>
+<tr><td class="ans">Loud voice, excessive talking</td><td class="desc">Full or Heat</td></tr>
+<tr><td class="ans">Weak voice, reluctance to talk</td><td class="desc">Empty or Cold, or Lung-Qi deficiency</td></tr>
+<tr><td class="ans">Hoarse, worse in the evening, chronic</td><td class="desc">Lung and Kidney Yin deficiency</td></tr>
+<tr><td class="ans">Coarse loud breathing</td><td class="desc">Full pattern</td></tr>
+<tr><td class="ans">Panting worse with movement, timid breath</td><td class="desc">Kidney deficiency (can't absorb qi) or Lung deficiency (can't govern qi)</td></tr>
+<tr><td class="ans">Dry cough</td><td class="desc">Lung-Yin deficiency</td></tr>
+<tr><td class="ans">Loud vomiting/belching/hiccup</td><td class="desc">Excess/Heat, or LV-Qi invading Stomach</td></tr>
+<tr><td class="ans">Frequent loud yawning relieved by yawning, emotion-triggered</td><td class="desc">Liver Qi Stagnation</td></tr>
+<tr><td class="ans">Shouting</td><td class="desc">Wood</td></tr>
+<tr><td class="ans">Groaning</td><td class="desc">Water</td></tr>
+<tr><td class="ans">Foul, strong, rotten smell (general rule)</td><td class="desc">Heat or Excess</td></tr>
+<tr><td class="ans">Fishy or absent smell (general rule)</td><td class="desc">Cold or Deficient</td></tr>
+<tr><td class="ans">Strong-smelling sweat</td><td class="desc">Damp-Heat</td></tr>
+<tr><td class="ans">Putrid-smelling sweat</td><td class="desc">Disease of Lungs, Liver, or Kidneys</td></tr>
+<tr><td class="ans">Clear, frequent, odorless urine</td><td class="desc">Kidney deficiency</td></tr>
+<tr><td class="ans">Fishy vaginal discharge</td><td class="desc">Damp-Cold</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec maroon">Error Log</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Every time you miss a drill item, log it here. Review this page before your next drill session &mdash; your errors are more valuable than your correct answers.</div>
+<table class="ref"><tr><th>Item I Missed</th><th>Correct Answer / Why I Missed It</th></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+
+</table>
+
+</body>
+</html>
