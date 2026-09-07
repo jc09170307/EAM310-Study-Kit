@@ -160,7 +160,7 @@
     pageStatic.innerHTML = '<img src="' + imgUrl(n) + '" onload="document.getElementById(\'loadingMsg\').style.display=\'none\'">';
     pageCounter.textContent = n + " / " + TOTAL_PAGES;
     preload(n+1); preload(n+2); preload(n-1);
-    history.replaceState(null, "", "#p" + n);
+    try { history.replaceState(null, "", "#p" + n); } catch(e) { /* srcdoc/sandboxed preview: no-op */ }
   }
 
   let animating = false;
