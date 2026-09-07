@@ -60,7 +60,7 @@
     justify-content: center; gap: 14px; background: linear-gradient(transparent, rgba(0,0,0,.55)); z-index: 50;
   }
   #pageCounter { color: #fff; font-size: 12px; opacity: 0.8; min-width: 70px; text-align:center; }
-  #bottombar button {
+  #bottombar button, #bottombar a {
     background: rgba(255,255,255,0.12); border:none; color:#fff; width:34px; height:34px;
     border-radius:50%; font-size:14px; cursor:pointer;
   }
@@ -115,7 +115,7 @@
   <button id="prevBtn">&#8592;</button>
   <div id="pageCounter">1 / 103</div>
   <button id="nextBtn">&#8594;</button>
-  <button id="pdfBtn" title="Open searchable PDF">PDF</button>
+  <a id="pdfBtn" title="Open searchable PDF" href="#" target="_blank" style="text-decoration:none; display:flex; align-items:center; justify-content:center;">PDF</a>
 </div>
 
 <div id="tocOverlay"></div>
@@ -221,11 +221,7 @@
     else document.exitFullscreen();
   });
 
-  document.getElementById('pdfBtn').addEventListener('click', () => {
-    fetch(PDF_CDN, {method:'HEAD'}).then(r => {
-      window.open(r.ok ? PDF_CDN : PDF_RAW, '_blank');
-    }).catch(() => window.open(PDF_RAW, '_blank'));
-  });
+  document.getElementById('pdfBtn').href = PDF_RAW;
 
   // ---------- TOC panel ----------
   const tocOverlay = document.getElementById('tocOverlay');
