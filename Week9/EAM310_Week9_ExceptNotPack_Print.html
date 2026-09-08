@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 9 EXCEPT/NOT Pack</title>
+<style>
+@page {
+  size: 714pt 945pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c; --jade: #16805f; --gold: #c9a226; --maroon: #7a2530;
+  --paper: #ffffff; --ink: #24395c; --muted: #5b6b85; --hairline: #d8dce4; --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif; color: var(--ink); font-size: 9.3pt;
+  line-height: 1.42; margin:0; padding:0; background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover { position: relative; padding-left: 26pt; min-height: 760pt; }
+.cover::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4pt; background: var(--navy); }
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold); display:inline-block;
+  margin-top: 46pt; max-width: 540pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.target {
+  margin-top: 14pt; background: #f1f7f4; border-left: 4pt solid var(--jade);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b, .target b { color: var(--navy); }
+.target b { color: var(--jade); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 12pt;
+  padding: 8pt 12pt; margin: 18pt 0 10pt 0;
+  page-break-inside: avoid; break-inside: avoid; page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:10pt; color:var(--navy); margin:12pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 8pt 12pt; margin: 8pt 0 10pt 0; font-size: 8.6pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+
+/* Question formatting */
+.q { margin: 12pt 0 10pt 0; page-break-inside: avoid; break-inside: avoid; }
+.q .stem { font-size: 9.4pt; color: var(--navy); }
+.q .num { font-weight: 700; color: var(--navy); }
+.q .opt { font-size: 9.2pt; color: var(--ink); margin: 2pt 0 2pt 14pt; }
+.q .tf { font-size: 8.3pt; color: var(--muted); margin: 3pt 0 0 14pt; }
+.q .line { border-bottom: 0.75pt solid var(--hairline); height: 14pt; margin: 3pt 0; }
+.q hr { border: none; border-top: 0.5pt solid var(--hairline); margin: 10pt 0; }
+
+table.ref { width:100%; border-collapse: collapse; margin-bottom: 8pt; }
+table.ref th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.ref td { border-bottom: 0.75pt solid var(--hairline); padding: 5pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.answer { font-weight: 600; color: var(--navy); }
+.pinyin { color: var(--jade); font-style: italic; font-size: 8pt; }
+.mnem { font-style: italic; color: var(--muted); }
+
+table.drill { width:100%; border-collapse: collapse; margin-bottom: 10pt; }
+table.drill th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.drill td { border-bottom: 0.75pt solid var(--hairline); padding: 6pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.drill tr:nth-child(even) td { background: #f7f9fc; }
+td.desc { width: 58%; }
+td.ans { width: 42%; font-weight: 600; color: var(--navy); }
+td.ans .sub { font-weight: 400; color: var(--muted); font-size: 8.2pt; display:block; margin-top:2pt; }
+
+.errorlog-row td { border-bottom: 1pt solid var(--hairline); padding: 10pt 7pt; height: 20pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:9.5pt;color:#5b6b85;">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>EXCEPT / NOT Question Pack</h1>
+  <div class="subtitle">25 Negative-Format Questions &mdash; Full Answer Key</div>
+  <div class="prof">Week 9 &middot; Inquiry Continued (Limbs&ndash;Children) &amp; Diagnosis by Hearing &amp; Smelling &mdash; 聞診 &middot; Lecture 9 (Final Lecture)</div>
+  <div class="cover-tags">
+    
+    <span class="tag-wrap"><span class="tag">Print Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+
+<div class="howto"><b>How to use this pack:</b> Negative-format questions ("All of the following EXCEPT...") are where students lose points even when they know the material &mdash; one wrong-in-context option hides among three correct ones. For each question, mark every option T (true/belongs) or F (false/doesn't belong) before picking your final answer &mdash; don't just scan for "the weird one."</div>
+<div class="sec jade">EXCEPT / NOT Questions</div>
+
+<div class="q"><span class="num">1.</span> <span class="stem">All of the following are correctly paired limb findings EXCEPT:</span><div class="opt">A. Tingling sensation &mdash; Blood deficiency</div><div class="opt">B. Numbness, often unilateral &mdash; Wind or Wind-Phlegm</div><div class="opt">C. Feeling of heaviness/swelling &mdash; Dampness</div><div class="opt">D. Pain &mdash; Liver-Yang rising</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">2.</span> <span class="stem">All of the following are true of Atrophy/Flaccidity &amp; Tremor EXCEPT:</span><div class="opt">A. Beginning stages are due to Stomach and Spleen-Qi deficiency</div><div class="opt">B. Later stages are due to a deficiency of Yin of the Liver and Kidneys, or Yang of the Spleen and Kidneys</div><div class="opt">C. Tremors always indicate Liver-Wind, which can be excess or deficiency type</div><div class="opt">D. Tremors always indicate an excess-type Wind only</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">3.</span> <span class="stem">All of the following are true of Cold Hands/Feet &amp; Weak Knees EXCEPT:</span><div class="opt">A. Cold fingertips especially indicates Liver-Qi stagnation</div><div class="opt">B. Cold feet in women specifically is attributed to Liver-Blood deficiency</div><div class="opt">C. Weak knees is due to a deficiency of the Kidneys, especially Kidney-Yang</div><div class="opt">D. Cold hands with palpitations and dizziness indicates Kidney-Yang deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">4.</span> <span class="stem">All of the following are true about Sleep EXCEPT:</span><div class="opt">A. Sleep depends on the state of Blood and Yin, especially of the Heart and Liver</div><div class="opt">B. Waking up many times during the night indicates Yin deficiency with Empty Heat</div><div class="opt">C. Waking early and failing to fall back asleep indicates Gall Bladder deficiency</div><div class="opt">D. Dream-symbolism material from the N&egrave;ij&#299;ng is confirmed as testable this week</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">5.</span> <span class="stem">All of the following Insomnia presentations are correctly paired EXCEPT:</span><div class="opt">A. Insomnia with anxiety, dream-disturbed sleep, other Qi/Blood-deficiency signs &mdash; Heart and Spleen Blood deficiency</div><div class="opt">B. Insomnia with difficulty falling asleep, dizziness, blurred vision &mdash; Liver Blood deficiency</div><div class="opt">C. Insomnia, waking frequently with excessive dreams, night sweating, palpitations &mdash; Heart and Kidney Yin deficiency with Empty-Heat</div><div class="opt">D. Restless sleep with excessive dreams &mdash; Kidney-Yang deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">6.</span> <span class="stem">All of the following are true of Sweating EXCEPT:</span><div class="opt">A. Daytime sweating indicates Yang deficiency</div><div class="opt">B. Night sweating indicates Yin deficiency</div><div class="opt">C. Sweating on the palms, soles, and chest is called "five-palm heat" and indicates Yin deficiency</div><div class="opt">D. Oily, pearl-like sweat on the forehead that isn't flowing indicates Damp-Heat with a good prognosis</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">7.</span> <span class="stem">All of the following are true of Tinnitus and Deafness EXCEPT:</span><div class="opt">A. Sudden onset indicates a Full condition &mdash; Liver-Fire, Liver-Yang rising, or Liver-Wind</div><div class="opt">B. Gradual onset indicates an Empty condition &mdash; Kidney deficiency</div><div class="opt">C. Noise aggravated by pressing on the ears indicates a Full condition</div><div class="opt">D. A low-pitched noise like rushing water indicates Liver-Fire</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">8.</span> <span class="stem">All of the following are true of Feeling of Cold, Heat, and Fever EXCEPT:</span><div class="opt">A. Fever intensity depends on the struggle between Zheng Qi and the pathogenic factor</div><div class="opt">B. Fever intensity depends on whether the pathogen is Wind-Cold or Wind-Heat</div><div class="opt">C. Simultaneous aversion to cold and fever is the key sign of an exterior pathogenic factor invasion</div><div class="opt">D. Alternating feeling of cold and heat indicates the Shao Yang stage</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">9.</span> <span class="stem">All of the following Cold/Heat-by-location findings are correctly paired EXCEPT:</span><div class="opt">A. Cold limbs and abdomen &mdash; Spleen-Yang/Stomach-Yang deficiency</div><div class="opt">B. Cold hands and feet, especially the fingers &mdash; Liver Qi stagnation</div><div class="opt">C. Cold legs, knees, feet, and back &mdash; Kidney-Yang deficiency</div><div class="opt">D. Heat in the afternoon or evening &mdash; Damp-Heat exclusively, never Yin deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">10.</span> <span class="stem">All of the following are true of Emotional Symptoms EXCEPT:</span><div class="opt">A. The Heart alone "knows" what an emotion is, because it houses the Shen</div><div class="opt">B. Depression with insomnia, palpitations, tiredness, weak limbs, and loose stools indicates Spleen and Heart-Blood deficiency</div><div class="opt">C. Severe anxiety with stabbing chest pain radiating to the inner left arm and a purple tongue is the TCM description of a heart attack (Heart-Blood stasis)</div><div class="opt">D. Every organ except the Heart is capable of consciously "knowing" an emotion</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">11.</span> <span class="stem">All of the following Anxiety (Full) presentations are correctly paired EXCEPT:</span><div class="opt">A. Hypochondrial distention &mdash; Liver-Qi stagnation</div><div class="opt">B. Temple headache, tinnitus, deafness, dizziness &mdash; Liver-Yang rising</div><div class="opt">C. Anger outbursts, red eyes, bitter taste, dark urine &mdash; Liver-Fire</div><div class="opt">D. Manic behavior, mental confusion, swollen tongue &mdash; Heart-Blood deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">12.</span> <span class="stem">All of the following are true of Sexual Symptoms EXCEPT:</span><div class="opt">A. Impotence with feeling of cold, backache, and abundant clear urination indicates Kidney-Yang deficiency</div><div class="opt">B. Younger men with premature ejaculation are more often treated via the Heart</div><div class="opt">C. Older men with premature ejaculation are more often treated via the Kidneys</div><div class="opt">D. Excessive sexual desire is a pattern that can only occur in women</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">13.</span> <span class="stem">All of the following Menstruation findings are correctly paired EXCEPT:</span><div class="opt">A. Purple or blackish blood with clots &mdash; Stasis of Blood or Cold</div><div class="opt">B. Pale blood &mdash; Blood deficiency</div><div class="opt">C. Pain before the period &mdash; Blood deficiency</div><div class="opt">D. Pain after the period &mdash; Blood deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">14.</span> <span class="stem">All of the following are true of Pregnancy &amp; Childbirth EXCEPT:</span><div class="opt">A. Miscarriage before 3 months is attributed to Blood or Essence deficiency</div><div class="opt">B. Miscarriage after 3 months is attributed to Liver-Blood stasis or sinking of Spleen-Qi</div><div class="opt">C. Vomiting during pregnancy is attributed to Stomach and Chong Vessel disharmony</div><div class="opt">D. The 3-month cutoff has no bearing on which pattern is more likely</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">15.</span> <span class="stem">All of the following are true of Children's Health EXCEPT:</span><div class="opt">A. Vomiting of milk and colic in babies indicates retention of food</div><div class="opt">B. Chronic earache in children indicates Damp-Heat in the Gall Bladder channel</div><div class="opt">C. Chronic cough/wheeze with sticky sputum indicates Damp-Phlegm in the Lungs</div><div class="opt">D. Chronic earache in children indicates a simple Kidney deficiency, unrelated to channel pathways</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="pb"></div>
+<div class="q"><span class="num">16.</span> <span class="stem">All of the following are governed by the organs listed for the voice EXCEPT:</span><div class="opt">A. Lung governs production of the voice</div><div class="opt">B. Kidney governs volume of the voice</div><div class="opt">C. Spleen &amp; Stomach govern strength of the voice</div><div class="opt">D. Liver governs the pitch of the voice</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">17.</span> <span class="stem">All of the following describe hoarseness patterns EXCEPT:</span><div class="opt">A. Sudden onset, low pitch, raspy &mdash; Exterior syndrome</div><div class="opt">B. Chronic, gradual intensity &mdash; Blood stagnation</div><div class="opt">C. Plum-pit sensation with cough &mdash; Phlegm-Heat</div><div class="opt">D. Chronic, worse in the morning &mdash; Lung and Kidney Yin deficiency</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">18.</span> <span class="stem">All of the following are true of Respiration patterns EXCEPT:</span><div class="opt">A. Excess/Heat = loud sound, rough/distressed breath, acute onset</div><div class="opt">B. Empty/Cold = low sound, faint/slow breath, slow onset</div><div class="opt">C. Excess/Heat is seen with phlegm-heat invading the Lung</div><div class="opt">D. Empty/Cold is seen with a surplus of external contraction of evil qi</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">19.</span> <span class="stem">All of the following are Abnormal Respiration types with their correct mechanism EXCEPT:</span><div class="opt">A. Asthma &mdash; Lung qi's failure to descend</div><div class="opt">B. Wheezing &mdash; Lung qi fails to descend with phlegm obstruction</div><div class="opt">C. Upper Stifling &mdash; Lung qi rises upward to throat, obstructs air tract</div><div class="opt">D. Shortness of Breath &mdash; Excess Heart fire flooding the Lung</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">20.</span> <span class="stem">All of the following indicate a Full/Excess presentation EXCEPT:</span><div class="opt">A. Loud, explosive cough</div><div class="opt">B. Loud and long belching sound</div><div class="opt">C. Sudden, forceful vomiting sound</div><div class="opt">D. Quiet, low hiccup sound</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">21.</span> <span class="stem">All of the following are correctly paired Five Element Sounds EXCEPT:</span><div class="opt">A. Wood &mdash; Shouting</div><div class="opt">B. Fire &mdash; Laughing</div><div class="opt">C. Earth &mdash; Groaning</div><div class="opt">D. Metal &mdash; Weeping</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">22.</span> <span class="stem">All of the following are correctly paired Six Healing Sounds EXCEPT:</span><div class="opt">A. X&#363; 嘘 &mdash; Liver</div><div class="opt">B. H&#275; 呵 &mdash; Heart</div><div class="opt">C. Chu&#299; 吹 &mdash; Spleen</div><div class="opt">D. X&#299; 嘻 &mdash; Triple Burner</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">23.</span> <span class="stem">All of the following are true about the general smell rule EXCEPT:</span><div class="opt">A. Strong, foul, rotten, fetid, or stinking smell indicates Heat or Excess</div><div class="opt">B. Absence of smell indicates Cold or Deficient</div><div class="opt">C. A fishy smell generally leans Cold or Deficient</div><div class="opt">D. A strong smell always indicates Cold or Deficient</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">24.</span> <span class="stem">All of the following are true of the Five (named) Odor slides EXCEPT:</span><div class="opt">A. "Fragrant" is described as cloying and sickly sweet, not pleasant</div><div class="opt">B. "Putrid" is compared to rotting meat or stagnant pond water</div><div class="opt">C. "Rotten" is compared to a trash can/garbage truck</div><div class="opt">D. Each odor slide explicitly states its paired Zang-Fu element</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="q"><span class="num">25.</span> <span class="stem">All of the following Odor-of-Secretion findings are correctly paired EXCEPT:</span><div class="opt">A. Fishy breath odor &mdash; Phlegm-Heat in the Lung</div><div class="opt">B. Heavy urea smell, scanty yellow urine &mdash; Heart fire pouring into the Bladder</div><div class="opt">C. Odorless urinary incontinence &mdash; Exhaustion of Kidney fire</div><div class="opt">D. Odorless urinary incontinence &mdash; Liver Qi stagnation</div><div class="tf">T/F each: A ___ B ___ C ___ D ___</div></div><hr>
+
+<div class="pb"></div>
+<div class="sec maroon">ANSWER KEY</div>
+<table class="ref"><tr><th>#</th><th>Ans</th><th>Why</th></tr>
+<tr><td style="width:4%">1</td><td class="answer" style="width:6%">D</td><td>Pain in the limbs indicates Qi or Blood Stagnation, not Liver-Yang rising.</td></tr>
+<tr><td style="width:4%">2</td><td class="answer" style="width:6%">D</td><td>Tremors can be EITHER excess or deficiency-type Wind, per the slides &mdash; not excess-type only.</td></tr>
+<tr><td style="width:4%">3</td><td class="answer" style="width:6%">D</td><td>Cold hands with palpitations and dizziness indicates Heart-Blood deficiency, not Kidney-Yang deficiency.</td></tr>
+<tr><td style="width:4%">4</td><td class="answer" style="width:6%">D</td><td>Prof. Schrier's own slide states dream-symbolism material "Will Not Be Tested On."</td></tr>
+<tr><td style="width:4%">5</td><td class="answer" style="width:6%">D</td><td>Restless sleep with excessive dreams indicates retention of food, not Kidney-Yang deficiency.</td></tr>
+<tr><td style="width:4%">6</td><td class="answer" style="width:6%">D</td><td>Oily, pearl-like sweat on the forehead indicates Collapse of Yang and signals imminent death &mdash; not a good prognosis, and not simply Damp-Heat.</td></tr>
+<tr><td style="width:4%">7</td><td class="answer" style="width:6%">D</td><td>A low-pitched noise like rushing water indicates Kidney deficiency, not Liver-Fire (which is a high-pitched presentation).</td></tr>
+<tr><td style="width:4%">8</td><td class="answer" style="width:6%">B</td><td>Fever intensity depends on the Zheng Qi vs. pathogen struggle, explicitly NOT on whether the pathogen is Wind-Cold or Wind-Heat.</td></tr>
+<tr><td style="width:4%">9</td><td class="answer" style="width:6%">D</td><td>Heat in the afternoon/evening indicates Empty-Heat/Yin deficiency, not exclusively Damp-Heat.</td></tr>
+<tr><td style="width:4%">10</td><td class="answer" style="width:6%">D</td><td>Every other organ is AFFECTED by emotion without being conscious of it &mdash; the statement inverts this relationship.</td></tr>
+<tr><td style="width:4%">11</td><td class="answer" style="width:6%">D</td><td>Manic behavior, mental confusion, and a swollen tongue indicates Phlegm-Fire harassing the Mind, not Heart-Blood deficiency (which is an Empty pattern, not a Full anxiety presentation).</td></tr>
+<tr><td style="width:4%">12</td><td class="answer" style="width:6%">D</td><td>Excessive sexual desire mechanisms (Liver/Heart-Fire, Empty-Heat from Kidney-Yin deficiency) apply to both sexes; Maciocia's text just happens to list it only under Women.</td></tr>
+<tr><td style="width:4%">13</td><td class="answer" style="width:6%">C</td><td>Pain BEFORE the period indicates stagnation of Qi or Blood, not Blood deficiency (which is the pattern for pain AFTER the period).</td></tr>
+<tr><td style="width:4%">14</td><td class="answer" style="width:6%">D</td><td>The 3-month cutoff is the key differentiator: before 3 months leans deficiency; after 3 months leans stasis/sinking.</td></tr>
+<tr><td style="width:4%">15</td><td class="answer" style="width:6%">D</td><td>Chronic earache in children is specifically Damp-Heat in the Gall Bladder channel &mdash; a channel-pathway-based answer, not a generic Kidney deficiency.</td></tr>
+<tr><td style="width:4%">16</td><td class="answer" style="width:6%">D</td><td>The slides assign only three organs to the voice &mdash; Lung (production), Kidney (volume), Spleen/Stomach (strength). Liver is not one of the three.</td></tr>
+<tr><td style="width:4%">17</td><td class="answer" style="width:6%">D</td><td>Lung/Kidney Yin deficiency hoarseness is described as worse in the EVENING, not the morning.</td></tr>
+<tr><td style="width:4%">18</td><td class="answer" style="width:6%">D</td><td>A surplus of external contraction of evil qi (or phlegm-heat) is the Excess/Heat mechanism, not Empty/Cold.</td></tr>
+<tr><td style="width:4%">19</td><td class="answer" style="width:6%">D</td><td>Shortness of Breath is attributed to Lung qi deficiency or Water Retention in the Chest, not excess Heart fire.</td></tr>
+<tr><td style="width:4%">20</td><td class="answer" style="width:6%">D</td><td>A quiet, low hiccup sound indicates an Empty pattern, not Full/Excess.</td></tr>
+<tr><td style="width:4%">21</td><td class="answer" style="width:6%">C</td><td>Earth pairs with Singing, not Groaning. Groaning pairs with Water.</td></tr>
+<tr><td style="width:4%">22</td><td class="answer" style="width:6%">C</td><td>Chu&#299; 吹 targets the Kidney, not the Spleen. The Spleen Healing Sound is H&#363; 呼.</td></tr>
+<tr><td style="width:4%">23</td><td class="answer" style="width:6%">D</td><td>A strong smell indicates Heat or Excess, the opposite of what this option states.</td></tr>
+<tr><td style="width:4%">24</td><td class="answer" style="width:6%">D</td><td>Unlike the Five Element Sounds slides, the Five Odor slides do NOT explicitly pair each odor with an element.</td></tr>
+<tr><td style="width:4%">25</td><td class="answer" style="width:6%">D</td><td>Odorless urinary incontinence indicates exhaustion of Kidney fire, not Liver Qi stagnation.</td></tr>
+</table>
+
+</body>
+</html>
