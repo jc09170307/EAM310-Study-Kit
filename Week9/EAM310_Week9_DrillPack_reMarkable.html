@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 9 Drill Pack</title>
+<style>
+@page {
+  size: 714pt 966pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c; --jade: #16805f; --gold: #c9a226; --maroon: #7a2530;
+  --paper: #ffffff; --ink: #24395c; --muted: #5b6b85; --hairline: #d8dce4; --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif; color: var(--ink); font-size: 9.3pt;
+  line-height: 1.42; margin:0; padding:0; background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover { position: relative; padding-left: 26pt; min-height: 760pt; }
+.cover::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4pt; background: var(--navy); }
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold); display:inline-block;
+  margin-top: 46pt; max-width: 540pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.target {
+  margin-top: 14pt; background: #f1f7f4; border-left: 4pt solid var(--jade);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b, .target b { color: var(--navy); }
+.target b { color: var(--jade); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 12pt;
+  padding: 8pt 12pt; margin: 18pt 0 10pt 0;
+  page-break-inside: avoid; break-inside: avoid; page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:10pt; color:var(--navy); margin:12pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 8pt 12pt; margin: 8pt 0 10pt 0; font-size: 8.6pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+
+/* Question formatting */
+.q { margin: 12pt 0 10pt 0; page-break-inside: avoid; break-inside: avoid; }
+.q .stem { font-size: 9.4pt; color: var(--navy); }
+.q .num { font-weight: 700; color: var(--navy); }
+.q .opt { font-size: 9.2pt; color: var(--ink); margin: 2pt 0 2pt 14pt; }
+.q .tf { font-size: 8.3pt; color: var(--muted); margin: 3pt 0 0 14pt; }
+.q .line { border-bottom: 0.75pt solid var(--hairline); height: 14pt; margin: 3pt 0; }
+.q hr { border: none; border-top: 0.5pt solid var(--hairline); margin: 10pt 0; }
+
+table.ref { width:100%; border-collapse: collapse; margin-bottom: 8pt; }
+table.ref th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.ref td { border-bottom: 0.75pt solid var(--hairline); padding: 5pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.answer { font-weight: 600; color: var(--navy); }
+.pinyin { color: var(--jade); font-style: italic; font-size: 8pt; }
+.mnem { font-style: italic; color: var(--muted); }
+
+table.drill { width:100%; border-collapse: collapse; margin-bottom: 10pt; }
+table.drill th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.drill td { border-bottom: 0.75pt solid var(--hairline); padding: 6pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.drill tr:nth-child(even) td { background: #f7f9fc; }
+td.desc { width: 58%; }
+td.ans { width: 42%; font-weight: 600; color: var(--navy); }
+td.ans .sub { font-weight: 400; color: var(--muted); font-size: 8.2pt; display:block; margin-top:2pt; }
+
+.errorlog-row td { border-bottom: 1pt solid var(--hairline); padding: 10pt 7pt; height: 20pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:9.5pt;color:#5b6b85;">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>Drill Pack</h1>
+  <div class="subtitle">Blind ID Drills &middot; Both Directions &middot; Error Log</div>
+  <div class="prof">Week 9 &middot; Inquiry Continued (Limbs&ndash;Children) &amp; Diagnosis by Hearing &amp; Smelling &mdash; 聞診 &middot; Lecture 9 (Final Lecture)</div>
+  <div class="target"><b>Target:</b> Drill until you can answer each item in under 3 seconds, both directions (Parts A&ndash;G forward, Part H reverse), with zero hesitation.</div>
+  <div class="cover-tags">
+    <span class="tag-wrap"><span class="tag gold">TCM for Ballroom Dancers</span></span>
+    <span class="tag-wrap"><span class="tag">reMarkable Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+
+<div class="howto"><b>How drilling differs from studying:</b> Reading builds understanding. Drilling builds <b>speed</b>. You can understand every table in the Study Guide and still blank under time pressure &mdash; these drills fix that. Fifteen minutes daily beats two hours on Sunday, especially with the Final one week out.</div>
+
+<div class="sec ">PART A &middot; Blind ID &mdash; Limbs, Sleep &amp; Sweating</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Cover the right column. Read the description, name the pattern out loud, then uncover.</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Tingling sensation in limbs</td><td class="ans">Blood deficiency</td></tr>
+<tr><td class="desc">Numbness, often unilateral</td><td class="ans">Wind or Wind-Phlegm</td></tr>
+<tr><td class="desc">Joint pain that wanders, sore and aching</td><td class="ans">Wind</td></tr>
+<tr><td class="desc">Severe, fixed joint pain, worse with cold</td><td class="ans">Cold</td></tr>
+<tr><td class="desc">Atrophy/Flaccidity, later stages</td><td class="ans">LV/KI-Yin deficiency, or SP/KI-Yang deficiency</td></tr>
+<tr><td class="desc">Tremors &mdash; always indicates</td><td class="ans">Liver-Wind (excess or deficiency type)</td></tr>
+<tr><td class="desc">Cold fingertips especially</td><td class="ans">Liver-Qi stagnation</td></tr>
+<tr><td class="desc">Cold feet, in women specifically</td><td class="ans">Liver-Blood deficiency</td></tr>
+<tr><td class="desc">Weak knees</td><td class="ans">Deficiency of the Kidneys, esp. Kidney-Yang</td></tr>
+<tr><td class="desc">Not being able to fall or stay asleep</td><td class="ans">Blood deficiency not anchoring Shen/Hun</td></tr>
+<tr><td class="desc">Very restless sleep, heat, agitation, excess dreaming</td><td class="ans">Pathogens agitating Shen/Hun out of Blood (Full)</td></tr>
+<tr><td class="desc">Difficulty falling asleep</td><td class="ans">Blood deficiency (usually Heart, can be LV/SP)</td></tr>
+<tr><td class="desc">Waking many times during the night</td><td class="ans">Yin deficiency with Empty Heat</td></tr>
+<tr><td class="desc">Waking early, can't fall back asleep</td><td class="ans">Gall Bladder deficiency</td></tr>
+<tr><td class="desc">Sweating only on head</td><td class="ans">Heat in the Stomach, or Damp-Heat</td></tr>
+<tr><td class="desc">Oily sweat on forehead, pearl-like</td><td class="ans">Collapse of Yang &mdash; imminent death</td></tr>
+<tr><td class="desc">Sweating on palms, soles, and chest</td><td class="ans">Yin deficiency (five-palm heat)</td></tr>
+<tr><td class="desc">Daytime sweating</td><td class="ans">Yang deficiency</td></tr>
+<tr><td class="desc">Night sweating</td><td class="ans">Yin deficiency</td></tr>
+</table>
+
+<div class="sec jade">PART B &middot; Blind ID &mdash; Ears/Eyes &amp; Cold/Heat/Fever</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Tinnitus, sudden onset</td><td class="ans">Full &mdash; Liver-Fire, Liver-Yang rising, or Liver-Wind</td></tr>
+<tr><td class="desc">Tinnitus, gradual onset</td><td class="ans">Empty &mdash; Kidney deficiency</td></tr>
+<tr><td class="desc">Tinnitus noise worse with pressure</td><td class="ans">Full condition</td></tr>
+<tr><td class="desc">Low-pitched tinnitus like rushing water</td><td class="ans">Kidney deficiency</td></tr>
+<tr><td class="desc">Blurred vision with floaters</td><td class="ans">Liver-Blood, Liver-Yin, or Kidney-Yin deficiency</td></tr>
+<tr><td class="desc">Dry eyes</td><td class="ans">Liver and/or Kidney-Yin deficiency</td></tr>
+<tr><td class="desc">Simultaneous aversion to cold and fever</td><td class="ans">Key sign of exterior pathogenic factor invasion (Tai Yang / Wei level)</td></tr>
+<tr><td class="desc">Subjective feeling of heat in exterior-origin disease</td><td class="ans">Pathogen has entered the Interior</td></tr>
+<tr><td class="desc">Alternating feeling of cold and heat</td><td class="ans">Shao Yang stage (GB/TH), or GB Heat at Qi level</td></tr>
+<tr><td class="desc">What determines fever intensity (not pathogen type)</td><td class="ans">The struggle between Zheng Qi and the EPF</td></tr>
+<tr><td class="desc">Cold limbs and abdomen</td><td class="ans">Spleen-Yang / Stomach-Yang deficiency</td></tr>
+<tr><td class="desc">Cold hands and feet, especially fingers</td><td class="ans">Liver Qi stagnation</td></tr>
+<tr><td class="desc">Heat worse in the afternoon or evening</td><td class="ans">Empty-Heat / Yin deficiency</td></tr>
+<tr><td class="desc">Constant low-grade temperature</td><td class="ans">Damp-Heat</td></tr>
+<tr><td class="desc">Fever in the middle of the night</td><td class="ans">Yin deficiency</td></tr>
+</table>
+
+<div class="sec jade">PART C &middot; Blind ID &mdash; Emotional Symptoms</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Depression + insomnia, palpitations, tiredness, weak limbs, loose stools</td><td class="ans">Spleen and Heart-Blood deficiency</td></tr>
+<tr><td class="desc">Depression + cold hands, palpitations</td><td class="ans">Heart-Yang deficiency</td></tr>
+<tr><td class="desc">Depression + lack of sense of direction, sadness</td><td class="ans">Liver-Blood deficiency</td></tr>
+<tr><td class="desc">Depression (full) + moodiness, irritability, red tongue</td><td class="ans">Stagnant Liver-Qi turning into Heat</td></tr>
+<tr><td class="desc">Depression + lump in the throat</td><td class="ans">Liver-Qi stagnation with Qi-Phlegm (Plum-Pit Qi)</td></tr>
+<tr><td class="desc">Depression + purple tongue (chest area)</td><td class="ans">Heart-Blood stasis</td></tr>
+<tr><td class="desc">Anxiety worse in evening + lack of willpower, dizziness, tinnitus</td><td class="ans">Kidney-Yin deficiency</td></tr>
+<tr><td class="desc">Anxiety (full) + hypochondrial distention</td><td class="ans">Liver-Qi stagnation</td></tr>
+<tr><td class="desc">Anxiety + temple headache, tinnitus, deafness, dizziness</td><td class="ans">Liver-Yang rising</td></tr>
+<tr><td class="desc">Anxiety + anger outbursts, red eyes, bitter taste, dark urine</td><td class="ans">Liver-Fire</td></tr>
+<tr><td class="desc">Anxiety + stabbing chest pain radiating to inner left arm</td><td class="ans">Heart-Blood stasis (TCM description of a heart attack)</td></tr>
+<tr><td class="desc">Anxiety + manic behavior, mental confusion, swollen tongue</td><td class="ans">Phlegm-Fire harassing the Mind</td></tr>
+<tr><td class="desc">Worry, obsessive thinking + palpitations, loose stools</td><td class="ans">Heart and Spleen Qi deficiency</td></tr>
+<tr><td class="desc">Worry which increases after the period in women</td><td class="ans">Liver-Blood deficiency</td></tr>
+<tr><td class="desc">Sadness/grief + breathlessness, dislike speaking</td><td class="ans">Lung and Heart-Qi deficiency</td></tr>
+<tr><td class="desc">Which organ alone "knows" what an emotion is</td><td class="ans">Heart (houses the Shen/consciousness)</td></tr>
+</table>
+
+<div class="sec jade">PART D &middot; Blind ID &mdash; Sexual, Women's &amp; Children's</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Impotence + feeling cold, backache, clear urine</td><td class="ans">Kidney-Yang deficiency</td></tr>
+<tr><td class="desc">Heaviness of the scrotum, urethral discharge, sticky yellow coat</td><td class="ans">Damp-Heat in the Liver channel</td></tr>
+<tr><td class="desc">Premature ejaculation, younger men &mdash; more often</td><td class="ans">Heart-related (settling of the Heart, performance anxiety)</td></tr>
+<tr><td class="desc">Tiredness and dizziness after ejaculation</td><td class="ans">Deficiency of the Kidneys</td></tr>
+<tr><td class="desc">Excessive sexual desire (women or men)</td><td class="ans">Liver or Heart-Fire, or Empty-Heat from Kidney-Yin deficiency</td></tr>
+<tr><td class="desc">Headache after orgasm</td><td class="ans">Rebellious Qi of the Chong Mai, or Heart-Fire</td></tr>
+<tr><td class="desc">Periods always early</td><td class="ans">Blood-Heat, or Qi deficiency</td></tr>
+<tr><td class="desc">Periods irregular, sometimes early sometimes late</td><td class="ans">Stagnation of Liver-Qi/Blood, or Spleen deficiency</td></tr>
+<tr><td class="desc">Purple or blackish menstrual blood</td><td class="ans">Stasis of Blood or Cold</td></tr>
+<tr><td class="desc">Pain before the period</td><td class="ans">Stagnation of Qi or Blood</td></tr>
+<tr><td class="desc">Pain after the period</td><td class="ans">Blood deficiency</td></tr>
+<tr><td class="desc">Yellow leukorrhea</td><td class="ans">Damp-Heat in the Lower Burner</td></tr>
+<tr><td class="desc">Miscarriage before 3 months</td><td class="ans">Blood or Essence deficiency</td></tr>
+<tr><td class="desc">Miscarriage after 3 months</td><td class="ans">Liver-Blood stasis, or sinking of Spleen-Qi</td></tr>
+<tr><td class="desc">Vomiting of milk and colic in babies</td><td class="ans">Retention of food</td></tr>
+<tr><td class="desc">Chronic earache in children</td><td class="ans">Damp-Heat in the Gall Bladder channel</td></tr>
+<tr><td class="desc">Skin rash, insomnia, character change after immunizations</td><td class="ans">Latent Heat</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec maroon">PART E &middot; Blind ID &mdash; Voice, Breathing &amp; Reflexive Sounds</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Organ that governs production of the voice</td><td class="ans">Lung</td></tr>
+<tr><td class="desc">Organ that governs volume of the voice</td><td class="ans">Kidney</td></tr>
+<tr><td class="desc">Organ(s) that govern strength of the voice</td><td class="ans">Spleen &amp; Stomach</td></tr>
+<tr><td class="desc">Sudden loss of voice</td><td class="ans">Invasion of Wind-Heat</td></tr>
+<tr><td class="desc">Hoarseness: chronic, gradual, worse in evening</td><td class="ans">Lung and Kidney Yin deficiency</td></tr>
+<tr><td class="desc">Deep breathing</td><td class="ans">Excess qi in Heart and Lungs</td></tr>
+<tr><td class="desc">Panting, deficiency type</td><td class="ans">Timid breath, low voice, worse with movement &mdash; Kidney or Lung deficiency</td></tr>
+<tr><td class="desc">Wheezing</td><td class="ans">Lung qi fails to descend with phlegm obstruction</td></tr>
+<tr><td class="desc">Dry cough</td><td class="ans">Lung-Yin deficiency</td></tr>
+<tr><td class="desc">Shared mechanism of vomiting, belching, and hiccup</td><td class="ans">Rebellious Stomach Qi</td></tr>
+<tr><td class="desc">Loud, forceful hiccup</td><td class="ans">Full &mdash; often Liver-Qi invading the Stomach</td></tr>
+<tr><td class="desc">Borborygmi, loud sound</td><td class="ans">Full pattern (with diarrhea or dysentery)</td></tr>
+<tr><td class="desc">Yawning, frequent/loud, emotion-induced</td><td class="ans">Liver Qi Stagnation</td></tr>
+<tr><td class="desc">Sighing from repressed anger/frustration</td><td class="ans">Liver Qi stagnation</td></tr>
+</table>
+
+<div class="sec maroon">PART F &middot; Blind ID &mdash; Five Element Sounds &amp; Six Healing Sounds</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">Shouting voice &mdash; element</td><td class="ans">Wood <span class="sub">H&#363; 呼</span></td></tr>
+<tr><td class="desc">Laughing voice &mdash; element</td><td class="ans">Fire <span class="sub">Xi&agrave;o 笑</span></td></tr>
+<tr><td class="desc">Singing voice &mdash; element</td><td class="ans">Earth <span class="sub">Ch&agrave;ng 唱</span></td></tr>
+<tr><td class="desc">Weeping voice &mdash; element</td><td class="ans">Metal</td></tr>
+<tr><td class="desc">Groaning voice &mdash; element</td><td class="ans">Water</td></tr>
+<tr><td class="desc">X&#363; 嘘 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Liver &mdash; removes heat, brightens eyes</td></tr>
+<tr><td class="desc">H&#275; 呵 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Heart &mdash; expels heat, reduces fire</td></tr>
+<tr><td class="desc">H&#363; 呼 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Spleen &mdash; drives out heat, strengthens spleen</td></tr>
+<tr><td class="desc">Chu&#299; 吹 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Kidney &mdash; removes wind-cold, urges stagnant qi</td></tr>
+<tr><td class="desc">X&#299; 嘻 Healing Sound &mdash; organ &amp; effect</td><td class="ans">Triple Burner &mdash; clears heat/restlessness, emotions</td></tr>
+<tr><td class="desc">Which hanzi/pinyin is shared between a Voice Sound and a Healing Sound?</td><td class="ans">H&#363; 呼 &mdash; Shout (Wood voice) AND Spleen Healing Sound</td></tr>
+</table>
+
+<div class="sec maroon">PART G &middot; Blind ID &mdash; Smelling Framework, Five Odors &amp; Secretions</div>
+<table class="drill"><tr><th>Description (cover the right)</th><th>Answer</th></tr>
+<tr><td class="desc">First aspect of Diagnosis by Smelling</td><td class="ans">Odor of the patient's body itself &mdash; pattern AND constitutional type</td></tr>
+<tr><td class="desc">General rule: strong/foul/rotten smell</td><td class="ans">Heat or Excess</td></tr>
+<tr><td class="desc">General rule: absent or fishy smell</td><td class="ans">Cold or Deficient</td></tr>
+<tr><td class="desc">"Fragrant" odor (Xi&#257;ng 香) &mdash; description</td><td class="ans">Cloying, sickly sweet, lingers in nostrils &mdash; NOT actually pleasant</td></tr>
+<tr><td class="desc">"Scorched" odor slide's labeled hanzi (and the likely error)</td><td class="ans">Xi&agrave;o 笑 (reused from Laughing) &mdash; classical scorched is Ji&#257;o 焦</td></tr>
+<tr><td class="desc">Breath: fishy</td><td class="ans">Phlegm-Heat in Lung</td></tr>
+<tr><td class="desc">Sweat: putrid-smelling</td><td class="ans">Disease of Lungs, Liver, or Kidneys</td></tr>
+<tr><td class="desc">Sputum: without smell</td><td class="ans">Cold</td></tr>
+<tr><td class="desc">Flatulence: rancid, like rotten eggs</td><td class="ans">Toxic Heat in Large Intestines</td></tr>
+<tr><td class="desc">Urine: heavy urea smell, scanty yellow</td><td class="ans">Heart fire pouring into Bladder</td></tr>
+<tr><td class="desc">Odorless urinary incontinence</td><td class="ans">Exhaustion of Kidney fire</td></tr>
+<tr><td class="desc">Vaginal discharge: fishy smell</td><td class="ans">Damp-Cold</td></tr>
+<tr><td class="desc">Eyes: red/swollen, turbid tears, foul fishy odor</td><td class="ans">Damp-heat in the Liver channel</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec jade">PART H &middot; Reverse Direction &mdash; Pattern &rarr; Finding</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Now cover the LEFT column instead. Read the pattern, recall the finding that points to it.</div>
+<table class="drill"><tr><th>Finding (cover the left)</th><th>Pattern (read this side)</th></tr>
+<tr><td class="ans">Cold fingertips especially</td><td class="desc">Liver-Qi stagnation</td></tr>
+<tr><td class="ans">Waking up many times at night</td><td class="desc">Yin deficiency with Empty Heat</td></tr>
+<tr><td class="ans">Sudden tinnitus, worse with pressure</td><td class="desc">Full &mdash; Liver-Fire/Yang rising/Wind</td></tr>
+<tr><td class="ans">Constant low-grade fever, doesn't fully clear with sweating</td><td class="desc">Damp-Heat</td></tr>
+<tr><td class="ans">Stabbing chest pain radiating to inner left arm, purple tongue</td><td class="desc">Heart-Blood stasis (TCM "heart attack")</td></tr>
+<tr><td class="ans">Cold feet, specifically in women</td><td class="desc">Liver-Blood deficiency</td></tr>
+<tr><td class="ans">Miscarriage after 3 months</td><td class="desc">Liver-Blood stasis, or Spleen-Qi sinking</td></tr>
+<tr><td class="ans">Chronic earache in a child</td><td class="desc">Damp-Heat in the Gall Bladder channel</td></tr>
+<tr><td class="ans">Loud voice, excessive talking</td><td class="desc">Full or Heat</td></tr>
+<tr><td class="ans">Hoarse, worse in the evening, chronic</td><td class="desc">Lung and Kidney Yin deficiency</td></tr>
+<tr><td class="ans">Frequent loud yawning, emotion-triggered</td><td class="desc">Liver Qi Stagnation</td></tr>
+<tr><td class="ans">Shouting</td><td class="desc">Wood</td></tr>
+<tr><td class="ans">Foul, strong, rotten smell (general rule)</td><td class="desc">Heat or Excess</td></tr>
+<tr><td class="ans">Clear, frequent, odorless urine</td><td class="desc">Kidney deficiency</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec maroon">Error Log</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Every time you miss a drill item, log it here. Review this page before your next drill session &mdash; your errors are more valuable than your correct answers.</div>
+<table class="ref"><tr><th>Item I Missed</th><th>Correct Answer / Why I Missed It</th></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+<tr class="errorlog-row"><td style="width:40%">&nbsp;</td><td style="width:60%">&nbsp;</td></tr>
+</table>
+
+</body>
+</html>
