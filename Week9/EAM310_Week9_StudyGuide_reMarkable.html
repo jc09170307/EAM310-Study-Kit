@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 9 Study Guide</title>
+<style>
+@page {
+  size: 714pt 966pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c;
+  --jade: #16805f;
+  --gold: #c9a226;
+  --maroon: #7a2530;
+  --paper: #ffffff;
+  --ink: #24395c;
+  --muted: #5b6b85;
+  --hairline: #d8dce4;
+  --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+  font-size: 9pt;
+  line-height: 1.42;
+  margin: 0; padding: 0;
+  background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover {
+  position: relative;
+  padding-left: 26pt;
+  min-height: 760pt;
+}
+.cover::before {
+  content: ""; position:absolute; left:0; top:0; bottom:0; width:4pt;
+  background: var(--navy);
+}
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold);
+  display:inline-block; margin-top: 46pt; max-width: 520pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.cover .meta { margin-top: 20pt; font-size: 9.5pt; color: var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b { color: var(--navy); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+.scope-note {
+  margin-top: 18pt; background: #fff8e5; border: 1pt solid var(--gold);
+  padding: 10pt 14pt; max-width: 460pt; font-size: 8.6pt; color: var(--navy);
+}
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 11pt;
+  padding: 6pt 10pt; margin: 16pt 0 8pt 0;
+  page-break-inside: avoid; break-inside: avoid;
+  page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:9.6pt; color:var(--navy); margin:10pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+p.lede { color: var(--muted); font-size: 8.6pt; margin: 2pt 0 6pt 0; }
+
+table.ref {
+  width:100%; border-collapse: collapse; margin-bottom: 8pt;
+  page-break-inside: avoid; break-inside: avoid;
+}
+table.ref th {
+  background: var(--navy); color:#fff; font-size:8pt; text-align:left; padding:4pt 6pt;
+}
+table.ref td {
+  border-bottom: 0.75pt solid var(--hairline); padding: 4pt 6pt; font-size: 8pt;
+  vertical-align: top;
+}
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.lbl { font-weight:600; color: var(--navy); width: 20%; }
+td.lbl.jade { color: var(--jade); }
+td.lbl.maroon { color: var(--maroon); }
+
+.qr {
+  font-style: italic; font-size: 8pt; color: var(--jade); margin: -2pt 0 8pt 0;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 7pt 10pt; margin: 6pt 0 10pt 0; font-size: 8.3pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+.clinical {
+  background: #f1f7f4; border: 1pt solid var(--jade); border-left: 4pt solid var(--jade);
+  padding: 8pt 10pt; margin: 6pt 0 10pt 0; font-size: 8.4pt;
+  page-break-inside: avoid; break-inside: avoid;
+}
+.clinical b { color: var(--jade); }
+.footer-tag {
+  position: fixed; bottom: 14pt; left: 44pt; font-size: 7pt; color: #b7bfcf;
+}
+
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="meta">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>Week 9 Study Guide</h1>
+  <div class="subtitle">Diagnosis by Inquiry (continued: Limbs through Children's Symptoms) &amp; Diagnosis by Hearing &amp; Smelling &mdash; 聞診 (W&eacute;n Zh&eacute;n)</div>
+  <div class="prof">Lecture 9 (Final Lecture) &middot; Daniel Schrier, D.O.M., L.Ac.</div>
+  <div class="howto"><b>How to use this guide:</b> Part I continues the Inquiry framework (Questions 8&ndash;16). Part II covers the second Pillar, Hearing &amp; Smelling. Read once for the framework, then drill the tables &mdash; every finding-to-pattern mapping is in a table. Pair with the Cram Sheet the night before class or the Final.</div>
+  <div class="scope-note"><b>Source note:</b> Built from Prof. Schrier's Week 9 lecture transcript (the final class session, continuing Inquiry from Week 8 through Hearing &amp; Smelling) and cross-checked line-by-line against the Inquiry slide deck (slides 661&ndash;730) and the Hearing &amp; Smelling slide deck (slides 731&ndash;781). Dream-symbolism material is flagged separately as not tested, per Prof. Schrier's own slide.</div>
+  <div class="cover-tags">
+    <span class="tag-wrap"><span class="tag gold">TCM for Ballroom Dancers</span></span>
+    <span class="tag-wrap"><span class="tag">reMarkable Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+
+<div class="sec ">PART I &middot; Framework &mdash; Today's 16 Questions (Continued)</div>
+<p class="lede">Week 9 is Prof. Schrier's final lecture and continues the 16-question Inquiry framework introduced in Week 7/8, picking up at Question 8. It then moves into the second Pillar of diagnosis: Hearing &amp; Smelling.</p>
+<table class="ref"><tr><th>#</th><th>Question Topic</th><th>Covered</th></tr>
+<tr><td>1&ndash;7</td><td>Pain, Food/Taste, Stools/Urine, Thirst/Drink, Energy, Head/Face/Body, Chest/Abdomen</td><td>Weeks 7&ndash;8</td></tr>
+<tr><td class="lbl">8</td><td>Limbs</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">9</td><td>Sleep</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">10</td><td>Sweating</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">11</td><td>Ears and Eyes</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">12</td><td>Feeling of Cold, Feeling of Heat and Fever</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">13</td><td>Emotional Symptoms</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">14</td><td>Sexual Symptoms</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">15</td><td>Special Questions Regarding Women's Health</td><td class="lbl jade">Week 9</td></tr>
+<tr><td class="lbl">16</td><td>Special Questions Regarding Children's Health</td><td class="lbl jade">Week 9</td></tr>
+</table>
+<div class="qr">Quick Recall: Week 9 = Questions 8&ndash;16, then Diagnosis by Hearing &amp; Smelling (聞診). This is the last lecture before the Final.</div>
+
+<div class="sec ">1 &middot; Limbs (Question 8)</div>
+<div class="subhead">Weakness &amp; Numbness of Limbs</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Tingling sensation (more often)</td><td>Blood deficiency</td></tr>
+<tr><td>Numbness, often unilateral</td><td>Wind or Wind-Phlegm</td></tr>
+<tr><td>Feeling of heaviness and/or swelling</td><td>Dampness</td></tr>
+<tr><td>With pain</td><td>Qi or Blood Stagnation</td></tr>
+</table>
+<div class="qr">Quick Recall: tingling=Blood deficiency; unilateral numbness=Wind/Wind-Phlegm; heavy/swollen=Damp; painful=Qi/Blood stagnation.</div>
+
+<div class="subhead">Generalized Joint Pain (often Wind, but can combine with Cold, Dampness, Heat)</div>
+<table class="ref"><tr><th>Presentation</th><th>Pathogenic Factor</th></tr>
+<tr><td>Pain that wanders joint to joint; sore and aching</td><td>Wind</td></tr>
+<tr><td>Severe, fixed pain, worse with cold</td><td>Cold</td></tr>
+<tr><td>Heaviness and aching, possible swelling and numbness in joints/limbs</td><td>Dampness</td></tr>
+<tr><td>Pain with redness, swelling, and heaviness</td><td>Damp-Heat (redness=Heat, heaviness=Damp)</td></tr>
+</table>
+
+<div class="subhead">Atrophy / Flaccidity &amp; Tremor of Limbs</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Atrophy/Flaccidity &mdash; beginning stages</td><td>Stomach and Spleen-Qi deficiency</td></tr>
+<tr><td>Atrophy/Flaccidity &mdash; later stages</td><td>Deficiency of Yin of the Liver and Kidneys, or deficiency of Yang of the Spleen and Kidneys</td></tr>
+<tr><td>Tremors (always indicates Liver-Wind)</td><td>Can be excess or deficiency type Wind</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> Tremors always point to Liver-Wind, but don't stop there &mdash; ask whether it's an excess-type or deficiency-type Wind (e.g. sudden violent tremor/seizure vs. a fine, chronic tremor from Blood/Yin deficiency not nourishing the sinews).</div>
+
+<div class="subhead">Cold Hands / Feet &amp; Weak Knees</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Cold hands</td><td>Yang deficiency, or Heart Blood deficiency</td></tr>
+<tr><td>Cold hands with palpitations and dizziness</td><td>Heart Blood deficiency</td></tr>
+<tr><td>Cold fingers and toes, especially the tips</td><td>Liver Qi stagnation (Liver Qi can't send Qi/Blood to the extremities)</td></tr>
+<tr><td>Cold feet</td><td>Kidney-Yang deficiency, or Liver Qi stagnation</td></tr>
+<tr><td>Cold feet, in women specifically</td><td>Liver Blood deficiency</td></tr>
+<tr><td>Weak knees</td><td>Deficiency of the Kidneys, especially Kidney-Yang</td></tr>
+</table>
+<div class="qr">Quick Recall: cold fingertips especially = Liver Qi stagnation (torso stays warm). Cold feet in women specifically leans Liver Blood deficiency.</div>
+
+<div class="subhead">Feeling of Heaviness</div>
+<p class="lede">Usually due to Dampness; can combine with Heat or Cold. When Spleen-Qi deficiency is associated with Stomach-Qi deficiency, heaviness is frequently experienced in all four limbs, not just the legs &mdash; because Earth (Spleen/Stomach) governs the limbs generally.</p>
+
+<div class="sec jade">2 &middot; Sleep (Question 9)</div>
+<table class="ref"><tr><th>Principle</th><th>Detail</th></tr>
+<tr><td class="lbl">Root of sleep</td><td>Sleep depends on the state of Blood and Yin, especially of the Heart and Liver. The Spleen can also influence sleep.</td></tr>
+<tr><td class="lbl">Anchoring</td><td>The Mind/Shen and Ethereal Soul/Hun must be anchored with sufficient Heart and Liver Blood for good sleep.</td></tr>
+<tr><td class="lbl">Age</td><td>Length of sleep needed varies by age and generally decreases across one's lifetime &mdash; highest in babies, lowest in the elderly.</td></tr>
+</table>
+
+<div class="subhead">Sleep &mdash; Core Patterns</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Not being able to fall or stay asleep</td><td>Deficiency of Blood not anchoring Mind/Shen and/or Ethereal Soul/Hun (Empty Condition)</td></tr>
+<tr><td>Very restless sleep, feeling of heat, agitation, excessive dreaming</td><td>Pathogenic factors agitating the Mind/Shen and/or Hun out of Blood (Full Condition)</td></tr>
+<tr><td>Difficulty falling asleep</td><td>Blood deficiency &mdash; usually Heart, but can be Liver or Spleen</td></tr>
+<tr><td>Waking up many times during the night</td><td>Yin deficiency with Empty Heat (Heart, Liver, or Kidneys)</td></tr>
+<tr><td>Waking early and failing to fall back asleep</td><td>Gall Bladder deficiency</td></tr>
+</table>
+
+<div class="subhead">Insomnia &mdash; Organ Differentiation</div>
+<p class="lede">Often due to disharmony of the Heart or Liver (Stomach, Spleen, Kidneys and Gall Bladder may also play a role). Liver = excessive dreaming (dreams are pictures/vision, a Liver function). Heart = restlessness.</p>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Insomnia with anxiety, dream-disturbed sleep, other Qi/Blood-deficiency signs</td><td>Heart and Spleen Blood deficiency</td></tr>
+<tr><td>Insomnia with difficulty falling asleep, dizziness, blurred vision</td><td>Liver Blood deficiency</td></tr>
+<tr><td>Insomnia, waking frequently with excessive dreams, night sweating, palpitations</td><td>Heart and Kidney Yin deficiency with Empty-Heat</td></tr>
+<tr><td>Dream-disturbed sleep (isolated)</td><td>Liver-Fire or Heart-Fire</td></tr>
+<tr><td>Restless sleep with excessive dreams</td><td>Retention of food</td></tr>
+</table>
+<div class="qr">Quick Recall: trouble FALLING asleep leans Heart Blood deficiency. Excessive DREAMING leans Liver. WAKING repeatedly leans Yin deficiency with Empty Heat.</div>
+
+<div class="heads-up"><b>Heads Up &mdash; Dreams are background only.</b> Prof. Schrier's slide explicitly states "Bonus Material on Sleep Will Not Be Tested On." The N&egrave;ij&#299;ng dream passages (S&ugrave; W&egrave;n 17 &amp; 80, L&iacute;ngsh&#363; 43 &mdash; e.g. abundant Yin qi &rarr; dreams of wading through water; depleted Liver qi &rarr; dreams of fragrant plants) and the Po/Hun/Shen dream categories (mundane/symbolic/deep-consciousness) are classroom color and context, not exam material. Know that they exist; don't drill the specific dream-to-organ mappings.</div>
+
+<div class="sec jade">3 &middot; Sweating (Question 10)</div>
+<table class="ref"><tr><th>Condition</th><th>Common Cause</th></tr>
+<tr><td class="lbl">Full Conditions</td><td>Heat, or Damp-Heat</td></tr>
+<tr><td class="lbl jade">Empty Conditions</td><td>Deficiency of Yang, or deficiency of Yin</td></tr>
+</table>
+
+<div class="subhead">Area of Sweating</div>
+<table class="ref"><tr><th>Location</th><th>Pattern</th></tr>
+<tr><td>Only on head</td><td>Heat in the Stomach, or Damp-Heat</td></tr>
+<tr><td>Oily sweat on forehead</td><td>Collapse of Yang</td></tr>
+<tr><td>Only on arms and legs</td><td>Stomach and Spleen deficiency</td></tr>
+<tr><td>Only on hands</td><td>Lung-Qi or Heart-Qi deficiency</td></tr>
+<tr><td>Whole body</td><td>Lung-Qi deficiency</td></tr>
+<tr><td>Palms, soles, and chest</td><td>Yin deficiency (five-palm heat)</td></tr>
+</table>
+
+<div class="subhead">Timing, Illness Stage &amp; Quality</div>
+<table class="ref"><tr><th>Feature</th><th>Pattern</th></tr>
+<tr><td>Sweating in daytime</td><td>Yang deficiency</td></tr>
+<tr><td>Sweating at night</td><td>Yin deficiency (occasionally can also be Damp-Heat)</td></tr>
+<tr><td>Profuse cold sweat during severe illness</td><td>Collapse of Yang</td></tr>
+<tr><td>Oily sweat on forehead, like pearls, not flowing</td><td>Collapse of Yang &mdash; danger of imminent death</td></tr>
+<tr><td>Oily-quality sweat</td><td>Severe Yang deficiency</td></tr>
+<tr><td>Yellow-quality sweat</td><td>Damp-Heat</td></tr>
+</table>
+<div class="qr">Quick Recall: Daytime sweat=Yang deficiency. Night sweat=Yin deficiency. Oily/pearl-like on the forehead in severe illness=Collapse of Yang, a critical sign.</div>
+
+<div class="sec jade">4 &middot; Ears and Eyes (Question 11)</div>
+<div class="subhead">Tinnitus</div>
+<table class="ref"><tr><th>Feature</th><th>Pattern</th></tr>
+<tr><td>Sudden onset</td><td>Full condition &mdash; Liver-Fire, Liver-Yang rising, or Liver-Wind</td></tr>
+<tr><td>Gradual onset</td><td>Empty condition &mdash; Kidney deficiency</td></tr>
+<tr><td>Noise aggravated by pressing on the ears</td><td>Full condition</td></tr>
+<tr><td>Noise alleviated by pressing on the ears</td><td>Empty condition</td></tr>
+<tr><td>Loud, high-pitched, like a whistle or cicada</td><td>Liver-Yang, Liver-Fire, or Liver-Wind</td></tr>
+<tr><td>Low-pitched, like rushing water</td><td>Kidney deficiency</td></tr>
+</table>
+
+<div class="subhead">Deafness</div>
+<table class="ref"><tr><th>Onset</th><th>Pattern</th></tr>
+<tr><td>Sudden onset</td><td>Full condition &mdash; Liver-Fire, Liver-Yang rising, or Liver-Wind</td></tr>
+<tr><td>Gradual onset</td><td>Empty condition &mdash; deficiency of Kidneys, Heart-Blood, or Qi of the Upper Burner</td></tr>
+</table>
+<div class="qr">Quick Recall: sudden tinnitus/deafness=Full-Liver pattern; gradual=Empty-Kidney (or Heart-Blood/Upper Burner Qi for deafness specifically). Pressure test: worse with pressure=Full, better with pressure=Empty.</div>
+
+<div class="subhead">Eyes</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Eye pain, swelling, redness</td><td>Invasion of Wind-Heat, or Liver-Fire</td></tr>
+<tr><td>Feeling of pressure in the eyes</td><td>Kidney-Yin deficiency</td></tr>
+<tr><td>Blurred vision with floaters</td><td>Liver-Blood, Liver-Yin, or Kidney-Yin deficiency</td></tr>
+<tr><td>Blurred vision with photophobia</td><td>Liver-Blood deficiency, or Liver-Yang rising</td></tr>
+<tr><td>Dry eyes</td><td>Liver and/or Kidney-Yin deficiency</td></tr>
+</table>
+
+<div class="sec maroon">5 &middot; Feeling of Cold, Feeling of Heat and Fever (Question 12)</div>
+<div class="subhead">Interior vs. Exterior Conditions &mdash; Framework</div>
+<table class="ref"><tr><th>Condition Type</th><th>Component</th></tr>
+<tr><td rowspan="2" class="lbl">Interior conditions</td><td>Feeling of cold</td></tr>
+<tr><td>Feeling of heat</td></tr>
+<tr><td rowspan="3" class="lbl jade">Exterior conditions</td><td>Aversion to cold &amp; "fever" (simultaneous)</td></tr>
+<tr><td>Feeling of heat in diseases of exterior origin</td></tr>
+<tr><td>Alternating feeling of cold and heat</td></tr>
+</table>
+
+<div class="subhead">Aversion to Cold</div>
+<p class="lede">Means the patient feels <b>subjectively</b> cold &mdash; ranging from very mild to a strong cold feeling with shivering. Due to invasion of Wind: Wind obstructs the Cou Li (space between skin and muscles) where Wei Qi circulates; Wei Qi normally warms the muscles, so when obstructed the patient feels cold.</p>
+
+<div class="subhead">Fever</div>
+<p class="lede">Does not necessarily indicate a raised temperature &mdash; it means the patient's body feels hot <b>on palpation</b> (objective). The intensity of "fever" relates to the struggle between Zheng Qi (Upright Qi) and the External Pathogenic Factor (EPF) &mdash; NOT whether the pathogen is Wind-Cold or Wind-Heat.</p>
+<table class="ref"><tr><th>Zheng Qi vs. Pathogenic Factor</th><th>Fever Intensity</th></tr>
+<tr><td>Both strong</td><td>High "fever"</td></tr>
+<tr><td>Both weak</td><td>Low "fever"</td></tr>
+<tr><td>One strong, one weak (either direction)</td><td>Medium "fever"</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> This is a classic trap: fever intensity is about the STRUGGLE (Zheng Qi vs. pathogen), not about whether the invading pathogen is Wind-Cold or Wind-Heat. Don't conflate fever severity with pathogen type.</div>
+
+<div class="subhead">Simultaneous Aversion to Cold &amp; "Fever"</div>
+<p class="lede">The key sign of an invasion of an exterior pathogenic factor. Corresponds to Wind-Cold at the Tai Yang stage (BL/SI) of the Six Stages, and the Wei/Defensive Level of the Four Levels.</p>
+
+<div class="subhead">Feeling of Heat in Diseases of Exterior Origin</div>
+<p class="lede">A <b>subjective</b> feeling of heat indicates the pathogenic factor has now entered the Interior level. The patient has both a subjective feeling of heat AND their body is objectively emanating heat &mdash; this may or may not include an actual fever.</p>
+
+<div class="subhead">Alternating Feeling of Cold and Heat</div>
+<p class="lede">The feeling of heat here is subjective. Indicates the pathogenic factor is in the Shao Yang stage (GB/TH) per Six-Stage/Channel Pattern Identification &mdash; i.e. Gall Bladder Heat in the Qi Level per Four-Level Pattern Identification.</p>
+
+<div class="subhead">Feeling of Cold &mdash; By Location</div>
+<table class="ref"><tr><th>Location</th><th>Pattern</th></tr>
+<tr><td>Cold limbs and abdomen</td><td>Spleen-Yang / Stomach-Yang deficiency</td></tr>
+<tr><td>Cold hands and feet, especially the fingers</td><td>Liver Qi stagnation</td></tr>
+<tr><td>Cold hands and chest</td><td>Heart-Blood deficiency, or Yang deficiency</td></tr>
+<tr><td>Cold feet</td><td>Kidney-Yang deficiency, or Liver Qi stagnation</td></tr>
+<tr><td>Cold legs, knees, feet, and back</td><td>Kidney-Yang deficiency</td></tr>
+</table>
+
+<div class="subhead">Feeling of Heat &mdash; By Timing</div>
+<table class="ref"><tr><th>Timing</th><th>Pattern</th></tr>
+<tr><td>Heat in the afternoon or evening</td><td>Empty-Heat</td></tr>
+<tr><td>Low-grade fever, worse in the afternoon or only in the afternoon</td><td>Yin deficiency</td></tr>
+<tr><td>Constant low-grade temperature</td><td>Damp-Heat (dampness obstructs full venting of the heat)</td></tr>
+<tr><td>Fever in the middle of the night</td><td>Yin deficiency</td></tr>
+</table>
+<div class="qr">Quick Recall: afternoon/evening heat pattern &rarr; Yin deficiency (Empty-Heat). Constant low-grade, doesn't fully resolve with sweating &rarr; Damp-Heat.</div>
+
+<div class="sec maroon">6 &middot; Emotional Symptoms (Question 13)</div>
+<p class="lede">Emotions are related to the Internal Causes of Disease and play an important role in etiology and clinical manifestations. The emotional state of the patient reflects the state of one's Mind and Spirit. The Heart is the only organ that "knows" what an emotion is (it houses the Shen/consciousness) &mdash; every other organ is affected by emotion without being conscious of it. This is why emotional distress often still shows a red tip on the tongue (Heart).</p>
+
+<div class="subhead">Depression</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern (Empty)</th></tr>
+<tr><td>Insomnia, palpitations, tiredness, weak limbs, loose stools</td><td>Spleen and Heart-Blood deficiency</td></tr>
+<tr><td>Palpitations, cold hands</td><td>Heart-Yang deficiency</td></tr>
+<tr><td>Lack of sense of direction, sadness</td><td>Liver-Blood deficiency</td></tr>
+<tr><td>Anxiety, night sweating, palpitations, red tongue without coating</td><td>Kidney and Heart-Yin deficiency with Empty-Heat</td></tr>
+<tr><td>Lack of motivation/willpower, feeling cold, weak knees, frequent urination</td><td>Kidney-Yang deficiency</td></tr>
+</table>
+<table class="ref"><tr><th>Presentation</th><th>Pattern (Full)</th></tr>
+<tr><td>Moodiness, irritability</td><td>Liver-Qi stagnation</td></tr>
+<tr><td>Irritability with red tongue</td><td>Stagnant Liver-Qi turning into Heat</td></tr>
+<tr><td>Moodiness, irritability, feeling of a lump in the throat</td><td>Liver-Qi stagnation with Qi-Phlegm (Plum-Pit Qi)</td></tr>
+<tr><td>Palpitations, anxiety, agitation, expectoration of phlegm, swollen tongue</td><td>Phlegm-Fire harassing the Mind</td></tr>
+<tr><td>Palpitation, agitation, purple tongue (entire or chest area)</td><td>Heart-Blood stasis</td></tr>
+</table>
+
+<div class="subhead">Anxiety</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern (Empty)</th></tr>
+<tr><td>With insomnia, palpitations</td><td>Heart-Blood deficiency</td></tr>
+<tr><td>Worse in the evening, palpitations, night sweating</td><td>Heart-Yin deficiency</td></tr>
+<tr><td>With depression, insomnia, blurred vision</td><td>Liver-Blood deficiency</td></tr>
+<tr><td>With depression, insomnia, tongue without coating</td><td>Liver-Yin deficiency</td></tr>
+<tr><td>Worse in the evening, lack of willpower, dizziness, tinnitus</td><td>Kidney-Yin deficiency</td></tr>
+<tr><td>With insomnia, palpitations, timidity</td><td>Heart and Gall Bladder Qi deficiency</td></tr>
+</table>
+<table class="ref"><tr><th>Presentation</th><th>Pattern (Full)</th></tr>
+<tr><td>Anxiety, depression, irritability, hypochondrial distention</td><td>Liver-Qi stagnation</td></tr>
+<tr><td>Anxiety, headache (esp. temples), tinnitus, deafness, blurred vision, dizziness</td><td>Liver-Yang rising</td></tr>
+<tr><td>Irritability, outbursts of anger, temporal headache, dizziness, red face/eyes, thirst, bitter taste, dark-yellow urine, epistaxis, Full Wiry Rapid pulse</td><td>Liver-Fire</td></tr>
+<tr><td>Severe anxiety, palpitations, thirst, mouth/tongue ulcers, mental restlessness, agitation, feeling of heat, red face, dark urine or blood in urine, red tongue with coating</td><td>Heart-Fire</td></tr>
+<tr><td>Severe anxiety, palpitations, stabbing/pricking chest pain radiating to inner left arm or shoulder, purple tongue</td><td>Heart-Blood stasis</td></tr>
+<tr><td>Severe anxiety, palpitations, manic behavior, mental confusion, swollen tongue</td><td>Phlegm-Fire harassing the Mind</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> "Severe anxiety, palpitations, stabbing/pricking pain in the chest radiating to the inner left arm or shoulder" is the TCM description of what Western medicine would call a heart attack (Heart-Blood stasis). Know this cross-reference &mdash; it's a favorite way to test pattern recognition against a real clinical picture.</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern (Full/Empty)</th></tr>
+<tr><td>Palpitations, mental restlessness, insomnia, dream-disturbed sleep, anxiety worse in evening, poor memory, dizziness, tinnitus, low backache, heat in evening, dry throat at night, thirst with small sips, night sweating, five-palm heat, scanty dark urine</td><td>Kidney and Heart-Yin deficiency with Empty-Heat</td></tr>
+<tr><td>Palpitations, insomnia, dream-disturbed sleep, propensity to be startled, poor memory, anxiety worse in evening, mental restlessness, "uneasiness"/"fidgetiness," dry mouth and throat, night sweating, red tongue without coating (redder at tip, with red points), Floating-Empty pulse (esp. front left)</td><td>Heart-Yin deficiency with Empty-Heat</td></tr>
+</table>
+
+<div class="subhead">Irritability / Anger &mdash; Possible Roots</div>
+<table class="ref"><tr><th>Root Mechanism</th></tr>
+<tr><td>Qi stagnation</td></tr>
+<tr><td>Blood stasis</td></tr>
+<tr><td>Liver-Yang rising</td></tr>
+<tr><td>Blood deficiency</td></tr>
+<tr><td>Yin deficiency (with or without Empty-Heat)</td></tr>
+<tr><td>Heat (including Damp-Heat)</td></tr>
+</table>
+
+<div class="subhead">Worry / Overthinking</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Worry, slightly obsessive thinking, palpitations, slight depression, overthinking, loose stools, pale tongue, Empty pulse</td><td>Heart and Spleen Qi deficiency</td></tr>
+<tr><td>Worry, depression, slight shortness of breath, slight cough, weak voice, pale tongue, Empty pulse</td><td>Lung-Qi deficiency</td></tr>
+<tr><td>Worry, depression, palpitations, pale and thin tongue, Choppy or Fine pulse</td><td>Heart-Blood deficiency</td></tr>
+<tr><td>Worry which increases after the period in women, pale tongue, blurred vision, Choppy or Fine pulse</td><td>Liver-Blood deficiency</td></tr>
+<tr><td>Worry, insomnia, dream-disturbed sleep, poor memory, anxiety, propensity to be startled, mental restlessness, uneasiness, "feeling hot and bothered," Floating-Empty pulse (esp. front left), red tongue redder on tip, no coating</td><td>Heart-Yin deficiency with Empty-Heat</td></tr>
+</table>
+
+<div class="subhead">Sadness and Grief</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>With crying, depression, palpitations, breathlessness, dislike speaking, pale tongue, Empty pulse</td><td>Lung and Heart-Qi deficiency</td></tr>
+<tr><td>With crying, mental confusion, blurred vision, aimlessness, pale tongue, Choppy or Fine pulse</td><td>Liver-Blood deficiency</td></tr>
+<tr><td>With crying, depression, palpitations, dream-disturbed sleep, propensity to be startled, pale and thin tongue, Choppy or Fine pulse</td><td>Heart-Blood deficiency</td></tr>
+</table>
+<div class="qr">Quick Recall: Depression/Anxiety/Worry/Grief all recur across the same short list of roots &mdash; Heart-Blood, Liver-Blood, Spleen-Qi, Lung-Qi, Kidney/Heart-Yin with Empty-Heat, Liver-Qi stagnation. Learn the ROOT mechanisms once; the specific emotion label matters less than the pattern underneath.</div>
+
+<div class="sec maroon">7 &middot; Sexual Symptoms (Question 14)</div>
+<div class="subhead">Men &mdash; Impotence</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>With feeling of cold, backache, abundant clear urination</td><td>Kidney-Yang deficiency</td></tr>
+<tr><td>With dizziness, palpitations, choppy pulse</td><td>Heart-Blood deficiency</td></tr>
+<tr><td>With palpitation, insomnia, dream-disturbed sleep, rapid overflowing pulse</td><td>Heart-Fire</td></tr>
+<tr><td>Heaviness of the scrotum, urethral discharge, sticky yellow coating</td><td>Damp-Heat in the Liver channel</td></tr>
+</table>
+
+<div class="subhead">Men &mdash; Lack of Libido</div>
+<p class="lede">Kidney-Yang or Qi deficiency &middot; Spleen deficiency &middot; Heart deficiency &middot; Lung deficiency &middot; Liver-Qi stagnation.</p>
+
+<div class="subhead">Men &mdash; Premature Ejaculation / Tiredness &amp; Dizziness After Ejaculation</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Premature ejaculation</td><td>Kidney-Qi not firm, Heart-Qi deficiency, or Heart-Blood deficiency</td></tr>
+<tr><td>Tiredness and dizziness after ejaculation</td><td>Deficiency of the Kidneys</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> Younger men presenting with premature ejaculation are more often Heart-related (settling of the Heart, performance anxiety); older men are more often Kidney-related. Don't jump straight to "Kidney" for every case &mdash; consider age and the rest of the picture.</div>
+
+<div class="subhead">Women &mdash; Lack of Libido &amp; Headache After Orgasm</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Lack of libido or inability to reach orgasm</td><td>Kidney or Heart deficiency, Kidney-Yang deficiency</td></tr>
+<tr><td>Excessive sexual desire</td><td>Liver or Heart-Fire, Empty-Heat from Kidney-Yin deficiency</td></tr>
+<tr><td>Inability to reach an orgasm</td><td>Heart deficiency</td></tr>
+<tr><td>Headache after orgasm</td><td>Rebellious Qi of the Penetrating Vessel (Chong Mai), or Heart-Fire</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> Sexual symptom patterns (lack of libido, excessive desire, inability to reach orgasm) are essentially the same mechanisms for men and women &mdash; Maciocia's text just happens to only list "excessive sexual desire" under the Women's section. Don't assume a pattern is sex-specific just because of where it's listed in the book.</div>
+
+<div class="sec maroon">8 &middot; Special Questions: Women's Health (Question 15)</div>
+<div class="subhead">Menstruation &mdash; Cycle &amp; Amount</div>
+<table class="ref"><tr><th>Feature</th><th>Pattern</th></tr>
+<tr><td>Periods always early</td><td>Blood-Heat, or Qi deficiency</td></tr>
+<tr><td>Periods always late</td><td>Blood deficiency, or stagnation of Blood or Cold</td></tr>
+<tr><td>Periods irregular (sometimes early, sometimes late)</td><td>Stagnation of Liver-Qi or Liver-Blood, or Spleen deficiency</td></tr>
+<tr><td>Heavy loss of blood</td><td>Blood-Heat, or Qi deficiency</td></tr>
+<tr><td>Scanty periods</td><td>Blood deficiency, or stagnation of Blood or Cold</td></tr>
+</table>
+
+<div class="subhead">Menstruation &mdash; Color, Quality &amp; Pain</div>
+<table class="ref"><tr><th>Feature</th><th>Pattern</th></tr>
+<tr><td>Dark-red or bright-red blood</td><td>Blood-Heat</td></tr>
+<tr><td>Pale blood</td><td>Blood deficiency</td></tr>
+<tr><td>Purple or blackish blood</td><td>Stasis of Blood or Cold</td></tr>
+<tr><td>Fresh-red blood</td><td>Empty-Heat from Yin deficiency</td></tr>
+<tr><td>Congealed blood with clots</td><td>Stasis of Blood or Cold</td></tr>
+<tr><td>Watery blood</td><td>Blood or Yin deficiency</td></tr>
+<tr><td>Turbid blood</td><td>Blood-Heat, or stagnation of Cold</td></tr>
+<tr><td>Pain before the period</td><td>Stagnation of Qi or Blood</td></tr>
+<tr><td>Pain during the period</td><td>Blood-Heat, or stagnation of Cold</td></tr>
+<tr><td>Pain after the period</td><td>Blood deficiency</td></tr>
+</table>
+<div class="qr">Quick Recall: dark/purple/clotted=stasis or Cold. Pale/watery=deficiency. Bright/fresh-red=Heat. Pain BEFORE=stagnation; pain AFTER=deficiency.</div>
+
+<div class="subhead">Leukorrhea (Vaginal Discharge)</div>
+<table class="ref"><tr><th>Feature</th><th>Pattern</th></tr>
+<tr><td>White</td><td>Cold, Spleen or Kidney-Yang deficiency, or exterior Cold-Damp</td></tr>
+<tr><td>Yellow</td><td>Damp-Heat in the Lower Burner</td></tr>
+<tr><td>Greenish-yellow</td><td>Damp-Heat in the Liver channel</td></tr>
+<tr><td>Red and white</td><td>Damp-Heat</td></tr>
+<tr><td>Yellow with pus and blood, after menopause</td><td>Toxic Damp-Heat in the uterus</td></tr>
+<tr><td>Watery consistency</td><td>Cold-Damp</td></tr>
+<tr><td>Thick/sticky consistency</td><td>Damp-Heat</td></tr>
+<tr><td>Fishy smell</td><td>Damp-Cold</td></tr>
+<tr><td>Leathery smell</td><td>Damp-Heat</td></tr>
+</table>
+
+<div class="subhead">Pregnancy &amp; Childbirth</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Infertility</td><td>Blood or Kidney Essence deficiency, Damp-Phlegm in the Lower Burner, or stasis/Cold in the uterus</td></tr>
+<tr><td>Vomiting during pregnancy</td><td>Stomach and Chong Vessel disharmony</td></tr>
+<tr><td>Miscarriage before 3 months</td><td>Blood or Essence deficiency</td></tr>
+<tr><td>Miscarriage after 3 months</td><td>Liver-Blood stasis, or sinking of Spleen-Qi</td></tr>
+<tr><td>Nausea and heavy bleeding after delivery</td><td>Exhaustion of the Chong (Penetrating) Vessel</td></tr>
+<tr><td>Sweating and fever after delivery</td><td>Exhaustion of Qi and Blood</td></tr>
+<tr><td>Post-natal depression</td><td>Heart-Blood deficiency (may also involve Pericardium, Spleen, or Liver &mdash; ask about the fuller picture)</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> The 3-month miscarriage cutoff is the differentiator: before 3 months think Blood/Essence deficiency (not enough to sustain); after 3 months think Liver-Blood stasis or Spleen-Qi sinking (a holding/stasis problem, not just insufficiency).</div>
+
+<div class="sec maroon">9 &middot; Special Questions: Children's Health (Question 16)</div>
+<p class="lede">The Spleen and Stomach are inherently weak in children as they fully develop &mdash; digestive symptoms dominate.</p>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Abdominal pain</td><td>Cold in the Stomach and Intestines, or Qi stagnation</td></tr>
+<tr><td>Vomiting of milk and colic in babies</td><td>Retention of food</td></tr>
+<tr><td>Cough, wheezing, earache</td><td>Invasion of Wind attacking the Lungs</td></tr>
+<tr><td>Chronic cough, wheezing with sticky sputum</td><td>Damp-Phlegm in the Lungs</td></tr>
+<tr><td>Chronic earache</td><td>Damp-Heat in the Gall Bladder channel</td></tr>
+<tr><td>Disturbed sleep with crying in babies</td><td>Retention of food, or Stomach-Heat</td></tr>
+<tr><td>Disturbed sleep in older children</td><td>Liver-Fire, or Stomach-Heat</td></tr>
+<tr><td>Skin rash, insomnia, change in character after immunizations</td><td>Latent Heat</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> Chronic earache in children is Damp-Heat in the <b>Gall Bladder</b> channel, not a generic "ear = Kidney" answer &mdash; know your deep channel pathways (the Gall Bladder channel has a well-documented ear pathway), not just the superficial map.</div>
+
+<div class="pb"></div>
+<div class="sec ">PART II &middot; Framework: 聞診 (W&eacute;n Zh&eacute;n) &mdash; The Second Pillar</div>
+<p class="lede">W&eacute;n Zh&eacute;n is the second of the Four Diagnostic Methods (望聞問切) and has two distinct components sharing one character (聞 &mdash; "to perceive with the ear/nose").</p>
+<table class="ref"><tr><th>Component</th><th>Covers</th></tr>
+<tr><td class="lbl">Hearing</td><td>Voice, breathing, cough, vomiting, hiccup, borborygmi, sighing, belching &mdash; any sound emitted by the patient</td></tr>
+<tr><td class="lbl jade">Smelling</td><td>Body odor, and odor of bodily secretions (breath, sweat, sputum, urine/stools, vaginal discharge, intestinal gas)</td></tr>
+</table>
+<div class="qr">Quick Recall: 聞診 = Hearing + Smelling, the 2nd of the Four Pillars (望聞問切).</div>
+
+<div class="sec ">10 &middot; Voice &amp; Zang-Fu Relationship</div>
+<table class="ref"><tr><th>Organ</th><th>Role</th><th>Governs</th></tr>
+<tr><td class="lbl">Lung</td><td>Gateway of the voice; movement of qi helps create sounds</td><td><b>Production</b> of sound</td></tr>
+<tr><td class="lbl">Kidney</td><td>Root of the voice; root of yuan qi, controls reception of qi</td><td><b>Volume</b> of the voice</td></tr>
+<tr><td class="lbl jade">Spleen &amp; Stomach</td><td>Acquired root of qi; influences vocalization</td><td><b>Strength</b> of the voice</td></tr>
+</table>
+<div class="qr">Quick Recall: Lung=production, Kidney=volume, Spleen/Stomach=strength.</div>
+
+<div class="sec jade">11 &middot; Voice &mdash; Basic Full/Empty Patterns</div>
+<table class="ref"><tr><th>Vocalization</th><th>Pattern</th></tr>
+<tr><td>Loud voice</td><td>Full or Heat pattern</td></tr>
+<tr><td>Weak voice</td><td>Empty or Cold pattern</td></tr>
+<tr><td>Weak and vague</td><td>Exterior wind-cold, or Dampness</td></tr>
+<tr><td>Reluctance to talk</td><td>Cold pattern or Lung-Qi deficiency</td></tr>
+<tr><td>Excessive talking</td><td>Heat</td></tr>
+<tr><td>Sudden loss of voice</td><td>Invasion of Wind-Heat</td></tr>
+<tr><td>Gradual loss of voice</td><td>Lung-Qi or Lung-Yin deficiency</td></tr>
+</table>
+<div class="qr">Quick Recall: Loud/excessive=Full/Heat. Weak/reluctant=Empty/Cold. Sudden loss=Wind-Heat invasion; gradual loss=Lung-Qi/Yin deficiency.</div>
+
+<div class="subhead">Abnormal Vocalizations: Hoarseness (by onset)</div>
+<table class="ref"><tr><th>Onset / Quality</th><th>Pattern</th></tr>
+<tr><td>Sudden onset, low pitch, raspy</td><td>Exterior syndrome</td></tr>
+<tr><td>Chronic with gradual intensity</td><td>Blood stagnation</td></tr>
+<tr><td>Hoarseness with plum-pit sensation &amp; cough</td><td>Phlegm-Heat</td></tr>
+<tr><td>Chronic onset, gradually increasing, worse in evening</td><td>Lung and Kidney Yin deficiency</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> "Worse in the evening" is the differentiator that flags Yin deficiency &mdash; don't just memorize "chronic," since Blood stagnation is also chronic but lacks the evening-worsening detail.</div>
+
+<div class="sec ">12 &middot; Breathing &amp; Respiration</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Coarse, loud breathing sound</td><td>Full pattern</td></tr>
+<tr><td>Weak, thin breathing sound</td><td>Empty pattern</td></tr>
+<tr><td>Deep breathing</td><td>Excess qi in the Heart and Lungs</td></tr>
+<tr><td>Weak breathing</td><td>Deficiency of qi in Liver and Kidney</td></tr>
+<tr><td>Rough respiration, rapid inhalation &amp; slow exhalation</td><td>Heat, excess, exogenous condition</td></tr>
+<tr><td>Faint respiration, slow inhalation and exhalation</td><td>Deficiency condition or chronic internal condition</td></tr>
+</table>
+
+<div class="subhead">Respiration &mdash; Excess/Heat vs. Empty/Cold</div>
+<table class="ref"><tr><th>Feature</th><th>Excess / Heat</th><th>Empty / Cold</th></tr>
+<tr><td>Sound of respiration</td><td>Loud</td><td>Low</td></tr>
+<tr><td>Breath quality</td><td>Rough and distressed</td><td>Faint and slow</td></tr>
+<tr><td>Onset</td><td>Acute</td><td>Relatively slow</td></tr>
+<tr><td>Mechanism</td><td>Surplus of external contraction of evil qi, or Phlegm-Heat invading the Lung</td><td>Internal damage causing insufficient Zheng Qi and Kidney/Lung Qi vacuity</td></tr>
+</table>
+<div class="qr">Quick Recall: Loud/rough/acute = Excess-Heat. Low/faint/slow-onset = Empty-Cold.</div>
+
+<div class="subhead">Panting (severe respiratory distress)</div>
+<p class="lede">Rapid, irregular respiration, extreme to the point that the nostrils move, with uneven entrance and exit of breath, opening of the mouth, raising of the shoulders, and difficulty lying down.</p>
+<table class="ref"><tr><th>Type</th><th>Presentation</th><th>Mechanism</th></tr>
+<tr><td class="lbl">Excess</td><td>Respiration irregular, chest full, sound loud and rough, exit of breath irregular and exhalation uneven</td><td>Disease/xie qi obstructing the Lung</td></tr>
+<tr><td class="lbl">Deficiency</td><td>Respiration irregular, breath timid, voice low, inhalation diminished and exhalation increased and rapid, breath not continuous, panting worse with movement</td><td>Kidney deficiency (unable to absorb qi) or Lung deficiency (unable to govern qi)</td></tr>
+</table>
+
+<div class="subhead">Abnormal Respiration Types</div>
+<table class="ref"><tr><th>Type</th><th>Mechanism</th></tr>
+<tr><td>Asthma</td><td>Lung qi's failure to descend</td></tr>
+<tr><td>Wheezing</td><td>Lung qi fails to descend with phlegm obstruction</td></tr>
+<tr><td>Upper Stifling</td><td>Lung qi rises upward to the throat and obstructs air tract</td></tr>
+<tr><td>Shortness of Breath</td><td>Lung qi deficiency, or Water Retention in the Chest (coughing up watery sputum)</td></tr>
+<tr><td>Shortage of Qi</td><td>Lung qi obstructed, Lung qi deficiency, Zheng qi insufficient</td></tr>
+</table>
+
+<div class="sec jade">13 &middot; Cough, Sneezing &amp; Reflexive Sounds</div>
+<div class="subhead">Cough &mdash; K&eacute; S&ograve;u 咳嗽</div>
+<p class="lede">Due to the Lung not diffusing and down-bearing, Lung qi rising counterflow, and Phlegm and Qi flooding the airways.</p>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Loud, explosive cough</td><td>Full pattern</td></tr>
+<tr><td>Weak cough</td><td>Empty pattern</td></tr>
+<tr><td>Dry cough</td><td>Lung-Yin deficiency</td></tr>
+<tr><td>Sound without phlegm</td><td>"Unproductive cough"</td></tr>
+<tr><td>Phlegm with sound</td><td>"Productive cough"</td></tr>
+</table>
+
+<div class="subhead">Sneezing</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Acute onset, constant loud sounds</td><td>Heat and/or excess condition</td></tr>
+<tr><td>Chronic, frequent, soft in volume</td><td>Lung deficiency</td></tr>
+<tr><td>Sudden sneezing in critical stage of chronic illness</td><td>Yang qi recovery</td></tr>
+<tr><td>Sneezing due to external stimulation</td><td>Normal</td></tr>
+</table>
+
+<div class="sec jade">14 &middot; Vomiting, Belching &amp; Hiccup</div>
+<p class="lede">All three share the same root mechanism &mdash; Rebellious Stomach Qi &mdash; and differ only in what is expelled and how.</p>
+<table class="ref"><tr><th>Symptom</th><th>Common Root</th><th>Differences</th></tr>
+<tr><td class="lbl">Vomiting</td><td rowspan="3">Rebellious ST Qi</td><td>Food, fluid or sputum flows up from the Stomach and out of the mouth with sound</td></tr>
+<tr><td class="lbl">Belching</td><td>Air or gas flows up from the stomach and makes sound passing through the throat</td></tr>
+<tr><td class="lbl">Hiccup</td><td>ST Qi's rebellion causes involuntary spasms of the diaphragm and makes a short sound</td></tr>
+</table>
+<table class="ref"><tr><th>Symptom</th><th>Deficiency/Cold Presentation</th><th>Excess/Heat Presentation</th></tr>
+<tr><td>Vomiting</td><td>Comes slowly, sound of retching relatively low, faint, and without force &mdash; frequently ST deficiency and Cold</td><td>Comes relatively suddenly, sound of retching relatively loud and forceful &mdash; frequently ST-Heat</td></tr>
+<tr><td>Belching</td><td>Short and low sound &mdash; ST-Qi deficiency, or ST-Qi deficiency with Cold</td><td>Loud and long sound &mdash; retention of food, ST-Heat, or LV-Qi invading the Stomach</td></tr>
+<tr><td>Hiccup</td><td>Quiet, low sound &mdash; often ST-Qi or ST-Yin deficiency</td><td>Loud sound &mdash; often LV-Qi invading the Stomach</td></tr>
+</table>
+<div class="qr">Quick Recall: All three = Rebellious ST Qi. Loud/forceful=Excess-Heat or LV invading ST. Quiet/faint=ST deficiency (Qi, Yin, or Cold).</div>
+
+<div class="sec jade">15 &middot; Borborygmi, Yawning &amp; Sighing</div>
+<div class="subhead">Borborygmi (gurgling sound in the intestines)</div>
+<table class="ref"><tr><th>Sound</th><th>Pattern</th><th>Subtypes</th></tr>
+<tr><td class="lbl">Loud</td><td>Full pattern (usually with diarrhea or dysentery)</td><td>Cold-damp in MB, Phlegm-damp in MB, LR/SP disharmony, Damp-Heat in ST &amp; Intestines</td></tr>
+<tr><td class="lbl">Low</td><td>Empty pattern</td><td>SP/KI yang deficiency, MB qi deficiency</td></tr>
+</table>
+
+<div class="subhead">Yawning</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Frequent, loud, relieved after yawn, induced by emotional changes</td><td>Liver Qi Stagnation</td></tr>
+<tr><td>Accompanied by chest pain, may occur after injury or chronic illness</td><td>Blood and Qi Stagnation</td></tr>
+<tr><td>Infrequent, weak or no sound</td><td>Spleen/Kidney Yang deficiency</td></tr>
+</table>
+
+<div class="subhead">Sighing</div>
+<p class="lede">Generally indicates Qi stagnation of the Liver or Lungs, often from emotional problems.</p>
+<table class="ref"><tr><th>Cause</th><th>Emotion / Mechanism</th></tr>
+<tr><td>Liver involvement</td><td>Repressed anger or frustration</td></tr>
+<tr><td>Lung involvement</td><td>Worry &amp; sadness</td></tr>
+<tr><td>Weak sound (alternate root)</td><td>Deficiency of Spleen and Heart, deriving from sadness, grief, or pensiveness</td></tr>
+</table>
+
+<div class="sec maroon">16 &middot; Five Element Sounds &mdash; 五音 W&#468; Y&#299;n</div>
+<p class="lede">Voice quality/expression, paired to the Five Elements. Distinct topic from the Five (named) Odors in Section 19 &mdash; don't conflate the two lists.</p>
+<table class="ref"><tr><th>Element</th><th>Sound</th><th>Pinyin / Hanzi</th><th>Character of the Sound</th></tr>
+<tr><td class="lbl">Wood</td><td>Shouting</td><td>H&#363; 呼</td><td>Gives forcefulness to the voice; an indication of assertion. When one shouts they want to be heard and/or are asking, explicitly or implicitly, for changes to be made. Frequently louder at moments when the person isn't really needing to be particularly assertive.</td></tr>
+<tr><td class="lbl">Fire</td><td>Laughing</td><td>Xi&agrave;o 笑</td><td>Occurs when expressing moments of joy. Doesn't necessarily mean an actual belly laugh &mdash; can include a "pre-laugh" without one emerging. Fire is a very yang Element, so just as laughter rises upwards and outwards, so does this sound.</td></tr>
+<tr><td class="lbl jade">Earth</td><td>Singing</td><td>Ch&agrave;ng 唱</td><td>May occur naturally when singing a lullaby with a child in arms, or soothing an anxious or distressed animal/person. Has increased variation in pitch &mdash; the voice goes up and down more frequently.</td></tr>
+<tr><td class="lbl">Metal</td><td>Weeping</td><td>&mdash; (no pinyin/hanzi given on slide)</td><td>Consumes or dissolves qi. More of a non-verbal sound but based on an expressive, emotional quality. When speaking with a weep the person might easily begin to cry; other times there could be a choking back or a faltering in the words.</td></tr>
+<tr><td class="lbl maroon">Water</td><td>Groaning</td><td>&mdash; (no pinyin/hanzi given on slide)</td><td>Has little movement or modulation in its quality &mdash; a flatness, as if the more normal ups and downs of the voice have been squeezed or flattened out.</td></tr>
+</table>
+<div class="qr">Quick Recall: Shout=Wood, Laugh=Fire, Sing=Earth, Weep=Metal, Groan=Water &mdash; same order as the standard Five Element cycle.</div>
+
+<div class="sec maroon">17 &middot; The Six Healing Sounds &mdash; Li&ugrave; Z&igrave; Ju&eacute;</div>
+<table class="ref"><tr><th>Sound</th><th>Organ</th><th>Effect</th></tr>
+<tr><td>X&#363; 嘘</td><td class="lbl">Liver</td><td>Removes heat, disperses blockages, brings brightness to the eyes</td></tr>
+<tr><td>H&#275; 呵</td><td class="lbl">Heart</td><td>Expels heat, makes qi descend, reduces fire in the heart</td></tr>
+<tr><td>H&#363; 呼</td><td class="lbl jade">Spleen</td><td>Drives out heat, strengthens the spleen in all four seasons</td></tr>
+<tr><td>S&igrave; 呬</td><td class="lbl">Lung</td><td>Moderates stress, calms the qi, moistens the lungs</td></tr>
+<tr><td>Chu&#299; 吹</td><td class="lbl maroon">Kidney</td><td>Removes wind and cold, urges stagnant qi, brings tranquility to the kidneys</td></tr>
+<tr><td>X&#299; 嘻</td><td>Triple Burner</td><td>Clears heat and restlessness, drives out strong emotional afflictions</td></tr>
+</table>
+<div class="heads-up"><b>Heads Up &mdash;</b> H&#363; 呼 appears twice with two different meanings: the <b>Shouting</b> voice sound (Wood, Section 16) and the <b>Spleen</b> Healing Sound (this section). Same pinyin/hanzi, different context &mdash; know which table you're in before answering.</div>
+
+<div class="sec maroon">18 &middot; Diagnosis by Smelling &mdash; Framework</div>
+<table class="ref"><tr><th>Aspect</th><th>Tells the Practitioner</th></tr>
+<tr><td class="lbl">First: Odor of the patient's body itself</td><td>Can indicate not only the pattern of disharmony but also the patient's constitutional type</td></tr>
+<tr><td class="lbl jade">Second: Odor of certain bodily secretions</td><td>Used only to identify the nature of the pattern of disharmony</td></tr>
+</table>
+<table class="ref"><tr><th>Rule</th><th>Indicates</th></tr>
+<tr><td>Strong and/or foul, rotten, fetid, stinking smell</td><td>Heat or Excess</td></tr>
+<tr><td>Absence of smell, or fishy smell</td><td>Cold or Deficient</td></tr>
+</table>
+<div class="qr">Quick Recall: Generally, strong/foul = Heat. Absent/fishy = Cold. Applies across nearly every secretion below.</div>
+
+<div class="subhead">Body Odor</div>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Goatish odor</td><td>Wind, damp, heat accumulation</td></tr>
+<tr><td>Foul, stinking (fox-like)</td><td>Epidemic infectious disease, or summer heat toxin</td></tr>
+<tr><td>Foul, set in the armpit</td><td>Damp-heat accumulation</td></tr>
+</table>
+
+<div class="sec maroon">19 &middot; The Five (Named) Odors</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Unlike the Five Element Sounds (Section 16), these five odor-description slides do NOT explicitly label each smell with a Zang-Fu element. Also, the "Scorched" slide title uses the character xi&agrave;o 笑 &mdash; the same hanzi as "Laughing" from Section 16. Classically the Fire-element scorched odor is ji&#257;o 焦, a different character. This looks like a copy/paste label error on the lecture slide &mdash; confirm with Prof. Schrier rather than memorizing 笑 for "scorched," and don't assume the classical Wood/Fire/Earth/Metal/Water odor pairing (sour&ndash;scorched&ndash;fragrant&ndash;rank&ndash;putrid) maps 1:1 onto this list without confirming it in class.</div>
+<table class="ref"><tr><th>Odor</th><th>Sensory Description</th></tr>
+<tr><td class="lbl">Rancid (S&#333;u 餿)</td><td>Associated with fat that is no longer fresh or slightly sour. Also related to the smell of newly-mown grass, but not pleasant. Effect on the inside of the nose is somewhat prickling and makes one wrinkle their nose.</td></tr>
+<tr><td class="lbl">Scorched</td><td>Resembles what someone would describe as the smell in life &mdash; e.g. burnt toast, clothes coming out of the tumble dryer, a shirt just scorched while ironing.</td></tr>
+<tr><td class="lbl jade">Fragrant (Xi&#257;ng 香)</td><td>Often thought of as a pleasing smell such as flowers, but this odor is the opposite and not as pleasing &mdash; more associated with a cloying, sickly sweet smell with a tendency to linger in the nostrils.</td></tr>
+<tr><td class="lbl">Rotten (L&agrave;n 爛)</td><td>Fills the inside of one's nose with tiny prickles and may make one clench the inside of their nose. Rotting meat is the best verbal description, or a trash can/garbage truck where many substances are decomposing.</td></tr>
+<tr><td class="lbl maroon">Putrid (F&#468; 腐)</td><td>Described as the smell of rotting meat. Can describe the smell of water in a stagnant pond or the smell of stale urine. Has a sharp and aggressive quality, making one's nose clench up.</td></tr>
+</table>
+
+<div class="sec maroon">20 &middot; Odor of Bodily Secretions</div>
+<div class="subhead">Breath</div>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Strong, foul</td><td>Stomach Heat or retention of food</td></tr>
+<tr><td>Sour</td><td>Retention of food, Accumulation Disorder</td></tr>
+<tr><td>Foul, pungent</td><td>Damp-Heat in Stomach and Spleen</td></tr>
+<tr><td>Rotten</td><td>Damp-Heat in Large Intestine</td></tr>
+<tr><td>Fishy</td><td>Phlegm-Heat in Lung</td></tr>
+</table>
+
+<div class="subhead">Sweat</div>
+<p class="lede">Related to Dampness because the fluids forming sweat come from the space between the skin and muscles, where Dampness often accumulates.</p>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Strong-smelling</td><td>Damp-Heat</td></tr>
+<tr><td>Putrid-smelling</td><td>Indicates a disease of the Lungs, Liver, or Kidneys</td></tr>
+</table>
+
+<div class="subhead">Sputum</div>
+<table class="ref"><tr><th>Odor</th><th>Pattern</th></tr>
+<tr><td>Strong-smelling, often smelling rotten</td><td>Heat in the Lungs, usually Phlegm-Heat or Toxic Heat</td></tr>
+<tr><td>Fishy-smelling</td><td>Lung-Heat</td></tr>
+<tr><td>Without smell</td><td>Cold</td></tr>
+</table>
+
+<div class="subhead">Stool &amp; Flatulence</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Extremely stinky, foul odor, diarrhea with pus or blood</td><td>Damp-Heat in the Intestines</td></tr>
+<tr><td>Sour and foul odor with indigestion</td><td>Food stagnation</td></tr>
+<tr><td>Fishy odor with loose stools</td><td>Cold in Spleen/Stomach</td></tr>
+<tr><td>Slight or odorless flatulence, aggravated by emotional stress</td><td>Liver qi stagnation</td></tr>
+<tr><td>Flatulence smells rancid and rotten, like rotten eggs</td><td>Toxic Heat in the Large Intestines</td></tr>
+<tr><td>Abnormal stool color but without odor, or frequent flatulence without strong odor</td><td>ST/LI qi deficiency</td></tr>
+</table>
+
+<div class="subhead">Urine</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Frequent, urgent, painful, burning, turbid yellow with foul odor</td><td>Damp-Heat in Bladder</td></tr>
+<tr><td>Heavy smell of urea, scanty yellow urine</td><td>Heart fire pouring downward into Bladder</td></tr>
+<tr><td>Clear, frequent, odorless or with a slightly fishy odor</td><td>Kidney deficiency</td></tr>
+<tr><td>Odorless urinary incontinence</td><td>Exhaustion of Kidney fire</td></tr>
+</table>
+
+<div class="subhead">Vaginal Discharge</div>
+<table class="ref"><tr><th>Presentation</th><th>Pattern</th></tr>
+<tr><td>Strong-smelling, leathery smell</td><td>Damp-Heat</td></tr>
+<tr><td>Fishy smell</td><td>Damp-Cold</td></tr>
+<tr><td>Strong-smelling lochia after childbirth</td><td>Damp-Heat or Toxic Heat in the Uterus</td></tr>
+</table>
+
+<div class="subhead">Odors of Nose, Ears, Eyes</div>
+<table class="ref"><tr><th>Site</th><th>Presentation</th><th>Pattern</th></tr>
+<tr><td class="lbl">Nose</td><td>Yellow, sticky discharge with foul odor</td><td>Heat in Lung or Damp-Heat in SP &amp; ST</td></tr>
+<tr><td class="lbl">Ears</td><td>Foul, fishy odor emanating from ears with turbid pus and discharge</td><td>Damp-Heat in the ear</td></tr>
+<tr><td class="lbl">Eyes</td><td>Red, swollen eyes with turbid tears accompanied by foul, fishy odor, or ulcerations around the eyes</td><td>Damp-Heat in the Liver channel</td></tr>
+</table>
+<div class="qr">Quick Recall: Across nearly every secretion, foul/strong/rotten = Heat or Damp-Heat; fishy or odorless leans Cold or Deficiency &mdash; the general rule from Section 18 holds.</div>
+
+<div class="sec ">21 &middot; Vocabulary Table</div>
+<table class="ref"><tr><th>Character</th><th>Pinyin</th><th>English</th><th>Note</th></tr>
+<tr><td>聞診</td><td>W&eacute;n Zh&eacute;n</td><td>Diagnosis by Hearing &amp; Smelling</td><td>2nd of the Four Diagnostic Methods (望聞問切)</td></tr>
+<tr><td>呼</td><td>H&#363;</td><td>Shout (voice sound)</td><td>Wood-element voice sound &mdash; forcefulness, assertion; ALSO the Spleen Healing Sound</td></tr>
+<tr><td>笑</td><td>Xi&agrave;o</td><td>Laugh (voice sound)</td><td>Fire-element voice sound &mdash; expression of joy; also mislabels the "Scorched" odor slide</td></tr>
+<tr><td>唱</td><td>Ch&agrave;ng</td><td>Sing (voice sound)</td><td>Earth-element voice sound &mdash; soothing, wide pitch variation</td></tr>
+<tr><td>咳嗽</td><td>K&eacute; S&ograve;u</td><td>Cough</td><td>Lung qi rising counterflow + Phlegm/Qi flooding the airways</td></tr>
+<tr><td>嘘</td><td>X&#363;</td><td>"Xu" Healing Sound</td><td>Liver &mdash; removes heat, clears blockages, brightens the eyes</td></tr>
+<tr><td>呵</td><td>H&#275;</td><td>"He" Healing Sound</td><td>Heart &mdash; expels heat, makes qi descend, reduces fire</td></tr>
+<tr><td>呬</td><td>S&igrave;</td><td>"Si" Healing Sound</td><td>Lung &mdash; moderates stress, calms qi, moistens the lungs</td></tr>
+<tr><td>吹</td><td>Chu&#299;</td><td>"Chui" Healing Sound</td><td>Kidney &mdash; removes wind-cold, urges stagnant qi</td></tr>
+<tr><td>嘻</td><td>X&#299;</td><td>"Xi" Healing Sound</td><td>Triple Burner &mdash; clears heat/restlessness, emotional afflictions</td></tr>
+<tr><td>餿</td><td>S&#333;u</td><td>Rancid odor</td><td>Fat no longer fresh / newly-mown grass, unpleasant</td></tr>
+<tr><td>香</td><td>Xi&#257;ng</td><td>Fragrant odor</td><td>Cloying, sickly sweet &mdash; NOT actually pleasant in this context</td></tr>
+<tr><td>爛</td><td>L&agrave;n</td><td>Rotten odor</td><td>Rotting meat / decomposing trash</td></tr>
+<tr><td>腐</td><td>F&#468;</td><td>Putrid odor</td><td>Rotting meat / stagnant water smell</td></tr>
+</table>
+
+<div class="sec maroon">22 &middot; Clinical Case &mdash; Apply It</div>
+<div class="clinical"><b>Ms. Delgado, 29 years old, a competitive ballroom dancer</b> &mdash; presents 3 days before a competition with cold, tingling fingertips that turn pale mid-routine, irritability she describes as "on edge," and a feeling of a lump in her throat she can't clear when she's stressed about choreography changes. She sighs frequently during warmups. Her periods have been irregular this season &mdash; sometimes early, sometimes 10 days late &mdash; with clotted, dark blood and cramping that eases once bleeding starts. Voice is otherwise normal volume; no cough or breath-odor complaints.
+<br><br><b>Working through it:</b> Cold, tingling fingertips &rarr; <b>Liver-Qi stagnation</b> (Part I, Section 1 &mdash; Liver Qi can't send Qi/Blood to the extremities, tips especially). Irritability + lump in the throat she can't clear &rarr; <b>Liver-Qi stagnation with Qi-Phlegm (Plum-Pit Qi)</b> (Part I, Section 6). Frequent sighing &rarr; consistent with <b>Liver Qi stagnation</b> from repressed frustration (Part II, Section 15). Irregular periods (sometimes early, sometimes late) &rarr; <b>stagnation of Liver-Qi or Liver-Blood</b> (Part I, Section 8). Clotted, dark blood with pain that eases once bleeding starts &rarr; <b>stasis of Blood</b>, pain-before-period pattern pointing to <b>stagnation of Qi or Blood</b> (Part I, Section 8).
+<br><br><b>Working TCM pattern:</b> Liver-Qi stagnation, affecting the extremities, throat (Plum-Pit Qi), and menstruation &mdash; a single unifying mechanism across four different intake categories.
+<br><br><b>Dance-medicine note:</b> Cold, stagnant Liver-Qi at the fingertips is a real performance concern for a dancer relying on fine hand articulation (a hallmark of American Rhythm styling) &mdash; and pre-competition stress is a classic trigger for Liver-Qi stagnation to flare. This is exactly the kind of case where Inquiry findings across seemingly unrelated categories (limbs, throat, emotions, menstruation) converge on one root pattern.</div>
+
+<div class="footer-tag">EAM310 Week 9 Study Guide &middot; Sources: Prof. Schrier lecture transcript &amp; slides (Inquiry deck 661&ndash;730, Hearing/Smelling deck 731&ndash;781) &middot; Maciocia FCM 3rd ed. &middot; Cheng Xinnong CAM 4th ed.</div>
+
+</body>
+</html>
