@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EAM310 Week 9 Quiz Pack</title>
+<style>
+@page {
+  size: 714pt 945pt;
+  margin: 40pt 44pt 46pt 44pt;
+  @bottom-right {
+    content: "温故知新   온고지신";
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5pt;
+    color: #c9c9c9;
+  }
+}
+:root {
+  --navy: #24395c; --jade: #16805f; --gold: #c9a226; --maroon: #7a2530;
+  --paper: #ffffff; --ink: #24395c; --muted: #5b6b85; --hairline: #d8dce4; --cream: #faf6ec;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif; color: var(--ink); font-size: 9.3pt;
+  line-height: 1.42; margin:0; padding:0; background: var(--paper);
+  orphans: 3; widows: 3;
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; margin:0; }
+
+.cover { position: relative; padding-left: 26pt; min-height: 760pt; }
+.cover::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4pt; background: var(--navy); }
+.cover h1 {
+  font-size: 30pt; font-weight:700; color:var(--navy); line-height:1.15;
+  padding-bottom: 10pt; border-bottom: 3pt solid var(--gold); display:inline-block;
+  margin-top: 46pt; max-width: 540pt;
+}
+.cover .subtitle { margin-top:14pt; font-size:12pt; color:var(--muted); }
+.cover .prof { margin-top:4pt; font-size:12pt; color:var(--muted); }
+.howto {
+  margin-top: 26pt; background: var(--cream); border-left: 4pt solid var(--gold);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.target {
+  margin-top: 14pt; background: #f1f7f4; border-left: 4pt solid var(--jade);
+  padding: 14pt 18pt; max-width: 460pt; font-size: 9pt; color: var(--navy);
+}
+.howto b, .target b { color: var(--navy); }
+.target b { color: var(--jade); }
+.cover-tags { position:absolute; right:0; bottom:30pt; text-align:right; }
+.tag {
+  display:inline-block; border:1pt solid var(--navy); border-radius:3pt;
+  padding:4pt 12pt; font-size:9pt; font-weight:600; color:var(--navy); margin-bottom:6pt;
+}
+.tag.gold { border-color: var(--gold); color: var(--gold); }
+.tag-wrap { display:block; }
+
+.pb { page-break-after: always; break-after: page; height:0; line-height:0; margin:0; padding:0; }
+
+.sec {
+  background: var(--navy); color:#fff; font-weight:700; font-size: 12pt;
+  padding: 8pt 12pt; margin: 18pt 0 10pt 0;
+  page-break-inside: avoid; break-inside: avoid; page-break-after: avoid; break-after: avoid;
+}
+.sec.jade { background: var(--jade); }
+.sec.maroon { background: var(--maroon); }
+.subhead {
+  font-weight:700; font-size:10pt; color:var(--navy); margin:12pt 0 4pt 0;
+  border-bottom: 1.5pt solid var(--gold); padding-bottom:2pt;
+  page-break-after: avoid; break-after: avoid;
+}
+.heads-up {
+  background: #fff8e5; border: 1pt solid var(--gold); border-left: 4pt solid var(--gold);
+  padding: 8pt 12pt; margin: 8pt 0 10pt 0; font-size: 8.6pt; color: var(--navy);
+  page-break-inside: avoid; break-inside: avoid;
+}
+.heads-up b { color: var(--maroon); }
+
+/* Question formatting */
+.q { margin: 12pt 0 10pt 0; page-break-inside: avoid; break-inside: avoid; }
+.q .stem { font-size: 9.4pt; color: var(--navy); }
+.q .num { font-weight: 700; color: var(--navy); }
+.q .opt { font-size: 9.2pt; color: var(--ink); margin: 2pt 0 2pt 14pt; }
+.q .tf { font-size: 8.3pt; color: var(--muted); margin: 3pt 0 0 14pt; }
+.q .line { border-bottom: 0.75pt solid var(--hairline); height: 14pt; margin: 3pt 0; }
+.q hr { border: none; border-top: 0.5pt solid var(--hairline); margin: 10pt 0; }
+
+table.ref { width:100%; border-collapse: collapse; margin-bottom: 8pt; }
+table.ref th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.ref td { border-bottom: 0.75pt solid var(--hairline); padding: 5pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.ref tr:nth-child(even) td { background: #f7f9fc; }
+td.answer { font-weight: 600; color: var(--navy); }
+.pinyin { color: var(--jade); font-style: italic; font-size: 8pt; }
+.mnem { font-style: italic; color: var(--muted); }
+
+table.drill { width:100%; border-collapse: collapse; margin-bottom: 10pt; }
+table.drill th { background: var(--navy); color:#fff; font-size:8.4pt; text-align:left; padding:5pt 7pt; }
+table.drill td { border-bottom: 0.75pt solid var(--hairline); padding: 6pt 7pt; font-size: 8.6pt; vertical-align: top; page-break-inside: avoid; break-inside: avoid; }
+table.drill tr:nth-child(even) td { background: #f7f9fc; }
+td.desc { width: 58%; }
+td.ans { width: 42%; font-weight: 600; color: var(--navy); }
+td.ans .sub { font-weight: 400; color: var(--muted); font-size: 8.2pt; display:block; margin-top:2pt; }
+
+.errorlog-row td { border-bottom: 1pt solid var(--hairline); padding: 10pt 7pt; height: 20pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:9.5pt;color:#5b6b85;">EAM310 &middot; East Asian Medicine Diagnosis I &middot; VUIM &middot; Summer 2026</div>
+  <h1>Quiz Pack</h1>
+  <div class="subtitle">65 Questions + 4 Matching Sets &middot; True/False &middot; Multiple Choice &middot; Fill-in-Blank &middot; Matching &middot; Active Recall &middot; Full Answer Key</div>
+  <div class="prof">Week 9 &middot; Inquiry Continued (Limbs&ndash;Children) &amp; Diagnosis by Hearing &amp; Smelling &mdash; 聞診 &middot; Lecture 9 (Final Lecture)</div>
+  <div class="heads-up" style="max-width:460pt;margin-top:18pt;"><b>Source note:</b> Built from Prof. Schrier's Week 9 lecture transcript, cross-checked against the Inquiry slide deck (661&ndash;730) and the Hearing &amp; Smelling slide deck (731&ndash;781).</div>
+  <div class="cover-tags">
+    
+    <span class="tag-wrap"><span class="tag">Print Edition</span></span>
+  </div>
+</div>
+<div class="pb"></div>
+
+<div class="howto"><b>How to use this pack:</b> Take the parts in order &mdash; built easy &rarr; hard on purpose. Close every source before starting. This is your last quiz pack before the Final.</div>
+<div class="target"><b>Target scores:</b> Part A: 90%+ (if lower, the base isn't set) &middot; Part B/C: 85%+ &middot; Part D/E: 80%+ &middot; 80%+ overall means genuinely ready.</div>
+
+<div class="sec ">PART A &middot; Active Recall &mdash; Write From Memory</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Cover all sources. Write your answer on the line before checking the key.</div>
+<div class="q"><span class="num">1.</span> <span class="stem">What differentiates tingling vs. numbness in limb weakness, per pattern?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">2.</span> <span class="stem">What is the significance of cold fingertips specifically (vs. generally cold hands)?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">3.</span> <span class="stem">What organs must be sufficiently supplied with Blood for the Mind/Shen and Ethereal Soul/Hun to be anchored for sleep?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">4.</span> <span class="stem">Contrast difficulty FALLING asleep vs. excessive DREAMING vs. WAKING repeatedly at night &mdash; which organ/mechanism does each point toward?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">5.</span> <span class="stem">Why is dream-symbolism material (the N&egrave;ij&#299;ng passages) excluded from testable material this week?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">6.</span> <span class="stem">What does sweating on the palms, soles, and chest indicate, and what is this presentation called?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">7.</span> <span class="stem">Daytime sweating vs. night sweating &mdash; what does each indicate?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">8.</span> <span class="stem">Sudden vs. gradual onset of tinnitus &mdash; what pattern type does each indicate?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">9.</span> <span class="stem">What determines the intensity of a "fever," according to Prof. Schrier's slides?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">10.</span> <span class="stem">What is the difference between "aversion to cold" and "fever" in terms of subjective vs. objective?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">11.</span> <span class="stem">Why does the tongue often show a red tip in emotional distress regardless of which organ/emotion is primary?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">12.</span> <span class="stem">Name three different root patterns that can underlie insomnia with palpitations.</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">13.</span> <span class="stem">What TCM pattern corresponds to the Western description of a "heart attack," and what are its key signs?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">14.</span> <span class="stem">Why do younger men with premature ejaculation more often get treated via the Heart, while older men get treated via the Kidneys?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">15.</span> <span class="stem">What differentiates menstrual pain that occurs BEFORE the period from pain that occurs AFTER the period?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">16.</span> <span class="stem">What is the 3-month cutoff used for in Inquiry about pregnancy, and what pattern applies on each side of it?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">17.</span> <span class="stem">Why is chronic earache in a child attributed to the Gall Bladder channel rather than the Kidney?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">18.</span> <span class="stem">What are the two components of 聞診 (W&eacute;n Zh&eacute;n)?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">19.</span> <span class="stem">Which three organs govern the voice, and what aspect does each govern?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">20.</span> <span class="stem">What is the shared root mechanism of vomiting, belching, and hiccup?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">21.</span> <span class="stem">List the Five Element Sounds and their elements.</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">22.</span> <span class="stem">Name the Six Healing Sounds and their target organs.</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">23.</span> <span class="stem">What is the general rule linking smell strength/quality to Heat vs. Cold?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">24.</span> <span class="stem">What copy/paste-style error appears on the "Scorched" odor slide?</span><div class="line"></div><div class="line"></div></div>
+<div class="q"><span class="num">25.</span> <span class="stem">What sound does H&#363; 呼 refer to in two different contexts across the whole deck?</span><div class="line"></div><div class="line"></div></div>
+
+<div class="pb"></div>
+<div class="sec maroon">PART B &middot; True / False</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Mark each statement T or F. About a third are deliberately false &mdash; including a few classic trap statements.</div>
+<table class="ref"><tr><th>#</th><th>Statement</th><th>Answer</th></tr>
+<tr><td style="width:6%">1.</td><td style="width:84%">Numbness that is unilateral is usually caused by Wind or Wind-Phlegm.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">2.</td><td style="width:84%">Tremors always indicate Liver-Wind, but the Wind can be either excess or deficiency type.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">3.</td><td style="width:84%">Cold feet in women specifically is attributed to Liver-Blood deficiency.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">4.</td><td style="width:84%">Difficulty falling asleep is most often attributed to the Liver, not the Heart.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">5.</td><td style="width:84%">Dream-symbolism material from the N&egrave;ij&#299;ng is explicitly marked as tested material this week.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">6.</td><td style="width:84%">Oily sweat on the forehead, like pearls and not flowing, indicates Collapse of Yang and can signal imminent death.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">7.</td><td style="width:84%">Daytime sweating indicates Yin deficiency.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">8.</td><td style="width:84%">Tinnitus that is aggravated by pressing on the ear indicates an Empty condition.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">9.</td><td style="width:84%">Low-pitched tinnitus like rushing water indicates Kidney deficiency.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">10.</td><td style="width:84%">The intensity of a "fever" depends on whether the pathogen is Wind-Cold or Wind-Heat.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">11.</td><td style="width:84%">A constant low-grade temperature that doesn't fully resolve with sweating suggests Damp-Heat.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">12.</td><td style="width:84%">Only the Heart is capable of "knowing" what an emotion is; other organs are affected by emotion without being conscious of it.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">13.</td><td style="width:84%">Severe anxiety with stabbing chest pain radiating to the inner left arm and a purple tongue corresponds to Heart-Blood stasis.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">14.</td><td style="width:84%">Worry that increases after the menstrual period in women points to Liver-Blood deficiency.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">15.</td><td style="width:84%">Sexual-symptom patterns (lack of libido, excessive desire) are fundamentally different mechanisms for men vs. women.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">16.</td><td style="width:84%">Premature ejaculation in older men is more often treated via the Heart than the Kidneys.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">17.</td><td style="width:84%">Purple or blackish menstrual blood with clots indicates stasis of Blood or Cold.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">18.</td><td style="width:84%">Pain that occurs BEFORE the menstrual period generally indicates a deficiency pattern.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">19.</td><td style="width:84%">Miscarriage occurring after 3 months of pregnancy is attributed to Liver-Blood stasis or sinking of Spleen-Qi.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">20.</td><td style="width:84%">Chronic earache in children is attributed to Damp-Heat in the Gall Bladder channel.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">21.</td><td style="width:84%">Kidney governs the production of the voice.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">22.</td><td style="width:84%">A weak, thin breathing sound indicates a Full pattern.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">23.</td><td style="width:84%">Hoarseness that is chronic and worse in the evening points to Blood stagnation.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">24.</td><td style="width:84%">The Weeping voice sound is paired with the Metal element.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">25.</td><td style="width:84%">The general smell rule states that a strong or foul odor indicates Cold.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">26.</td><td style="width:84%">The Five (named) Odor slides explicitly pair each odor with a Zang-Fu element.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">27.</td><td style="width:84%">Odorless urinary incontinence indicates Kidney Yin deficiency.</td><td style="width:10%">T / F</td></tr>
+<tr><td style="width:6%">28.</td><td style="width:84%">Sneezing due to external stimulation (e.g. dust, pepper) is considered a normal reaction, not a pattern.</td><td style="width:10%">T / F</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec jade">PART C &middot; Multiple Choice</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Standard 4-option format. Distractors are drawn from real adjacent content &mdash; read all four before picking.</div>
+<div class="q"><span class="num">1.</span> <span class="stem">Feeling of heaviness and/or swelling in the limbs points to:</span><div class="opt">A. Blood deficiency</div><div class="opt">B. Wind or Wind-Phlegm</div><div class="opt">C. Dampness</div><div class="opt">D. Qi or Blood stagnation</div></div>
+<div class="q"><span class="num">2.</span> <span class="stem">Atrophy/Flaccidity in its beginning stages is due to:</span><div class="opt">A. Liver and Kidney Yin deficiency</div><div class="opt">B. Stomach and Spleen-Qi deficiency</div><div class="opt">C. Spleen and Kidney Yang deficiency</div><div class="opt">D. Liver-Wind, excess type</div></div>
+<div class="q"><span class="num">3.</span> <span class="stem">Which of the following is NOT one of the listed causes of "not being able to fall or stay asleep" (Empty Condition)?</span><div class="opt">A. Deficiency of Blood not anchoring the Mind/Shen</div><div class="opt">B. Deficiency of Blood not anchoring the Ethereal Soul/Hun</div><div class="opt">C. Retention of food</div><div class="opt">D. Excess Liver-Fire agitating the Mind (a Full condition)</div></div>
+<div class="q"><span class="num">4.</span> <span class="stem">Sweating that occurs only on the arms and legs indicates:</span><div class="opt">A. Lung-Qi deficiency</div><div class="opt">B. Stomach and Spleen deficiency</div><div class="opt">C. Kidney-Yang deficiency</div><div class="opt">D. Collapse of Yang</div></div>
+<div class="q"><span class="num">5.</span> <span class="stem">A high-pitched tinnitus like a whistle or cicada points to:</span><div class="opt">A. Kidney deficiency</div><div class="opt">B. Liver-Yang, Liver-Fire, or Liver-Wind</div><div class="opt">C. Spleen-Qi deficiency</div><div class="opt">D. Lung-Qi deficiency</div></div>
+<div class="q"><span class="num">6.</span> <span class="stem">According to the slides, what determines the intensity of a "fever" in exterior disease?</span><div class="opt">A. Whether the pathogen is Wind-Cold or Wind-Heat</div><div class="opt">B. The struggle between Zheng Qi and the pathogenic factor</div><div class="opt">C. The season in which the illness occurs</div><div class="opt">D. The patient's baseline body temperature</div></div>
+<div class="q"><span class="num">7.</span> <span class="stem">Alternating feeling of cold and heat indicates the pathogen is at which stage?</span><div class="opt">A. Tai Yang</div><div class="opt">B. Yang Ming</div><div class="opt">C. Shao Yang</div><div class="opt">D. Jue Yin</div></div>
+<div class="q"><span class="num">8.</span> <span class="stem">Depression with insomnia, palpitations, tiredness, weak limbs, and loose stools indicates:</span><div class="opt">A. Liver-Qi stagnation</div><div class="opt">B. Spleen and Heart-Blood deficiency</div><div class="opt">C. Kidney-Yang deficiency</div><div class="opt">D. Phlegm-Fire harassing the Mind</div></div>
+<div class="q"><span class="num">9.</span> <span class="stem">Severe anxiety with palpitations, manic behavior, mental confusion, and a swollen tongue indicates:</span><div class="opt">A. Heart-Blood stasis</div><div class="opt">B. Liver-Fire</div><div class="opt">C. Phlegm-Fire harassing the Mind</div><div class="opt">D. Heart-Yin deficiency with Empty-Heat</div></div>
+<div class="q"><span class="num">10.</span> <span class="stem">Impotence with feeling of cold, backache, and abundant clear urination indicates:</span><div class="opt">A. Heart-Blood deficiency</div><div class="opt">B. Kidney-Yang deficiency</div><div class="opt">C. Damp-Heat in the Liver channel</div><div class="opt">D. Heart-Fire</div></div>
+<div class="q"><span class="num">11.</span> <span class="stem">Which of the following is TRUE regarding excessive sexual desire?</span><div class="opt">A. It only occurs in women, per the underlying mechanism</div><div class="opt">B. It can result from Liver or Heart-Fire, or Empty-Heat from Kidney-Yin deficiency, in either sex</div><div class="opt">C. It is always a sign of Kidney-Yang excess</div><div class="opt">D. It cannot be differentiated from lack of libido</div></div>
+<div class="q"><span class="num">12.</span> <span class="stem">Periods that are irregular &mdash; sometimes early, sometimes late &mdash; most likely indicate:</span><div class="opt">A. Blood-Heat</div><div class="opt">B. Stagnation of Liver-Qi or Liver-Blood, or Spleen deficiency</div><div class="opt">C. Kidney-Yang deficiency</div><div class="opt">D. Exhaustion of the Chong Vessel</div></div>
+<div class="q"><span class="num">13.</span> <span class="stem">Vomiting during pregnancy is attributed to:</span><div class="opt">A. Liver-Blood stasis</div><div class="opt">B. Stomach and Chong Vessel disharmony</div><div class="opt">C. Sinking of Spleen-Qi</div><div class="opt">D. Kidney Essence deficiency</div></div>
+<div class="q"><span class="num">14.</span> <span class="stem">Which organ governs the production of sound, per the slides?</span><div class="opt">A. Kidney</div><div class="opt">B. Lung</div><div class="opt">C. Spleen</div><div class="opt">D. Heart</div></div>
+<div class="q"><span class="num">15.</span> <span class="stem">Hoarseness with a plum-pit sensation and cough points to:</span><div class="opt">A. Exterior syndrome</div><div class="opt">B. Blood stagnation</div><div class="opt">C. Phlegm-Heat</div><div class="opt">D. Lung and Kidney Yin deficiency</div></div>
+<div class="q"><span class="num">16.</span> <span class="stem">Panting due to Kidney deficiency occurs because:</span><div class="opt">A. The Kidney generates excess phlegm</div><div class="opt">B. The Kidney is unable to absorb qi</div><div class="opt">C. The Kidney over-governs the Lung</div><div class="opt">D. The Kidney floods the Lung with fluid</div></div>
+<div class="q"><span class="num">17.</span> <span class="stem">Which Five Element Sound is paired with Earth?</span><div class="opt">A. Shouting</div><div class="opt">B. Laughing</div><div class="opt">C. Singing</div><div class="opt">D. Groaning</div></div>
+<div class="q"><span class="num">18.</span> <span class="stem">The X&#363; 嘘 Healing Sound targets which organ?</span><div class="opt">A. Heart</div><div class="opt">B. Liver</div><div class="opt">C. Kidney</div><div class="opt">D. Lung</div></div>
+<div class="q"><span class="num">19.</span> <span class="stem">According to the general smell rule, an absent or fishy smell indicates:</span><div class="opt">A. Heat or Excess</div><div class="opt">B. Cold or Deficient</div><div class="opt">C. Blood stasis</div><div class="opt">D. Wind invasion</div></div>
+<div class="q"><span class="num">20.</span> <span class="stem">A strong, leathery-smelling vaginal discharge indicates:</span><div class="opt">A. Damp-Cold</div><div class="opt">B. Damp-Heat</div><div class="opt">C. Blood deficiency</div><div class="opt">D. Qi stagnation</div></div>
+
+<div class="pb"></div>
+<div class="sec ">PART D &middot; Fill-in-the-Blank</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Fill in every blank before checking the key.</div>
+<table class="ref"><tr><th>#</th><th>Item</th><th>Answer (fill in)</th></tr>
+<tr><td style="width:6%">1.</td><td style="width:64%">Cold fingertips especially (vs. the whole hand) points to ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">2.</td><td style="width:64%">Sleep depends on the state of Blood and ______, especially of the Heart and Liver.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">3.</td><td style="width:64%">Waking up many times during the night indicates ______ deficiency with Empty Heat.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">4.</td><td style="width:64%">The intensity of a "fever" depends on the struggle between Zheng Qi and the ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">5.</td><td style="width:64%">A constant low-grade temperature that doesn't fully clear with sweating suggests ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">6.</td><td style="width:64%">The organ that alone "knows" what an emotion is, because it houses the Shen, is the ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">7.</td><td style="width:64%">Severe anxiety with stabbing chest pain radiating to the inner left arm is the TCM description of a ______ (Western term).</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">8.</td><td style="width:64%">Miscarriage occurring after 3 months is attributed to Liver-Blood stasis or sinking of ______.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">9.</td><td style="width:64%">Chronic earache in children is Damp-Heat in the ______ channel.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">10.</td><td style="width:64%">Gradual loss of voice indicates Lung-Qi or ______ deficiency.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">11.</td><td style="width:64%">The Fire-element voice sound is ______, pinyin xi&agrave;o.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">12.</td><td style="width:64%">The Kidney Healing Sound is Chu&#299; 吹, and it removes wind-cold and urges ______ qi.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">13.</td><td style="width:64%">Flatulence that smells rancid and rotten, like rotten eggs, indicates ______ in the Large Intestines.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">14.</td><td style="width:64%">The classical Fire-element scorched odor character is ______, though the slide uses a different (likely mislabeled) character.</td><td style="width:30%">&nbsp;</td></tr>
+<tr><td style="width:6%">15.</td><td style="width:64%">Foul, fishy odor from the ears with turbid pus and discharge indicates ______ in the ear.</td><td style="width:30%">&nbsp;</td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec maroon">PART E &middot; Matching Sets</div>
+<div class="heads-up"><b>Heads Up &mdash;</b> Match each item on the left to its answer on the right.</div>
+<div class="subhead">Emotional Symptoms &mdash; Presentation &rarr; Root</div>
+<table class="ref"><tr><th>Item</th><th>Your Answer</th><th>Options</th></tr>
+<tr><td>1. Depression + lack of direction, sadness</td><td class="line"></td><td rowspan="5">A. Liver-Blood deficiency &nbsp; B. Heart-Yang deficiency &nbsp; C. Liver-Qi stagnation with Qi-Phlegm &nbsp; D. Phlegm-Fire harassing the Mind &nbsp; E. Heart-Blood stasis</td></tr>
+<tr><td>2. Depression + cold hands, palpitations</td><td class="line"></td></tr>
+<tr><td>3. Moodiness/irritability + lump in throat</td><td class="line"></td></tr>
+<tr><td>4. Palpitations, agitation, purple tongue</td><td class="line"></td></tr>
+<tr><td>5. Manic behavior, mental confusion, swollen tongue</td><td class="line"></td></tr>
+</table>
+<div class="subhead">Five Element Sounds</div>
+<table class="ref"><tr><th>Item</th><th>Your Answer</th><th>Options</th></tr>
+<tr><td>1. Shouting</td><td class="line"></td><td rowspan="5">A. Wood &nbsp; B. Fire &nbsp; C. Earth &nbsp; D. Metal &nbsp; E. Water</td></tr>
+<tr><td>2. Laughing</td><td class="line"></td></tr>
+<tr><td>3. Singing</td><td class="line"></td></tr>
+<tr><td>4. Weeping</td><td class="line"></td></tr>
+<tr><td>5. Groaning</td><td class="line"></td></tr>
+</table>
+<div class="subhead">Six Healing Sounds</div>
+<table class="ref"><tr><th>Item</th><th>Your Answer</th><th>Options</th></tr>
+<tr><td>1. X&#363; 嘘</td><td class="line"></td><td rowspan="6">A. Liver &nbsp; B. Heart &nbsp; C. Spleen &nbsp; D. Lung &nbsp; E. Kidney &nbsp; F. Triple Burner</td></tr>
+<tr><td>2. H&#275; 呵</td><td class="line"></td></tr>
+<tr><td>3. H&#363; 呼</td><td class="line"></td></tr>
+<tr><td>4. S&igrave; 呬</td><td class="line"></td></tr>
+<tr><td>5. Chu&#299; 吹</td><td class="line"></td></tr>
+<tr><td>6. X&#299; 嘻</td><td class="line"></td></tr>
+</table>
+<div class="subhead">Women's Health &mdash; Finding &rarr; Pattern</div>
+<table class="ref"><tr><th>Item</th><th>Your Answer</th><th>Options</th></tr>
+<tr><td>1. Purple/blackish blood with clots</td><td class="line"></td><td rowspan="5">A. Blood-Heat &nbsp; B. Blood deficiency &nbsp; C. Stasis of Blood or Cold &nbsp; D. Empty-Heat from Yin deficiency &nbsp; E. Stagnation of Qi or Blood</td></tr>
+<tr><td>2. Pale blood</td><td class="line"></td></tr>
+<tr><td>3. Fresh-red blood</td><td class="line"></td></tr>
+<tr><td>4. Pain before the period</td><td class="line"></td></tr>
+<tr><td>5. Dark-red or bright-red blood</td><td class="line"></td></tr>
+</table>
+
+<div class="pb"></div>
+<div class="sec jade">ANSWER KEY</div>
+
+<div class="subhead">Part A &mdash; Active Recall</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>Tingling = Blood deficiency; numbness (esp. unilateral) = Wind or Wind-Phlegm.</td></tr>
+<tr><td style="width:8%">2</td><td>Cold fingertips especially = Liver-Qi stagnation (Liver Qi can't send Qi/Blood to the extremities, tips especially, while the torso stays warm).</td></tr>
+<tr><td style="width:8%">3</td><td>Heart and Liver (Spleen also has influence).</td></tr>
+<tr><td style="width:8%">4</td><td>Falling asleep = Heart-Blood deficiency (usually). Excessive dreaming = Liver. Waking repeatedly = Yin deficiency with Empty Heat.</td></tr>
+<tr><td style="width:8%">5</td><td>Prof. Schrier's own slide states "Bonus Material on Sleep Will Not Be Tested On."</td></tr>
+<tr><td style="width:8%">6</td><td>Yin deficiency; called "five-palm heat."</td></tr>
+<tr><td style="width:8%">7</td><td>Daytime = Yang deficiency. Night = Yin deficiency.</td></tr>
+<tr><td style="width:8%">8</td><td>Sudden = Full (Liver-Fire, Liver-Yang rising, or Liver-Wind). Gradual = Empty (Kidney deficiency).</td></tr>
+<tr><td style="width:8%">9</td><td>The struggle between Zheng Qi (Upright Qi) and the External Pathogenic Factor &mdash; not whether the pathogen is Wind-Cold or Wind-Heat.</td></tr>
+<tr><td style="width:8%">10</td><td>Aversion to cold = subjective (patient feels cold). Fever = objective (body feels hot on palpation).</td></tr>
+<tr><td style="width:8%">11</td><td>The Heart alone houses the Shen/consciousness and "knows" what an emotion is; every other organ is affected by emotion without being conscious of it.</td></tr>
+<tr><td style="width:8%">12</td><td>Heart-Blood deficiency; Heart-Yin deficiency (worse in evening, night sweating); Heart and Gall Bladder Qi deficiency (with timidity).</td></tr>
+<tr><td style="width:8%">13</td><td>Heart-Blood stasis &mdash; severe anxiety, palpitations, stabbing/pricking chest pain radiating to the inner left arm or shoulder, purple tongue.</td></tr>
+<tr><td style="width:8%">14</td><td>Younger men's premature ejaculation is often more about settling the Heart / performance anxiety; older men's is more truly Kidney-rooted.</td></tr>
+<tr><td style="width:8%">15</td><td>Pain BEFORE the period = stagnation of Qi or Blood. Pain AFTER the period = Blood deficiency.</td></tr>
+<tr><td style="width:8%">16</td><td>Before 3 months = Blood or Essence deficiency. After 3 months = Liver-Blood stasis, or sinking of Spleen-Qi.</td></tr>
+<tr><td style="width:8%">17</td><td>The Gall Bladder channel has a documented deep pathway to the ear; know deep pathways, not just the superficial map.</td></tr>
+<tr><td style="width:8%">18</td><td>Hearing and Smelling &mdash; the 2nd of the Four Diagnostic Methods (望聞問切).</td></tr>
+<tr><td style="width:8%">19</td><td>Lung=production, Kidney=volume, Spleen &amp; Stomach=strength.</td></tr>
+<tr><td style="width:8%">20</td><td>Rebellious Stomach Qi.</td></tr>
+<tr><td style="width:8%">21</td><td>Shout=Wood, Laugh=Fire, Sing=Earth, Weep=Metal, Groan=Water.</td></tr>
+<tr><td style="width:8%">22</td><td>X&#363;=Liver, H&#275;=Heart, H&#363;=Spleen, S&igrave;=Lung, Chu&#299;=Kidney, X&#299;=Triple Burner.</td></tr>
+<tr><td style="width:8%">23</td><td>Strong/foul/rotten = Heat or Excess. Absent or fishy = Cold or Deficient.</td></tr>
+<tr><td style="width:8%">24</td><td>It's labeled with xi&agrave;o 笑 (same hanzi as Laughing) &mdash; classical scorched is ji&#257;o 焦.</td></tr>
+<tr><td style="width:8%">25</td><td>The Shouting voice sound (Wood) AND the Spleen Healing Sound &mdash; same hanzi, different tables.</td></tr>
+</table>
+
+<div class="subhead">Part B &mdash; True/False</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>T</td></tr>
+<tr><td style="width:8%">2</td><td>T</td></tr>
+<tr><td style="width:8%">3</td><td>T</td></tr>
+<tr><td style="width:8%">4</td><td>F &mdash; difficulty falling asleep is usually Heart, though it can be Liver or Spleen.</td></tr>
+<tr><td style="width:8%">5</td><td>F &mdash; it is explicitly marked as NOT tested.</td></tr>
+<tr><td style="width:8%">6</td><td>T</td></tr>
+<tr><td style="width:8%">7</td><td>F &mdash; daytime sweating indicates Yang deficiency; night sweating indicates Yin deficiency.</td></tr>
+<tr><td style="width:8%">8</td><td>F &mdash; aggravated by pressure indicates a Full condition; alleviated by pressure indicates Empty.</td></tr>
+<tr><td style="width:8%">9</td><td>T</td></tr>
+<tr><td style="width:8%">10</td><td>F &mdash; intensity depends on the Zheng Qi vs. pathogen struggle, not pathogen type.</td></tr>
+<tr><td style="width:8%">11</td><td>T</td></tr>
+<tr><td style="width:8%">12</td><td>T</td></tr>
+<tr><td style="width:8%">13</td><td>T</td></tr>
+<tr><td style="width:8%">14</td><td>F &mdash; that presentation indicates Liver-Blood deficiency.</td></tr>
+<tr><td style="width:8%">15</td><td>F &mdash; the mechanisms are essentially the same for men and women.</td></tr>
+<tr><td style="width:8%">16</td><td>F &mdash; older men's premature ejaculation is more often Kidney-related; younger men's is more often Heart-related.</td></tr>
+<tr><td style="width:8%">17</td><td>T</td></tr>
+<tr><td style="width:8%">18</td><td>F &mdash; pain before the period indicates a stagnation (excess) pattern, not deficiency.</td></tr>
+<tr><td style="width:8%">19</td><td>T</td></tr>
+<tr><td style="width:8%">20</td><td>T</td></tr>
+<tr><td style="width:8%">21</td><td>F &mdash; Lung governs production; Kidney governs volume.</td></tr>
+<tr><td style="width:8%">22</td><td>F &mdash; it indicates an Empty pattern.</td></tr>
+<tr><td style="width:8%">23</td><td>F &mdash; that presentation points to Lung and Kidney Yin deficiency.</td></tr>
+<tr><td style="width:8%">24</td><td>T</td></tr>
+<tr><td style="width:8%">25</td><td>F &mdash; strong/foul indicates Heat or Excess; absence of smell or fishy smell indicates Cold.</td></tr>
+<tr><td style="width:8%">26</td><td>F &mdash; unlike the Five Element Sounds slides, these do not explicitly state an element per odor.</td></tr>
+<tr><td style="width:8%">27</td><td>F &mdash; it indicates exhaustion of Kidney fire (Yang).</td></tr>
+<tr><td style="width:8%">28</td><td>T</td></tr>
+</table>
+
+<div class="subhead">Part C &mdash; Multiple Choice</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>C. Dampness</td></tr>
+<tr><td style="width:8%">2</td><td>B. Stomach and Spleen-Qi deficiency</td></tr>
+<tr><td style="width:8%">3</td><td>D &mdash; excess Liver-Fire is not one of the listed Empty-condition causes (it's a different, Full mechanism from the "very restless sleep" entry)</td></tr>
+<tr><td style="width:8%">4</td><td>B. Stomach and Spleen deficiency</td></tr>
+<tr><td style="width:8%">5</td><td>B. Liver-Yang, Liver-Fire, or Liver-Wind</td></tr>
+<tr><td style="width:8%">6</td><td>B. The struggle between Zheng Qi and the pathogenic factor</td></tr>
+<tr><td style="width:8%">7</td><td>C. Shao Yang</td></tr>
+<tr><td style="width:8%">8</td><td>B. Spleen and Heart-Blood deficiency</td></tr>
+<tr><td style="width:8%">9</td><td>C. Phlegm-Fire harassing the Mind</td></tr>
+<tr><td style="width:8%">10</td><td>B. Kidney-Yang deficiency</td></tr>
+<tr><td style="width:8%">11</td><td>B. It can result from Liver or Heart-Fire, or Empty-Heat from Kidney-Yin deficiency, in either sex</td></tr>
+<tr><td style="width:8%">12</td><td>B. Stagnation of Liver-Qi or Liver-Blood, or Spleen deficiency</td></tr>
+<tr><td style="width:8%">13</td><td>B. Stomach and Chong Vessel disharmony</td></tr>
+<tr><td style="width:8%">14</td><td>B. Lung</td></tr>
+<tr><td style="width:8%">15</td><td>C. Phlegm-Heat</td></tr>
+<tr><td style="width:8%">16</td><td>B. The Kidney is unable to absorb qi</td></tr>
+<tr><td style="width:8%">17</td><td>C. Singing</td></tr>
+<tr><td style="width:8%">18</td><td>B. Liver</td></tr>
+<tr><td style="width:8%">19</td><td>B. Cold or Deficient</td></tr>
+<tr><td style="width:8%">20</td><td>B. Damp-Heat</td></tr>
+</table>
+
+<div class="subhead">Part D &mdash; Fill-in-the-Blank</div>
+<table class="ref"><tr><th>#</th><th>Answer</th></tr>
+<tr><td style="width:8%">1</td><td>Liver-Qi stagnation</td></tr>
+<tr><td style="width:8%">2</td><td>Yin</td></tr>
+<tr><td style="width:8%">3</td><td>Yin</td></tr>
+<tr><td style="width:8%">4</td><td>External Pathogenic Factor (pathogenic factor / EPF)</td></tr>
+<tr><td style="width:8%">5</td><td>Damp-Heat</td></tr>
+<tr><td style="width:8%">6</td><td>Heart</td></tr>
+<tr><td style="width:8%">7</td><td>heart attack</td></tr>
+<tr><td style="width:8%">8</td><td>Spleen-Qi</td></tr>
+<tr><td style="width:8%">9</td><td>Gall Bladder</td></tr>
+<tr><td style="width:8%">10</td><td>Lung-Yin</td></tr>
+<tr><td style="width:8%">11</td><td>Laughing</td></tr>
+<tr><td style="width:8%">12</td><td>stagnant</td></tr>
+<tr><td style="width:8%">13</td><td>Toxic Heat</td></tr>
+<tr><td style="width:8%">14</td><td>ji&#257;o 焦</td></tr>
+<tr><td style="width:8%">15</td><td>Damp-heat</td></tr>
+</table>
+
+<div class="subhead">Part E &mdash; Matching</div>
+<table class="ref"><tr><th>Set</th><th>Answers (in order)</th></tr>
+<tr><td>Emotional Symptoms</td><td>1-A (Liver-Blood deficiency), 2-B (Heart-Yang deficiency), 3-C (Liver-Qi stagnation w/ Qi-Phlegm), 4-E (Heart-Blood stasis), 5-D (Phlegm-Fire harassing the Mind)</td></tr>
+<tr><td>Five Element Sounds</td><td>1-A (Wood), 2-B (Fire), 3-C (Earth), 4-D (Metal), 5-E (Water)</td></tr>
+<tr><td>Six Healing Sounds</td><td>1-A (Liver), 2-B (Heart), 3-C (Spleen), 4-D (Lung), 5-E (Kidney), 6-F (Triple Burner)</td></tr>
+<tr><td>Women's Health</td><td>1-C (Stasis of Blood or Cold), 2-B (Blood deficiency), 3-D (Empty-Heat from Yin deficiency), 4-E (Stagnation of Qi or Blood), 5-A (Blood-Heat)</td></tr>
+</table>
+
+</body>
+</html>
